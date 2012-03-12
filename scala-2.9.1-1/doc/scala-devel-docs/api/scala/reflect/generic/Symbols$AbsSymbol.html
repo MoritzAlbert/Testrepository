@@ -1,0 +1,1668 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>scala.reflect.generic.Symbols.AbsSymbol</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../lib/class_big.png" />
+        <p id="owner"><a name="scala" class="extype" href="../../package.html">scala</a>.<a name="scala.reflect" class="extype" href="../package.html">reflect</a>.<a name="scala.reflect.generic" class="extype" href="package.html">generic</a>.<a name="scala.reflect.generic.Symbols" class="extype" href="Symbols.html">Symbols</a></p>
+        <h1>AbsSymbol</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">AbsSymbol</span>
+        
+        <span class="result"> extends <a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></span>
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Self Type</dt><dd>Symbol</dd><dt>Source</dt><dd><a href="https://lampsvn.epfl.ch/trac/scala/browser/scala/tags/R_2_9_1_final/src//library/scala/reflect/generic/Symbols.scala#L1">Symbols.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a>, AnyRef, <a name="scala.Any" class="extype" href="../../Any.html">Any</a></div>
+        </div></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          <div id="order">
+                <span class="filtertype">Ordering</span>
+                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+              </div>
+          <div id="ancestors">
+                <span class="filtertype">Inherited</span>
+                <ol><li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show all</span></li></ol>
+                <ol id="linearization"><li name="scala.reflect.generic.Symbols.AbsSymbol" class="in"><span>AbsSymbol</span></li><li name="scala.reflect.generic.HasFlags" class="in"><span>HasFlags</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#this" data-isabs="false">
+      <a id="this:AbsSymbol"></a>
+      <h4 class="signature">
+      <span class="kind">new</span>
+      <span class="symbol">
+        <span class="name">AbsSymbol</span>
+        
+        <span class="params">()</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#AccessBoundaryType" data-isabs="false">
+      <a id="AccessBoundaryType:AccessBoundaryType"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">AccessBoundaryType</span>
+        
+        <span class="result"> = Symbol</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.Symbols.AbsSymbol" class="extype" href="">AbsSymbol</a> → <a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#AnnotationType" data-isabs="false">
+      <a id="AnnotationType:AnnotationType"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">AnnotationType</span>
+        
+        <span class="result"> = AnnotationInfo</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.Symbols.AbsSymbol" class="extype" href="">AbsSymbol</a> → <a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#FlagsType" data-isabs="false">
+      <a id="FlagsType:FlagsType"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">FlagsType</span>
+        
+        <span class="result"> = <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.Symbols.AbsSymbol" class="extype" href="">AbsSymbol</a> → <a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Abstract Value Members</h3>
+              <ol><li visbl="pub" name="scala.reflect.generic.HasFlags#annotations" data-isabs="true">
+      <a id="annotations:List[AnnotationType]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">annotations</span>
+        
+        <span class="result">: List[AnnotationType]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A list of annotations attached to this entity.</p><div class="fullcomment"><div class="comment cmt"><p>A list of annotations attached to this entity.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#flags" data-isabs="true">
+      <a id="flags:Long"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">flags</span>
+        
+        <span class="result">: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The flags of this symbol</p><div class="fullcomment"><div class="comment cmt"><p>The flags of this symbol</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Definition Classes</dt><dd><a name="scala.reflect.generic.Symbols.AbsSymbol" class="extype" href="">AbsSymbol</a> → <a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasFlagsToString" data-isabs="true">
+      <a id="hasFlagsToString(FlagsType):String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasFlagsToString</span>
+        
+        <span class="params">(<span name="mask">mask: FlagsType</span>)</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The printable representation of this entity's flags and access boundary,
+ restricted to flags in the given mask.</p><div class="fullcomment"><div class="comment cmt"><p>The printable representation of this entity's flags and access boundary,
+ restricted to flags in the given mask.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#lazyAccessor" data-isabs="true">
+      <a id="lazyAccessor:Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">lazyAccessor</span>
+        
+        <span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"> If symbol is a lazy val, it's lazy accessor
+</p><div class="fullcomment"><div class="comment cmt"><p> If symbol is a lazy val, it's lazy accessor
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#linkedClassOfClass" data-isabs="true">
+      <a id="linkedClassOfClass:Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">linkedClassOfClass</span>
+        
+        <span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">For a module class its linked class, for a plain class
+ the module class of its linked module.</p><div class="fullcomment"><div class="comment cmt"><p>For a module class its linked class, for a plain class
+ the module class of its linked module.
+ For instance
+   object Foo
+   class Foo</p><p> Then object Foo has a <code>moduleClass' (invisible to the user, the backend calls it Foo$
+ linkedClassOfClass goes from class Foo$ to class Foo, and back.
+</code></p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#moduleClass" data-isabs="true">
+      <a id="moduleClass:Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">moduleClass</span>
+        
+        <span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">If symbol is an object definition, it's implied associated class,
+ otherwise NoSymbol
+</p><div class="fullcomment"><div class="comment cmt"><p>If symbol is an object definition, it's implied associated class,
+ otherwise NoSymbol
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#name" data-isabs="true">
+      <a id="name:Name"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">name</span>
+        
+        <span class="result">: Name</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The name of the symbol as a member of the <code>Name</code> type.</p><div class="fullcomment"><div class="comment cmt"><p>The name of the symbol as a member of the <code>Name</code> type.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#newAbstractType" data-isabs="true">
+      <a id="newAbstractType(TypeName,Position):Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">newAbstractType</span>
+        
+        <span class="params">(<span name="name">name: TypeName</span>, <span name="pos">pos: Position = <span class="symbol"><span class="name"><a href="Universe.html#NoPosition:Position">NoPosition</a></span></span></span>)</span><span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#newAliasType" data-isabs="true">
+      <a id="newAliasType(TypeName,Position):Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">newAliasType</span>
+        
+        <span class="params">(<span name="name">name: TypeName</span>, <span name="pos">pos: Position = <span class="symbol"><span class="name"><a href="Universe.html#NoPosition:Position">NoPosition</a></span></span></span>)</span><span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#newClass" data-isabs="true">
+      <a id="newClass(TypeName,Position):Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">newClass</span>
+        
+        <span class="params">(<span name="name">name: TypeName</span>, <span name="pos">pos: Position = <span class="symbol"><span class="name"><a href="Universe.html#NoPosition:Position">NoPosition</a></span></span></span>)</span><span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#newMethod" data-isabs="true">
+      <a id="newMethod(TermName,Position):Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">newMethod</span>
+        
+        <span class="params">(<span name="name">name: TermName</span>, <span name="pos">pos: Position = <span class="symbol"><span class="name"><a href="Universe.html#NoPosition:Position">NoPosition</a></span></span></span>)</span><span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#newModule" data-isabs="true">
+      <a id="newModule(TermName,Symbol,Position):Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">newModule</span>
+        
+        <span class="params">(<span name="name">name: TermName</span>, <span name="clazz">clazz: Symbol</span>, <span name="pos">pos: Position = <span class="symbol"><span class="name"><a href="Universe.html#NoPosition:Position">NoPosition</a></span></span></span>)</span><span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#newModuleClass" data-isabs="true">
+      <a id="newModuleClass(TypeName,Position):Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">newModuleClass</span>
+        
+        <span class="params">(<span name="name">name: TypeName</span>, <span name="pos">pos: Position = <span class="symbol"><span class="name"><a href="Universe.html#NoPosition:Position">NoPosition</a></span></span></span>)</span><span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#newValue" data-isabs="true">
+      <a id="newValue(TermName,Position):Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">newValue</span>
+        
+        <span class="params">(<span name="name">name: TermName</span>, <span name="pos">pos: Position = <span class="symbol"><span class="name"><a href="Universe.html#NoPosition:Position">NoPosition</a></span></span></span>)</span><span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#owner" data-isabs="true">
+      <a id="owner:Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">owner</span>
+        
+        <span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The owner of this symbol.</p><div class="fullcomment"><div class="comment cmt"><p>The owner of this symbol.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#privateWithin" data-isabs="true">
+      <a id="privateWithin:Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">privateWithin</span>
+        
+        <span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Set when symbol has a modifier of the form private[X], NoSymbol otherwise.</p><div class="fullcomment"><div class="comment cmt"><p>Set when symbol has a modifier of the form private[X], NoSymbol otherwise.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Definition Classes</dt><dd><a name="scala.reflect.generic.Symbols.AbsSymbol" class="extype" href="">AbsSymbol</a> → <a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#rawInfo" data-isabs="true">
+      <a id="rawInfo:Type"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">rawInfo</span>
+        
+        <span class="result">: Type</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The raw info of the type
+</p><div class="fullcomment"><div class="comment cmt"><p>The raw info of the type
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#typeOfThis" data-isabs="true">
+      <a id="typeOfThis:Type"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">typeOfThis</span>
+        
+        <span class="result">: Type</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">If this symbol is a class or trait, its self type, otherwise the type of the symbol itse;lf
+</p><div class="fullcomment"><div class="comment cmt"><p>If this symbol is a class or trait, its self type, otherwise the type of the symbol itse;lf
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Concrete Value Members</h3>
+              <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">##</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#addAnnotation" data-isabs="false">
+      <a id="addAnnotation(AnnotationInfo):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">addAnnotation</span>
+        
+        <span class="params">(<span name="annot">annot: AnnotationInfo</span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#addChild" data-isabs="false">
+      <a id="addChild(Symbol):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">addChild</span>
+        
+        <span class="params">(<span name="sym">sym: Symbol</span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">clone</span>
+        
+        <span class="params">()</span><span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#decodedName" data-isabs="false">
+      <a id="decodedName:String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">decodedName</span>
+        
+        <span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The decoded name of the symbol, e.</p><div class="fullcomment"><div class="comment cmt"><p>The decoded name of the symbol, e.g. <code>==</code> instead of <code>$eq$eq</code>.
+</p></div></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#enclClass" data-isabs="false">
+      <a id="enclClass:Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">enclClass</span>
+        
+        <span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The next enclosing class</p>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#enclMethod" data-isabs="false">
+      <a id="enclMethod:Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">enclMethod</span>
+        
+        <span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The next enclosing method</p>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#encodedName" data-isabs="false">
+      <a id="encodedName:String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">encodedName</span>
+        
+        <span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The name of the symbol before decoding, e.</p><div class="fullcomment"><div class="comment cmt"><p>The name of the symbol before decoding, e.g. <code>$eq$eq</code> instead of <code>==</code>.
+</p></div></div>
+    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">eq</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">equals</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  See equals in <a name="scala.Any" class="extype" href="../../Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">finalize</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#flags_=" data-isabs="false">
+      <a id="flags_=(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">flags_=</span>
+        
+        <span class="params">(<span name="flags">flags: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#fullName" data-isabs="false">
+      <a id="fullName:String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">fullName</span>
+        
+        <span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The encoded full path name of this symbol, where outer names and inner names
+ are separated by periods.</p><div class="fullcomment"><div class="comment cmt"><p>The encoded full path name of this symbol, where outer names and inner names
+ are separated by periods.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#fullName" data-isabs="false">
+      <a id="fullName(Char):String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">fullName</span>
+        
+        <span class="params">(<span name="separator">separator: <a name="scala.Char" class="extype" href="../../Char.html">Char</a></span>)</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The encoded full path name of this symbol, where outer names and inner names
+ are separated by <code>separator</code> characters.</p><div class="fullcomment"><div class="comment cmt"><p>The encoded full path name of this symbol, where outer names and inner names
+ are separated by <code>separator</code> characters.
+ Never translates expansions of operators back to operator symbol.
+ Never adds id.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getClass</span>
+        
+        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A representation that corresponds to the dynamic class of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>A representation that corresponds to the dynamic class of the receiver object.</p><p> The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasAbstractFlag" data-isabs="false">
+      <a id="hasAbstractFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasAbstractFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#hasAccessBoundary" data-isabs="false">
+      <a id="hasAccessBoundary:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasAccessBoundary</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Whether this entity has a &quot;privateWithin&quot; visibility barrier attached.</p><div class="fullcomment"><div class="comment cmt"><p>Whether this entity has a &quot;privateWithin&quot; visibility barrier attached.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.reflect.generic.Symbols.AbsSymbol" class="extype" href="">AbsSymbol</a> → <a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasAccessorFlag" data-isabs="false">
+      <a id="hasAccessorFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasAccessorFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#hasAllFlags" data-isabs="false">
+      <a id="hasAllFlags(Long):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasAllFlags</span>
+        
+        <span class="params">(<span name="mask">mask: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Does symbol have ALL the flags in <code>mask</code> set?</p><div class="fullcomment"><div class="comment cmt"><p>Does symbol have ALL the flags in <code>mask</code> set?</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.reflect.generic.Symbols.AbsSymbol" class="extype" href="">AbsSymbol</a> → <a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasContravariantFlag" data-isabs="false">
+      <a id="hasContravariantFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasContravariantFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasDefault" data-isabs="false">
+      <a id="hasDefault:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasDefault</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasDefaultFlag" data-isabs="false">
+      <a id="hasDefaultFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasDefaultFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#hasFlag" data-isabs="false">
+      <a id="hasFlag(Long):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasFlag</span>
+        
+        <span class="params">(<span name="mask">mask: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Does symbol have ANY flag in <code>mask</code> set?</p><div class="fullcomment"><div class="comment cmt"><p>Does symbol have ANY flag in <code>mask</code> set?</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.reflect.generic.Symbols.AbsSymbol" class="extype" href="">AbsSymbol</a> → <a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasInConstructorFlag" data-isabs="false">
+      <a id="hasInConstructorFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasInConstructorFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasLocalFlag" data-isabs="false">
+      <a id="hasLocalFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasLocalFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasModuleFlag" data-isabs="false">
+      <a id="hasModuleFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasModuleFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasNoFlags" data-isabs="false">
+      <a id="hasNoFlags(Long):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasNoFlags</span>
+        
+        <span class="params">(<span name="mask">mask: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Whether this entity has NONE of the flags in the given mask.</p><div class="fullcomment"><div class="comment cmt"><p>Whether this entity has NONE of the flags in the given mask.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasPackageFlag" data-isabs="false">
+      <a id="hasPackageFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasPackageFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasPreSuperFlag" data-isabs="false">
+      <a id="hasPreSuperFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasPreSuperFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasStableFlag" data-isabs="false">
+      <a id="hasStableFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasStableFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasStaticFlag" data-isabs="false">
+      <a id="hasStaticFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasStaticFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#hasTraitFlag" data-isabs="false">
+      <a id="hasTraitFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hasTraitFlag</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hashCode</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a name="scala.Any" class="extype" href="../../Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#info" data-isabs="false">
+      <a id="info:Type"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">info</span>
+        
+        <span class="result">: Type</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The info of the symbol.</p><div class="fullcomment"><div class="comment cmt"><p>The info of the symbol. This is like tpe, except for class symbols where the <code>info</code>
+ describes the contents of the class whereas the <code>tpe</code> is a reference to the class.
+</p></div></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#info_=" data-isabs="false">
+      <a id="info_=(Type):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">info_=</span>
+        
+        <span class="params">(<span name="tp">tp: Type</span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isAbstractClass" data-isabs="false">
+      <a id="isAbstractClass:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isAbstractClass</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isAbstractOverride" data-isabs="false">
+      <a id="isAbstractOverride:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isAbstractOverride</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isAbstractType" data-isabs="false">
+      <a id="isAbstractType:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isAbstractType</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isAliasType" data-isabs="false">
+      <a id="isAliasType:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isAliasType</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isBridge" data-isabs="false">
+      <a id="isBridge:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isBridge</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isByNameParam" data-isabs="false">
+      <a id="isByNameParam:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isByNameParam</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isCase" data-isabs="false">
+      <a id="isCase:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isCase</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isCaseAccessor" data-isabs="false">
+      <a id="isCaseAccessor:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isCaseAccessor</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isClass" data-isabs="false">
+      <a id="isClass:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isClass</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isContravariant" data-isabs="false">
+      <a id="isContravariant:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isContravariant</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isCovariant" data-isabs="false">
+      <a id="isCovariant:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isCovariant</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isDefaultInit" data-isabs="false">
+      <a id="isDefaultInit:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isDefaultInit</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isDeferred" data-isabs="false">
+      <a id="isDeferred:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isDeferred</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isEarlyInitialized" data-isabs="false">
+      <a id="isEarlyInitialized:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isEarlyInitialized</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isEffectiveRoot" data-isabs="false">
+      <a id="isEffectiveRoot:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isEffectiveRoot</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Is this symbol an effective root for fullname string?
+</p>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isEmptyPackage" data-isabs="false">
+      <a id="isEmptyPackage:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isEmptyPackage</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Package tests</p><div class="fullcomment"><div class="comment cmt"><p>Package tests</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isEmptyPackageClass" data-isabs="false">
+      <a id="isEmptyPackageClass:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isEmptyPackageClass</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isExistentiallyBound" data-isabs="false">
+      <a id="isExistentiallyBound:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isExistentiallyBound</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isFinal" data-isabs="false">
+      <a id="isFinal:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isFinal</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isImplClass" data-isabs="false">
+      <a id="isImplClass:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isImplClass</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isImplicit" data-isabs="false">
+      <a id="isImplicit:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isImplicit</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isInterface" data-isabs="false">
+      <a id="isInterface:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isInterface</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isJavaDefined" data-isabs="false">
+      <a id="isJavaDefined:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isJavaDefined</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isLabel" data-isabs="false">
+      <a id="isLabel:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isLabel</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isLazy" data-isabs="false">
+      <a id="isLazy:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isLazy</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isLazyAccessor" data-isabs="false">
+      <a id="isLazyAccessor:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isLazyAccessor</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isLifted" data-isabs="false">
+      <a id="isLifted:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isLifted</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isMethod" data-isabs="false">
+      <a id="isMethod:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isMethod</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isModule" data-isabs="false">
+      <a id="isModule:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isModule</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isModuleClass" data-isabs="false">
+      <a id="isModuleClass:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isModuleClass</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isMutable" data-isabs="false">
+      <a id="isMutable:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isMutable</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isOverloaded" data-isabs="false">
+      <a id="isOverloaded:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isOverloaded</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isOverride" data-isabs="false">
+      <a id="isOverride:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isOverride</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isPackage" data-isabs="false">
+      <a id="isPackage:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isPackage</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isPackageClass" data-isabs="false">
+      <a id="isPackageClass:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isPackageClass</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isParamAccessor" data-isabs="false">
+      <a id="isParamAccessor:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isParamAccessor</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isParameter" data-isabs="false">
+      <a id="isParameter:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isParameter</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isPrivate" data-isabs="false">
+      <a id="isPrivate:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isPrivate</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isPrivateLocal" data-isabs="false">
+      <a id="isPrivateLocal:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isPrivateLocal</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isProtected" data-isabs="false">
+      <a id="isProtected:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isProtected</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isProtectedLocal" data-isabs="false">
+      <a id="isProtectedLocal:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isProtectedLocal</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isPublic" data-isabs="false">
+      <a id="isPublic:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isPublic</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isRefinementClass" data-isabs="false">
+      <a id="isRefinementClass:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isRefinementClass</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isRoot" data-isabs="false">
+      <a id="isRoot:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isRoot</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isRootPackage" data-isabs="false">
+      <a id="isRootPackage:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isRootPackage</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isSealed" data-isabs="false">
+      <a id="isSealed:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isSealed</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isSourceMethod" data-isabs="false">
+      <a id="isSourceMethod:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isSourceMethod</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isSuperAccessor" data-isabs="false">
+      <a id="isSuperAccessor:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isSuperAccessor</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.HasFlags#isSynthetic" data-isabs="false">
+      <a id="isSynthetic:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isSynthetic</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isTerm" data-isabs="false">
+      <a id="isTerm:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isTerm</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isTrait" data-isabs="false">
+      <a id="isTrait:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isTrait</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.Symbols.AbsSymbol" class="extype" href="">AbsSymbol</a> → <a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isType" data-isabs="false">
+      <a id="isType:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isType</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isTypeParameter" data-isabs="false">
+      <a id="isTypeParameter:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isTypeParameter</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#isVarargsMethod" data-isabs="false">
+      <a id="isVarargsMethod:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isVarargsMethod</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">ne</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notify</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notifyAll</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#orElse" data-isabs="false">
+      <a id="orElse[T](⇒ Symbol):Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">orElse</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="alt">alt: ⇒ Symbol</span>)</span><span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">If this is NoSymbol, evaluate the argument: otherwise, this.</p>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#owner_=" data-isabs="false">
+      <a id="owner_=(Symbol):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">owner_=</span>
+        
+        <span class="params">(<span name="sym">sym: Symbol</span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#privateWithin_=" data-isabs="false">
+      <a id="privateWithin_=(Symbol):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">privateWithin_=</span>
+        
+        <span class="params">(<span name="sym">sym: Symbol</span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#sourceModule" data-isabs="false">
+      <a id="sourceModule:Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">sourceModule</span>
+        
+        <span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The module corresponding to this module class (note that this
+ is not updated when a module is cloned), or NoSymbol if this is not a ModuleClass
+</p>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#sourceModule_=" data-isabs="false">
+      <a id="sourceModule_=(Symbol):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">sourceModule_=</span>
+        
+        <span class="params">(<span name="sym">sym: Symbol</span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
+      <a id="synchronized[T0](⇒ T0):T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">synchronized</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">toString</span>
+        
+        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#tpe" data-isabs="false">
+      <a id="tpe:Type"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">tpe</span>
+        
+        <span class="result">: Type</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The type of the symbol
+</p>
+    </li><li visbl="pub" name="scala.reflect.generic.Symbols.AbsSymbol#typeOfThis_=" data-isabs="false">
+      <a id="typeOfThis_=(Type):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">typeOfThis_=</span>
+        
+        <span class="params">(<span name="tp">tp: Type</span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>, <span name="arg1">arg1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Deprecated Value Members</h3>
+              <ol><li visbl="pub" name="scala.reflect.generic.HasFlags#isAbstract" data-isabs="false">
+      <a id="isAbstract:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name deprecated">isAbstract</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.deprecated" class="extype" href="../../deprecated.html">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div name="scala.reflect.generic.HasFlags" class="parent">
+              <h3>Inherited from <a name="scala.reflect.generic.HasFlags" class="extype" href="HasFlags.html">HasFlags</a></h3>
+            </div><div name="scala.AnyRef" class="parent">
+              <h3>Inherited from AnyRef</h3>
+            </div><div name="scala.Any" class="parent">
+              <h3>Inherited from <a name="scala.Any" class="extype" href="../../Any.html">Any</a></h3>
+            </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+    </body>
+      </html>

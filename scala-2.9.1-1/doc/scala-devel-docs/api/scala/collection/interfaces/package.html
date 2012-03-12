@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>scala.collection.interfaces</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a name="scala" class="extype" href="../../package.html">scala</a>.<a name="scala.collection" class="extype" href="../package.html">collection</a></p>
+        <h1>interfaces</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">interfaces</span>
+        
+        
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="scala.collection.interfaces.IterableMethods" data-isabs="true">
+      <a id="IterableMethods:IterableMethods[A, This]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="IterableMethods.html"><span class="name">IterableMethods</span></a>
+        <span class="tparams">[<span name="A">+A</span>, <span name="This">+This &lt;: IterableLike[A, This] with Iterable[A]</span>]</span>
+        <span class="result"> extends TraversableMethods[A, This]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li visbl="pub" name="scala.collection.interfaces.MapMethods" data-isabs="true">
+      <a id="MapMethods:MapMethods[A, B, This]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="MapMethods.html"><span class="name">MapMethods</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="B">+B</span>, <span name="This">+This &lt;: MapLike[A, B, This] with Map[A, B]</span>]</span>
+        <span class="result"> extends IterableMethods[(A, B), This] with SubtractableMethods[A, This]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li visbl="pub" name="scala.collection.interfaces.SeqMethods" data-isabs="true">
+      <a id="SeqMethods:SeqMethods[A, This]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="SeqMethods.html"><span class="name">SeqMethods</span></a>
+        <span class="tparams">[<span name="A">+A</span>, <span name="This">+This &lt;: SeqLike[A, This] with Seq[A]</span>]</span>
+        <span class="result"> extends IterableMethods[A, This]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li visbl="pub" name="scala.collection.interfaces.SetMethods" data-isabs="true">
+      <a id="SetMethods:SetMethods[A, This]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="SetMethods.html"><span class="name">SetMethods</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="This">+This &lt;: SetLike[A, This] with Set[A]</span>]</span>
+        <span class="result"> extends IterableMethods[A, This] with SubtractableMethods[A, This]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li visbl="pub" name="scala.collection.interfaces.SubtractableMethods" data-isabs="true">
+      <a id="SubtractableMethods:SubtractableMethods[A, This]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="SubtractableMethods.html"><span class="name">SubtractableMethods</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="This">+This &lt;: Subtractable[A, This]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li visbl="pub" name="scala.collection.interfaces.TraversableMethods" data-isabs="true">
+      <a id="TraversableMethods:TraversableMethods[A, This]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="TraversableMethods.html"><span class="name">TraversableMethods</span></a>
+        <span class="tparams">[<span name="A">+A</span>, <span name="This">+This &lt;: TraversableLike[A, This]</span>]</span>
+        <span class="result"> extends TraversableOnceMethods[A]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li visbl="pub" name="scala.collection.interfaces.TraversableOnceMethods" data-isabs="true">
+      <a id="TraversableOnceMethods:TraversableOnceMethods[A]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="TraversableOnceMethods.html"><span class="name">TraversableOnceMethods</span></a>
+        <span class="tparams">[<span name="A">+A</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+
+      </div>
+
+      <div id="tooltip"></div>
+
+    </body>
+      </html>

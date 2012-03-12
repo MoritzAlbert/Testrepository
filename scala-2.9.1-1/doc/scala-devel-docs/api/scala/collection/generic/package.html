@@ -1,0 +1,722 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>scala.collection.generic</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a name="scala" class="extype" href="../../package.html">scala</a>.<a name="scala.collection" class="extype" href="../package.html">collection</a></p>
+        <h1>generic</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">generic</span>
+        
+        
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="scala.collection.generic.AtomicIndexFlag" data-isabs="true">
+      <a id="AtomicIndexFlag:AtomicIndexFlag"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="AtomicIndexFlag.html"><span class="name">AtomicIndexFlag</span></a>
+        
+        <span class="result"> extends Signalling</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A mixin trait that implements index flag behaviour using atomic integers.</p>
+    </li><li visbl="pub" name="scala.collection.generic.BitSetFactory" data-isabs="true">
+      <a id="BitSetFactory:BitSetFactory[Coll]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="BitSetFactory.html"><span class="name">BitSetFactory</span></a>
+        <span class="tparams">[<span name="Coll">Coll &lt;: BitSet with BitSetLike[Coll]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li visbl="pub" name="scala.collection.generic.package#CanBuild" data-isabs="false">
+      <a id="CanBuild:CanBuild[Elem, To]"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">CanBuild</span>
+        <span class="tparams">[<span name="Elem">-Elem</span>, <span name="To">+To</span>]</span>
+        <span class="result"> = <a name="scala.collection.generic.CanBuildFrom" class="extype" href="CanBuildFrom.html">CanBuildFrom</a>[<a name="scala.Nothing" class="extype" href="../../Nothing.html">Nothing</a>, Elem, To]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.CanBuildFrom" data-isabs="true">
+      <a id="CanBuildFrom:CanBuildFrom[From, Elem, To]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="CanBuildFrom.html"><span class="name">CanBuildFrom</span></a>
+        <span class="tparams">[<span name="From">-From</span>, <span name="Elem">-Elem</span>, <span name="To">+To</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A base trait for builder factories.</p>
+    </li><li visbl="pub" name="scala.collection.generic.CanCombineFrom" data-isabs="true">
+      <a id="CanCombineFrom:CanCombineFrom[From, Elem, To]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="CanCombineFrom.html"><span class="name">CanCombineFrom</span></a>
+        <span class="tparams">[<span name="From">-From</span>, <span name="Elem">-Elem</span>, <span name="To">+To</span>]</span>
+        <span class="result"> extends CanBuildFrom[From, Elem, To] with Parallel</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A base trait for parallel builder factories.</p>
+    </li><li visbl="pub" name="scala.collection.generic.ClassManifestTraversableFactory" data-isabs="true">
+      <a id="ClassManifestTraversableFactory:ClassManifestTraversableFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="ClassManifestTraversableFactory.html"><span class="name">ClassManifestTraversableFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Traversable[X] with GenericClassManifestTraversableTemplate[X, CC]</span>]</span>
+        <span class="result"> extends GenericClassManifestCompanion[CC]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.DefaultSignalling" data-isabs="false">
+      <a id="DefaultSignalling:DefaultSignalling"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="DefaultSignalling.html"><span class="name">DefaultSignalling</span></a>
+        
+        <span class="result"> extends Signalling with VolatileAbort</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This signalling implementation returns default values and ignores received signals.</p>
+    </li><li visbl="pub" name="scala.collection.generic.DelegatedContext" data-isabs="false">
+      <a id="DelegatedContext:DelegatedContext"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="DelegatedContext.html"><span class="name">DelegatedContext</span></a>
+        
+        <span class="result"> extends DelegatedSignalling</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Class implementing delegated signalling.</p>
+    </li><li visbl="pub" name="scala.collection.generic.DelegatedSignalling" data-isabs="true">
+      <a id="DelegatedSignalling:DelegatedSignalling"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="DelegatedSignalling.html"><span class="name">DelegatedSignalling</span></a>
+        
+        <span class="result"> extends Signalling</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An implementation of the signalling interface using delegates.</p>
+    </li><li visbl="pub" name="scala.collection.generic.FilterMonadic" data-isabs="true">
+      <a id="FilterMonadic:FilterMonadic[A, Repr]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="FilterMonadic.html"><span class="name">FilterMonadic</span></a>
+        <span class="tparams">[<span name="A">+A</span>, <span name="Repr">+Repr</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template trait that contains just the <code>map</code>, <code>flatMap</code>, <code>foreach</code> and <code>withFilter</code> methods
+ of trait <code>TraversableLike</code>.</p>
+    </li><li visbl="pub" name="scala.collection.generic.GenMapFactory" data-isabs="true">
+      <a id="GenMapFactory:GenMapFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="GenMapFactory.html"><span class="name">GenMapFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span> &lt;: GenMap[A, B] with GenMapLike[A, B, CC[A, B]]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of <code>Map</code> and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.GenSeqFactory" data-isabs="true">
+      <a id="GenSeqFactory:GenSeqFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="GenSeqFactory.html"><span class="name">GenSeqFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: GenSeq[X] with GenericTraversableTemplate[X, CC]</span>]</span>
+        <span class="result"> extends GenTraversableFactory[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of Seq and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.GenSetFactory" data-isabs="true">
+      <a id="GenSetFactory:GenSetFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="GenSetFactory.html"><span class="name">GenSetFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: GenSet[X] with GenSetLike[X, CC[X]]</span>]</span>
+        <span class="result"> extends GenericCompanion[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of <code>Set</code> and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.GenTraversableFactory" data-isabs="true">
+      <a id="GenTraversableFactory:GenTraversableFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="GenTraversableFactory.html"><span class="name">GenTraversableFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: GenTraversable[X] with GenericTraversableTemplate[X, CC]</span>]</span>
+        <span class="result"> extends GenericCompanion[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of <code>Traversable</code> and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.GenericClassManifestCompanion" data-isabs="true">
+      <a id="GenericClassManifestCompanion:GenericClassManifestCompanion[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="GenericClassManifestCompanion.html"><span class="name">GenericClassManifestCompanion</span></a>
+        <span class="tparams">[<span name="CC">+CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Traversable[X]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class represents companions of classes which require ClassManifests
+ for their element types.</p>
+    </li><li visbl="pub" name="scala.collection.generic.GenericClassManifestTraversableTemplate" data-isabs="true">
+      <a id="GenericClassManifestTraversableTemplate:GenericClassManifestTraversableTemplate[A, CC]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="GenericClassManifestTraversableTemplate.html"><span class="name">GenericClassManifestTraversableTemplate</span></a>
+        <span class="tparams">[<span name="A">+A</span>, <span name="CC">+CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Traversable[X]</span>]</span>
+        <span class="result"> extends HasNewBuilder[A, CC[A]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This trait represents collections classes which require class
+ manifests for their element types.</p>
+    </li><li visbl="pub" name="scala.collection.generic.GenericCompanion" data-isabs="true">
+      <a id="GenericCompanion:GenericCompanion[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="GenericCompanion.html"><span class="name">GenericCompanion</span></a>
+        <span class="tparams">[<span name="CC">+CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: GenTraversable[X]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template class for companion objects of <code></code>regular<i> collection classes
+ represent an unconstrained higher-kinded type. Typically
+ such classes inherit from trait <code>GenericTraversableTemplate</code>.</i></p>
+    </li><li visbl="pub" name="scala.collection.generic.GenericOrderedCompanion" data-isabs="true">
+      <a id="GenericOrderedCompanion:GenericOrderedCompanion[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="GenericOrderedCompanion.html"><span class="name">GenericOrderedCompanion</span></a>
+        <span class="tparams">[<span name="CC">+CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Traversable[X]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class represents companions of classes which require the ordered trait
+ for their element types.</p>
+    </li><li visbl="pub" name="scala.collection.generic.GenericOrderedTraversableTemplate" data-isabs="true">
+      <a id="GenericOrderedTraversableTemplate:GenericOrderedTraversableTemplate[A, CC]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="GenericOrderedTraversableTemplate.html"><span class="name">GenericOrderedTraversableTemplate</span></a>
+        <span class="tparams">[<span name="A">+A</span>, <span name="CC">+CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Traversable[X]</span>]</span>
+        <span class="result"> extends HasNewBuilder[A, CC[A]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This trait represents collections classes which require
+ ordered element types.</p>
+    </li><li visbl="pub" name="scala.collection.generic.GenericParCompanion" data-isabs="true">
+      <a id="GenericParCompanion:GenericParCompanion[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="GenericParCompanion.html"><span class="name">GenericParCompanion</span></a>
+        <span class="tparams">[<span name="CC">+CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: ParIterable[X]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template class for companion objects of parallel collection classes.</p>
+    </li><li visbl="pub" name="scala.collection.generic.GenericParMapCompanion" data-isabs="true">
+      <a id="GenericParMapCompanion:GenericParMapCompanion[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="GenericParMapCompanion.html"><span class="name">GenericParMapCompanion</span></a>
+        <span class="tparams">[<span name="CC">+CC<span class="tparams">[<span name="P">P</span>, <span name="Q">Q</span>]</span> &lt;: ParMap[P, Q]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.generic.GenericParMapTemplate" data-isabs="true">
+      <a id="GenericParMapTemplate:GenericParMapTemplate[K, V, CC]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="GenericParMapTemplate.html"><span class="name">GenericParMapTemplate</span></a>
+        <span class="tparams">[<span name="K">K</span>, <span name="V">+V</span>, <span name="CC">+CC<span class="tparams">[<span name="X">X</span>, <span name="Y">Y</span>]</span> &lt;: ParMap[X, Y]</span>]</span>
+        <span class="result"> extends GenericParTemplate[(K, V), ParIterable]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.generic.GenericParTemplate" data-isabs="true">
+      <a id="GenericParTemplate:GenericParTemplate[A, CC]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="GenericParTemplate.html"><span class="name">GenericParTemplate</span></a>
+        <span class="tparams">[<span name="A">+A</span>, <span name="CC">+CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: ParIterable[X]</span>]</span>
+        <span class="result"> extends GenericTraversableTemplate[A, CC] with HasNewCombiner[A, CC[A]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template trait for collections having a companion.</p>
+    </li><li visbl="pub" name="scala.collection.generic.GenericSeqCompanion" data-isabs="true">
+      <a id="GenericSeqCompanion:GenericSeqCompanion[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="GenericSeqCompanion.html"><span class="name">GenericSeqCompanion</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Traversable[X]</span>]</span>
+        <span class="result"> extends GenericCompanion[CC]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.generic.GenericSetTemplate" data-isabs="true">
+      <a id="GenericSetTemplate:GenericSetTemplate[A, CC]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="GenericSetTemplate.html"><span class="name">GenericSetTemplate</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="CC">+CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: GenSet[X]</span>]</span>
+        <span class="result"> extends GenericTraversableTemplate[A, CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li visbl="pub" name="scala.collection.generic.GenericTraversableTemplate" data-isabs="true">
+      <a id="GenericTraversableTemplate:GenericTraversableTemplate[A, CC]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="GenericTraversableTemplate.html"><span class="name">GenericTraversableTemplate</span></a>
+        <span class="tparams">[<span name="A">+A</span>, <span name="CC">+CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: GenTraversable[X]</span>]</span>
+        <span class="result"> extends HasNewBuilder[A, CC[A]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template class for companion objects of <code></code>regular<code></code> collection classes
+ that represent an unconstrained higher-kinded type.</p>
+    </li><li visbl="pub" name="scala.collection.generic.Growable" data-isabs="true">
+      <a id="Growable:Growable[A]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Growable.html"><span class="name">Growable</span></a>
+        <span class="tparams">[<span name="A">-A</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This trait forms part of collections that can be augmented
+ using a <code>+=</code> operator and that can be cleared of all elements using
+ a <code>clear</code> method.</p>
+    </li><li visbl="pub" name="scala.collection.generic.HasNewBuilder" data-isabs="true">
+      <a id="HasNewBuilder:HasNewBuilder[A, Repr]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="HasNewBuilder.html"><span class="name">HasNewBuilder</span></a>
+        <span class="tparams">[<span name="A">+A</span>, <span name="Repr">+Repr</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.generic.HasNewCombiner" data-isabs="true">
+      <a id="HasNewCombiner:HasNewCombiner[T, Repr]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="HasNewCombiner.html"><span class="name">HasNewCombiner</span></a>
+        <span class="tparams">[<span name="T">+T</span>, <span name="Repr">+Repr</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.generic.ImmutableMapFactory" data-isabs="true">
+      <a id="ImmutableMapFactory:ImmutableMapFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="ImmutableMapFactory.html"><span class="name">ImmutableMapFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="A">A</span>, <span name="B">+B</span>]</span> &lt;: Map[A, B] with MapLike[A, B, CC[A, B]]</span>]</span>
+        <span class="result"> extends MapFactory[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of <code>immutable.Map</code> and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.ImmutableSetFactory" data-isabs="true">
+      <a id="ImmutableSetFactory:ImmutableSetFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="ImmutableSetFactory.html"><span class="name">ImmutableSetFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Set[X] with SetLike[X, CC[X]]</span>]</span>
+        <span class="result"> extends SetFactory[CC]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.ImmutableSortedMapFactory" data-isabs="true">
+      <a id="ImmutableSortedMapFactory:ImmutableSortedMapFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="ImmutableSortedMapFactory.html"><span class="name">ImmutableSortedMapFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span> &lt;: SortedMap[A, B] with SortedMapLike[A, B, CC[A, B]]</span>]</span>
+        <span class="result"> extends SortedMapFactory[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of <code>SortedMap</code> and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.ImmutableSortedSetFactory" data-isabs="true">
+      <a id="ImmutableSortedSetFactory:ImmutableSortedSetFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="ImmutableSortedSetFactory.html"><span class="name">ImmutableSortedSetFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="A">A</span>]</span> &lt;: SortedSet[A] with SortedSetLike[A, CC[A]]</span>]</span>
+        <span class="result"> extends SortedSetFactory[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of <code>SortedSet</code> and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.IterableForwarder" data-isabs="true">
+      <a id="IterableForwarder:IterableForwarder[A]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="IterableForwarder.html"><span class="name">IterableForwarder</span></a>
+        <span class="tparams">[<span name="A">+A</span>]</span>
+        <span class="result"> extends Iterable[A] with TraversableForwarder[A]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This trait implements a forwarder for iterable objects.</p>
+    </li><li visbl="pub" name="scala.collection.generic.MapFactory" data-isabs="true">
+      <a id="MapFactory:MapFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="MapFactory.html"><span class="name">MapFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span> &lt;: Map[A, B] with MapLike[A, B, CC[A, B]]</span>]</span>
+        <span class="result"> extends GenMapFactory[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of <code>Map</code> and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.MutableMapFactory" data-isabs="true">
+      <a id="MutableMapFactory:MutableMapFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="MutableMapFactory.html"><span class="name">MutableMapFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span> &lt;: Map[A, B] with MapLike[A, B, CC[A, B]]</span>]</span>
+        <span class="result"> extends MapFactory[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of <code>mutable.Map</code> and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.MutableSetFactory" data-isabs="true">
+      <a id="MutableSetFactory:MutableSetFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="MutableSetFactory.html"><span class="name">MutableSetFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Set[X] with SetLike[X, CC[X]]</span>]</span>
+        <span class="result"> extends SetFactory[CC]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.OrderedTraversableFactory" data-isabs="true">
+      <a id="OrderedTraversableFactory:OrderedTraversableFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="OrderedTraversableFactory.html"><span class="name">OrderedTraversableFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Traversable[X] with GenericOrderedTraversableTemplate[X, CC]</span>]</span>
+        <span class="result"> extends GenericOrderedCompanion[CC]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.ParFactory" data-isabs="true">
+      <a id="ParFactory:ParFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="ParFactory.html"><span class="name">ParFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: ParIterable[X] with GenericParTemplate[X, CC]</span>]</span>
+        <span class="result"> extends GenTraversableFactory[CC] with GenericParCompanion[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template class for companion objects of <code>ParIterable</code> and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.ParMapFactory" data-isabs="true">
+      <a id="ParMapFactory:ParMapFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="ParMapFactory.html"><span class="name">ParMapFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>, <span name="Y">Y</span>]</span> &lt;: ParMap[X, Y] with scala.collection.parallel.ParMapLike[X, Y, CC[X,Y], _]</span>]</span>
+        <span class="result"> extends GenMapFactory[CC] with GenericParMapCompanion[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template class for companion objects of <code>ParMap</code> and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.ParSetFactory" data-isabs="true">
+      <a id="ParSetFactory:ParSetFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="ParSetFactory.html"><span class="name">ParSetFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: ParSet[X] with scala.collection.parallel.ParSetLike[X, CC[X], _] with GenericParTemplate[X, CC]</span>]</span>
+        <span class="result"> extends GenSetFactory[CC] with GenericParCompanion[CC]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.SeqFactory" data-isabs="true">
+      <a id="SeqFactory:SeqFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="SeqFactory.html"><span class="name">SeqFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Seq[X] with GenericTraversableTemplate[X, CC]</span>]</span>
+        <span class="result"> extends GenSeqFactory[CC] with TraversableFactory[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of Seq and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.SeqForwarder" data-isabs="true">
+      <a id="SeqForwarder:SeqForwarder[A]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="SeqForwarder.html"><span class="name">SeqForwarder</span></a>
+        <span class="tparams">[<span name="A">+A</span>]</span>
+        <span class="result"> extends Seq[A] with IterableForwarder[A]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class implements a forwarder for sequences.</p>
+    </li><li visbl="pub" name="scala.collection.generic.SetFactory" data-isabs="true">
+      <a id="SetFactory:SetFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="SetFactory.html"><span class="name">SetFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Set[X] with SetLike[X, CC[X]]</span>]</span>
+        <span class="result"> extends GenSetFactory[CC] with GenericSeqCompanion[CC]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.Shrinkable" data-isabs="true">
+      <a id="Shrinkable:Shrinkable[A]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Shrinkable.html"><span class="name">Shrinkable</span></a>
+        <span class="tparams">[<span name="A">-A</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This trait forms part of collections that can be reduced
+ using a <code>-=</code> operator.</p>
+    </li><li visbl="pub" name="scala.collection.generic.Signalling" data-isabs="true">
+      <a id="Signalling:Signalling"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Signalling.html"><span class="name">Signalling</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A message interface serves as a unique interface to the
+part of the collection capable of receiving messages from
+a different task.</p>
+    </li><li visbl="pub" name="scala.collection.generic.Sizing" data-isabs="true">
+      <a id="Sizing:Sizing"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Sizing.html"><span class="name">Sizing</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A trait for objects which have a size.</p>
+    </li><li visbl="pub" name="scala.collection.generic.Sorted" data-isabs="true">
+      <a id="Sorted:Sorted[K, This]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Sorted.html"><span class="name">Sorted</span></a>
+        <span class="tparams">[<span name="K">K</span>, <span name="This">+This &lt;: Sorted[K, This]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Any collection (including maps) whose keys (or elements) are ordered.</p>
+    </li><li visbl="pub" name="scala.collection.generic.SortedMapFactory" data-isabs="true">
+      <a id="SortedMapFactory:SortedMapFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="SortedMapFactory.html"><span class="name">SortedMapFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span> &lt;: SortedMap[A, B] with SortedMapLike[A, B, CC[A, B]]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of mutable.</p>
+    </li><li visbl="pub" name="scala.collection.generic.SortedSetFactory" data-isabs="true">
+      <a id="SortedSetFactory:SortedSetFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="SortedSetFactory.html"><span class="name">SortedSetFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="A">A</span>]</span> &lt;: SortedSet[A] with SortedSetLike[A, CC[A]]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of Set and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.Subtractable" data-isabs="true">
+      <a id="Subtractable:Subtractable[A, Repr]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Subtractable.html"><span class="name">Subtractable</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="Repr">+Repr &lt;: Subtractable[A, Repr]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This trait represents collection-like objects that can be reduced
+ using a '+' operator.</p>
+    </li><li visbl="pub" name="scala.collection.generic.TaggedDelegatedContext" data-isabs="false">
+      <a id="TaggedDelegatedContext:TaggedDelegatedContext"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="TaggedDelegatedContext.html"><span class="name">TaggedDelegatedContext</span></a>
+        
+        <span class="result"> extends DelegatedContext</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Class implementing delegated signalling, but having its own distinct <code>tag</code>.</p>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory" data-isabs="true">
+      <a id="TraversableFactory:TraversableFactory[CC]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="TraversableFactory.html"><span class="name">TraversableFactory</span></a>
+        <span class="tparams">[<span name="CC">CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: Traversable[X] with GenericTraversableTemplate[X, CC]</span>]</span>
+        <span class="result"> extends GenTraversableFactory[CC] with GenericSeqCompanion[CC]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template for companion objects of <code>Traversable</code> and subclasses thereof.</p>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableForwarder" data-isabs="true">
+      <a id="TraversableForwarder:TraversableForwarder[A]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="TraversableForwarder.html"><span class="name">TraversableForwarder</span></a>
+        <span class="tparams">[<span name="A">+A</span>]</span>
+        <span class="result"> extends Traversable[A]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This trait implements a forwarder for traversable objects.</p>
+    </li><li visbl="pub" name="scala.collection.generic.VolatileAbort" data-isabs="true">
+      <a id="VolatileAbort:VolatileAbort"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="VolatileAbort.html"><span class="name">VolatileAbort</span></a>
+        
+        <span class="result"> extends Signalling</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A mixin trait that implements abort flag behaviour using volatile variables.</p>
+    </li><li visbl="pub" name="scala.collection.generic.Addable" data-isabs="true">
+      <a id="Addable:Addable[A, Repr]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Addable.html"><span class="name deprecated">Addable</span></a>
+        <span class="tparams">[<span name="A">A</span>, <span name="Repr">+Repr &lt;: Addable[A, Repr]</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This trait represents collection-like objects that can be added to
+ using a '+' operator.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="scala.collection.generic.IdleSignalling" data-isabs="false">
+      <a id="IdleSignalling:IdleSignalling"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="IdleSignalling$.html"><span class="name">IdleSignalling</span></a>
+        
+        <span class="result"> extends DefaultSignalling</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An object that returns default values and ignores received signals.</p>
+    </li><li visbl="pub" name="scala.collection.generic.SliceInterval" data-isabs="false">
+      <a id="SliceInterval:SliceInterval"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="SliceInterval$.html"><span class="name">SliceInterval</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+      </div>
+
+      <div id="tooltip"></div>
+
+    </body>
+      </html>

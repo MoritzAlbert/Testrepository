@@ -1,0 +1,638 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>scala.collection.parallel</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a name="scala" class="extype" href="../../package.html">scala</a>.<a name="scala.collection" class="extype" href="../package.html">collection</a></p>
+        <h1>parallel</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">parallel</span>
+        
+        
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Package object for parallel collections.
+</p></div></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks" data-isabs="true">
+      <a id="AdaptiveWorkStealingForkJoinTasks:AdaptiveWorkStealingForkJoinTasks"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="AdaptiveWorkStealingForkJoinTasks.html"><span class="name">AdaptiveWorkStealingForkJoinTasks</span></a>
+        
+        <span class="result"> extends ForkJoinTasks with AdaptiveWorkStealingTasks</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.AdaptiveWorkStealingTasks" data-isabs="true">
+      <a id="AdaptiveWorkStealingTasks:AdaptiveWorkStealingTasks"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="AdaptiveWorkStealingTasks.html"><span class="name">AdaptiveWorkStealingTasks</span></a>
+        
+        <span class="result"> extends Tasks</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This trait implements scheduling by employing
+ an adaptive work stealing technique.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.AdaptiveWorkStealingThreadPoolTasks" data-isabs="true">
+      <a id="AdaptiveWorkStealingThreadPoolTasks:AdaptiveWorkStealingThreadPoolTasks"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="AdaptiveWorkStealingThreadPoolTasks.html"><span class="name">AdaptiveWorkStealingThreadPoolTasks</span></a>
+        
+        <span class="result"> extends ThreadPoolTasks with AdaptiveWorkStealingTasks</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.Combiner" data-isabs="true">
+      <a id="Combiner:Combiner[Elem, To]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Combiner.html"><span class="name">Combiner</span></a>
+        <span class="tparams">[<span name="Elem">-Elem</span>, <span name="To">+To</span>]</span>
+        <span class="result"> extends Builder[Elem, To] with Sizing with Parallel</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The base trait for all combiners.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.package.CompositeThrowable" data-isabs="false">
+      <a id="CompositeThrowable:CompositeThrowable"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="package$$CompositeThrowable.html"><span class="name">CompositeThrowable</span></a>
+        
+        <span class="result"> extends Throwable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Composite throwable - thrown when multiple exceptions are thrown at the same time.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.package.FactoryOps" data-isabs="true">
+      <a id="FactoryOps:FactoryOps[From, Elem, To]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="package$$FactoryOps.html"><span class="name">FactoryOps</span></a>
+        <span class="tparams">[<span name="From">From</span>, <span name="Elem">Elem</span>, <span name="To">To</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.ForkJoinTasks" data-isabs="true">
+      <a id="ForkJoinTasks:ForkJoinTasks"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ForkJoinTasks.html"><span class="name">ForkJoinTasks</span></a>
+        
+        <span class="result"> extends Tasks with HavingForkJoinPool</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An implementation trait for parallel tasks based on the fork/join framework.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.FutureThreadPoolTasks" data-isabs="true">
+      <a id="FutureThreadPoolTasks:FutureThreadPoolTasks"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="FutureThreadPoolTasks.html"><span class="name">FutureThreadPoolTasks</span></a>
+        
+        <span class="result"> extends Tasks</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An implementation of tasks objects based on the Java thread pooling API and synchronization using futures.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.HavingForkJoinPool" data-isabs="true">
+      <a id="HavingForkJoinPool:HavingForkJoinPool"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="HavingForkJoinPool.html"><span class="name">HavingForkJoinPool</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A trait describing objects that provide a fork/join pool.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.IterableSplitter" data-isabs="true">
+      <a id="IterableSplitter:IterableSplitter[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="IterableSplitter.html"><span class="name">IterableSplitter</span></a>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        <span class="result"> extends AugmentedIterableIterator[T] with Splitter[T] with Signalling with DelegatedSignalling</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Parallel iterators allow splitting and provide a <code>remaining</code> method to
+ obtain the number of elements remaining in the iterator.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParIterable" data-isabs="true">
+      <a id="ParIterable:ParIterable[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParIterable.html"><span class="name">ParIterable</span></a>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        <span class="result"> extends GenIterable[T] with GenericParTemplate[T, ParIterable] with ParIterableLike[T, ParIterable[T], Iterable[T]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template trait for parallel iterable collections.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParIterableLike" data-isabs="true">
+      <a id="ParIterableLike:ParIterableLike[T, Repr, Sequential]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParIterableLike.html"><span class="name">ParIterableLike</span></a>
+        <span class="tparams">[<span name="T">+T</span>, <span name="Repr">+Repr &lt;: ParIterable[T]</span>, <span name="Sequential">+Sequential &lt;: Iterable[T] with IterableLike[T, Sequential]</span>]</span>
+        <span class="result"> extends GenIterableLike[T, Repr] with CustomParallelizable[T, Repr] with Parallel with HasNewCombiner[T, Repr]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template trait for parallel collections of type <code>ParIterable[T]</code>.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParIterableView" data-isabs="true">
+      <a id="ParIterableView:ParIterableView[T, Coll, CollSeq]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParIterableView.html"><span class="name">ParIterableView</span></a>
+        <span class="tparams">[<span name="T">+T</span>, <span name="Coll">+Coll &lt;: Parallel</span>, <span name="CollSeq">+CollSeq</span>]</span>
+        <span class="result"> extends ParIterableViewLike[T, Coll, CollSeq, ParIterableView[T, Coll, CollSeq], IterableView[T, CollSeq]] with GenIterableView[T, Coll]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template view of a non-strict view of a parallel iterable collection.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParIterableViewLike" data-isabs="true">
+      <a id="ParIterableViewLike:ParIterableViewLike[T, Coll, CollSeq, This, ThisSeq]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParIterableViewLike.html"><span class="name">ParIterableViewLike</span></a>
+        <span class="tparams">[<span name="T">+T</span>, <span name="Coll">+Coll &lt;: Parallel</span>, <span name="CollSeq">+CollSeq</span>, <span name="This">+This &lt;: ParIterableView[T, Coll, CollSeq] with ParIterableViewLike[T, Coll, CollSeq, This, ThisSeq]</span>, <span name="ThisSeq">+ThisSeq &lt;: IterableView[T, CollSeq] with IterableViewLike[T, CollSeq, ThisSeq]</span>]</span>
+        <span class="result"> extends GenIterableView[T, Coll] with GenIterableViewLike[T, Coll, This] with ParIterable[T] with ParIterableLike[T, This, ThisSeq]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template view of a non-strict view of parallel iterable collection.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParMap" data-isabs="true">
+      <a id="ParMap:ParMap[K, V]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParMap.html"><span class="name">ParMap</span></a>
+        <span class="tparams">[<span name="K">K</span>, <span name="V">+V</span>]</span>
+        <span class="result"> extends GenMap[K, V] with GenericParMapTemplate[K, V, ParMap] with ParIterable[(K, V)] with ParMapLike[K, V, ParMap[K, V], Map[K, V]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template trait for parallel maps.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParMapLike" data-isabs="true">
+      <a id="ParMapLike:ParMapLike[K, V, Repr, Sequential]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParMapLike.html"><span class="name">ParMapLike</span></a>
+        <span class="tparams">[<span name="K">K</span>, <span name="V">+V</span>, <span name="Repr">+Repr &lt;: ParMapLike[K, V, Repr, Sequential] with ParMap[K, V]</span>, <span name="Sequential">+Sequential &lt;: Map[K, V] with MapLike[K, V, Sequential]</span>]</span>
+        <span class="result"> extends GenMapLike[K, V, Repr] with ParIterableLike[(K, V), Repr, Sequential]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template trait for mutable parallel maps.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParSeq" data-isabs="true">
+      <a id="ParSeq:ParSeq[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParSeq.html"><span class="name">ParSeq</span></a>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        <span class="result"> extends GenSeq[T] with ParIterable[T] with GenericParTemplate[T, ParSeq] with ParSeqLike[T, ParSeq[T], Seq[T]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template trait for parallel sequences.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParSeqLike" data-isabs="true">
+      <a id="ParSeqLike:ParSeqLike[T, Repr, Sequential]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParSeqLike.html"><span class="name">ParSeqLike</span></a>
+        <span class="tparams">[<span name="T">+T</span>, <span name="Repr">+Repr &lt;: ParSeq[T]</span>, <span name="Sequential">+Sequential &lt;: Seq[T] with SeqLike[T, Sequential]</span>]</span>
+        <span class="result"> extends GenSeqLike[T, Repr] with ParIterableLike[T, Repr, Sequential]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template trait for sequences of type <code>ParSeq[T]</code>, representing
+ parallel sequences with element type <code>T</code>.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParSeqView" data-isabs="true">
+      <a id="ParSeqView:ParSeqView[T, Coll, CollSeq]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParSeqView.html"><span class="name">ParSeqView</span></a>
+        <span class="tparams">[<span name="T">+T</span>, <span name="Coll">+Coll &lt;: Parallel</span>, <span name="CollSeq">+CollSeq</span>]</span>
+        <span class="result"> extends ParSeqViewLike[T, Coll, CollSeq, ParSeqView[T, Coll, CollSeq], SeqView[T, CollSeq]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template view of a non-strict view of a parallel sequence.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParSeqViewLike" data-isabs="true">
+      <a id="ParSeqViewLike:ParSeqViewLike[T, Coll, CollSeq, This, ThisSeq]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParSeqViewLike.html"><span class="name">ParSeqViewLike</span></a>
+        <span class="tparams">[<span name="T">+T</span>, <span name="Coll">+Coll &lt;: Parallel</span>, <span name="CollSeq">+CollSeq</span>, <span name="This">+This &lt;: ParSeqView[T, Coll, CollSeq] with ParSeqViewLike[T, Coll, CollSeq, This, ThisSeq]</span>, <span name="ThisSeq">+ThisSeq &lt;: SeqView[T, CollSeq] with SeqViewLike[T, CollSeq, ThisSeq]</span>]</span>
+        <span class="result"> extends GenSeqView[T, Coll] with GenSeqViewLike[T, Coll, This] with ParIterableView[T, Coll, CollSeq] with ParIterableViewLike[T, Coll, CollSeq, This, ThisSeq] with ParSeq[T] with ParSeqLike[T, This, ThisSeq]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template view of a non-strict view of parallel sequence.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParSet" data-isabs="true">
+      <a id="ParSet:ParSet[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParSet.html"><span class="name">ParSet</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="result"> extends GenSet[T] with GenericParTemplate[T, ParSet] with ParIterable[T] with ParSetLike[T, ParSet[T], Set[T]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template trait for parallel sets.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParSetLike" data-isabs="true">
+      <a id="ParSetLike:ParSetLike[T, Repr, Sequential]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ParSetLike.html"><span class="name">ParSetLike</span></a>
+        <span class="tparams">[<span name="T">T</span>, <span name="Repr">+Repr &lt;: ParSetLike[T, Repr, Sequential] with ParSet[T]</span>, <span name="Sequential">+Sequential &lt;: Set[T] with SetLike[T, Sequential]</span>]</span>
+        <span class="result"> extends GenSetLike[T, Repr] with ParIterableLike[T, Repr, Sequential]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A template trait for parallel sets.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.PreciseSplitter" data-isabs="true">
+      <a id="PreciseSplitter:PreciseSplitter[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="PreciseSplitter.html"><span class="name">PreciseSplitter</span></a>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        <span class="result"> extends Splitter[T]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A precise splitter (or a precise split iterator) can be split into arbitrary number of splitters
+ that traverse disjoint subsets of arbitrary sizes.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.SeqSplitter" data-isabs="true">
+      <a id="SeqSplitter:SeqSplitter[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="SeqSplitter.html"><span class="name">SeqSplitter</span></a>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        <span class="result"> extends IterableSplitter[T] with AugmentedSeqIterator[T] with PreciseSplitter[T]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Parallel sequence iterators allow splitting into arbitrary subsets.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.Splitter" data-isabs="true">
+      <a id="Splitter:Splitter[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Splitter.html"><span class="name">Splitter</span></a>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        <span class="result"> extends Iterator[T]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A splitter (or a split iterator) can be split into more splitters that traverse over
+ disjoint subsets of elements.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.TaskSupport" data-isabs="true">
+      <a id="TaskSupport:TaskSupport"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="TaskSupport.html"><span class="name">TaskSupport</span></a>
+        
+        <span class="result"> extends Tasks</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.Tasks" data-isabs="true">
+      <a id="Tasks:Tasks"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Tasks.html"><span class="name">Tasks</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A trait that declares task execution capabilities used
+ by parallel collections.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ThreadPoolTasks" data-isabs="true">
+      <a id="ThreadPoolTasks:ThreadPoolTasks"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ThreadPoolTasks.html"><span class="name">ThreadPoolTasks</span></a>
+        
+        <span class="result"> extends Tasks</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An implementation of tasks objects based on the Java thread pooling API.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.package.ThrowableOps" data-isabs="true">
+      <a id="ThrowableOps:ThrowableOps"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="package$$ThrowableOps.html"><span class="name">ThrowableOps</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.package.TraversableOps" data-isabs="true">
+      <a id="TraversableOps:TraversableOps[T]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="package$$TraversableOps.html"><span class="name">TraversableOps</span></a>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="scala.collection.parallel.package#CHECK_RATE" data-isabs="false">
+      <a id="CHECK_RATE:Int"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">CHECK_RATE</span>
+        
+        <span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.parallel.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.parallel.ForkJoinTasks" data-isabs="false">
+      <a id="ForkJoinTasks:ForkJoinTasks"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="ForkJoinTasks$.html"><span class="name">ForkJoinTasks</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.FutureThreadPoolTasks" data-isabs="false">
+      <a id="FutureThreadPoolTasks:FutureThreadPoolTasks"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="FutureThreadPoolTasks$.html"><span class="name">FutureThreadPoolTasks</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.package#MIN_FOR_COPY" data-isabs="false">
+      <a id="MIN_FOR_COPY:Int"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">MIN_FOR_COPY</span>
+        
+        <span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.parallel.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.parallel.ParIterable" data-isabs="false">
+      <a id="ParIterable:ParIterable"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="ParIterable$.html"><span class="name">ParIterable</span></a>
+        
+        <span class="result"> extends ParFactory[ParIterable]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations to create <code>ParIterable</code> values.</p>
+    </li><li visbl="pub" name="scala.collection.parallel.ParIterableView" data-isabs="false">
+      <a id="ParIterableView:ParIterableView"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="ParIterableView$.html"><span class="name">ParIterableView</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.ParMap" data-isabs="false">
+      <a id="ParMap:ParMap"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="ParMap$.html"><span class="name">ParMap</span></a>
+        
+        <span class="result"> extends ParMapFactory[ParMap]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.ParSeq" data-isabs="false">
+      <a id="ParSeq:ParSeq"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="ParSeq$.html"><span class="name">ParSeq</span></a>
+        
+        <span class="result"> extends ParFactory[ParSeq]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.ParSeqView" data-isabs="false">
+      <a id="ParSeqView:ParSeqView"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="ParSeqView$.html"><span class="name">ParSeqView</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.ParSet" data-isabs="false">
+      <a id="ParSet:ParSet"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="ParSet$.html"><span class="name">ParSet</span></a>
+        
+        <span class="result"> extends ParSetFactory[ParSet]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.package#SQRT2" data-isabs="false">
+      <a id="SQRT2:Double"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">SQRT2</span>
+        
+        <span class="result">: <a name="scala.Double" class="extype" href="../../Double.html">Double</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.parallel.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.parallel.Splitter" data-isabs="false">
+      <a id="Splitter:Splitter"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="Splitter$.html"><span class="name">Splitter</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.ThreadPoolTasks" data-isabs="false">
+      <a id="ThreadPoolTasks:ThreadPoolTasks"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="ThreadPoolTasks$.html"><span class="name">ThreadPoolTasks</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.package#availableProcessors" data-isabs="false">
+      <a id="availableProcessors:Int"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">availableProcessors</span>
+        
+        <span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.parallel.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.parallel.package#factory2ops" data-isabs="false">
+      <a id="factory2ops[From, Elem, To](CanBuildFrom[From, Elem, To]):FactoryOps[From, Elem, To]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">factory2ops</span>
+        <span class="tparams">[<span name="From">From</span>, <span name="Elem">Elem</span>, <span name="To">To</span>]</span>
+        <span class="params">(<span name="bf">bf: <a name="scala.collection.generic.CanBuildFrom" class="extype" href="../generic/CanBuildFrom.html">CanBuildFrom</a>[From, Elem, To]</span>)</span><span class="result">: <a name="scala.collection.parallel.package.FactoryOps" class="extype" href="package$$FactoryOps.html">FactoryOps</a>[From, Elem, To]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="scala.collection.parallel.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.parallel.immutable" data-isabs="false">
+      <a id="immutable:immutable"></a>
+      <h4 class="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <a href="immutable/package.html"><span class="name">immutable</span></a>
+        
+        
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.mutable" data-isabs="false">
+      <a id="mutable:mutable"></a>
+      <h4 class="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <a href="mutable/package.html"><span class="name">mutable</span></a>
+        
+        
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.collection.parallel.package#tasksupport" data-isabs="false">
+      <a id="tasksupport:TaskSupport"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">tasksupport</span>
+        
+        <span class="result">: <a name="scala.collection.parallel.TaskSupport" class="extype" href="TaskSupport.html">TaskSupport</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.parallel.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.parallel.package#thresholdFromSize" data-isabs="false">
+      <a id="thresholdFromSize(Int,Int):Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">thresholdFromSize</span>
+        
+        <span class="params">(<span name="sz">sz: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="parallelismLevel">parallelismLevel: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Computes threshold from the size of the collection and the parallelism level.</p><div class="fullcomment"><div class="comment cmt"><p>Computes threshold from the size of the collection and the parallelism level.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.parallel.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.parallel.package#throwable2ops" data-isabs="false">
+      <a id="throwable2ops(Throwable):ThrowableOps"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">throwable2ops</span>
+        
+        <span class="params">(<span name="self">self: Throwable</span>)</span><span class="result">: <a name="scala.collection.parallel.package.ThrowableOps" class="extype" href="package$$ThrowableOps.html">ThrowableOps</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="scala.collection.parallel.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.parallel.package#traversable2ops" data-isabs="false">
+      <a id="traversable2ops[T](GenTraversableOnce[T]):TraversableOps[T]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">traversable2ops</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="t">t: <a name="scala.collection.GenTraversableOnce" class="extype" href="../GenTraversableOnce.html">GenTraversableOnce</a>[T]</span>)</span><span class="result">: <a name="scala.collection.parallel.package.TraversableOps" class="extype" href="package$$TraversableOps.html">TraversableOps</a>[T]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="scala.collection.parallel.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+      </div>
+
+      <div id="tooltip"></div>
+
+    </body>
+      </html>

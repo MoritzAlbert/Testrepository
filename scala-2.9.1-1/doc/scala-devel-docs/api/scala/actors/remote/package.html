@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>scala.actors.remote</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a name="scala" class="extype" href="../../package.html">scala</a>.<a name="scala.actors" class="extype" href="../package.html">actors</a></p>
+        <h1>remote</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">remote</span>
+        
+        
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="scala.actors.remote.ExitFun" data-isabs="false">
+      <a id="ExitFun:ExitFun"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="ExitFun.html"><span class="name">ExitFun</span></a>
+        
+        <span class="result"> extends (AbstractActor, Proxy) ⇒ Unit with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.actors.remote.JavaSerializer" data-isabs="false">
+      <a id="JavaSerializer:JavaSerializer"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="JavaSerializer.html"><span class="name">JavaSerializer</span></a>
+        
+        <span class="result"> extends Serializer</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li visbl="pub" name="scala.actors.remote.LinkToFun" data-isabs="false">
+      <a id="LinkToFun:LinkToFun"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="LinkToFun.html"><span class="name">LinkToFun</span></a>
+        
+        <span class="result"> extends (AbstractActor, Proxy) ⇒ Unit with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.actors.remote.LocalApply0" data-isabs="false">
+      <a id="LocalApply0:LocalApply0"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <a href="LocalApply0.html"><span class="name">LocalApply0</span></a>
+        
+        <span class="params">(<span name="rfun">rfun: (AbstractActor, Proxy) ⇒ Unit</span>, <span name="a">a: AbstractActor</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.actors.remote.Locator" data-isabs="false">
+      <a id="Locator:Locator"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <a href="Locator.html"><span class="name">Locator</span></a>
+        
+        <span class="params">(<span name="node">node: Node</span>, <span name="name">name: Symbol</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.actors.remote.NamedSend" data-isabs="false">
+      <a id="NamedSend:NamedSend"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <a href="NamedSend.html"><span class="name">NamedSend</span></a>
+        
+        <span class="params">(<span name="senderLoc">senderLoc: Locator</span>, <span name="receiverLoc">receiverLoc: Locator</span>, <span name="data">data: Array[Byte]</span>, <span name="session">session: Symbol</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.actors.remote.Node" data-isabs="false">
+      <a id="Node:Node"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <a href="Node.html"><span class="name">Node</span></a>
+        
+        <span class="params">(<span name="address">address: String</span>, <span name="port">port: Int</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class represents a machine node on a TCP network.</p>
+    </li><li visbl="pub" name="scala.actors.remote.RemoteApply0" data-isabs="false">
+      <a id="RemoteApply0:RemoteApply0"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <a href="RemoteApply0.html"><span class="name">RemoteApply0</span></a>
+        
+        <span class="params">(<span name="senderLoc">senderLoc: Locator</span>, <span name="receiverLoc">receiverLoc: Locator</span>, <span name="rfun">rfun: (AbstractActor, Proxy) ⇒ Unit</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.actors.remote.SendTo" data-isabs="false">
+      <a id="SendTo:SendTo"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <a href="SendTo.html"><span class="name">SendTo</span></a>
+        
+        <span class="params">(<span name="a">a: OutputChannel[Any]</span>, <span name="msg">msg: Any</span>, <span name="session">session: Symbol</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.actors.remote.Serializer" data-isabs="true">
+      <a id="Serializer:Serializer"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="Serializer.html"><span class="name">Serializer</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.remote.Service" data-isabs="true">
+      <a id="Service:Service"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Service.html"><span class="name">Service</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li visbl="pub" name="scala.actors.remote.TcpService" data-isabs="false">
+      <a id="TcpService:TcpService"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="TcpService.html"><span class="name">TcpService</span></a>
+        
+        <span class="result"> extends Thread with Service</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.actors.remote.UnlinkFromFun" data-isabs="false">
+      <a id="UnlinkFromFun:UnlinkFromFun"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="UnlinkFromFun.html"><span class="name">UnlinkFromFun</span></a>
+        
+        <span class="result"> extends (AbstractActor, Proxy) ⇒ Unit with Serializable</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="scala.actors.remote.FreshNameCreator" data-isabs="false">
+      <a id="FreshNameCreator:FreshNameCreator"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="FreshNameCreator$.html"><span class="name">FreshNameCreator</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.actors.remote.RemoteActor" data-isabs="false">
+      <a id="RemoteActor:RemoteActor"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="RemoteActor$.html"><span class="name">RemoteActor</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt"> This object provides methods for creating, registering, and
+ selecting remotely accessible actors.</p>
+    </li><li visbl="pub" name="scala.actors.remote.TcpService" data-isabs="false">
+      <a id="TcpService:TcpService"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="TcpService$.html"><span class="name">TcpService</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.actors.remote.Terminate" data-isabs="false">
+      <a id="Terminate:Terminate"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="Terminate$.html"><span class="name">Terminate</span></a>
+        
+        <span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+      </div>
+
+      <div id="tooltip"></div>
+
+    </body>
+      </html>

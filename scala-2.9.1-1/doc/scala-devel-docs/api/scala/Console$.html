@@ -1,0 +1,1096 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>scala.Console</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../lib/template.css" />
+      <script type="text/javascript" src="../lib/jquery.js"></script>
+      <script type="text/javascript" src="../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../lib/template.js"></script>
+      <script type="text/javascript" src="../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../lib/object_big.png" />
+        <p id="owner"><a name="scala" class="extype" href="package.html">scala</a></p>
+        <h1>Console</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">Console</span>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Implements functionality for
+ printing Scala values on the terminal as well as reading specific values.
+ Also defines
+ constants for marking up text on ANSI terminals.
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://lampsvn.epfl.ch/trac/scala/browser/scala/tags/R_2_9_1_final/src//library/scala/Console.scala#L1">Console.scala</a></dd><dt>Version</dt><dd><p>1.0, 03/09/2003
+</p></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent">AnyRef, <a name="scala.Any" class="extype" href="Any.html">Any</a></div>
+        </div></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          <div id="order">
+                <span class="filtertype">Ordering</span>
+                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+              </div>
+          <div id="ancestors">
+                <span class="filtertype">Inherited</span>
+                <ol><li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show all</span></li></ol>
+                <ol id="linearization"><li name="scala.Console" class="in"><span>Console</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        
+
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">##</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#BLACK" data-isabs="false">
+      <a id="BLACK:java.lang.String(&quot;\033[30m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">BLACK</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[30m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Foreground color for ANSI black</p><div class="fullcomment"><div class="comment cmt"><p>Foreground color for ANSI black</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#BLACK_B" data-isabs="false">
+      <a id="BLACK_B:java.lang.String(&quot;\033[40m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">BLACK_B</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[40m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Background color for ANSI black</p><div class="fullcomment"><div class="comment cmt"><p>Background color for ANSI black</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#BLINK" data-isabs="false">
+      <a id="BLINK:java.lang.String(&quot;\033[5m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">BLINK</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[5m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">ANSI blink</p><div class="fullcomment"><div class="comment cmt"><p>ANSI blink</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#BLUE" data-isabs="false">
+      <a id="BLUE:java.lang.String(&quot;\033[34m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">BLUE</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[34m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Foreground color for ANSI blue</p><div class="fullcomment"><div class="comment cmt"><p>Foreground color for ANSI blue</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#BLUE_B" data-isabs="false">
+      <a id="BLUE_B:java.lang.String(&quot;\033[44m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">BLUE_B</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[44m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Background color for ANSI blue</p><div class="fullcomment"><div class="comment cmt"><p>Background color for ANSI blue</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#BOLD" data-isabs="false">
+      <a id="BOLD:java.lang.String(&quot;\033[1m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">BOLD</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[1m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">ANSI bold</p><div class="fullcomment"><div class="comment cmt"><p>ANSI bold</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#CYAN" data-isabs="false">
+      <a id="CYAN:java.lang.String(&quot;\033[36m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">CYAN</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[36m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Foreground color for ANSI cyan</p><div class="fullcomment"><div class="comment cmt"><p>Foreground color for ANSI cyan</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#CYAN_B" data-isabs="false">
+      <a id="CYAN_B:java.lang.String(&quot;\033[46m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">CYAN_B</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[46m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Background color for ANSI cyan</p><div class="fullcomment"><div class="comment cmt"><p>Background color for ANSI cyan</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#GREEN" data-isabs="false">
+      <a id="GREEN:java.lang.String(&quot;\033[32m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">GREEN</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[32m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Foreground color for ANSI green</p><div class="fullcomment"><div class="comment cmt"><p>Foreground color for ANSI green</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#GREEN_B" data-isabs="false">
+      <a id="GREEN_B:java.lang.String(&quot;\033[42m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">GREEN_B</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[42m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Background color for ANSI green</p><div class="fullcomment"><div class="comment cmt"><p>Background color for ANSI green</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#INVISIBLE" data-isabs="false">
+      <a id="INVISIBLE:java.lang.String(&quot;\033[8m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">INVISIBLE</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[8m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">ANSI invisible</p><div class="fullcomment"><div class="comment cmt"><p>ANSI invisible</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#MAGENTA" data-isabs="false">
+      <a id="MAGENTA:java.lang.String(&quot;\033[35m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">MAGENTA</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[35m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Foreground color for ANSI magenta</p><div class="fullcomment"><div class="comment cmt"><p>Foreground color for ANSI magenta</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#MAGENTA_B" data-isabs="false">
+      <a id="MAGENTA_B:java.lang.String(&quot;\033[45m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">MAGENTA_B</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[45m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Background color for ANSI magenta</p><div class="fullcomment"><div class="comment cmt"><p>Background color for ANSI magenta</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#RED" data-isabs="false">
+      <a id="RED:java.lang.String(&quot;\033[31m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">RED</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[31m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Foreground color for ANSI red</p><div class="fullcomment"><div class="comment cmt"><p>Foreground color for ANSI red</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#RED_B" data-isabs="false">
+      <a id="RED_B:java.lang.String(&quot;\033[41m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">RED_B</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[41m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Background color for ANSI red</p><div class="fullcomment"><div class="comment cmt"><p>Background color for ANSI red</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#RESET" data-isabs="false">
+      <a id="RESET:java.lang.String(&quot;\033[0m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">RESET</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[0m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reset ANSI styles</p><div class="fullcomment"><div class="comment cmt"><p>Reset ANSI styles</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#REVERSED" data-isabs="false">
+      <a id="REVERSED:java.lang.String(&quot;\033[7m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">REVERSED</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[7m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">ANSI reversed</p><div class="fullcomment"><div class="comment cmt"><p>ANSI reversed</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#UNDERLINED" data-isabs="false">
+      <a id="UNDERLINED:java.lang.String(&quot;\033[4m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">UNDERLINED</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[4m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">ANSI underlines</p><div class="fullcomment"><div class="comment cmt"><p>ANSI underlines</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#WHITE" data-isabs="false">
+      <a id="WHITE:java.lang.String(&quot;\033[37m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">WHITE</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[37m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Foreground color for ANSI white</p><div class="fullcomment"><div class="comment cmt"><p>Foreground color for ANSI white</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#WHITE_B" data-isabs="false">
+      <a id="WHITE_B:java.lang.String(&quot;\033[47m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">WHITE_B</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[47m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Background color for ANSI white</p><div class="fullcomment"><div class="comment cmt"><p>Background color for ANSI white</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#YELLOW" data-isabs="false">
+      <a id="YELLOW:java.lang.String(&quot;\033[33m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">YELLOW</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[33m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Foreground color for ANSI yellow</p><div class="fullcomment"><div class="comment cmt"><p>Foreground color for ANSI yellow</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#YELLOW_B" data-isabs="false">
+      <a id="YELLOW_B:java.lang.String(&quot;\033[43m&quot;)"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">YELLOW_B</span>
+        
+        <span class="result">: java.lang.String(&quot;\033[43m&quot;)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Background color for ANSI yellow</p><div class="fullcomment"><div class="comment cmt"><p>Background color for ANSI yellow</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="Any.html">Any</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">clone</span>
+        
+        <span class="params">()</span><span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">eq</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">equals</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  See equals in <a name="scala.Any" class="extype" href="Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#err" data-isabs="false">
+      <a id="err:PrintStream"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">err</span>
+        
+        <span class="result">: <span name="java.io.PrintStream" class="extype">PrintStream</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The default error, can be overridden by <code>setErr</code></p>
+    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">finalize</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#flush" data-isabs="false">
+      <a id="flush():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">flush</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Flushes the output stream.</p><div class="fullcomment"><div class="comment cmt"><p>Flushes the output stream. This function is required when partial
+ output (i.e. output not terminated by a newline character) has
+ to be made visible on the terminal.
+</p></div></div>
+    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getClass</span>
+        
+        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A representation that corresponds to the dynamic class of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>A representation that corresponds to the dynamic class of the receiver object.</p><p> The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hashCode</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a name="scala.Any" class="extype" href="Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#in" data-isabs="false">
+      <a id="in:BufferedReader"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">in</span>
+        
+        <span class="result">: <span name="java.io.BufferedReader" class="extype">BufferedReader</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The default input, can be overridden by <code>setIn</code></p>
+    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: <a name="scala.Boolean" class="extype" href="Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">ne</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notify</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notifyAll</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#out" data-isabs="false">
+      <a id="out:PrintStream"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">out</span>
+        
+        <span class="result">: <span name="java.io.PrintStream" class="extype">PrintStream</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The default output, can be overridden by <code>setOut</code></p>
+    </li><li visbl="pub" name="scala.Console#print" data-isabs="false">
+      <a id="print(Any):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">print</span>
+        
+        <span class="params">(<span name="obj">obj: <a name="scala.Any" class="extype" href="Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Prints an object to <code>out</code> using its <code>toString</code> method.</p><div class="fullcomment"><div class="comment cmt"><p>Prints an object to <code>out</code> using its <code>toString</code> method.
+</p></div><dl class="paramcmts block"><dt class="param">obj</dt><dd class="cmt"><p>the object to print; may be null.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#printf" data-isabs="false">
+      <a id="printf(String,Any*):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">printf</span>
+        
+        <span class="params">(<span name="text">text: String</span>, <span name="args">args: <a name="scala.Any" class="extype" href="Any.html">Any</a>*</span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">   Prints its arguments as a formatted string to the default output, based on a string
+   pattern (in a fashion similar to printf in C).</p><div class="fullcomment"><div class="comment cmt"><p>   Prints its arguments as a formatted string to the default output, based on a string
+   pattern (in a fashion similar to printf in C).</p><p>   The interpretation of the formatting patterns is described in
+   <a href="" target="contentFrame" class="java/util/Formatter">
+   <code>java.util.Formatter</code></a>.
+</p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>the pattern for formatting the arguments.</p></dd><dt class="param">args</dt><dd class="cmt"><p>the arguments used to instantiating the pattern.</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#println" data-isabs="false">
+      <a id="println(Any):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">println</span>
+        
+        <span class="params">(<span name="x">x: <a name="scala.Any" class="extype" href="Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Prints out an object to the default output, followed by a newline character.</p><div class="fullcomment"><div class="comment cmt"><p>Prints out an object to the default output, followed by a newline character.
+</p></div><dl class="paramcmts block"><dt class="param">x</dt><dd class="cmt"><p>the object to print.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#println" data-isabs="false">
+      <a id="println():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">println</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Prints a newline character on the default output.</p>
+    </li><li visbl="pub" name="scala.Console#readBoolean" data-isabs="false">
+      <a id="readBoolean():Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readBoolean</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Boolean" class="extype" href="Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads a boolean value from an entire line of the default input.</p><div class="fullcomment"><div class="comment cmt"><p>Reads a boolean value from an entire line of the default input.
+Has a fairly liberal interpretation of the input.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the boolean value read, or false if it couldn't be converted to a boolean</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readByte" data-isabs="false">
+      <a id="readByte():Byte"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readByte</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Byte" class="extype" href="Byte.html">Byte</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads a byte value from an entire line of the default input.</p><div class="fullcomment"><div class="comment cmt"><p>Reads a byte value from an entire line of the default input.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the Byte that was read</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readChar" data-isabs="false">
+      <a id="readChar():Char"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readChar</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Char" class="extype" href="Char.html">Char</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads a char value from an entire line of the default input.</p><div class="fullcomment"><div class="comment cmt"><p>Reads a char value from an entire line of the default input.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the Char that was read</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readDouble" data-isabs="false">
+      <a id="readDouble():Double"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readDouble</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Double" class="extype" href="Double.html">Double</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads a double value from an entire line of the default input.</p><div class="fullcomment"><div class="comment cmt"><p>Reads a double value from an entire line of the default input.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the Double that was read.</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readFloat" data-isabs="false">
+      <a id="readFloat():Float"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readFloat</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Float" class="extype" href="Float.html">Float</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads a float value from an entire line of the default input.</p><div class="fullcomment"><div class="comment cmt"><p>Reads a float value from an entire line of the default input.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the Float that was read.</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readInt" data-isabs="false">
+      <a id="readInt():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readInt</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads an int value from an entire line of the default input.</p><div class="fullcomment"><div class="comment cmt"><p>Reads an int value from an entire line of the default input.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the Int that was read</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readLine" data-isabs="false">
+      <a id="readLine(String,Any*):String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readLine</span>
+        
+        <span class="params">(<span name="text">text: String</span>, <span name="args">args: <a name="scala.Any" class="extype" href="Any.html">Any</a>*</span>)</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Print formatted text to the default output and read a full line from the default input.</p><div class="fullcomment"><div class="comment cmt"><p>Print formatted text to the default output and read a full line from the default input.
+Returns null if the end of the input stream has been reached.
+</p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>the format of the text to print out, as in <code>printf</code>.</p></dd><dt class="param">args</dt><dd class="cmt"><p>the parameters used to instantiate the format, as in <code>printf</code>.</p></dd><dt>returns</dt><dd class="cmt"><p>the string read from the default input
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readLine" data-isabs="false">
+      <a id="readLine():String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readLine</span>
+        
+        <span class="params">()</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read a full line from the default input.</p><div class="fullcomment"><div class="comment cmt"><p>Read a full line from the default input.  Returns <code>null</code> if the end of the
+input stream has been reached.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the string read from the terminal or null if the end of stream was reached.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readLong" data-isabs="false">
+      <a id="readLong():Long"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readLong</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Long" class="extype" href="Long.html">Long</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads an long value from an entire line of the default input.</p><div class="fullcomment"><div class="comment cmt"><p>Reads an long value from an entire line of the default input.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the Long that was read</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readShort" data-isabs="false">
+      <a id="readShort():Short"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readShort</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Short" class="extype" href="Short.html">Short</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads a short value from an entire line of the default input.</p><div class="fullcomment"><div class="comment cmt"><p>Reads a short value from an entire line of the default input.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the short that was read</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readf" data-isabs="false">
+      <a id="readf(String):List[Any]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readf</span>
+        
+        <span class="params">(<span name="format">format: String</span>)</span><span class="result">: List[<a name="scala.Any" class="extype" href="Any.html">Any</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads in some structured input (from the default input), specified by a format specifier.</p><div class="fullcomment"><div class="comment cmt"><p>Reads in some structured input (from the default input), specified by a format specifier.
+ See class <code>java.text.MessageFormat</code> for details of
+ the format specification.
+</p></div><dl class="paramcmts block"><dt class="param">format</dt><dd class="cmt"><p>the format of the input.</p></dd><dt>returns</dt><dd class="cmt"><p>a list of all extracted values.</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readf1" data-isabs="false">
+      <a id="readf1(String):Any"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readf1</span>
+        
+        <span class="params">(<span name="format">format: String</span>)</span><span class="result">: <a name="scala.Any" class="extype" href="Any.html">Any</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads in some structured input (from the default input), specified by a format specifier, returning
+ only the first value extracted, according to the format specification.</p><div class="fullcomment"><div class="comment cmt"><p>Reads in some structured input (from the default input), specified by a format specifier, returning
+ only the first value extracted, according to the format specification.
+</p></div><dl class="paramcmts block"><dt class="param">format</dt><dd class="cmt"><p>format string, as accepted by <code>readf</code>.</p></dd><dt>returns</dt><dd class="cmt"><p>The first value that was extracted from the input
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readf2" data-isabs="false">
+      <a id="readf2(String):(Any, Any)"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readf2</span>
+        
+        <span class="params">(<span name="format">format: String</span>)</span><span class="result">: (<a name="scala.Any" class="extype" href="Any.html">Any</a>, <a name="scala.Any" class="extype" href="Any.html">Any</a>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads in some structured input (from the default input), specified by a format specifier, returning
+ only the first two values extracted, according to the format specification.</p><div class="fullcomment"><div class="comment cmt"><p>Reads in some structured input (from the default input), specified by a format specifier, returning
+ only the first two values extracted, according to the format specification.
+</p></div><dl class="paramcmts block"><dt class="param">format</dt><dd class="cmt"><p>format string, as accepted by <code>readf</code>.</p></dd><dt>returns</dt><dd class="cmt"><p>A <a name="scala.Tuple2" class="extype" href="Tuple2.html">Tuple2</a> containing the first two values extracted
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#readf3" data-isabs="false">
+      <a id="readf3(String):(Any, Any, Any)"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readf3</span>
+        
+        <span class="params">(<span name="format">format: String</span>)</span><span class="result">: (<a name="scala.Any" class="extype" href="Any.html">Any</a>, <a name="scala.Any" class="extype" href="Any.html">Any</a>, <a name="scala.Any" class="extype" href="Any.html">Any</a>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reads in some structured input (from the default input), specified by a format specifier, returning
+ only the first three values extracted, according to the format specification.</p><div class="fullcomment"><div class="comment cmt"><p>Reads in some structured input (from the default input), specified by a format specifier, returning
+ only the first three values extracted, according to the format specification.
+</p></div><dl class="paramcmts block"><dt class="param">format</dt><dd class="cmt"><p>format string, as accepted by <code>readf</code>.</p></dd><dt>returns</dt><dd class="cmt"><p>A <a name="scala.Tuple3" class="extype" href="Tuple3.html">Tuple3</a> containing the first three values extracted
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#setErr" data-isabs="false">
+      <a id="setErr(OutputStream):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">setErr</span>
+        
+        <span class="params">(<span name="err">err: <span name="java.io.OutputStream" class="extype">OutputStream</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the default error stream.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the default error stream.
+</p></div><dl class="paramcmts block"><dt class="param">err</dt><dd class="cmt"><p>the new error stream.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#setErr" data-isabs="false">
+      <a id="setErr(PrintStream):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">setErr</span>
+        
+        <span class="params">(<span name="err">err: <span name="java.io.PrintStream" class="extype">PrintStream</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the default error stream.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the default error stream.
+</p></div><dl class="paramcmts block"><dt class="param">err</dt><dd class="cmt"><p>the new error stream.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#setIn" data-isabs="false">
+      <a id="setIn(InputStream):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">setIn</span>
+        
+        <span class="params">(<span name="in">in: <span name="java.io.InputStream" class="extype">InputStream</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the default input stream.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the default input stream.
+</p></div><dl class="paramcmts block"><dt class="param">in</dt><dd class="cmt"><p>the new input stream.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#setIn" data-isabs="false">
+      <a id="setIn(Reader):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">setIn</span>
+        
+        <span class="params">(<span name="reader">reader: <span name="java.io.Reader" class="extype">Reader</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the default input stream.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the default input stream.
+</p></div><dl class="paramcmts block"><dt class="param">reader</dt><dd class="cmt"><p>specifies the new input stream.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#setOut" data-isabs="false">
+      <a id="setOut(OutputStream):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">setOut</span>
+        
+        <span class="params">(<span name="out">out: <span name="java.io.OutputStream" class="extype">OutputStream</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the default output stream.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the default output stream.
+</p></div><dl class="paramcmts block"><dt class="param">out</dt><dd class="cmt"><p>the new output stream.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#setOut" data-isabs="false">
+      <a id="setOut(PrintStream):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">setOut</span>
+        
+        <span class="params">(<span name="out">out: <span name="java.io.PrintStream" class="extype">PrintStream</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the default output stream.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the default output stream.
+</p></div><dl class="paramcmts block"><dt class="param">out</dt><dd class="cmt"><p>the new output stream.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
+      <a id="synchronized[T0](⇒ T0):T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">synchronized</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">toString</span>
+        
+        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="Long.html">Long</a></span>, <span name="arg1">arg1: <a name="scala.Int" class="extype" href="Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#withErr" data-isabs="false">
+      <a id="withErr[T](OutputStream)(⇒ T):T"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">withErr</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="err">err: <span name="java.io.OutputStream" class="extype">OutputStream</span></span>)</span><span class="params">(<span name="thunk">thunk: ⇒ T</span>)</span><span class="result">: T</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the default error stream for the duration
+ of execution of one thunk.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the default error stream for the duration
+ of execution of one thunk.
+</p></div><dl class="paramcmts block"><dt class="param">err</dt><dd class="cmt"><p>the new error stream.</p></dd><dt class="param">thunk</dt><dd class="cmt"><p>the code to execute with
+              the new error stream active</p></dd><dt>returns</dt><dd class="cmt"><p>the results of <code>thunk</code></p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>withErr[T](err:PrintStream)(thunk: =&gt;T)</code>
+</p></span></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#withErr" data-isabs="false">
+      <a id="withErr[T](PrintStream)(⇒ T):T"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">withErr</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="err">err: <span name="java.io.PrintStream" class="extype">PrintStream</span></span>)</span><span class="params">(<span name="thunk">thunk: ⇒ T</span>)</span><span class="result">: T</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Set the default error stream for the duration
+ of execution of one thunk.</p><div class="fullcomment"><div class="comment cmt"><p>Set the default error stream for the duration
+ of execution of one thunk.</p></div><dl class="paramcmts block"><dt class="param">err</dt><dd class="cmt"><p>the new error stream.</p></dd><dt class="param">thunk</dt><dd class="cmt"><p>the code to execute with
+              the new error stream active</p></dd><dt>returns</dt><dd class="cmt"><p>the results of <code>thunk</code></p></dd></dl><dl class="attributes block"> <div class="block">Example:
+                <ol><li class="cmt"><p></p><pre>
+ withErr(Console.out) { println(&quot;This goes to default _out_&quot;) }
+</pre></li></ol>
+              </div><dt>See also</dt><dd><span class="cmt"><p><code>withErr[T](err:OutputStream)(thunk: =&gt;T)</code>
+</p></span></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#withIn" data-isabs="false">
+      <a id="withIn[T](InputStream)(⇒ T):T"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">withIn</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="in">in: <span name="java.io.InputStream" class="extype">InputStream</span></span>)</span><span class="params">(<span name="thunk">thunk: ⇒ T</span>)</span><span class="result">: T</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the default input stream for the duration
+ of execution of one thunk.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the default input stream for the duration
+ of execution of one thunk.
+</p></div><dl class="paramcmts block"><dt class="param">in</dt><dd class="cmt"><p>the new input stream.</p></dd><dt class="param">thunk</dt><dd class="cmt"><p>the code to execute with
+              the new input stream active</p></dd><dt>returns</dt><dd class="cmt"><p>the results of <code>thunk</code></p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>withIn[T](reader:Reader)(thunk: =&gt;T)</code>
+</p></span></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#withIn" data-isabs="false">
+      <a id="withIn[T](Reader)(⇒ T):T"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">withIn</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="reader">reader: <span name="java.io.Reader" class="extype">Reader</span></span>)</span><span class="params">(<span name="thunk">thunk: ⇒ T</span>)</span><span class="result">: T</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the default input stream for the duration
+ of execution of one thunk.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the default input stream for the duration
+ of execution of one thunk.
+</p></div><dl class="paramcmts block"><dt class="param">thunk</dt><dd class="cmt"><p>the code to execute with
+              the new input stream active
+</p></dd><dt>returns</dt><dd class="cmt"><p>the results of <code>thunk</code></p></dd></dl><dl class="attributes block"> <div class="block">Example:
+                <ol><li class="cmt"><p></p><pre>
+ val someFile:Reader = openFile(&quot;file.txt&quot;)
+ withIn(someFile) {
+   // Reads a line from file.txt instead of default input
+   println(readLine)
+ }
+</pre></li></ol>
+              </div><dt>See also</dt><dd><span class="cmt"><p><code>withIn[T](in:InputStream)(thunk: =&gt;T)</code>
+</p></span></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#withOut" data-isabs="false">
+      <a id="withOut[T](OutputStream)(⇒ T):T"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">withOut</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="out">out: <span name="java.io.OutputStream" class="extype">OutputStream</span></span>)</span><span class="params">(<span name="thunk">thunk: ⇒ T</span>)</span><span class="result">: T</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the default output stream for the duration
+ of execution of one thunk.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the default output stream for the duration
+ of execution of one thunk.</p></div><dl class="paramcmts block"><dt class="param">out</dt><dd class="cmt"><p>the new output stream.</p></dd><dt class="param">thunk</dt><dd class="cmt"><p>the code to execute with
+              the new output stream active</p></dd><dt>returns</dt><dd class="cmt"><p>the results of <code>thunk</code></p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>withOut[T](out:PrintStream)(thunk: =&gt; T)</code>
+</p></span></dd></dl></div>
+    </li><li visbl="pub" name="scala.Console#withOut" data-isabs="false">
+      <a id="withOut[T](PrintStream)(⇒ T):T"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">withOut</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="out">out: <span name="java.io.PrintStream" class="extype">PrintStream</span></span>)</span><span class="params">(<span name="thunk">thunk: ⇒ T</span>)</span><span class="result">: T</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the default output stream for the duration
+ of execution of one thunk.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the default output stream for the duration
+ of execution of one thunk.
+</p></div><dl class="paramcmts block"><dt class="param">out</dt><dd class="cmt"><p>the new output stream.</p></dd><dt class="param">thunk</dt><dd class="cmt"><p>the code to execute with
+              the new output stream active</p></dd><dt>returns</dt><dd class="cmt"><p>the results of <code>thunk</code></p></dd></dl><dl class="attributes block"> <div class="block">Example:
+                <ol><li class="cmt"><p></p><pre>
+ withOut(Console.err) { println(&quot;This goes to default _error_&quot;) }
+</pre></li></ol>
+              </div><dt>See also</dt><dd><span class="cmt"><p><code>withOut[T](out:OutputStream)(thunk: =&gt; T)</code>
+</p></span></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div name="scala.AnyRef" class="parent">
+              <h3>Inherited from AnyRef</h3>
+            </div><div name="scala.Any" class="parent">
+              <h3>Inherited from <a name="scala.Any" class="extype" href="Any.html">Any</a></h3>
+            </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+    </body>
+      </html>

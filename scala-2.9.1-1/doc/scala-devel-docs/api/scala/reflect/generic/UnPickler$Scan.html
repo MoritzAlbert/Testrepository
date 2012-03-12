@@ -1,0 +1,1140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>scala.reflect.generic.UnPickler.Scan</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../lib/class_big.png" />
+        <p id="owner"><a name="scala" class="extype" href="../../package.html">scala</a>.<a name="scala.reflect" class="extype" href="../package.html">reflect</a>.<a name="scala.reflect.generic" class="extype" href="package.html">generic</a>.<a name="scala.reflect.generic.UnPickler" class="extype" href="UnPickler.html">UnPickler</a></p>
+        <h1>Scan</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Scan</span>
+        
+        <span class="result"> extends <a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></span>
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Source</dt><dd><a href="https://lampsvn.epfl.ch/trac/scala/browser/scala/tags/R_2_9_1_final/src//library/scala/reflect/generic/UnPickler.scala#L1">UnPickler.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a>, AnyRef, <a name="scala.Any" class="extype" href="../../Any.html">Any</a></div>
+        </div></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          <div id="order">
+                <span class="filtertype">Ordering</span>
+                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+              </div>
+          <div id="ancestors">
+                <span class="filtertype">Inherited</span>
+                <ol><li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show all</span></li></ol>
+                <ol id="linearization"><li name="scala.reflect.generic.UnPickler.Scan" class="in"><span>Scan</span></li><li name="scala.reflect.generic.PickleBuffer" class="in"><span>PickleBuffer</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="scala.reflect.generic.UnPickler.Scan#this" data-isabs="false">
+      <a id="this:Scan"></a>
+      <h4 class="signature">
+      <span class="kind">new</span>
+      <span class="symbol">
+        <span class="name">Scan</span>
+        
+        <span class="params">(<span name="bytes">bytes: <a name="scala.Array" class="extype" href="../../Array.html">Array</a>[<a name="scala.Byte" class="extype" href="../../Byte.html">Byte</a>]</span>, <span name="offset">offset: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="classRoot">classRoot: Symbol</span>, <span name="moduleRoot">moduleRoot: Symbol</span>, <span name="filename">filename: String</span>)</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members" id="values">
+              <h3>Abstract Value Members</h3>
+              <ol><li visbl="pub" name="scala.reflect.generic.UnPickler.Scan#inferMethodAlternative" data-isabs="true">
+      <a id="inferMethodAlternative(Tree,List[Type],Type):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">inferMethodAlternative</span>
+        
+        <span class="params">(<span name="fun">fun: <a name="scala.reflect.generic.Trees.Tree" class="extype" href="Trees$Tree.html">Tree</a></span>, <span name="argtpes">argtpes: List[Type]</span>, <span name="restpe">restpe: Type</span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">pre: <code>fun</code> points to a symbol with an overloaded type.</p><div class="fullcomment"><div class="comment cmt"><p>pre: <code>fun</code> points to a symbol with an overloaded type.
+ Selects the overloaded alternative of <code>fun</code> which best matches given
+ argument types <code>argtpes</code> and result type <code>restpe</code>. Stores this alternative as
+ the symbol of <code>fun</code>.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.UnPickler.Scan#newLazyTypeRef" data-isabs="true">
+      <a id="newLazyTypeRef(Int):LazyType"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">newLazyTypeRef</span>
+        
+        <span class="params">(<span name="i">i: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: LazyType</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a lazy type which when completed returns type at index <code>i</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Create a lazy type which when completed returns type at index <code>i</code>.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.UnPickler.Scan#newLazyTypeRefAndAlias" data-isabs="true">
+      <a id="newLazyTypeRefAndAlias(Int,Int):LazyType"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">newLazyTypeRefAndAlias</span>
+        
+        <span class="params">(<span name="i">i: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="j">j: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: LazyType</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a lazy type which when completed returns type at index <code>i</code> and sets alias
+ of completed symbol to symbol at index <code>j</code>
+</p><div class="fullcomment"><div class="comment cmt"><p>Create a lazy type which when completed returns type at index <code>i</code> and sets alias
+ of completed symbol to symbol at index <code>j</code>
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Concrete Value Members</h3>
+              <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">##</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#at" data-isabs="false">
+      <a id="at[T&lt;:AnyRef](Int,() ⇒ T):T"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">at</span>
+        <span class="tparams">[<span name="T">T &lt;: AnyRef</span>]</span>
+        <span class="params">(<span name="i">i: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="op">op: () ⇒ T</span>)</span><span class="result">: T</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">If entry at <code>i</code> is undefined, define it by performing
+ operation <code>op</code> with <code>readIndex at start of i'th
+ entry. Restore <code>readIndex</code> afterwards.
+</p><div class="fullcomment"><div class="comment cmt"><p>If entry at <code>i</code> is undefined, define it by performing
+ operation <code>op</code> with <code>readIndex at start of i'th
+ entry. Restore <code>readIndex</code> afterwards.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">clone</span>
+        
+        <span class="params">()</span><span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#createIndex" data-isabs="false">
+      <a id="createIndex:Array[Int]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">createIndex</span>
+        
+        <span class="result">: <a name="scala.Array" class="extype" href="../../Array.html">Array</a>[<a name="scala.Int" class="extype" href="../../Int.html">Int</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Pickle = majorVersion_Nat minorVersion_Nat nbEntries_Nat {Entry}
+ Entry  = type_Nat length_Nat [actual entries]</p><div class="fullcomment"><div class="comment cmt"><p>Pickle = majorVersion_Nat minorVersion_Nat nbEntries_Nat {Entry}
+ Entry  = type_Nat length_Nat [actual entries]</p><p> Assumes that the ..Version_Nat are already consumed.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an array mapping entry numbers to locations in
+ the byte array where the entries start.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#debug" data-isabs="false">
+      <a id="debug:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">debug</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#ensureCapacity" data-isabs="false">
+      <a id="ensureCapacity(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">ensureCapacity</span>
+        
+        <span class="params">(<span name="capacity">capacity: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">eq</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">equals</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  See equals in <a name="scala.Any" class="extype" href="../../Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#errorBadSignature" data-isabs="false">
+      <a id="errorBadSignature(String):Nothing"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">errorBadSignature</span>
+        
+        <span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <a name="scala.Nothing" class="extype" href="../../Nothing.html">Nothing</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#errorMissingRequirement" data-isabs="false">
+      <a id="errorMissingRequirement(Name,Symbol):Nothing"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">errorMissingRequirement</span>
+        
+        <span class="params">(<span name="name">name: Name</span>, <span name="owner">owner: Symbol</span>)</span><span class="result">: <a name="scala.Nothing" class="extype" href="../../Nothing.html">Nothing</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#errorMissingRequirement" data-isabs="false">
+      <a id="errorMissingRequirement(String):Nothing"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">errorMissingRequirement</span>
+        
+        <span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <a name="scala.Nothing" class="extype" href="../../Nothing.html">Nothing</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">finalize</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getClass</span>
+        
+        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A representation that corresponds to the dynamic class of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>A representation that corresponds to the dynamic class of the receiver object.</p><p> The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hashCode</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a name="scala.Any" class="extype" href="../../Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#isChildrenEntry" data-isabs="false">
+      <a id="isChildrenEntry(Int):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isChildrenEntry</span>
+        
+        <span class="params">(<span name="i">i: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Does the entry represent children of a symbol?</p><div class="fullcomment"><div class="comment cmt"><p>Does the entry represent children of a symbol?</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#isNameEntry" data-isabs="false">
+      <a id="isNameEntry(Int):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isNameEntry</span>
+        
+        <span class="params">(<span name="i">i: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Does entry represent a name?</p><div class="fullcomment"><div class="comment cmt"><p>Does entry represent a name?</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#isRefinementSymbolEntry" data-isabs="false">
+      <a id="isRefinementSymbolEntry(Int):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isRefinementSymbolEntry</span>
+        
+        <span class="params">(<span name="i">i: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Does entry represent a refinement symbol?
+ pre: Entry is a class symbol
+</p><div class="fullcomment"><div class="comment cmt"><p>Does entry represent a refinement symbol?
+ pre: Entry is a class symbol
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#isSymbolAnnotationEntry" data-isabs="false">
+      <a id="isSymbolAnnotationEntry(Int):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isSymbolAnnotationEntry</span>
+        
+        <span class="params">(<span name="i">i: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Does entry represent a symbol annotation?</p><div class="fullcomment"><div class="comment cmt"><p>Does entry represent a symbol annotation?</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#isSymbolEntry" data-isabs="false">
+      <a id="isSymbolEntry(Int):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isSymbolEntry</span>
+        
+        <span class="params">(<span name="i">i: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Does entry represent an (internal) symbol</p><div class="fullcomment"><div class="comment cmt"><p>Does entry represent an (internal) symbol</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#isSymbolRef" data-isabs="false">
+      <a id="isSymbolRef(Int):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isSymbolRef</span>
+        
+        <span class="params">(<span name="i">i: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Does entry represent an (internal or external) symbol</p><div class="fullcomment"><div class="comment cmt"><p>Does entry represent an (internal or external) symbol</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">ne</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.UnPickler.Scan#noSuchConstantTag" data-isabs="false">
+      <a id="noSuchConstantTag(Int,Int):Constant"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">noSuchConstantTag</span>
+        
+        <span class="params">(<span name="tag">tag: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="len">len: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.reflect.generic.Constants.Constant" class="extype" href="Constants$Constant.html">Constant</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.UnPickler.Scan#noSuchTreeTag" data-isabs="false">
+      <a id="noSuchTreeTag(Int,Int):Nothing"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">noSuchTreeTag</span>
+        
+        <span class="params">(<span name="tag">tag: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="end">end: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Nothing" class="extype" href="../../Nothing.html">Nothing</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.reflect.generic.UnPickler.Scan#noSuchTypeTag" data-isabs="false">
+      <a id="noSuchTypeTag(Int,Int):Type"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">noSuchTypeTag</span>
+        
+        <span class="params">(<span name="tag">tag: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="end">end: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: Type</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notify</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notifyAll</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#patchNat" data-isabs="false">
+      <a id="patchNat(Int,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">patchNat</span>
+        
+        <span class="params">(<span name="pos">pos: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="x">x: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Write a natural number <code>x</code> at position <code>pos</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Write a natural number <code>x</code> at position <code>pos</code>.
+ If number is more than one byte, shift rest of array to make space.
+</p></div><dl class="paramcmts block"><dt class="param">pos</dt><dd class="cmt"><p>...</p></dd><dt class="param">x</dt><dd class="cmt"><p>...
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#peekByte" data-isabs="false">
+      <a id="peekByte():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">peekByte</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Peek at the current byte without moving the read index</p><div class="fullcomment"><div class="comment cmt"><p>Peek at the current byte without moving the read index</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readAnnotArg" data-isabs="false">
+      <a id="readAnnotArg(Int):Tree"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readAnnotArg</span>
+        
+        <span class="params">(<span name="i">i: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.reflect.generic.Trees.Tree" class="extype" href="Trees$Tree.html">Tree</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read an annotation argument, which is pickled either
+ as a Constant or a Tree.</p><div class="fullcomment"><div class="comment cmt"><p>Read an annotation argument, which is pickled either
+ as a Constant or a Tree.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readAnnotation" data-isabs="false">
+      <a id="readAnnotation():AnnotationInfo"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readAnnotation</span>
+        
+        <span class="params">()</span><span class="result">: AnnotationInfo</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read an annotation and return it.</p><div class="fullcomment"><div class="comment cmt"><p>Read an annotation and return it. Used when unpickling
+ an ANNOTATED(WSELF)tpe or a NestedAnnotArg</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readAnnotationInfo" data-isabs="false">
+      <a id="readAnnotationInfo(Int):AnnotationInfo"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readAnnotationInfo</span>
+        
+        <span class="params">(<span name="end">end: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: AnnotationInfo</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read an AnnotationInfo.</p><div class="fullcomment"><div class="comment cmt"><p>Read an AnnotationInfo. Not to be called directly, use
+ readAnnotation or readSymbolAnnotation
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readAnnotationRef" data-isabs="false">
+      <a id="readAnnotationRef():AnnotationInfo"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readAnnotationRef</span>
+        
+        <span class="params">()</span><span class="result">: AnnotationInfo</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#readByte" data-isabs="false">
+      <a id="readByte():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readByte</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read a byte</p><div class="fullcomment"><div class="comment cmt"><p>Read a byte</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readCaseDefRef" data-isabs="false">
+      <a id="readCaseDefRef():CaseDef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readCaseDefRef</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.reflect.generic.Trees.CaseDef" class="extype" href="Trees$CaseDef.html">CaseDef</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readChildren" data-isabs="false">
+      <a id="readChildren():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readChildren</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read children and store them into the corresponding symbol.</p><div class="fullcomment"><div class="comment cmt"><p>Read children and store them into the corresponding symbol.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readClassfileAnnotArg" data-isabs="false">
+      <a id="readClassfileAnnotArg(Int):ClassfileAnnotArg"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readClassfileAnnotArg</span>
+        
+        <span class="params">(<span name="i">i: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: ClassfileAnnotArg</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readConstant" data-isabs="false">
+      <a id="readConstant():Constant"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readConstant</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.reflect.generic.Constants.Constant" class="extype" href="Constants$Constant.html">Constant</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read a constant</p><div class="fullcomment"><div class="comment cmt"><p>Read a constant</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readConstantRef" data-isabs="false">
+      <a id="readConstantRef():Constant"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readConstantRef</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.reflect.generic.Constants.Constant" class="extype" href="Constants$Constant.html">Constant</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readIdentRef" data-isabs="false">
+      <a id="readIdentRef():Ident"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readIdentRef</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.reflect.generic.Trees.Ident" class="extype" href="Trees$Ident.html">Ident</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#readIndex" data-isabs="false">
+      <a id="readIndex:Int"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol">
+        <span class="name">readIndex</span>
+        
+        <span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#readLong" data-isabs="false">
+      <a id="readLong(Int):Long"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readLong</span>
+        
+        <span class="params">(<span name="len">len: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read a long number in signed big endian format, base 256.</p><div class="fullcomment"><div class="comment cmt"><p>Read a long number in signed big endian format, base 256.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#readLongNat" data-isabs="false">
+      <a id="readLongNat():Long"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readLongNat</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.UnPickler.Scan#readModifiers" data-isabs="false">
+      <a id="readModifiers():Modifiers"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readModifiers</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.reflect.generic.Trees.Modifiers" class="extype" href="Trees$Modifiers.html">Modifiers</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readModifiersRef" data-isabs="false">
+      <a id="readModifiersRef():Modifiers"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readModifiersRef</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.reflect.generic.Trees.Modifiers" class="extype" href="Trees$Modifiers.html">Modifiers</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readName" data-isabs="false">
+      <a id="readName():Name"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readName</span>
+        
+        <span class="params">()</span><span class="result">: Name</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read a name</p><div class="fullcomment"><div class="comment cmt"><p>Read a name</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readNameRef" data-isabs="false">
+      <a id="readNameRef():Name"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readNameRef</span>
+        
+        <span class="params">()</span><span class="result">: Name</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#readNat" data-isabs="false">
+      <a id="readNat():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readNat</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read a natural number in big endian format, base 128.</p><div class="fullcomment"><div class="comment cmt"><p>Read a natural number in big endian format, base 128.
+ All but the last digits have bit 0x80 set.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readSymbol" data-isabs="false">
+      <a id="readSymbol():Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readSymbol</span>
+        
+        <span class="params">()</span><span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read a symbol</p><div class="fullcomment"><div class="comment cmt"><p>Read a symbol</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readSymbolAnnotation" data-isabs="false">
+      <a id="readSymbolAnnotation():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readSymbolAnnotation</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read an annotation and as a side effect store it into
+ the symbol it requests.</p><div class="fullcomment"><div class="comment cmt"><p>Read an annotation and as a side effect store it into
+ the symbol it requests. Called at top-level, for all
+ (symbol, annotInfo) entries.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readSymbolRef" data-isabs="false">
+      <a id="readSymbolRef():Symbol"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readSymbolRef</span>
+        
+        <span class="params">()</span><span class="result">: Symbol</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readTemplateRef" data-isabs="false">
+      <a id="readTemplateRef():Template"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readTemplateRef</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.reflect.generic.Trees.Template" class="extype" href="Trees$Template.html">Template</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readTermNameRef" data-isabs="false">
+      <a id="readTermNameRef():TermName"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readTermNameRef</span>
+        
+        <span class="params">()</span><span class="result">: TermName</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readTree" data-isabs="false">
+      <a id="readTree():Tree"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readTree</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.reflect.generic.Trees.Tree" class="extype" href="Trees$Tree.html">Tree</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readTreeRef" data-isabs="false">
+      <a id="readTreeRef():Tree"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readTreeRef</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.reflect.generic.Trees.Tree" class="extype" href="Trees$Tree.html">Tree</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readType" data-isabs="false">
+      <a id="readType(Boolean):Type"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readType</span>
+        
+        <span class="params">(<span name="forceProperType">forceProperType: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a> = <span class="symbol">false</span></span>)</span><span class="result">: Type</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Read a type
+</p><div class="fullcomment"><div class="comment cmt"><p>Read a type
+</p></div><dl class="paramcmts block"><dt class="param">forceProperType</dt><dd class="cmt"><p>is used to ease the transition to NullaryMethodTypes (commentmarker: NMT_TRANSITION)
+       the flag say that a type of kind * is expected, so that PolyType(tps, restpe) can be disambiguated to PolyType(tps, NullaryMethodType(restpe))
+       (if restpe is not a ClassInfoType, a MethodType or a NullaryMethodType, which leaves TypeRef/SingletonType -- the latter would make the polytype a type constructor)
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readTypeDefRef" data-isabs="false">
+      <a id="readTypeDefRef():TypeDef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readTypeDefRef</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.reflect.generic.Trees.TypeDef" class="extype" href="Trees$TypeDef.html">TypeDef</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readTypeNameRef" data-isabs="false">
+      <a id="readTypeNameRef():TypeName"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readTypeNameRef</span>
+        
+        <span class="params">()</span><span class="result">: TypeName</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readTypeRef" data-isabs="false">
+      <a id="readTypeRef():Type"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readTypeRef</span>
+        
+        <span class="params">()</span><span class="result">: Type</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#readValDefRef" data-isabs="false">
+      <a id="readValDefRef():ValDef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">readValDefRef</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.reflect.generic.Trees.ValDef" class="extype" href="Trees$ValDef.html">ValDef</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.UnPickler.Scan#run" data-isabs="false">
+      <a id="run():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">run</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="prt" name="scala.reflect.generic.UnPickler.Scan#symScope" data-isabs="false">
+      <a id="symScope(Symbol):Scope"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">symScope</span>
+        
+        <span class="params">(<span name="sym">sym: Symbol</span>)</span><span class="result">: Scope</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The <code>decls' scope associated with given symbol</code></p><div class="fullcomment"><div class="comment cmt"><p>The <code>decls' scope associated with given symbol</code></p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
+      <a id="synchronized[T0](⇒ T0):T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">synchronized</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#times" data-isabs="false">
+      <a id="times[T](Int,() ⇒ T):List[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">times</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="n">n: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="op">op: () ⇒ T</span>)</span><span class="result">: List[T]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Perform operation <code>op</code> the number of
+ times specified.</p><div class="fullcomment"><div class="comment cmt"><p>Perform operation <code>op</code> the number of
+ times specified.  Concatenate the results into a list.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#toIndexedSeq" data-isabs="false">
+      <a id="toIndexedSeq:IndexedSeq[(Int, Array[Byte])]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">toIndexedSeq</span>
+        
+        <span class="result">: IndexedSeq[(<a name="scala.Int" class="extype" href="../../Int.html">Int</a>, <a name="scala.Array" class="extype" href="../../Array.html">Array</a>[<a name="scala.Byte" class="extype" href="../../Byte.html">Byte</a>])]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the buffer as a sequence of (Int, Array[Byte]) representing
+ (tag, data) of the individual entries.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the buffer as a sequence of (Int, Array[Byte]) representing
+ (tag, data) of the individual entries.  Saves and restores buffer state.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">toString</span>
+        
+        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#until" data-isabs="false">
+      <a id="until[T](Int,() ⇒ T):List[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">until</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="end">end: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="op">op: () ⇒ T</span>)</span><span class="result">: List[T]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Perform operation <code>op</code> until the condition
+ <code>readIndex == end</code> is satisfied.</p><div class="fullcomment"><div class="comment cmt"><p>Perform operation <code>op</code> until the condition
+ <code>readIndex == end</code> is satisfied.
+ Concatenate results into a list.
+</p></div><dl class="paramcmts block"><dt class="param">end</dt><dd class="cmt"><p>...</p></dd><dt class="param">op</dt><dd class="cmt"><p>...</p></dd><dt>returns</dt><dd class="cmt"><p>...
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>, <span name="arg1">arg1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#writeByte" data-isabs="false">
+      <a id="writeByte(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">writeByte</span>
+        
+        <span class="params">(<span name="b">b: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Write a byte of data</p><div class="fullcomment"><div class="comment cmt"><p>Write a byte of data</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#writeIndex" data-isabs="false">
+      <a id="writeIndex:Int"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol">
+        <span class="name">writeIndex</span>
+        
+        <span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#writeLong" data-isabs="false">
+      <a id="writeLong(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">writeLong</span>
+        
+        <span class="params">(<span name="x">x: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Write a long number <code>x</code> in signed big endian format, base 256.</p><div class="fullcomment"><div class="comment cmt"><p>Write a long number <code>x</code> in signed big endian format, base 256.
+</p></div><dl class="paramcmts block"><dt class="param">x</dt><dd class="cmt"><p>The long number to be written.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#writeLongNat" data-isabs="false">
+      <a id="writeLongNat(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">writeLongNat</span>
+        
+        <span class="params">(<span name="x">x: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Like writeNat, but for longs.</p><div class="fullcomment"><div class="comment cmt"><p>Like writeNat, but for longs. This is not the same as
+writeLong, which writes in base 256. Note that the
+binary representation of LongNat is identical to Nat
+if the long value is in the range Int.MIN_VALUE to
+Int.MAX_VALUE.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.reflect.generic.PickleBuffer#writeNat" data-isabs="false">
+      <a id="writeNat(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">writeNat</span>
+        
+        <span class="params">(<span name="x">x: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Write a natural number in big endian format, base 128.</p><div class="fullcomment"><div class="comment cmt"><p>Write a natural number in big endian format, base 128.
+ All but the last digits have bit 0x80 set.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div name="scala.reflect.generic.PickleBuffer" class="parent">
+              <h3>Inherited from <a name="scala.reflect.generic.PickleBuffer" class="extype" href="PickleBuffer.html">PickleBuffer</a></h3>
+            </div><div name="scala.AnyRef" class="parent">
+              <h3>Inherited from AnyRef</h3>
+            </div><div name="scala.Any" class="parent">
+              <h3>Inherited from <a name="scala.Any" class="extype" href="../../Any.html">Any</a></h3>
+            </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+    </body>
+      </html>

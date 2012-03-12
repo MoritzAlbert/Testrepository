@@ -1,0 +1,713 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>scala.collection.immutable.IndexedSeq</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <a title="Go to companion" href="IndexedSeq.html"><img src="../../../lib/object_to_trait_big.png" /></a>
+        <p id="owner"><a name="scala" class="extype" href="../../package.html">scala</a>.<a name="scala.collection" class="extype" href="../package.html">collection</a>.<a name="scala.collection.immutable" class="extype" href="package.html">immutable</a></p>
+        <h1><a title="Go to companion" href="IndexedSeq.html">IndexedSeq</a></h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">IndexedSeq</span>
+        
+        <span class="result"> extends <a name="scala.collection.generic.SeqFactory" class="extype" href="../generic/SeqFactory.html">SeqFactory</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>]</span>
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>   This object provides a set of operations to create <code>IndexedSeq</code> values.
+ The current default implementation of a IndexedSeq is a <code>Vector</code>.
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://lampsvn.epfl.ch/trac/scala/browser/scala/tags/R_2_9_1_final/src//library/scala/collection/immutable/IndexedSeq.scala#L1">IndexedSeq.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a name="scala.collection.generic.SeqFactory" class="extype" href="../generic/SeqFactory.html">SeqFactory</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>], <a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>], <a name="scala.collection.generic.GenericSeqCompanion" class="extype" href="../generic/GenericSeqCompanion.html">GenericSeqCompanion</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>], <a name="scala.collection.generic.GenSeqFactory" class="extype" href="../generic/GenSeqFactory.html">GenSeqFactory</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>], <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>], <a name="scala.collection.generic.GenericCompanion" class="extype" href="../generic/GenericCompanion.html">GenericCompanion</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>], AnyRef, <a name="scala.Any" class="extype" href="../../Any.html">Any</a></div>
+        </div></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          <div id="order">
+                <span class="filtertype">Ordering</span>
+                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+              </div>
+          <div id="ancestors">
+                <span class="filtertype">Inherited</span>
+                <ol><li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show all</span></li></ol>
+                <ol id="linearization"><li name="scala.collection.immutable.IndexedSeq" class="in"><span>IndexedSeq</span></li><li name="scala.collection.generic.SeqFactory" class="in"><span>SeqFactory</span></li><li name="scala.collection.generic.TraversableFactory" class="in"><span>TraversableFactory</span></li><li name="scala.collection.generic.GenericSeqCompanion" class="in"><span>GenericSeqCompanion</span></li><li name="scala.collection.generic.GenSeqFactory" class="in"><span>GenSeqFactory</span></li><li name="scala.collection.generic.GenTraversableFactory" class="in"><span>GenTraversableFactory</span></li><li name="scala.collection.generic.GenericCompanion" class="in"><span>GenericCompanion</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="scala.collection.generic.GenericCompanion#Coll" data-isabs="false">
+      <a id="Coll:Coll"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">Coll</span>
+        
+        <span class="result"> = scala.collection.immutable.IndexedSeq[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The underlying collection type with unknown element type</p><div class="fullcomment"><div class="comment cmt"><p>The underlying collection type with unknown element type</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.GenericCompanion" class="extype" href="../generic/GenericCompanion.html">GenericCompanion</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.GenTraversableFactory.GenericCanBuildFrom" data-isabs="false">
+      <a id="GenericCanBuildFrom:GenericCanBuildFrom[A]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="../generic/GenTraversableFactory$GenericCanBuildFrom.html"><span class="name">GenericCanBuildFrom</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> extends CanBuildFrom[CC[_], A, CC[A]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A generic implementation of the <code>CanBuildFrom</code> trait, which forwards
+ all calls to <code>apply(from)</code> to the <code>genericBuilder</code> method of
+ collection <code>from</code>, and which forwards all calls of <code>apply()</code> to the
+ <code>newBuilder</code> method of this factory.</p>
+    </li><li visbl="pub" name="scala.collection.immutable.IndexedSeq.Impl" data-isabs="false">
+      <a id="Impl:Impl[A]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="IndexedSeq$$Impl.html"><span class="name">Impl</span></a>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result"> extends IndexedSeq[A] with Serializable</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">##</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.GenericSeqCompanion#apply" data-isabs="false">
+      <a id="apply[A](A*):IndexedSeq[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">apply</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="elems">elems: A*</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a indexed sequence with the specified elements.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a indexed sequence with the specified elements.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the indexed sequence's elements</p></dd><dt class="param">elems</dt><dd class="cmt"><p>the elements of the created indexed sequence</p></dd><dt>returns</dt><dd class="cmt"><p>a new indexed sequence with elements <code>elems</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.GenericSeqCompanion" class="extype" href="../generic/GenericSeqCompanion.html">GenericSeqCompanion</a> → <a name="scala.collection.generic.GenericCompanion" class="extype" href="../generic/GenericCompanion.html">GenericCompanion</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.immutable.IndexedSeq#canBuildFrom" data-isabs="false">
+      <a id="canBuildFrom[A]:CanBuildFrom[Coll, A, IndexedSeq[A]]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">canBuildFrom</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result">: <a name="scala.collection.generic.CanBuildFrom" class="extype" href="../generic/CanBuildFrom.html">CanBuildFrom</a>[Coll, A, <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">clone</span>
+        
+        <span class="params">()</span><span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#concat" data-isabs="false">
+      <a id="concat[A](Traversable[A]*):IndexedSeq[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">concat</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="xss">xss: <a name="scala.collection.Traversable" class="extype" href="../Traversable.html">Traversable</a>[A]*</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Concatenates all argument collections into a single indexed sequence.</p><div class="fullcomment"><div class="comment cmt"><p>Concatenates all argument collections into a single indexed sequence.
+</p></div><dl class="paramcmts block"><dt class="param">xss</dt><dd class="cmt"><p>the collections that are to be concatenated.</p></dd><dt>returns</dt><dd class="cmt"><p>the concatenation of all the collections.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.GenericSeqCompanion#empty" data-isabs="false">
+      <a id="empty[A]:IndexedSeq[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">empty</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">An empty collection of type <code>IndexedSeq[A]</code></p><div class="fullcomment"><div class="comment cmt"><p>An empty collection of type <code>IndexedSeq[A]</code></p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the indexed sequence's elements
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.GenericSeqCompanion" class="extype" href="../generic/GenericSeqCompanion.html">GenericSeqCompanion</a> → <a name="scala.collection.generic.GenericCompanion" class="extype" href="../generic/GenericCompanion.html">GenericCompanion</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">eq</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">equals</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  See equals in <a name="scala.Any" class="extype" href="../../Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#fill" data-isabs="false">
+      <a id="fill[A](Int,Int,Int,Int,Int)(⇒ A):IndexedSeq[IndexedSeq[IndexedSeq[IndexedSeq[IndexedSeq[A]]]]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">fill</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="n1">n1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n2">n2: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n3">n3: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n4">n4: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n5">n5: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="params">(<span name="elem">elem: ⇒ A</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]]]]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a five-dimensional indexed sequence containing the results of some element computation a number of times.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a five-dimensional indexed sequence containing the results of some element computation a number of times.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">n4</dt><dd class="cmt"><p>the number of elements in the 4th dimension</p></dd><dt class="param">n5</dt><dd class="cmt"><p>the number of elements in the 5th dimension</p></dd><dt class="param">elem</dt><dd class="cmt"><p>the element computation</p></dd><dt>returns</dt><dd class="cmt"><p>A indexed sequence that contains the results of <code>n1 x n2 x n3 x n4 x n5</code> evaluations of <code>elem</code>.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#fill" data-isabs="false">
+      <a id="fill[A](Int,Int,Int,Int)(⇒ A):IndexedSeq[IndexedSeq[IndexedSeq[IndexedSeq[A]]]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">fill</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="n1">n1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n2">n2: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n3">n3: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n4">n4: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="params">(<span name="elem">elem: ⇒ A</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]]]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a four-dimensional indexed sequence containing the results of some element computation a number of times.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a four-dimensional indexed sequence containing the results of some element computation a number of times.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">n4</dt><dd class="cmt"><p>the number of elements in the 4th dimension</p></dd><dt class="param">elem</dt><dd class="cmt"><p>the element computation</p></dd><dt>returns</dt><dd class="cmt"><p>A indexed sequence that contains the results of <code>n1 x n2 x n3 x n4</code> evaluations of <code>elem</code>.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#fill" data-isabs="false">
+      <a id="fill[A](Int,Int,Int)(⇒ A):IndexedSeq[IndexedSeq[IndexedSeq[A]]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">fill</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="n1">n1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n2">n2: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n3">n3: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="params">(<span name="elem">elem: ⇒ A</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a three-dimensional indexed sequence containing the results of some element computation a number of times.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a three-dimensional indexed sequence containing the results of some element computation a number of times.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">elem</dt><dd class="cmt"><p>the element computation</p></dd><dt>returns</dt><dd class="cmt"><p>A indexed sequence that contains the results of <code>n1 x n2 x n3</code> evaluations of <code>elem</code>.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#fill" data-isabs="false">
+      <a id="fill[A](Int,Int)(⇒ A):IndexedSeq[IndexedSeq[A]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">fill</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="n1">n1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n2">n2: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="params">(<span name="elem">elem: ⇒ A</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a two-dimensional indexed sequence containing the results of some element computation a number of times.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a two-dimensional indexed sequence containing the results of some element computation a number of times.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">elem</dt><dd class="cmt"><p>the element computation</p></dd><dt>returns</dt><dd class="cmt"><p>A indexed sequence that contains the results of <code>n1 x n2</code> evaluations of <code>elem</code>.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#fill" data-isabs="false">
+      <a id="fill[A](Int)(⇒ A):IndexedSeq[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">fill</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="n">n: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="params">(<span name="elem">elem: ⇒ A</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a indexed sequence containing the results of some element computation a number of times.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a indexed sequence containing the results of some element computation a number of times.</p></div><dl class="paramcmts block"><dt class="param">n</dt><dd class="cmt"><p>the number of elements contained in the indexed sequence.</p></dd><dt class="param">elem</dt><dd class="cmt"><p>the element computation</p></dd><dt>returns</dt><dd class="cmt"><p>A indexed sequence that contains the results of <code>n</code> evaluations of <code>elem</code>.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">finalize</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getClass</span>
+        
+        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A representation that corresponds to the dynamic class of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>A representation that corresponds to the dynamic class of the receiver object.</p><p> The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hashCode</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a name="scala.Any" class="extype" href="../../Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#iterate" data-isabs="false">
+      <a id="iterate[A](A,Int)((A) ⇒ A):IndexedSeq[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">iterate</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="start">start: A</span>, <span name="len">len: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="params">(<span name="f">f: (A) ⇒ A</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a indexed sequence containing repeated applications of a function to a start value.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a indexed sequence containing repeated applications of a function to a start value.
+</p></div><dl class="paramcmts block"><dt class="param">start</dt><dd class="cmt"><p>the start value of the indexed sequence</p></dd><dt class="param">len</dt><dd class="cmt"><p>the number of elements contained inthe indexed sequence</p></dd><dt class="param">f</dt><dd class="cmt"><p>the function that's repeatedly applied</p></dd><dt>returns</dt><dd class="cmt"><p>a indexed sequence with <code>len</code> values in the sequence <code>start, f(start), f(f(start)), ...</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">ne</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.immutable.IndexedSeq#newBuilder" data-isabs="false">
+      <a id="newBuilder[A]:Builder[A, IndexedSeq[A]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">newBuilder</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="result">: <a name="scala.collection.mutable.Builder" class="extype" href="../mutable/Builder.html">Builder</a>[A, <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The default builder for <code>IndexedSeq</code> objects.</p><div class="fullcomment"><div class="comment cmt"><p>The default builder for <code>IndexedSeq</code> objects.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the indexed sequence's elements
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.immutable.IndexedSeq" class="extype" href="">IndexedSeq</a> → <a name="scala.collection.generic.GenericCompanion" class="extype" href="../generic/GenericCompanion.html">GenericCompanion</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notify</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notifyAll</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#range" data-isabs="false">
+      <a id="range[T](T,T,T)(Integral[T]):IndexedSeq[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">range</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="start">start: T</span>, <span name="end">end: T</span>, <span name="step">step: T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Integral[T]</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[T]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a indexed sequence containing equally spaced values in some integer interval.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a indexed sequence containing equally spaced values in some integer interval.</p></div><dl class="paramcmts block"><dt class="param">start</dt><dd class="cmt"><p>the start value of the indexed sequence</p></dd><dt class="param">end</dt><dd class="cmt"><p>the end value of the indexed sequence (the first value NOT contained)</p></dd><dt class="param">step</dt><dd class="cmt"><p>the difference between successive elements of the indexed sequence (must be positive or negative)</p></dd><dt>returns</dt><dd class="cmt"><p>a indexed sequence with values <code>start, start + step, ...</code> up to, but excluding <code>end</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#range" data-isabs="false">
+      <a id="range[T](T,T)(Integral[T]):IndexedSeq[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">range</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="start">start: T</span>, <span name="end">end: T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: Integral[T]</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[T]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a indexed sequence containing a sequence of increasing of integers.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a indexed sequence containing a sequence of increasing of integers.
+</p></div><dl class="paramcmts block"><dt class="param">end</dt><dd class="cmt"><p>the end value of the indexed sequence (the first value NOT contained)</p></dd><dt>returns</dt><dd class="cmt"><p>a indexed sequence with values <code>start, start + 1, ..., end - 1</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
+      <a id="synchronized[T0](⇒ T0):T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">synchronized</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#tabulate" data-isabs="false">
+      <a id="tabulate[A](Int,Int,Int,Int,Int)((Int, Int, Int, Int, Int) ⇒ A):IndexedSeq[IndexedSeq[IndexedSeq[IndexedSeq[IndexedSeq[A]]]]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">tabulate</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="n1">n1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n2">n2: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n3">n3: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n4">n4: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n5">n5: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="params">(<span name="f">f: (<a name="scala.Int" class="extype" href="../../Int.html">Int</a>, <a name="scala.Int" class="extype" href="../../Int.html">Int</a>, <a name="scala.Int" class="extype" href="../../Int.html">Int</a>, <a name="scala.Int" class="extype" href="../../Int.html">Int</a>, <a name="scala.Int" class="extype" href="../../Int.html">Int</a>) ⇒ A</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]]]]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a five-dimensional indexed sequence containing values of a given function over ranges of integer values starting from 0.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a five-dimensional indexed sequence containing values of a given function over ranges of integer values starting from 0.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">n4</dt><dd class="cmt"><p>the number of elements in the 4th dimension</p></dd><dt class="param">n5</dt><dd class="cmt"><p>the number of elements in the 5th dimension</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function computing element values</p></dd><dt>returns</dt><dd class="cmt"><p>A indexed sequence consisting of elements <code>f(i1, i2, i3, i4, i5)</code>
+         for <code>0 &lt;= i1 &lt; n1</code>, <code>0 &lt;= i2 &lt; n2</code>, <code>0 &lt;= i3 &lt; n3</code>, <code>0 &lt;= i4 &lt; n4</code>, and <code>0 &lt;= i5 &lt; n5</code>.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#tabulate" data-isabs="false">
+      <a id="tabulate[A](Int,Int,Int,Int)((Int, Int, Int, Int) ⇒ A):IndexedSeq[IndexedSeq[IndexedSeq[IndexedSeq[A]]]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">tabulate</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="n1">n1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n2">n2: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n3">n3: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n4">n4: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="params">(<span name="f">f: (<a name="scala.Int" class="extype" href="../../Int.html">Int</a>, <a name="scala.Int" class="extype" href="../../Int.html">Int</a>, <a name="scala.Int" class="extype" href="../../Int.html">Int</a>, <a name="scala.Int" class="extype" href="../../Int.html">Int</a>) ⇒ A</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]]]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a four-dimensional indexed sequence containing values of a given function over ranges of integer values starting from 0.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a four-dimensional indexed sequence containing values of a given function over ranges of integer values starting from 0.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">n4</dt><dd class="cmt"><p>the number of elements in the 4th dimension</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function computing element values</p></dd><dt>returns</dt><dd class="cmt"><p>A indexed sequence consisting of elements <code>f(i1, i2, i3, i4)</code>
+         for <code>0 &lt;= i1 &lt; n1</code>, <code>0 &lt;= i2 &lt; n2</code>, <code>0 &lt;= i3 &lt; n3</code>, and <code>0 &lt;= i4 &lt; n4</code>.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#tabulate" data-isabs="false">
+      <a id="tabulate[A](Int,Int,Int)((Int, Int, Int) ⇒ A):IndexedSeq[IndexedSeq[IndexedSeq[A]]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">tabulate</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="n1">n1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n2">n2: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n3">n3: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="params">(<span name="f">f: (<a name="scala.Int" class="extype" href="../../Int.html">Int</a>, <a name="scala.Int" class="extype" href="../../Int.html">Int</a>, <a name="scala.Int" class="extype" href="../../Int.html">Int</a>) ⇒ A</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a three-dimensional indexed sequence containing values of a given function over ranges of integer values starting from 0.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a three-dimensional indexed sequence containing values of a given function over ranges of integer values starting from 0.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function computing element values</p></dd><dt>returns</dt><dd class="cmt"><p>A indexed sequence consisting of elements <code>f(i1, i2, i3)</code>
+         for <code>0 &lt;= i1 &lt; n1</code>, <code>0 &lt;= i2 &lt; n2</code>, and <code>0 &lt;= i3 &lt; n3</code>.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#tabulate" data-isabs="false">
+      <a id="tabulate[A](Int,Int)((Int, Int) ⇒ A):IndexedSeq[IndexedSeq[A]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">tabulate</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="n1">n1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="n2">n2: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="params">(<span name="f">f: (<a name="scala.Int" class="extype" href="../../Int.html">Int</a>, <a name="scala.Int" class="extype" href="../../Int.html">Int</a>) ⇒ A</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a two-dimensional indexed sequence containing values of a given function over ranges of integer values starting from 0.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a two-dimensional indexed sequence containing values of a given function over ranges of integer values starting from 0.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function computing element values</p></dd><dt>returns</dt><dd class="cmt"><p>A indexed sequence consisting of elements <code>f(i1, i2)</code>
+         for <code>0 &lt;= i1 &lt; n1</code> and <code>0 &lt;= i2 &lt; n2</code>.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.TraversableFactory#tabulate" data-isabs="false">
+      <a id="tabulate[A](Int)((Int) ⇒ A):IndexedSeq[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">tabulate</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="n">n: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="params">(<span name="f">f: (<a name="scala.Int" class="extype" href="../../Int.html">Int</a>) ⇒ A</span>)</span><span class="result">: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Produces a indexed sequence containing values of a given function over a range of integer values starting from 0.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a indexed sequence containing values of a given function over a range of integer values starting from 0.</p></div><dl class="paramcmts block"><dt class="param">n</dt><dd class="cmt"><p>The number of elements in the indexed sequence</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function computing element values</p></dd><dt>returns</dt><dd class="cmt"><p>A indexed sequence consisting of elements <code>f(0), ..., f(n -1)</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a> → <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@bridge</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">toString</span>
+        
+        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.collection.generic.GenSeqFactory#unapplySeq" data-isabs="false">
+      <a id="unapplySeq[A](IndexedSeq[A]):Some[IndexedSeq[A]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">unapplySeq</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="x">x: <a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]</span>)</span><span class="result">: <a name="scala.Some" class="extype" href="../../Some.html">Some</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>[A]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">This method is called in a pattern match { case Seq(.</p><div class="fullcomment"><div class="comment cmt"><p>This method is called in a pattern match { case Seq(...) =&gt; }.
+</p></div><dl class="paramcmts block"><dt class="param">x</dt><dd class="cmt"><p>the selector value</p></dd><dt>returns</dt><dd class="cmt"><p>sequence wrapped in an option, if this is a Seq, otherwise none
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.collection.generic.GenSeqFactory" class="extype" href="../generic/GenSeqFactory.html">GenSeqFactory</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>, <span name="arg1">arg1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div name="scala.collection.generic.SeqFactory" class="parent">
+              <h3>Inherited from <a name="scala.collection.generic.SeqFactory" class="extype" href="../generic/SeqFactory.html">SeqFactory</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>]</h3>
+            </div><div name="scala.collection.generic.TraversableFactory" class="parent">
+              <h3>Inherited from <a name="scala.collection.generic.TraversableFactory" class="extype" href="../generic/TraversableFactory.html">TraversableFactory</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>]</h3>
+            </div><div name="scala.collection.generic.GenericSeqCompanion" class="parent">
+              <h3>Inherited from <a name="scala.collection.generic.GenericSeqCompanion" class="extype" href="../generic/GenericSeqCompanion.html">GenericSeqCompanion</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>]</h3>
+            </div><div name="scala.collection.generic.GenSeqFactory" class="parent">
+              <h3>Inherited from <a name="scala.collection.generic.GenSeqFactory" class="extype" href="../generic/GenSeqFactory.html">GenSeqFactory</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>]</h3>
+            </div><div name="scala.collection.generic.GenTraversableFactory" class="parent">
+              <h3>Inherited from <a name="scala.collection.generic.GenTraversableFactory" class="extype" href="../generic/GenTraversableFactory.html">GenTraversableFactory</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>]</h3>
+            </div><div name="scala.collection.generic.GenericCompanion" class="parent">
+              <h3>Inherited from <a name="scala.collection.generic.GenericCompanion" class="extype" href="../generic/GenericCompanion.html">GenericCompanion</a>[<a name="scala.collection.immutable.IndexedSeq" class="extype" href="IndexedSeq.html">IndexedSeq</a>]</h3>
+            </div><div name="scala.AnyRef" class="parent">
+              <h3>Inherited from AnyRef</h3>
+            </div><div name="scala.Any" class="parent">
+              <h3>Inherited from <a name="scala.Any" class="extype" href="../../Any.html">Any</a></h3>
+            </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+    </body>
+      </html>

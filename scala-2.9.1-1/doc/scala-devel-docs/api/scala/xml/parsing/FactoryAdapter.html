@@ -1,0 +1,932 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>scala.xml.parsing.FactoryAdapter</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../lib/class_big.png" />
+        <p id="owner"><a name="scala" class="extype" href="../../package.html">scala</a>.<a name="scala.xml" class="extype" href="../package.html">xml</a>.<a name="scala.xml.parsing" class="extype" href="package.html">parsing</a></p>
+        <h1>FactoryAdapter</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">FactoryAdapter</span>
+        
+        <span class="result"> extends <span name="org.xml.sax.helpers.DefaultHandler" class="extype">DefaultHandler</span> with <a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a>[<a name="scala.xml.Node" class="extype" href="../Node.html">Node</a>]</span>
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>SAX adapter class, for use with Java SAX parser. Keeps track of
+ namespace bindings, without relying on namespace handling of the
+ underlying SAX parser.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Source</dt><dd><a href="https://lampsvn.epfl.ch/trac/scala/browser/scala/tags/R_2_9_1_final/src//library/scala/xml/parsing/FactoryAdapter.scala#L1">FactoryAdapter.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a>[<a name="scala.xml.Node" class="extype" href="../Node.html">Node</a>], <span name="org.xml.sax.helpers.DefaultHandler" class="extype">DefaultHandler</span>, <span name="org.xml.sax.ErrorHandler" class="extype">ErrorHandler</span>, <span name="org.xml.sax.ContentHandler" class="extype">ContentHandler</span>, <span name="org.xml.sax.DTDHandler" class="extype">DTDHandler</span>, <span name="org.xml.sax.EntityResolver" class="extype">EntityResolver</span>, AnyRef, <a name="scala.Any" class="extype" href="../../Any.html">Any</a></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="scala.xml.parsing.NoBindingFactoryAdapter" class="extype" href="NoBindingFactoryAdapter.html">NoBindingFactoryAdapter</a></div>
+        </div></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          <div id="order">
+                <span class="filtertype">Ordering</span>
+                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+              </div>
+          <div id="ancestors">
+                <span class="filtertype">Inherited</span>
+                <ol><li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show all</span></li></ol>
+                <ol id="linearization"><li name="scala.xml.parsing.FactoryAdapter" class="in"><span>FactoryAdapter</span></li><li name="scala.xml.factory.XMLLoader" class="in"><span>XMLLoader</span></li><li name="org.xml.sax.helpers.DefaultHandler" class="in"><span>DefaultHandler</span></li><li name="org.xml.sax.ErrorHandler" class="in"><span>ErrorHandler</span></li><li name="org.xml.sax.ContentHandler" class="in"><span>ContentHandler</span></li><li name="org.xml.sax.DTDHandler" class="in"><span>DTDHandler</span></li><li name="org.xml.sax.EntityResolver" class="in"><span>EntityResolver</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#this" data-isabs="false">
+      <a id="this:FactoryAdapter"></a>
+      <h4 class="signature">
+      <span class="kind">new</span>
+      <span class="symbol">
+        <span class="name">FactoryAdapter</span>
+        
+        <span class="params">()</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members" id="values">
+              <h3>Abstract Value Members</h3>
+              <ol><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#createNode" data-isabs="true">
+      <a id="createNode(String,String,MetaData,NamespaceBinding,List[Node]):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">createNode</span>
+        
+        <span class="params">(<span name="pre">pre: String</span>, <span name="elemName">elemName: String</span>, <span name="attribs">attribs: <a name="scala.xml.MetaData" class="extype" href="../MetaData.html">MetaData</a></span>, <span name="scope">scope: <a name="scala.xml.NamespaceBinding" class="extype" href="../NamespaceBinding.html">NamespaceBinding</a></span>, <span name="chIter">chIter: List[<a name="scala.xml.Node" class="extype" href="../Node.html">Node</a>]</span>)</span><span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">creates an new non-text(tree) node.</p><div class="fullcomment"><div class="comment cmt"><p>creates an new non-text(tree) node.</p></div><dl class="paramcmts block"><dt class="param">elemName</dt><dd class="cmt"></dd><dt class="param">attribs</dt><dd class="cmt"></dd><dt class="param">chIter</dt><dd class="cmt"></dd><dt>returns</dt><dd class="cmt"><p>a new XML element.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#createProcInstr" data-isabs="true">
+      <a id="createProcInstr(String,String):Seq[ProcInstr]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">createProcInstr</span>
+        
+        <span class="params">(<span name="target">target: String</span>, <span name="data">data: String</span>)</span><span class="result">: Seq[<a name="scala.xml.ProcInstr" class="extype" href="../ProcInstr.html">ProcInstr</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">creates a new processing instruction node.</p><div class="fullcomment"><div class="comment cmt"><p>creates a new processing instruction node.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#createText" data-isabs="true">
+      <a id="createText(String):Text"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">createText</span>
+        
+        <span class="params">(<span name="text">text: String</span>)</span><span class="result">: <a name="scala.xml.Text" class="extype" href="../Text.html">Text</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">creates a Text node.</p><div class="fullcomment"><div class="comment cmt"><p>creates a Text node.</p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"></dd><dt>returns</dt><dd class="cmt"><p>a new Text node.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#nodeContainsText" data-isabs="true">
+      <a id="nodeContainsText(String):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">nodeContainsText</span>
+        
+        <span class="params">(<span name="localName">localName: String</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests if an XML element contains text.</p><div class="fullcomment"><div class="comment cmt"><p>Tests if an XML element contains text.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if element named <code>localName</code> contains text.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Concrete Value Members</h3>
+              <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">##</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#adapter" data-isabs="false">
+      <a id="adapter:FactoryAdapter"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">adapter</span>
+        
+        <span class="result">: <a name="scala.xml.parsing.FactoryAdapter" class="extype" href="">FactoryAdapter</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#attribStack" data-isabs="false">
+      <a id="attribStack:Stack[MetaData]"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">attribStack</span>
+        
+        <span class="result">: <a name="scala.collection.mutable.Stack" class="extype" href="../../collection/mutable/Stack.html">Stack</a>[<a name="scala.xml.MetaData" class="extype" href="../MetaData.html">MetaData</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#buffer" data-isabs="false">
+      <a id="buffer:StringBuilder"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">buffer</span>
+        
+        <span class="result">: <a name="scala.collection.mutable.StringBuilder" class="extype" href="../../collection/mutable/StringBuilder.html">StringBuilder</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#capture" data-isabs="false">
+      <a id="capture:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol">
+        <span class="name">capture</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#captureText" data-isabs="false">
+      <a id="captureText():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">captureText</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">captures text, possibly normalizing whitespace
+</p>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#characters" data-isabs="false">
+      <a id="characters(Array[Char],Int,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">characters</span>
+        
+        <span class="params">(<span name="ch">ch: <a name="scala.Array" class="extype" href="../../Array.html">Array</a>[<a name="scala.Char" class="extype" href="../../Char.html">Char</a>]</span>, <span name="offset">offset: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="length">length: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Characters.</p><div class="fullcomment"><div class="comment cmt"><p>Characters.</p></div><dl class="paramcmts block"><dt class="param">ch</dt><dd class="cmt"></dd><dt class="param">offset</dt><dd class="cmt"></dd><dt class="param">length</dt><dd class="cmt"><p>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.parsing.FactoryAdapter" class="extype" href="">FactoryAdapter</a> → DefaultHandler → ContentHandler</dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">clone</span>
+        
+        <span class="params">()</span><span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#curTag" data-isabs="false">
+      <a id="curTag:String"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol">
+        <span class="name">curTag</span>
+        
+        <span class="result">: String</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#endDocument" data-isabs="false">
+      <a id="endDocument():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">endDocument</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → ContentHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#endElement" data-isabs="false">
+      <a id="endElement(String,String,String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">endElement</span>
+        
+        <span class="params">(<span name="uri">uri: String</span>, <span name="_localName">_localName: String</span>, <span name="qname">qname: String</span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">End element.</p><div class="fullcomment"><div class="comment cmt"><p>End element.</p></div><dl class="paramcmts block"><dt class="param">uri</dt><dd class="cmt"></dd><dt class="param">qname</dt><dd class="cmt"></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.parsing.FactoryAdapter" class="extype" href="">FactoryAdapter</a> → DefaultHandler → ContentHandler</dd></dl></div>
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#endPrefixMapping" data-isabs="false">
+      <a id="endPrefixMapping(String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">endPrefixMapping</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="java.lang.String" class="extype">String</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → ContentHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">eq</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">equals</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  See equals in <a name="scala.Any" class="extype" href="../../Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#error" data-isabs="false">
+      <a id="error(SAXParseException):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">error</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="org.xml.sax.SAXParseException" class="extype">SAXParseException</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → ErrorHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#fatalError" data-isabs="false">
+      <a id="fatalError(SAXParseException):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">fatalError</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="org.xml.sax.SAXParseException" class="extype">SAXParseException</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → ErrorHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">finalize</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getClass</span>
+        
+        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A representation that corresponds to the dynamic class of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>A representation that corresponds to the dynamic class of the receiver object.</p><p> The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#hStack" data-isabs="false">
+      <a id="hStack:Stack[Node]"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">hStack</span>
+        
+        <span class="result">: <a name="scala.collection.mutable.Stack" class="extype" href="../../collection/mutable/Stack.html">Stack</a>[<a name="scala.xml.Node" class="extype" href="../Node.html">Node</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hashCode</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a name="scala.Any" class="extype" href="../../Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#ignorableWhitespace" data-isabs="false">
+      <a id="ignorableWhitespace(Array[Char],Int,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">ignorableWhitespace</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Array" class="extype" href="../../Array.html">Array</a>[<a name="scala.Char" class="extype" href="../../Char.html">Char</a>]</span>, <span name="arg1">arg1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>, <span name="arg2">arg2: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → ContentHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#load" data-isabs="false">
+      <a id="load(URL):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">load</span>
+        
+        <span class="params">(<span name="url">url: <span name="java.net.URL" class="extype">URL</span></span>)</span><span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#load" data-isabs="false">
+      <a id="load(InputSource):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">load</span>
+        
+        <span class="params">(<span name="source">source: InputSource</span>)</span><span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#load" data-isabs="false">
+      <a id="load(String):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">load</span>
+        
+        <span class="params">(<span name="sysID">sysID: String</span>)</span><span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#load" data-isabs="false">
+      <a id="load(Reader):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">load</span>
+        
+        <span class="params">(<span name="reader">reader: <span name="java.io.Reader" class="extype">Reader</span></span>)</span><span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#load" data-isabs="false">
+      <a id="load(InputStream):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">load</span>
+        
+        <span class="params">(<span name="is">is: <span name="java.io.InputStream" class="extype">InputStream</span></span>)</span><span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">loads XML from given InputStream, Reader, sysID, InputSource, or URL.</p><div class="fullcomment"><div class="comment cmt"><p>loads XML from given InputStream, Reader, sysID, InputSource, or URL.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#loadFile" data-isabs="false">
+      <a id="loadFile(String):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">loadFile</span>
+        
+        <span class="params">(<span name="name">name: String</span>)</span><span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#loadFile" data-isabs="false">
+      <a id="loadFile(FileDescriptor):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">loadFile</span>
+        
+        <span class="params">(<span name="fd">fd: <span name="java.io.FileDescriptor" class="extype">FileDescriptor</span></span>)</span><span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#loadFile" data-isabs="false">
+      <a id="loadFile(File):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">loadFile</span>
+        
+        <span class="params">(<span name="file">file: <span name="java.io.File" class="extype">File</span></span>)</span><span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Loads XML from the given file, file descriptor, or filename.</p><div class="fullcomment"><div class="comment cmt"><p>Loads XML from the given file, file descriptor, or filename.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#loadString" data-isabs="false">
+      <a id="loadString(String):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">loadString</span>
+        
+        <span class="params">(<span name="string">string: String</span>)</span><span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Loads XML from the given String.</p><div class="fullcomment"><div class="comment cmt"><p>Loads XML from the given String.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#loadXML" data-isabs="false">
+      <a id="loadXML(InputSource,SAXParser):Node"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">loadXML</span>
+        
+        <span class="params">(<span name="source">source: InputSource</span>, <span name="parser">parser: SAXParser</span>)</span><span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Loads XML from the given InputSource, using the supplied parser.</p><div class="fullcomment"><div class="comment cmt"><p>Loads XML from the given InputSource, using the supplied parser.
+ The methods available in scala.xml.XML use the XML parser in the JDK.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">ne</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#normalizeWhitespace" data-isabs="false">
+      <a id="normalizeWhitespace:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">normalizeWhitespace</span>
+        
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#notationDecl" data-isabs="false">
+      <a id="notationDecl(String,String,String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notationDecl</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="java.lang.String" class="extype">String</span></span>, <span name="arg1">arg1: <span name="java.lang.String" class="extype">String</span></span>, <span name="arg2">arg2: <span name="java.lang.String" class="extype">String</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → DTDHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notify</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notifyAll</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.factory.XMLLoader#parser" data-isabs="false">
+      <a id="parser:SAXParser"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">parser</span>
+        
+        <span class="result">: SAXParser</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#processingInstruction" data-isabs="false">
+      <a id="processingInstruction(String,String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">processingInstruction</span>
+        
+        <span class="params">(<span name="target">target: String</span>, <span name="data">data: String</span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Processing instruction.</p><div class="fullcomment"><div class="comment cmt"><p>Processing instruction.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.parsing.FactoryAdapter" class="extype" href="">FactoryAdapter</a> → DefaultHandler → ContentHandler</dd></dl></div>
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#resolveEntity" data-isabs="false">
+      <a id="resolveEntity(String,String):InputSource"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">resolveEntity</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="java.lang.String" class="extype">String</span></span>, <span name="arg1">arg1: <span name="java.lang.String" class="extype">String</span></span>)</span><span class="result">: <span name="org.xml.sax.InputSource" class="extype">InputSource</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → EntityResolver</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#rootElem" data-isabs="false">
+      <a id="rootElem:Node"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol">
+        <span class="name">rootElem</span>
+        
+        <span class="result">: <a name="scala.xml.Node" class="extype" href="../Node.html">Node</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#scopeStack" data-isabs="false">
+      <a id="scopeStack:Stack[NamespaceBinding]"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol">
+        <span class="name">scopeStack</span>
+        
+        <span class="result">: <a name="scala.collection.mutable.Stack" class="extype" href="../../collection/mutable/Stack.html">Stack</a>[<a name="scala.xml.NamespaceBinding" class="extype" href="../NamespaceBinding.html">NamespaceBinding</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#setDocumentLocator" data-isabs="false">
+      <a id="setDocumentLocator(Locator):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">setDocumentLocator</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="org.xml.sax.Locator" class="extype">Locator</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → ContentHandler</dd></dl></div>
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#skippedEntity" data-isabs="false">
+      <a id="skippedEntity(String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">skippedEntity</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="java.lang.String" class="extype">String</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → ContentHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#startDocument" data-isabs="false">
+      <a id="startDocument():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">startDocument</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → ContentHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#startElement" data-isabs="false">
+      <a id="startElement(String,String,String,Attributes):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">startElement</span>
+        
+        <span class="params">(<span name="uri">uri: String</span>, <span name="_localName">_localName: String</span>, <span name="qname">qname: String</span>, <span name="attributes">attributes: <span name="org.xml.sax.Attributes" class="extype">Attributes</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.xml.parsing.FactoryAdapter" class="extype" href="">FactoryAdapter</a> → DefaultHandler → ContentHandler</dd></dl></div>
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#startPrefixMapping" data-isabs="false">
+      <a id="startPrefixMapping(String,String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">startPrefixMapping</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="java.lang.String" class="extype">String</span></span>, <span name="arg1">arg1: <span name="java.lang.String" class="extype">String</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → ContentHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
+      <a id="synchronized[T0](⇒ T0):T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">synchronized</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.xml.parsing.FactoryAdapter#tagStack" data-isabs="false">
+      <a id="tagStack:Stack[String]"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name">tagStack</span>
+        
+        <span class="result">: <a name="scala.collection.mutable.Stack" class="extype" href="../../collection/mutable/Stack.html">Stack</a>[String]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">toString</span>
+        
+        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#unparsedEntityDecl" data-isabs="false">
+      <a id="unparsedEntityDecl(String,String,String,String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">unparsedEntityDecl</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="java.lang.String" class="extype">String</span></span>, <span name="arg1">arg1: <span name="java.lang.String" class="extype">String</span></span>, <span name="arg2">arg2: <span name="java.lang.String" class="extype">String</span></span>, <span name="arg3">arg3: <span name="java.lang.String" class="extype">String</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → DTDHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>, <span name="arg1">arg1: <a name="scala.Int" class="extype" href="../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="../../Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="org.xml.sax.helpers.DefaultHandler#warning" data-isabs="false">
+      <a id="warning(SAXParseException):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">warning</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="org.xml.sax.SAXParseException" class="extype">SAXParseException</span></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DefaultHandler → ErrorHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div name="scala.xml.factory.XMLLoader" class="parent">
+              <h3>Inherited from <a name="scala.xml.factory.XMLLoader" class="extype" href="../factory/XMLLoader.html">XMLLoader</a>[<a name="scala.xml.Node" class="extype" href="../Node.html">Node</a>]</h3>
+            </div><div name="org.xml.sax.helpers.DefaultHandler" class="parent">
+              <h3>Inherited from <span name="org.xml.sax.helpers.DefaultHandler" class="extype">DefaultHandler</span></h3>
+            </div><div name="org.xml.sax.ErrorHandler" class="parent">
+              <h3>Inherited from <span name="org.xml.sax.ErrorHandler" class="extype">ErrorHandler</span></h3>
+            </div><div name="org.xml.sax.ContentHandler" class="parent">
+              <h3>Inherited from <span name="org.xml.sax.ContentHandler" class="extype">ContentHandler</span></h3>
+            </div><div name="org.xml.sax.DTDHandler" class="parent">
+              <h3>Inherited from <span name="org.xml.sax.DTDHandler" class="extype">DTDHandler</span></h3>
+            </div><div name="org.xml.sax.EntityResolver" class="parent">
+              <h3>Inherited from <span name="org.xml.sax.EntityResolver" class="extype">EntityResolver</span></h3>
+            </div><div name="scala.AnyRef" class="parent">
+              <h3>Inherited from AnyRef</h3>
+            </div><div name="scala.Any" class="parent">
+              <h3>Inherited from <a name="scala.Any" class="extype" href="../../Any.html">Any</a></h3>
+            </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+    </body>
+      </html>

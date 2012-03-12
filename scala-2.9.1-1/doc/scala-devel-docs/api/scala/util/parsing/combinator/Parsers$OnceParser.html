@@ -1,0 +1,720 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>scala.util.parsing.combinator.Parsers.OnceParser</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../../lib/trait_big.png" />
+        <p id="owner"><a name="scala" class="extype" href="../../../package.html">scala</a>.<a name="scala.util" class="extype" href="../../package.html">util</a>.<a name="scala.util.parsing" class="extype" href="../package.html">parsing</a>.<a name="scala.util.parsing.combinator" class="extype" href="package.html">combinator</a>.<a name="scala.util.parsing.combinator.Parsers" class="extype" href="Parsers.html">Parsers</a></p>
+        <h1>OnceParser</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">OnceParser</span>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        <span class="result"> extends <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A parser whose ~ combinator disallows back-tracking.
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://lampsvn.epfl.ch/trac/scala/browser/scala/tags/R_2_9_1_final/src//library/scala/util/parsing/combinator/Parsers.scala#L1">Parsers.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[T], (Input) ⇒ <a name="scala.util.parsing.combinator.Parsers.ParseResult" class="extype" href="Parsers$ParseResult.html">ParseResult</a>[T], AnyRef, <a name="scala.Any" class="extype" href="../../../Any.html">Any</a></div>
+        </div></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          <div id="order">
+                <span class="filtertype">Ordering</span>
+                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+              </div>
+          <div id="ancestors">
+                <span class="filtertype">Inherited</span>
+                <ol><li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show all</span></li></ol>
+                <ol id="linearization"><li name="scala.util.parsing.combinator.Parsers.OnceParser" class="in"><span>OnceParser</span></li><li name="scala.util.parsing.combinator.Parsers.Parser" class="in"><span>Parser</span></li><li name="scala.Function1" class="in"><span>Function1</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        
+
+        <div class="values members" id="values">
+              <h3>Abstract Value Members</h3>
+              <ol><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#apply" data-isabs="true">
+      <a id="apply(Input):ParseResult[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">apply</span>
+        
+        <span class="params">(<span name="in">in: Input</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.ParseResult" class="extype" href="Parsers$ParseResult.html">ParseResult</a>[T]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">An unspecified method that defines the behaviour of this parser.</p><div class="fullcomment"><div class="comment cmt"><p>An unspecified method that defines the behaviour of this parser.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the result of function application.</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a> → <a name="scala.Function1" class="extype" href="../../../Function1.html">Function1</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Concrete Value Members</h3>
+              <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">##</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#*" data-isabs="false">
+      <a id="*[U&gt;:T](⇒ Parser[(U, U) ⇒ U]):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">*</span>
+        <span class="tparams">[<span name="U">U &gt;: T</span>]</span>
+        <span class="params">(<span name="sep">sep: ⇒ <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[(U, U) ⇒ U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a parser that repeatedly parses what this parser parses, interleaved with the <code>sep' parser.
+The </code>sep' parser specifies how the results parsed by this parser should be combined.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a parser that repeatedly parses what this parser parses, interleaved with the <code>sep' parser.
+The </code>sep' parser specifies how the results parsed by this parser should be combined.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>chainl1(this, sep)
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#*" data-isabs="false">
+      <a id="*:Parser[List[T]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">*</span>
+        
+        <span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[List[T]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a parser that repeatedly parses what this parser parses
+</p><div class="fullcomment"><div class="comment cmt"><p>Returns a parser that repeatedly parses what this parser parses
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>rep(this)
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#+" data-isabs="false">
+      <a id="+:Parser[List[T]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">+</span>
+        
+        <span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[List[T]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a parser that repeatedly (at least once) parses what this parser parses.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a parser that repeatedly (at least once) parses what this parser parses.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>rep1(this)
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#&lt;~" data-isabs="false">
+      <a id="&lt;~[U](⇒ Parser[U]):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">&lt;~</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="q">q: ⇒ <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[T]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A parser combinator for sequential composition which keeps only the left result</p><div class="fullcomment"><div class="comment cmt"><p>A parser combinator for sequential composition which keeps only the left result</p><p> <code>p &amp;lt;~ q' succeeds if </code>p' succeeds and <code>q' succeeds on the input
+          left over by </code>p'.</p><p><b>Note:</b> &lt;~ has lower operator precedence than ~ or ~&gt;.
+</p></div><dl class="paramcmts block"><dt class="param">q</dt><dd class="cmt"><p>a parser that will be executed after <code>p' (this parser) succeeds -- evaluated at most once, and only when necessary</code></p></dd><dt>returns</dt><dd class="cmt"><p>a <code>Parser' that -- on success -- returns the result of </code>p'.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@migration</span>
+              
+        </dd><dt>Migration</dt><dd class="cmt"><p>&quot;As of 2.9, the call-by-name argument is evaluated at most once per constructed Parser object, instead of on every need that arises during parsing.&quot;</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#&gt;&gt;" data-isabs="false">
+      <a id="&gt;&gt;[U]((T) ⇒ Parser[U]):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">&gt;&gt;</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="fq">fq: (T) ⇒ <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns into(fq)</p><div class="fullcomment"><div class="comment cmt"><p>Returns into(fq)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#?" data-isabs="false">
+      <a id="?:Parser[Option[T]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">?</span>
+        
+        <span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[<a name="scala.Option" class="extype" href="../../../Option.html">Option</a>[T]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a parser that optionally parses what this parser parses.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a parser that optionally parses what this parser parses.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>opt(this)
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#^?" data-isabs="false">
+      <a id="^?[U](PartialFunction[T, U]):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">^?</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="f">f: <a name="scala.PartialFunction" class="extype" href="../../../PartialFunction.html">PartialFunction</a>[T, U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A parser combinator for partial function application</p><div class="fullcomment"><div class="comment cmt"><p>A parser combinator for partial function application</p><p><code>p ^? f' succeeds if </code>p' succeeds AND <code>f' is defined at the result of </code>p';
+ in that case, it returns <code>f' applied to the result of </code>p'.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>a partial function that will be applied to this parser's result
+         (see <code>mapPartial' in </code>ParseResult').</p></dd><dt>returns</dt><dd class="cmt"><p>a parser that succeeds if the current parser succeeds <i>and</i> <code>f' is applicable
+        to the result. If so, the result will be transformed by </code>f'.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#^?" data-isabs="false">
+      <a id="^?[U](PartialFunction[T, U],(T) ⇒ String):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">^?</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="f">f: <a name="scala.PartialFunction" class="extype" href="../../../PartialFunction.html">PartialFunction</a>[T, U]</span>, <span name="error">error: (T) ⇒ String</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A parser combinator for partial function application</p><div class="fullcomment"><div class="comment cmt"><p>A parser combinator for partial function application</p><p><code>p ^? (f, error)' succeeds if </code>p' succeeds AND <code>f' is defined at the result of </code>p';
+ in that case, it returns <code>f' applied to the result of </code>p'. If <code>f' is not applicable,
+ error(the result of </code>p') should explain why.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>a partial function that will be applied to this parser's result
+         (see <code>mapPartial' in </code>ParseResult').</p></dd><dt class="param">error</dt><dd class="cmt"><p>a function that takes the same argument as <code>f' and produces an error message
+       to explain why </code>f' wasn't applicable</p></dd><dt>returns</dt><dd class="cmt"><p>a parser that succeeds if the current parser succeeds <i>and</i> <code>f' is applicable
+        to the result. If so, the result will be transformed by </code>f'.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#^^" data-isabs="false">
+      <a id="^^[U]((T) ⇒ U):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">^^</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="f">f: (T) ⇒ U</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A parser combinator for function application</p><div class="fullcomment"><div class="comment cmt"><p>A parser combinator for function application</p><p><code>p ^^ f' succeeds if </code>p' succeeds; it returns <code>f' applied to the result of </code>p'.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>a function that will be applied to this parser's result (see <code>map' in </code>ParseResult').</p></dd><dt>returns</dt><dd class="cmt"><p>a parser that has the same behaviour as the current parser, but whose result is
+        transformed by <code>f'.
+</code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#^^^" data-isabs="false">
+      <a id="^^^[U](⇒ U):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">^^^</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="v">v: ⇒ U</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A parser combinator that changes a successful result into the specified value.</p><div class="fullcomment"><div class="comment cmt"><p>A parser combinator that changes a successful result into the specified value.</p><p><code>p ^^^ v' succeeds if </code>p' succeeds; discards its result, and returns <code>v</code> instead.</p></div><dl class="paramcmts block"><dt class="param">v</dt><dd class="cmt"><p>The new result for the parser, evaluated at most once (if <code>p</code> succeeds), not evaluated at all if <code>p</code> fails.</p></dd><dt>returns</dt><dd class="cmt"><p>a parser that has the same behaviour as the current parser, but whose successful result is <code>v</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@migration</span>
+              
+        </dd><dt>Migration</dt><dd class="cmt"><p>&quot;As of 2.9, the call-by-name argument is evaluated at most once per constructed Parser object, instead of on every need that arises during parsing.&quot;</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Function1#andThen" data-isabs="false">
+      <a id="andThen[A]((ParseResult[T]) ⇒ A):(Input) ⇒ A"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">andThen</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="g">g: (<a name="scala.util.parsing.combinator.Parsers.ParseResult" class="extype" href="Parsers$ParseResult.html">ParseResult</a>[T]) ⇒ A</span>)</span><span class="result">: (Input) ⇒ A</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Composes two instances of Function1 in a new Function1, with this function applied first.</p><div class="fullcomment"><div class="comment cmt"><p>Composes two instances of Function1 in a new Function1, with this function applied first.
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the result type of function <code>g</code></p></dd><dt class="param">g</dt><dd class="cmt"><p>a function R =&gt; A</p></dd><dt>returns</dt><dd class="cmt"><p>a new function <code>f</code> such that <code>f(x) == g(apply(x))</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.Function1" class="extype" href="../../../Function1.html">Function1</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#append" data-isabs="false">
+      <a id="append[U&gt;:T](⇒ Parser[U]):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">append</span>
+        <span class="tparams">[<span name="U">U &gt;: T</span>]</span>
+        <span class="params">(<span name="p0">p0: ⇒ <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@migration</span>
+              
+        </dd><dt>Migration</dt><dd class="cmt"><p>&quot;As of 2.9, the call-by-name argument is evaluated at most once per constructed Parser object, instead of on every need that arises during parsing.&quot;</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">clone</span>
+        
+        <span class="params">()</span><span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.Function1#compose" data-isabs="false">
+      <a id="compose[A]((A) ⇒ Input):(A) ⇒ ParseResult[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">compose</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="g">g: (A) ⇒ Input</span>)</span><span class="result">: (A) ⇒ <a name="scala.util.parsing.combinator.Parsers.ParseResult" class="extype" href="Parsers$ParseResult.html">ParseResult</a>[T]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Composes two instances of Function1 in a new Function1, with this function applied last.</p><div class="fullcomment"><div class="comment cmt"><p>Composes two instances of Function1 in a new Function1, with this function applied last.
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type to which function <code>g</code> can be applied</p></dd><dt class="param">g</dt><dd class="cmt"><p>a function A =&gt; T1</p></dd><dt>returns</dt><dd class="cmt"><p>a new function <code>f</code> such that <code>f(x) == apply(g(x))</code>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.Function1" class="extype" href="../../../Function1.html">Function1</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">eq</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">equals</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Any" class="extype" href="../../../Any.html">Any</a></span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  See equals in <a name="scala.Any" class="extype" href="../../../Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">finalize</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#flatMap" data-isabs="false">
+      <a id="flatMap[U]((T) ⇒ Parser[U]):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">flatMap</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="f">f: (T) ⇒ <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getClass</span>
+        
+        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A representation that corresponds to the dynamic class of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>A representation that corresponds to the dynamic class of the receiver object.</p><p> The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hashCode</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Int" class="extype" href="../../../Int.html">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a name="scala.Any" class="extype" href="../../../Any.html">Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a name="scala.Any" class="extype" href="../../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#into" data-isabs="false">
+      <a id="into[U]((T) ⇒ Parser[U]):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">into</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="fq">fq: (T) ⇒ <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A parser combinator that parameterizes a subsequent parser with the result of this one</p><div class="fullcomment"><div class="comment cmt"><p>A parser combinator that parameterizes a subsequent parser with the result of this one</p><p>Use this combinator when a parser depends on the result of a previous parser. <code>p' should be
+a function that takes the result from the first parser and returns the second parser.
+
+
+
+ </code>p into fq' (with <code>fq' typically </code>{x =&gt; q}') first applies <code>p', and then, if </code>p' successfully
+   returned result <code>r', applies </code>fq(r)' to the rest of the input.</p><p> From: G. Hutton. Higher-order functions for parsing. J. Funct. Program., 2(3):323--343, 1992.
+</p></div><dl class="paramcmts block"><dt class="param">fq</dt><dd class="cmt"><p>a function that, given the result from this parser, returns the second parser to be applied</p></dd><dt>returns</dt><dd class="cmt"><p>a parser that succeeds if this parser succeeds (with result <code>x') and if then </code>fq(x)' succeeds
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: <a name="scala.Boolean" class="extype" href="../../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd><a name="scala.Any" class="extype" href="../../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#map" data-isabs="false">
+      <a id="map[U]((T) ⇒ U):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">map</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="f">f: (T) ⇒ U</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#named" data-isabs="false">
+      <a id="named(String):OnceParser.this.type"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">named</span>
+        
+        <span class="params">(<span name="n">n: String</span>)</span><span class="result">: OnceParser.this.type</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">ne</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <a name="scala.Boolean" class="extype" href="../../../Boolean.html">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notify</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notifyAll</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
+      <a id="synchronized[T0](⇒ T0):T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">synchronized</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#toString" data-isabs="false">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">toString</span>
+        
+        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a> → <a name="scala.Function1" class="extype" href="../../../Function1.html">Function1</a> → AnyRef → <a name="scala.Any" class="extype" href="../../../Any.html">Any</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">()</span><span class="result">: <a name="scala.Unit" class="extype" href="../../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="../../../Long.html">Long</a></span>, <span name="arg1">arg1: <a name="scala.Int" class="extype" href="../../../Int.html">Int</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <a name="scala.Long" class="extype" href="../../../Long.html">Long</a></span>)</span><span class="result">: <a name="scala.Unit" class="extype" href="../../../Unit.html">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.throws" class="extype" href="../../../throws.html">throws</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#|" data-isabs="false">
+      <a id="|[U&gt;:T](⇒ Parser[U]):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">|</span>
+        <span class="tparams">[<span name="U">U &gt;: T</span>]</span>
+        <span class="params">(<span name="q">q: ⇒ <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A parser combinator for alternative composition</p><div class="fullcomment"><div class="comment cmt"><p>A parser combinator for alternative composition</p><p><code>p | q' succeeds if </code>p' succeeds or <code>q' succeeds
+         Note that </code>q' is only tried if <code>p's failure is non-fatal (i.e., back-tracking is
+         allowed).
+</code></p></div><dl class="paramcmts block"><dt class="param">q</dt><dd class="cmt"><p>a parser that will be executed if <code>p' (this parser) fails (and allows back-tracking)</code></p></dd><dt>returns</dt><dd class="cmt"><p>a <code>Parser' that returns the result of the first parser to succeed (out of </code>p' and <code>q')
+        The resulting parser succeeds if (and only if)
+
+ -  </code>p' succeeds, <i>or</i></p><ul><li> if <code>p' fails allowing back-tracking and </code>q' succeeds.
+</li></ul></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#|||" data-isabs="false">
+      <a id="|||[U&gt;:T](⇒ Parser[U]):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">|||</span>
+        <span class="tparams">[<span name="U">U &gt;: T</span>]</span>
+        <span class="params">(<span name="q0">q0: ⇒ <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A parser combinator for alternative with longest match composition</p><div class="fullcomment"><div class="comment cmt"><p>A parser combinator for alternative with longest match composition</p><p><code>p ||| q' succeeds if </code>p' succeeds or <code>q' succeeds
+         If </code>p' and <code>q' both succeed, the parser that consumed the most
+         characters accepts.
+</code></p></div><dl class="paramcmts block"><dt class="param">q0</dt><dd class="cmt"><p>a parser that accepts if p consumes less characters. -- evaluated at most once, and only when necessary</p></dd><dt>returns</dt><dd class="cmt"><p>a <code>Parser' that returns the result of the parser consuming the most characters (out of </code>p' and <code>q').
+</code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@migration</span>
+              
+        </dd><dt>Migration</dt><dd class="cmt"><p>&quot;As of 2.9, the call-by-name argument is evaluated at most once per constructed Parser object, instead of on every need that arises during parsing.&quot;</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.OnceParser#~" data-isabs="false">
+      <a id="~[U](⇒ Parser[U]):Parser[~[T, U]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">~</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[<a name="scala.util.parsing.combinator.Parsers.~" class="extype" href="Parsers$$tilde.html">~</a>[T, U]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A parser combinator for sequential composition</p><div class="fullcomment"><div class="comment cmt"><p>A parser combinator for sequential composition</p><p> <code>p ~ q' succeeds if </code>p' succeeds and <code>q' succeeds on the input
+         left over by </code>p'.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a <code>Parser' that -- on success -- returns a </code>~' (like a Pair, but easier to pattern match on)
+        that contains the result of <code>p' and that of </code>q'.
+        The resulting parser fails if either <code>p' or </code>q' fails.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.OnceParser" class="extype" href="">OnceParser</a> → <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#~!" data-isabs="false">
+      <a id="~![U](⇒ Parser[U]):Parser[~[T, U]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">~!</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[<a name="scala.util.parsing.combinator.Parsers.~" class="extype" href="Parsers$$tilde.html">~</a>[T, U]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A parser combinator for non-back-tracking sequential composition</p><div class="fullcomment"><div class="comment cmt"><p>A parser combinator for non-back-tracking sequential composition</p><p><code>p ~! q' succeeds if </code>p' succeeds and <code>q' succeeds on the input
+         left over by </code>p'. In case of failure, no back-tracking is performed
+         (in an earlier parser produced by the | combinator).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a <code>Parser' that -- on success -- returns a </code>~' (like a Pair, but easier to pattern match on)
+        that contains the result of <code>p' and that of </code>q'.
+        The resulting parser fails if either <code>p' or </code>q' fails, this failure is fatal.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.util.parsing.combinator.Parsers.Parser#~&gt;" data-isabs="false">
+      <a id="~&gt;[U](⇒ Parser[U]):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">~&gt;</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="q">q: ⇒ <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>)</span><span class="result">: <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[U]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A parser combinator for sequential composition which keeps only the right result</p><div class="fullcomment"><div class="comment cmt"><p>A parser combinator for sequential composition which keeps only the right result</p><p> <code>p ~&gt; q' succeeds if </code>p' succeeds and <code>q' succeeds on the input
+          left over by </code>p'.
+</p></div><dl class="paramcmts block"><dt class="param">q</dt><dd class="cmt"><p>a parser that will be executed after <code>p' (this parser) succeeds -- evaluated at most once, and only when necessary</code></p></dd><dt>returns</dt><dd class="cmt"><p>a <code>Parser' that -- on success -- returns the result of </code>q'.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@migration</span>
+              
+        </dd><dt>Migration</dt><dd class="cmt"><p>&quot;As of 2.9, the call-by-name argument is evaluated at most once per constructed Parser object, instead of on every need that arises during parsing.&quot;</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div name="scala.util.parsing.combinator.Parsers.Parser" class="parent">
+              <h3>Inherited from <a name="scala.util.parsing.combinator.Parsers.Parser" class="extype" href="Parsers$Parser.html">Parser</a>[T]</h3>
+            </div><div name="scala.Function1" class="parent">
+              <h3>Inherited from (Input) ⇒ <a name="scala.util.parsing.combinator.Parsers.ParseResult" class="extype" href="Parsers$ParseResult.html">ParseResult</a>[T]</h3>
+            </div><div name="scala.AnyRef" class="parent">
+              <h3>Inherited from AnyRef</h3>
+            </div><div name="scala.Any" class="parent">
+              <h3>Inherited from <a name="scala.Any" class="extype" href="../../../Any.html">Any</a></h3>
+            </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+    </body>
+      </html>

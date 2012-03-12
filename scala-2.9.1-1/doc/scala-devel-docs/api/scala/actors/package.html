@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>scala.actors</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../lib/template.css" />
+      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a name="scala" class="extype" href="../package.html">scala</a></p>
+        <h1>actors</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">actors</span>
+        
+        
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A library that provides both asynchronous and synchronous messaging to allow
+for concurrent programming without explicit synchronization.</p><h4> Guide </h4><p>A detailed guide for the actors library is available
+<a href="http://www.scala-lang.org/docu/files/actors-api/actors_api_guide.html#">http://www.scala-lang.org/docu/files/actors-api/actors_api_guide.html#</a>.</p><h4> Getting Started </h4><p>A starting point for using the actors library would be <a name="scala.actors.Reactor" class="extype" href="Reactor.html">Reactor</a>,
+<a name="scala.actors.ReplyReactor" class="extype" href="ReplyReactor.html">ReplyReactor</a>, or <a name="scala.actors.Actor" class="extype" href="Actor.html">Actor</a> or their companion objects.</p></div></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="scala.actors.!" data-isabs="false">
+      <a id="!:![a]"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <a href="$bang.html"><span class="name">!</span></a>
+        <span class="tparams">[<span name="a">a</span>]</span>
+        <span class="params">(<span name="ch">ch: Channel[a]</span>, <span name="msg">msg: a</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt"> Used to pattern match on values that were sent
+ to some channel <code>Chan<sub>n</sub></code> by the current
+ actor <code>self</code>.</p>
+    </li><li visbl="pub" name="scala.actors.AbstractActor" data-isabs="true">
+      <a id="AbstractActor:AbstractActor"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="AbstractActor.html"><span class="name">AbstractActor</span></a>
+        
+        <span class="result"> extends OutputChannel[Any] with CanReply[Any, Any]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li visbl="pub" name="scala.actors.Actor" data-isabs="true">
+      <a id="Actor:Actor"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Actor.html"><span class="name">Actor</span></a>
+        
+        <span class="result"> extends AbstractActor with ReplyReactor with ActorCanReply with InputChannel[Any] with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">  Provides lightweight, concurrent actors.</p>
+    </li><li visbl="pub" name="scala.actors.CanReply" data-isabs="true">
+      <a id="CanReply:CanReply[T, R]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="CanReply.html"><span class="name">CanReply</span></a>
+        <span class="tparams">[<span name="T">-T</span>, <span name="R">+R</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Defines result-bearing message send operations.</p>
+    </li><li visbl="pub" name="scala.actors.Channel" data-isabs="false">
+      <a id="Channel:Channel[Msg]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="Channel.html"><span class="name">Channel</span></a>
+        <span class="tparams">[<span name="Msg">Msg</span>]</span>
+        <span class="result"> extends InputChannel[Msg] with OutputChannel[Msg] with CanReply[Msg, Any]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides a means for typed communication among
+actors.</p>
+    </li><li visbl="pub" name="scala.actors.DaemonActor" data-isabs="true">
+      <a id="DaemonActor:DaemonActor"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="DaemonActor.html"><span class="name">DaemonActor</span></a>
+        
+        <span class="result"> extends Actor</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base trait for actors with daemon semantics.</p>
+    </li><li visbl="pub" name="scala.actors.Exit" data-isabs="false">
+      <a id="Exit:Exit"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <a href="Exit.html"><span class="name">Exit</span></a>
+        
+        <span class="params">(<span name="from">from: AbstractActor</span>, <span name="reason">reason: AnyRef</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Sent to an actor
+ with <code>trapExit</code> set to <code>true</code> whenever one of its linked actors
+ terminates.</p>
+    </li><li visbl="pub" name="scala.actors.Future" data-isabs="true">
+      <a id="Future:Future[T]"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="Future.html"><span class="name">Future</span></a>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        <span class="result"> extends Responder[T] with () ⇒ T</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A function of arity 0, returing a value of type <code>T</code> that,
+ when applied, blocks the current actor (<code>Actor.self</code>)
+ until the future's value is available.</p>
+    </li><li visbl="pub" name="scala.actors.IScheduler" data-isabs="true">
+      <a id="IScheduler:IScheduler"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="IScheduler.html"><span class="name">IScheduler</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A common interface
+for all schedulers used to execute actor tasks.</p>
+    </li><li visbl="pub" name="scala.actors.InputChannel" data-isabs="true">
+      <a id="InputChannel:InputChannel[Msg]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="InputChannel.html"><span class="name">InputChannel</span></a>
+        <span class="tparams">[<span name="Msg">+Msg</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A common interface for all channels from which values can be received.</p>
+    </li><li visbl="pub" name="scala.actors.OutputChannel" data-isabs="true">
+      <a id="OutputChannel:OutputChannel[Msg]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="OutputChannel.html"><span class="name">OutputChannel</span></a>
+        <span class="tparams">[<span name="Msg">-Msg</span>]</span>
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A common interface for all channels to which values can be sent.</p>
+    </li><li visbl="pub" name="scala.actors.Reactor" data-isabs="true">
+      <a id="Reactor:Reactor[Msg]"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="Reactor.html"><span class="name">Reactor</span></a>
+        <span class="tparams">[<span name="Msg">Msg &gt;: Null</span>]</span>
+        <span class="result"> extends OutputChannel[Msg] with Combinators</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Super trait of all actor traits.</p>
+    </li><li visbl="pub" name="scala.actors.ReplyReactor" data-isabs="true">
+      <a id="ReplyReactor:ReplyReactor"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="ReplyReactor.html"><span class="name">ReplyReactor</span></a>
+        
+        <span class="result"> extends Reactor[Any] with ReactorCanReply</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Extends the <a name="scala.actors.Reactor" class="extype" href="Reactor.html">Reactor</a>
+   trait with methods to reply to the sender of a message.</p>
+    </li><li visbl="pub" name="scala.actors.SchedulerAdapter" data-isabs="true">
+      <a id="SchedulerAdapter:SchedulerAdapter"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <a href="SchedulerAdapter.html"><span class="name">SchedulerAdapter</span></a>
+        
+        <span class="result"> extends IScheduler</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Adapts
+ the behavior of the standard scala.actors.Scheduler object.</p>
+    </li><li visbl="pub" name="scala.actors.UncaughtException" data-isabs="false">
+      <a id="UncaughtException:UncaughtException"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <a href="UncaughtException.html"><span class="name">UncaughtException</span></a>
+        
+        <span class="params">(<span name="actor">actor: Actor</span>, <span name="message">message: Option[Any]</span>, <span name="sender">sender: Option[OutputChannel[Any]]</span>, <span name="thread">thread: Thread</span>, <span name="cause">cause: Throwable</span>)</span><span class="result"> extends Exception with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The exit reason when an actor fails to catch an exception.</p>
+    </li><li visbl="pub" name="scala.actors.Debug" data-isabs="false">
+      <a id="Debug:Debug"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="Debug.html"><span class="name deprecated">Debug</span></a>
+        
+        <span class="result"> extends Logger</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.deprecated" class="extype" href="../deprecated.html">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p>this class is going to be removed in a future release</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.package#FJTaskScheduler2" data-isabs="false">
+      <a id="FJTaskScheduler2:FJTaskScheduler2"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name deprecated">FJTaskScheduler2</span>
+        
+        <span class="result"> = <a name="scala.actors.scheduler.ForkJoinScheduler" class="extype" href="scheduler/ForkJoinScheduler.html">ForkJoinScheduler</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.actors.package" class="extype" href="package$.html">package</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.deprecated" class="extype" href="../deprecated.html">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p>use scheduler.ForkJoinScheduler instead</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.MessageQueue" data-isabs="false">
+      <a id="MessageQueue:MessageQueue"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="MessageQueue.html"><span class="name deprecated">MessageQueue</span></a>
+        
+        <span class="result"> extends MQueue[Any] with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The class <code>MessageQueue</code> provides an efficient
+implementation of a message queue specialized for this actor
+library.</p>
+    </li><li visbl="pub" name="scala.actors.MessageQueueElement" data-isabs="false">
+      <a id="MessageQueueElement:MessageQueueElement"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="MessageQueueElement.html"><span class="name deprecated">MessageQueueElement</span></a>
+        
+        <span class="result"> extends MQueueElement[Any] with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class is used by our efficient message queue
+implementation.</p>
+    </li><li visbl="pub" name="scala.actors.Reaction" data-isabs="false">
+      <a id="Reaction:Reaction"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <a href="Reaction.html"><span class="name deprecated">Reaction</span></a>
+        
+        <span class="result"> extends ActorTask</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   The abstract class <code>Reaction</code> associates
+   an instance of an <code>Actor</code> with a
+   <a class="java/lang/Runnable" href="" target="contentFrame">
+   <code>java.lang.Runnable</code></a>.</a class="java/lang/Runnable" href="" target="contentFrame"></p>
+    </li><li visbl="pub" name="scala.actors.package#SingleThreadedScheduler" data-isabs="false">
+      <a id="SingleThreadedScheduler:SingleThreadedScheduler"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name deprecated">SingleThreadedScheduler</span>
+        
+        <span class="result"> = <a name="scala.actors.scheduler.SingleThreadedScheduler" class="extype" href="scheduler/SingleThreadedScheduler.html">SingleThreadedScheduler</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.actors.package" class="extype" href="package$.html">package</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.deprecated" class="extype" href="../deprecated.html">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p>use scheduler.SingleThreadedScheduler instead</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.package#TickedScheduler" data-isabs="false">
+      <a id="TickedScheduler:TickedScheduler"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name deprecated">TickedScheduler</span>
+        
+        <span class="result"> = <a name="scala.actors.scheduler.ForkJoinScheduler" class="extype" href="scheduler/ForkJoinScheduler.html">ForkJoinScheduler</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.actors.package" class="extype" href="package$.html">package</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.deprecated" class="extype" href="../deprecated.html">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p>use scheduler.ForkJoinScheduler instead</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.package#WorkerThread" data-isabs="false">
+      <a id="WorkerThread:WorkerThread"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name deprecated">WorkerThread</span>
+        
+        <span class="result"> = <span name="java.lang.Thread" class="extype">Thread</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.actors.package" class="extype" href="package$.html">package</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.deprecated" class="extype" href="../deprecated.html">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p>this class is going to be removed in a future release</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.package#WorkerThreadScheduler" data-isabs="false">
+      <a id="WorkerThreadScheduler:WorkerThreadScheduler"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name deprecated">WorkerThreadScheduler</span>
+        
+        <span class="result"> = <a name="scala.actors.scheduler.ForkJoinScheduler" class="extype" href="scheduler/ForkJoinScheduler.html">ForkJoinScheduler</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.actors.package" class="extype" href="package$.html">package</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.deprecated" class="extype" href="../deprecated.html">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p>use scheduler.ForkJoinScheduler instead</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="scala.actors.Actor" data-isabs="false">
+      <a id="Actor:Actor"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="Actor$.html"><span class="name">Actor</span></a>
+        
+        <span class="result"> extends Combinators with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides functions for the definition of
+actors, as well as actor operations, such as
+<code>receive</code>, <code>react</code>, <code>reply</code>,
+etc.</p>
+    </li><li visbl="pub" name="scala.actors.Debug" data-isabs="false">
+      <a id="Debug:Debug"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="Debug$.html"><span class="name">Debug</span></a>
+        
+        <span class="result"> extends Logger</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides methods for generating debugging output.</p>
+    </li><li visbl="pub" name="scala.actors.Futures" data-isabs="false">
+      <a id="Futures:Futures"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="Futures$.html"><span class="name">Futures</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Methods that operate on futures.</p>
+    </li><li visbl="pub" name="scala.actors.Scheduler" data-isabs="false">
+      <a id="Scheduler:Scheduler"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="Scheduler$.html"><span class="name">Scheduler</span></a>
+        
+        <span class="result"> extends DelegatingScheduler</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Used by <a name="scala.actors.Actor" class="extype" href="Actor.html">Actor</a> instances to
+execute tasks of an actor execution.</p>
+    </li><li visbl="pub" name="scala.actors.TIMEOUT" data-isabs="false">
+      <a id="TIMEOUT:TIMEOUT"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <a href="TIMEOUT$.html"><span class="name">TIMEOUT</span></a>
+        
+        <span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   Used as the timeout pattern in
+   <a href="Actor.html#receiveWithin(Long)" target="contentFrame">
+   <code>receiveWithin</code></a> and
+   <a href="Actor.html#reactWithin(Long)" target="contentFrame">
+   <code>reactWithin</code></a>.</a href="Actor.html#reactWithin(Long)" target="contentFrame"></a href="Actor.html#receiveWithin(Long)" target="contentFrame"></p>
+    </li><li visbl="pub" name="scala.actors.remote" data-isabs="false">
+      <a id="remote:remote"></a>
+      <h4 class="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <a href="remote/package.html"><span class="name">remote</span></a>
+        
+        
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.actors.scheduler" data-isabs="false">
+      <a id="scheduler:scheduler"></a>
+      <h4 class="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <a href="scheduler/package.html"><span class="name">scheduler</span></a>
+        
+        
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Deprecated Value Members</h3>
+              <ol><li visbl="pub" name="scala.actors.package#ActorGC" data-isabs="false">
+      <a id="ActorGC:IScheduler with ActorGC"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol">
+        <span class="name deprecated">ActorGC</span>
+        
+        <span class="result">: <a name="scala.actors.IScheduler" class="extype" href="IScheduler.html">IScheduler</a> with <a name="scala.actors.scheduler.ActorGC" class="extype" href="scheduler/ActorGC.html">ActorGC</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="scala.actors.package" class="extype" href="package$.html">package</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a name="scala.deprecated" class="extype" href="../deprecated.html">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p>this value is going to be removed in a future release</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+      </div>
+
+      <div id="tooltip"></div>
+
+    </body>
+      </html>
