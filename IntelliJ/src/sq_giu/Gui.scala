@@ -104,7 +104,7 @@ object Gui extends SimpleGUIApplication{
       filechooser.showOpenDialog(frame)
       var file = filechooser.selectedFile
 
-      var url = file.toURL()
+      var url = file.toURI().toURL()
 
       datapool.addToDataPool(url.getPath())
 
