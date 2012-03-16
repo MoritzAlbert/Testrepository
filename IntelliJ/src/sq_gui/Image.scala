@@ -1,7 +1,6 @@
 package sq_gui
 
 import java.io._
-import java.awt.Desktop
 import javax.swing.ImageIcon
 
 class Image(s: String) extends Data(s) {
@@ -21,21 +20,23 @@ class Image(s: String) extends Data(s) {
     //java.lang.Runtime.getRuntime().exec(player)
     //oder
 
-    var sb = new StringBuilder(player);
+    val sb = new StringBuilder(player);
     sb.append(' ');
     sb.append(url);
 
-    Runtime.getRuntime().exec(sb.toString());
+    Runtime.getRuntime.exec(sb.toString());
   }
 
   //neuer Player
-  def newPlayer(s:String) = player = s
+  def newPlayer(s:String) {
+    player = s
+  }
 
   def getName : String = {
 
-    var s = url.split("/")
+    val s = url.split("/")
 
-    var name = s.last
+    val name = s.last
 
     name
 

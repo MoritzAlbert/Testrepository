@@ -12,10 +12,12 @@ class Data(s:String) {
   def addRelation(obj:Data) = relation += obj
 
   //setzt das rating
-  def addRating(a:Int) = rating = a
+  def addRating(a:Int) {
+    rating = a
+  }
 
   //keine Ahnung warum das hier ntig ist!!!
-  def play{}
+  def play(){}
 
 
 }

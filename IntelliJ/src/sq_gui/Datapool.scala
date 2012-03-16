@@ -18,7 +18,7 @@ class Datapool() {
 
     val file = new java.io.File(s)
 
-    if(file.getName().endsWith(".jpg")) {
+    if(file.getName.endsWith(".jpg")) {
 
       val img = new Image(s)
       datapool.add(img)
@@ -26,7 +26,7 @@ class Datapool() {
 
     }
 
-    if(file.getName().endsWith(".mp4")) {
+    if(file.getName.endsWith(".mp4")) {
 
       val vid = new Video(s)
       datapool.add(vid)
@@ -34,7 +34,7 @@ class Datapool() {
 
     }
 
-    if(file.getName().endsWith(".pdf")) {
+    if(file.getName.endsWith(".pdf")) {
 
       val doc = new Document(s)
       datapool.add(doc)
@@ -50,7 +50,7 @@ class Datapool() {
 
       val src = new java.io.File(args)
 
-      if(src.getName().endsWith(".jpg")) {
+      if(src.getName.endsWith(".jpg")) {
 
         val img = new Image(args)
         datapool.add(img)
@@ -58,7 +58,7 @@ class Datapool() {
 
       }
 
-      if(src.getName().endsWith(".mp4")) {
+      if(src.getName.endsWith(".mp4")) {
 
         val vid = new Video(args)
         datapool.add(vid)
@@ -66,7 +66,7 @@ class Datapool() {
 
       }
 
-      if(src.getName().endsWith(".pdf")) {
+      if(src.getName.endsWith(".pdf")) {
 
         val doc = new Document(args)
         datapool.add(doc)
@@ -103,11 +103,11 @@ class Datapool() {
 
     var id = new Data("")
 
-    var it = datapool.iterator
+    val it = datapool.iterator
 
     while(it.hasNext){
 
-      var data = it.next()
+      val data = it.next()
 
       if(data.url.equals(s)){
         id = data
@@ -128,20 +128,20 @@ class Datapool() {
 
     datapool.remove(data)
 
-    if(src.getName().endsWith(".jpg")) {
+    if(src.getName.endsWith(".jpg")) {
 
 
       imagepool.remove(data.asInstanceOf[Image])
 
     }
 
-    if(src.getName().endsWith(".mp4")) {
+    if(src.getName.endsWith(".mp4")) {
 
       videopool.remove(data.asInstanceOf[Video])
 
     }
 
-    if(src.getName().endsWith(".pdf")) {
+    if(src.getName.endsWith(".pdf")) {
 
       documentpool.remove(data.asInstanceOf[Document])
 
@@ -169,11 +169,11 @@ class Datapool() {
 
     var id = new Group("")
 
-    var it = grouppool.iterator
+    val it = grouppool.iterator
 
     while(it.hasNext){
 
-      var grp = it.next()
+      val grp = it.next()
 
       if(grp.name.equals(s)) id = grp
 

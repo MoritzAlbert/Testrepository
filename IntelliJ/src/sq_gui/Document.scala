@@ -1,6 +1,5 @@
 package sq_gui
 
-import java.awt.Desktop
 import java.io._
 import javax.swing.ImageIcon
 
@@ -22,21 +21,23 @@ class Document(s: String) extends Data(s) {
     //oder
     //java.lang.Runtime.getRuntime().exec(player,null,file)
     //oder
-    var sb = new StringBuilder(player)
+    val sb = new StringBuilder(player)
     sb.append(' ')
     sb.append(url)
 
-    Runtime.getRuntime().exec(sb.toString());
+    Runtime.getRuntime.exec(sb.toString());
   }
 
   //neuer Player
-  def newPlayer(s:String) = player = s
+  def newPlayer(s:String) {
+    player = s
+  }
 
   def getName : String = {
 
-    var s = url.split("/")
+    val s = url.split("/")
 
-    var name = s.last
+    val name = s.last
 
     name
 
