@@ -211,7 +211,7 @@ object Gui extends SimpleSwingApplication{
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
 
         if(s.getClickCount==2){
-          getObject(f.toString)
+          playObject(f.toString)
         }
 
       }
@@ -252,7 +252,7 @@ object Gui extends SimpleSwingApplication{
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
 
         if(s.getClickCount==2){
-          getObject(f.toString)
+          playObject(f.toString)
         }
 
       }
@@ -293,7 +293,7 @@ object Gui extends SimpleSwingApplication{
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
 
         if(s.getClickCount==2){
-          getObject(f.toString)
+          playObject(f.toString)
         }
 
       }
@@ -334,7 +334,7 @@ object Gui extends SimpleSwingApplication{
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
 
         if(s.getClickCount==2){
-          getObject(f.toString)
+          playObject(f.toString)
         }
 
       }
@@ -403,7 +403,7 @@ object Gui extends SimpleSwingApplication{
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
 
         if(s.getClickCount==2){
-          getObject(f.toString)
+          playObject(f.toString)
         }
 
       }
