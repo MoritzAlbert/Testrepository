@@ -1,5 +1,8 @@
 package sq_gui
+
 import scala.collection.mutable.HashSet
+
+//Begin class Datapool
 
 class Datapool() {
 
@@ -13,12 +16,14 @@ class Datapool() {
 
   var grouppool = new HashSet[Group]()
 
+  //methods
 
-  def addToDataPool(s:String){
+  //adding a file to datapool
+  def addToDataPool(s: String) {
 
     val file = new java.io.File(s)
 
-    if(file.getName.endsWith(".jpg")) {
+    if (file.getName.endsWith(".jpg")) {
 
       val img = new Image(s)
       datapool.add(img)
@@ -26,7 +31,7 @@ class Datapool() {
 
     }
 
-    if(file.getName.endsWith(".mp4")) {
+    if (file.getName.endsWith(".mp4")) {
 
       val vid = new Video(s)
       datapool.add(vid)
@@ -34,7 +39,7 @@ class Datapool() {
 
     }
 
-    if(file.getName.endsWith(".pdf")) {
+    if (file.getName.endsWith(".pdf")) {
 
       val doc = new Document(s)
       datapool.add(doc)
@@ -44,13 +49,14 @@ class Datapool() {
 
   }
 
-  def addToDataPool(s:Set[String]){
+  //adding a set to datapool
+  def addToDataPool(s: Set[String]) {
 
-    for(args <- s){
+    for (args <- s) {
 
       val src = new java.io.File(args)
 
-      if(src.getName.endsWith(".jpg")) {
+      if (src.getName.endsWith(".jpg")) {
 
         val img = new Image(args)
         datapool.add(img)
@@ -58,7 +64,7 @@ class Datapool() {
 
       }
 
-      if(src.getName.endsWith(".mp4")) {
+      if (src.getName.endsWith(".mp4")) {
 
         val vid = new Video(args)
         datapool.add(vid)
@@ -66,7 +72,7 @@ class Datapool() {
 
       }
 
-      if(src.getName.endsWith(".pdf")) {
+      if (src.getName.endsWith(".pdf")) {
 
         val doc = new Document(args)
         datapool.add(doc)
@@ -79,40 +85,44 @@ class Datapool() {
 
   }
 
-  def addToDataPoolI(s:HashSet[Image]){
+  //adding a hashset of images to datapool
+  def addToDataPoolI(s: HashSet[Image]) {
 
-    for(args <- s) this.addToDataPool(args.url)
-
-  }
-
-  def addToDataPoolD(s:HashSet[Document]){
-
-    for(args <- s) this.addToDataPool(args.url)
+    for (args <- s) this.addToDataPool(args.url)
 
   }
 
-  def addToDataPoolV(s:HashSet[Video]){
+  //adding a hashset of pdfs to datapool
+  def addToDataPoolD(s: HashSet[Document]) {
 
-    for(args <- s) this.addToDataPool(args.url)
+    for (args <- s) this.addToDataPool(args.url)
 
   }
 
-  def getData(s:String) : Data = {
+  //adding a hashset of videos to datapool
+  def addToDataPoolV(s: HashSet[Video]) {
 
-    var i=0
+    for (args <- s) this.addToDataPool(args.url)
+
+  }
+
+  //getData
+  def getData(s: String): Data = {
+
+    var i = 0
 
     var id = new Data("")
 
     val it = datapool.iterator
 
-    while(it.hasNext){
+    while (it.hasNext) {
 
       val data = it.next()
 
-      if(data.url.equals(s)){
+      if (data.url.equals(s)) {
         id = data
       }
-      else i+=1
+      else i += 1
     }
 
     id
@@ -120,7 +130,8 @@ class Datapool() {
   }
 
 
-  def removeFromPools(s:String){
+  //remove a file from datapool
+  def removeFromPools(s: String) {
 
     val data = getData(s)
 
@@ -128,20 +139,20 @@ class Datapool() {
 
     datapool.remove(data)
 
-    if(src.getName.endsWith(".jpg")) {
+    if (src.getName.endsWith(".jpg")) {
 
 
       imagepool.remove(data.asInstanceOf[Image])
 
     }
 
-    if(src.getName.endsWith(".mp4")) {
+    if (src.getName.endsWith(".mp4")) {
 
       videopool.remove(data.asInstanceOf[Video])
 
     }
 
-    if(src.getName.endsWith(".pdf")) {
+    if (src.getName.endsWith(".pdf")) {
 
       documentpool.remove(data.asInstanceOf[Document])
 
@@ -149,7 +160,8 @@ class Datapool() {
 
   }
 
-  def addToGrouppool(s:String){
+  //adding a group to grouppool
+  def addToGrouppool(s: String) {
 
     val grp = new Group(s)
 
@@ -157,34 +169,37 @@ class Datapool() {
 
   }
 
-  def addToGrouppool(s:Group){
+  //adding a group to grouppool
+  def addToGrouppool(s: Group) {
 
     grouppool += s
 
   }
 
-  def getGroup(s:String) : Group = {
+  //getGroup
+  def getGroup(s: String): Group = {
 
-    var i=0
+    var i = 0
 
     var id = new Group("")
 
     val it = grouppool.iterator
 
-    while(it.hasNext){
+    while (it.hasNext) {
 
       val grp = it.next()
 
-      if(grp.name.equals(s)) id = grp
+      if (grp.name.equals(s)) id = grp
 
-      else i+=1
+      else i += 1
     }
 
     id
 
   }
 
-  def removeFromGrouppool(s:String){
+  //remove a group from grouppool
+  def removeFromGrouppool(s: String) {
 
     val grp = getGroup(s)
 

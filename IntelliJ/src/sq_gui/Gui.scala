@@ -1,4 +1,5 @@
 package sq_gui
+
 import scala.swing._
 import javax.swing.ImageIcon
 import javax.swing.JList
@@ -17,17 +18,21 @@ import org.jdom.output.XMLOutputter
 import org.jdom.output.Format
 import java.io.FileOutputStream
 import javax.swing.DropMode
+import TabbedPane._
 
-object Gui extends SimpleSwingApplication{
 
+//Begin object Object Gui
+
+object Gui extends SimpleSwingApplication {
+
+  //Declarations
   val file = new File("test.xml")
-
   var database = readFromFile(file)
 
-  var col_data = (database.datapool.size)/3 +1
-  var col_image = (database.imagepool.size)/3 +1
-  var col_doc = (database.documentpool.size)/3 +1
-  var col_video = (database.videopool.size)/3 +1
+  var col_data = (database.datapool.size) / 3 + 1
+  var col_image = (database.imagepool.size) / 3 + 1
+  var col_doc = (database.documentpool.size) / 3 + 1
+  var col_video = (database.videopool.size) / 3 + 1
 
   var list = getJListFromDatabase(database)
 
@@ -68,17 +73,19 @@ object Gui extends SimpleSwingApplication{
 
   var scroll_video = ListRenderer(list_video)
 
-  def top = new MainFrame(){
+  //Begin MainFrame
+
+  def top = new MainFrame() {
 
     UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName)
-
     title = "Gui Explorer"
-
     visible = true
 
     var frame = new FlowPanel()
 
-    val addData = Action("add"){
+
+    //Add data to datapool
+    val addData = Action("add") {
 
       val fileChooser = new FileChooser() {
         fileFilter = new FileNameExtensionFilter("JPG,PDF & MP4", "jpg", "pdf", "mp4")
@@ -91,55 +98,62 @@ object Gui extends SimpleSwingApplication{
 
       database.addToDataPool(url.getPath)
 
-      updateListData(list,database)
-      updateListImage(list_image,database)
-      updateListDocument(list_doc,database)
-      updateListVideo(list_video,database)
+      updateListData(list, database)
+      updateListImage(list_image, database)
+      updateListDocument(list_doc, database)
+      updateListVideo(list_video, database)
 
-      exportToXML(database,"test.xml")
-
-    }
-
-    var add = new Button{action=addData}
-
-    var tab_test = new TabbedPane{
-
-      import TabbedPane._
-
-      pages += new Page("Alle",scroll)
-      pages += new Page("Images",scroll_image)
-      pages += new Page("Docs",scroll_doc)
-      pages += new Page("Vids",scroll_video)
+      exportToXML(database, "test.xml")
 
     }
 
-    var tab = new ScrollPane(tab_test)
+    //add-Button
+    var add = new Button {
+      action = addData
+    }
 
-    var search = new FlowPanel{
+    //filter tabs
+    var tab_filter = new TabbedPane {
+
+      pages += new Page("Alle", scroll)
+      pages += new Page("Images", scroll_image)
+      pages += new Page("Docs", scroll_doc)
+      pages += new Page("Vids", scroll_video)
+
+    }
+    //filter Pane
+    var tab = new ScrollPane(tab_filter)
+
+    //searchPanel
+    var searchPanel = new FlowPanel {
 
       contents += new TextField("Suche")
 
     }
 
-    var box_right = new BoxPanel(Orientation.Vertical){
+    //right-aligned Panel (containing three components)
+    var box_right = new BoxPanel(Orientation.Vertical) {
 
       contents += add
       contents += tab
-      contents += search
+      contents += searchPanel
 
     }
 
+    //panel for presentation all available groups
     var group = paintGridPanel
 
+    //group scrollPane
     var group_new = new ScrollPane(group)
 
-    var box_left = new BoxPanel(Orientation.Vertical){
+    //left-aligned Panel (containing two components)
+    var box_left = new BoxPanel(Orientation.Vertical) {
       contents += group_new
       contents += new Button("add group")
     }
 
-
-    val main = new BoxPanel(Orientation.Horizontal){
+    //complete window (containing left_box and right_box)
+    val main = new BoxPanel(Orientation.Horizontal) {
 
       contents += box_left
 
@@ -147,47 +161,49 @@ object Gui extends SimpleSwingApplication{
 
     }
 
-
     contents = main
 
   }
 
-  def getJListFromDatabase(data:Datapool) : JList = {
+  //Begin methods
 
-    val model = new DefaultListModel(){
+  //generating a JList from a database
+  def getJListFromDatabase(data: Datapool): JList = {
+
+    val model = new DefaultListModel() {
 
       val it = data.datapool.iterator
 
-      while(it.hasNext){
+      while (it.hasNext) {
         val data = it.next()
 
-        if(data.url.endsWith(".jpg")){
+        if (data.url.endsWith(".jpg")) {
 
           val img = data.asInstanceOf[Image]
 
-          img.image.getImage.getScaledInstance(10,10,10)
+          img.image.getImage.getScaledInstance(10, 10, 10)
 
           img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
           this.addElement(img.image)
 
         }
-        if(data.url.endsWith(".pdf")){
+        if (data.url.endsWith(".pdf")) {
 
           val img = data.asInstanceOf[Document]
 
-          img.image.getImage.getScaledInstance(10,10,10)
+          img.image.getImage.getScaledInstance(10, 10, 10)
 
           img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
           this.addElement(img.image)
 
         }
-        if(data.url.endsWith(".mp4")){
+        if (data.url.endsWith(".mp4")) {
 
           val img = data.asInstanceOf[Video]
 
-          img.image.getImage.getScaledInstance(10,10,10)
+          img.image.getImage.getScaledInstance(10, 10, 10)
 
           img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
@@ -202,15 +218,15 @@ object Gui extends SimpleSwingApplication{
 
     val list = new JList(model)
 
-    list.addMouseListener(new MouseAdapter(){
+    list.addMouseListener(new MouseAdapter() {
 
-      override def mouseClicked(s: MouseEvent){
+      override def mouseClicked(s: MouseEvent) {
 
         val e = s.getSource.asInstanceOf[JList]
 
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
 
-        if(s.getClickCount==2){
+        if (s.getClickCount == 2) {
           playObject(f.toString)
         }
 
@@ -222,17 +238,18 @@ object Gui extends SimpleSwingApplication{
 
   }
 
-  def getJListImageFromDatabase(data:Datapool) : JList = {
+  //generating an image-JList from database
+  def getJListImageFromDatabase(data: Datapool): JList = {
 
-    val model = new DefaultListModel(){
+    val model = new DefaultListModel() {
 
       val it = data.imagepool.iterator
 
-      while(it.hasNext){
+      while (it.hasNext) {
 
         val data = it.next()
 
-        data.image.getImage.getScaledInstance(10,10,10)
+        data.image.getImage.getScaledInstance(10, 10, 10)
 
         data.image.setImage(data.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
@@ -243,15 +260,15 @@ object Gui extends SimpleSwingApplication{
 
     val list = new JList(model)
 
-    list.addMouseListener(new MouseAdapter(){
+    list.addMouseListener(new MouseAdapter() {
 
-      override def mouseClicked(s: MouseEvent){
+      override def mouseClicked(s: MouseEvent) {
 
         val e = s.getSource.asInstanceOf[JList]
 
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
 
-        if(s.getClickCount==2){
+        if (s.getClickCount == 2) {
           playObject(f.toString)
         }
 
@@ -263,17 +280,18 @@ object Gui extends SimpleSwingApplication{
 
   }
 
-  def getJListDocumentFromDatabase(data:Datapool) : JList = {
+  //generating a document/pdf-JList from database
+  def getJListDocumentFromDatabase(data: Datapool): JList = {
 
-    val model = new DefaultListModel(){
+    val model = new DefaultListModel() {
 
       val it = data.documentpool.iterator
 
-      while(it.hasNext){
+      while (it.hasNext) {
 
         val data = it.next()
 
-        data.image.getImage.getScaledInstance(10,10,10)
+        data.image.getImage.getScaledInstance(10, 10, 10)
 
         data.image.setImage(data.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
@@ -284,15 +302,15 @@ object Gui extends SimpleSwingApplication{
 
     val list = new JList(model)
 
-    list.addMouseListener(new MouseAdapter(){
+    list.addMouseListener(new MouseAdapter() {
 
-      override def mouseClicked(s: MouseEvent){
+      override def mouseClicked(s: MouseEvent) {
 
         val e = s.getSource.asInstanceOf[JList]
 
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
 
-        if(s.getClickCount==2){
+        if (s.getClickCount == 2) {
           playObject(f.toString)
         }
 
@@ -304,17 +322,18 @@ object Gui extends SimpleSwingApplication{
 
   }
 
-  def getJListVideoFromDatabase(data:Datapool) : JList = {
+  //generating a video-JList from database
+  def getJListVideoFromDatabase(data: Datapool): JList = {
 
-    val model = new DefaultListModel{
+    val model = new DefaultListModel {
 
       val it = data.videopool.iterator
 
-      while(it.hasNext){
+      while (it.hasNext) {
 
         val data = it.next()
 
-        data.image.getImage.getScaledInstance(10,10,10)
+        data.image.getImage.getScaledInstance(10, 10, 10)
 
         data.image.setImage(data.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
@@ -325,15 +344,15 @@ object Gui extends SimpleSwingApplication{
 
     val list = new JList(model)
 
-    list.addMouseListener(new MouseAdapter(){
+    list.addMouseListener(new MouseAdapter() {
 
-      override def mouseClicked(s: MouseEvent){
+      override def mouseClicked(s: MouseEvent) {
 
         val e = s.getSource.asInstanceOf[JList]
 
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
 
-        if(s.getClickCount==2){
+        if (s.getClickCount == 2) {
           playObject(f.toString)
         }
 
@@ -345,42 +364,43 @@ object Gui extends SimpleSwingApplication{
 
   }
 
-  def getJListGroupFromDatabase(s:Group) : JList = {
+  //generating a JList of all groups in database
+  def getJListGroupFromDatabase(s: Group): JList = {
 
-    val model = new DefaultListModel(){
+    val model = new DefaultListModel() {
 
       val it = s.data.iterator
 
-      while(it.hasNext){
+      while (it.hasNext) {
         val data = it.next()
 
-        if(data.url.endsWith(".jpg")){
+        if (data.url.endsWith(".jpg")) {
 
           val img = data.asInstanceOf[Image]
 
-          img.image.getImage.getScaledInstance(10,10,10)
+          img.image.getImage.getScaledInstance(10, 10, 10)
 
           img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
           this.addElement(img.image)
 
         }
-        if(data.url.endsWith(".pdf")){
+        if (data.url.endsWith(".pdf")) {
 
           val img = data.asInstanceOf[Document]
 
-          img.image.getImage.getScaledInstance(10,10,10)
+          img.image.getImage.getScaledInstance(10, 10, 10)
 
           img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
           this.addElement(img.image)
 
         }
-        if(data.url.endsWith(".mp4")){
+        if (data.url.endsWith(".mp4")) {
 
           val img = data.asInstanceOf[Video]
 
-          img.image.getImage.getScaledInstance(10,10,10)
+          img.image.getImage.getScaledInstance(10, 10, 10)
 
           img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
@@ -394,15 +414,15 @@ object Gui extends SimpleSwingApplication{
 
     val list = new JList(model)
 
-    list.addMouseListener(new MouseAdapter(){
+    list.addMouseListener(new MouseAdapter() {
 
-      override def mouseClicked(s: MouseEvent){
+      override def mouseClicked(s: MouseEvent) {
 
         val e = s.getSource.asInstanceOf[JList]
 
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
 
-        if(s.getClickCount==2){
+        if (s.getClickCount == 2) {
           playObject(f.toString)
         }
 
@@ -413,8 +433,8 @@ object Gui extends SimpleSwingApplication{
     list
   }
 
-
-  def ListRenderer(s:JList) : Component = {
+  //list-renderer
+  def ListRenderer(s: JList): Component = {
 
     val renderer = new IconTextListCellRenderer()
 
@@ -425,33 +445,35 @@ object Gui extends SimpleSwingApplication{
     scroll
   }
 
-  def playObject(s:String){
+  //playing an object
+  def playObject(s: String) {
 
     val x = s.split("[.]")
 
-    if(x.last.equals("jpg")){
+    if (x.last.equals("jpg")) {
       playImage(s)
     }
-    if(x.last.equals("pdf")){
+    if (x.last.equals("pdf")) {
       playDocument(s)
     }
-    if(x.last.equals("mp4")){
+    if (x.last.equals("mp4")) {
       playVideo(s)
     }
 
   }
 
-  def playImage(s:String){
+  //presenting an image
+  def playImage(s: String) {
 
     val it = database.imagepool.iterator
 
     println(s)
 
-    while(it.hasNext){
+    while (it.hasNext) {
 
       val data = it.next()
 
-      if(data.getName.equals(s)){
+      if (data.getName.equals(s)) {
         println(data.url)
         data.play
       }
@@ -460,15 +482,16 @@ object Gui extends SimpleSwingApplication{
 
   }
 
-  def playDocument(s:String){
+  //presenting a pdf-file
+  def playDocument(s: String) {
 
     val it = database.documentpool.iterator
 
-    while(it.hasNext){
+    while (it.hasNext) {
 
       val data = it.next()
 
-      if(data.getName.equals(s)){
+      if (data.getName.equals(s)) {
         println(data.url)
         data.play
       }
@@ -477,15 +500,16 @@ object Gui extends SimpleSwingApplication{
 
   }
 
-  def playVideo(s:String){
+  //presenting a video
+  def playVideo(s: String) {
 
     val it = database.videopool.iterator
 
-    while(it.hasNext){
+    while (it.hasNext) {
 
       val data = it.next()
 
-      if(data.getName.equals(s)){
+      if (data.getName.equals(s)) {
         println(data.url)
         data.play
       }
@@ -494,15 +518,16 @@ object Gui extends SimpleSwingApplication{
 
   }
 
-  def paintGridPanel :GridPanel = {
+  //paint gridPanel
+  def paintGridPanel: GridPanel = {
 
     val size = database.grouppool.size
 
-    val grid = new GridPanel(size,1){
+    val grid = new GridPanel(size, 1) {
 
       val it = database.grouppool.iterator
 
-      while (it.hasNext){
+      while (it.hasNext) {
 
         val obj = it.next()
 
@@ -517,14 +542,14 @@ object Gui extends SimpleSwingApplication{
 
         var s_list = new ScrollPane(Component.wrap(list))
 
-        var bp = new BoxPanel(Orientation.Vertical){
+        var bp = new BoxPanel(Orientation.Vertical) {
 
           contents += new Label(obj.name)
           contents += new Label(obj.data.size + " Elements")
           //border = Swing.EmptyBorder(30, 30, 10, 30)
         }
 
-        val fp = new FlowPanel{
+        val fp = new FlowPanel {
 
           contents += bp
           contents += s_list
@@ -540,7 +565,10 @@ object Gui extends SimpleSwingApplication{
 
   }
 
-  def updateListData(list:JList, data:Datapool){
+  //update methods
+
+  //updating listData
+  def updateListData(list: JList, data: Datapool) {
 
     val listModel = list.getModel.asInstanceOf[DefaultListModel]
 
@@ -548,37 +576,37 @@ object Gui extends SimpleSwingApplication{
 
     val it = data.datapool.iterator
 
-    while(it.hasNext){
+    while (it.hasNext) {
 
       val data = it.next()
 
-      if(data.url.endsWith(".jpg")){
+      if (data.url.endsWith(".jpg")) {
 
         val img = data.asInstanceOf[Image]
 
-        img.image.getImage.getScaledInstance(10,10,10)
+        img.image.getImage.getScaledInstance(10, 10, 10)
 
         img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
         listModel.addElement(img.image)
 
       }
-      if(data.url.endsWith(".pdf")){
+      if (data.url.endsWith(".pdf")) {
 
         val img = data.asInstanceOf[Document]
 
-        img.image.getImage.getScaledInstance(10,10,10)
+        img.image.getImage.getScaledInstance(10, 10, 10)
 
         img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
         listModel.addElement(img.image)
 
       }
-      if(data.url.endsWith(".mp4")){
+      if (data.url.endsWith(".mp4")) {
 
         val img = data.asInstanceOf[Video]
 
-        img.image.getImage.getScaledInstance(10,10,10)
+        img.image.getImage.getScaledInstance(10, 10, 10)
 
         img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
@@ -590,7 +618,8 @@ object Gui extends SimpleSwingApplication{
 
   }
 
-  def updateListImage(list:JList, data:Datapool){
+  //updating listImage
+  def updateListImage(list: JList, data: Datapool) {
 
     val listModel = list.getModel.asInstanceOf[DefaultListModel]
 
@@ -598,11 +627,11 @@ object Gui extends SimpleSwingApplication{
 
     val it = data.imagepool.iterator
 
-    while(it.hasNext){
+    while (it.hasNext) {
 
       val data = it.next()
 
-      data.image.getImage.getScaledInstance(10,10,10)
+      data.image.getImage.getScaledInstance(10, 10, 10)
 
       data.image.setImage(data.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
@@ -611,7 +640,8 @@ object Gui extends SimpleSwingApplication{
     }
   }
 
-  def updateListDocument(list:JList, data:Datapool){
+  //updating listDocument
+  def updateListDocument(list: JList, data: Datapool) {
 
     val listModel = list.getModel.asInstanceOf[DefaultListModel]
 
@@ -619,11 +649,11 @@ object Gui extends SimpleSwingApplication{
 
     val it = data.documentpool.iterator
 
-    while(it.hasNext){
+    while (it.hasNext) {
 
       val data = it.next()
 
-      data.image.getImage.getScaledInstance(10,10,10)
+      data.image.getImage.getScaledInstance(10, 10, 10)
 
       data.image.setImage(data.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
@@ -632,7 +662,8 @@ object Gui extends SimpleSwingApplication{
     }
   }
 
-  def updateListVideo(list:JList, data:Datapool){
+  //updating listVideo
+  def updateListVideo(list: JList, data: Datapool) {
 
     val listModel = list.getModel.asInstanceOf[DefaultListModel]
 
@@ -640,11 +671,11 @@ object Gui extends SimpleSwingApplication{
 
     val it = data.videopool.iterator
 
-    while(it.hasNext){
+    while (it.hasNext) {
 
       val data = it.next()
 
-      data.image.getImage.getScaledInstance(10,10,10)
+      data.image.getImage.getScaledInstance(10, 10, 10)
 
       data.image.setImage(data.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
 
@@ -653,8 +684,10 @@ object Gui extends SimpleSwingApplication{
     }
   }
 
+  //reading method
 
-  def readFromFile(f:File) : Datapool={
+  //read from file
+  def readFromFile(f: File): Datapool = {
 
     val sAXBuilder = new SAXBuilder
 
@@ -672,9 +705,9 @@ object Gui extends SimpleSwingApplication{
 
     var i = 0
 
-    while(i < children.size()){
+    while (i < children.size()) {
 
-      var j=0
+      var j = 0
 
       val x = children.get(i)
 
@@ -682,14 +715,14 @@ object Gui extends SimpleSwingApplication{
 
       var name = ""
 
-      if(elem.getName=="Group"){
+      if (elem.getName == "Group") {
 
         name = elem.getChild("name").getText
         database.addToGrouppool(name)
 
         val child = elem.getChildren("Data")
 
-        while(j < child.size){
+        while (j < child.size) {
 
           val x = child.get(j)
 
@@ -703,7 +736,7 @@ object Gui extends SimpleSwingApplication{
         }
 
       }
-      else{
+      else {
 
         name = elem.getChild("URL").getText
 
@@ -711,14 +744,17 @@ object Gui extends SimpleSwingApplication{
 
       }
 
-      i+=1
+      i += 1
     }
 
     database
 
   }
 
-  def exportToXML(d: Datapool,s:String){
+  //export method
+
+  //export to XML
+  def exportToXML(d: Datapool, s: String) {
 
     val root = new Element("Datapool")
 
@@ -726,7 +762,7 @@ object Gui extends SimpleSwingApplication{
 
     val it = d.datapool.iterator
 
-    while(it.hasNext){
+    while (it.hasNext) {
 
       val data = it.next()
 
@@ -740,7 +776,7 @@ object Gui extends SimpleSwingApplication{
 
     var i = d.datapool.size
 
-    while(it2.hasNext){
+    while (it2.hasNext) {
 
       val grp = it2.next()
 
@@ -760,7 +796,7 @@ object Gui extends SimpleSwingApplication{
 
       val it3 = set.iterator
 
-      while(it3.hasNext){
+      while (it3.hasNext) {
 
         val obj = it3.next()
 
@@ -779,7 +815,7 @@ object Gui extends SimpleSwingApplication{
 
     val output = new FileOutputStream(s)
 
-    xml.output(doc,output)
+    xml.output(doc, output)
 
 
   }

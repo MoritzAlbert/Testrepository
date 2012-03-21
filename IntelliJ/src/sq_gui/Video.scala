@@ -3,7 +3,11 @@ package sq_gui
 import java.io._
 import javax.swing.ImageIcon
 
+//Begin class Video
+
 class Video(s: String) extends Data(s) {
+
+  //declarations
 
   this.url = s
 
@@ -11,12 +15,14 @@ class Video(s: String) extends Data(s) {
 
   val file = new File(s)
 
-  var image = new ImageIcon(default,getName)
+  var image = new ImageIcon(default, getName)
 
   var player = "C:/Program Files (x86)/Windows Media Player/wmplayer.exe"
 
-  //berschreibt play-Fkt von Data
-  override def play{
+  //methods
+
+  //overwrites the play-function of video
+  override def play {
     //Desktop.getDesktop().open(file)
     //oder
     //java.lang.Runtime.getRuntime().exec(player,null,file)
@@ -28,12 +34,13 @@ class Video(s: String) extends Data(s) {
     Runtime.getRuntime.exec(sb.toString());
   }
 
-  //neuer Player
-  def newPlayer(s:String) {
+  //new Player
+  def newPlayer(s: String) {
     player = s
   }
 
-  def getName : String = {
+  //get name
+  def getName: String = {
 
     val s = url.split("/")
 

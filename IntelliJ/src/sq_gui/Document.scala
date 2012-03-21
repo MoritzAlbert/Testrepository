@@ -3,7 +3,11 @@ package sq_gui
 import java.io._
 import javax.swing.ImageIcon
 
+//Begin class Document
+
 class Document(s: String) extends Data(s) {
+
+  //declarations
 
   this.url = s
 
@@ -11,12 +15,14 @@ class Document(s: String) extends Data(s) {
 
   var default = "D:/eclipse-jee-indigo-SR1-win32-x86_64/eclipse/workspace/SQ_GUI/pdf_logo.jpg"
 
-  var image = new ImageIcon(default,getName)
+  var image = new ImageIcon(default, getName)
 
   var player = "C:/Program Files (x86)/Adobe/Acrobat 10.0/Acrobat/Acrobat.exe"
 
-  //berschreibt play-Fkt von Data
-  override def play{
+  //methods
+
+  //overwrites the play-function of video
+  override def play {
     //Desktop.getDesktop().open(file)
     //oder
     //java.lang.Runtime.getRuntime().exec(player,null,file)
@@ -28,12 +34,13 @@ class Document(s: String) extends Data(s) {
     Runtime.getRuntime.exec(sb.toString());
   }
 
-  //neuer Player
-  def newPlayer(s:String) {
+  //new player
+  def newPlayer(s: String) {
     player = s
   }
 
-  def getName : String = {
+  //getName
+  def getName: String = {
 
     val s = url.split("/")
 
