@@ -81,6 +81,8 @@ object Gui extends SimpleSwingApplication {
     title = "Gui Explorer"
     visible = true
 
+    // KOMMENTAR TEST
+
     var frame = new FlowPanel()
 
     //Add data to datapool
