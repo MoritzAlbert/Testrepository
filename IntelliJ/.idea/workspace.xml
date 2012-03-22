@@ -88,7 +88,7 @@
       <file leaf-file-name="Gui.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sq_gui/Gui.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="21" selection-start="2418" selection-end="2418" vertical-scroll-proportion="0.29694322">
+            <state line="19" column="57" selection-start="543" selection-end="543" vertical-scroll-proportion="-0.6310044">
               <folding />
             </state>
           </provider>
@@ -656,7 +656,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sq_gui/Gui.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="21" selection-start="2418" selection-end="2418" vertical-scroll-proportion="0.29694322">
+        <state line="19" column="57" selection-start="543" selection-end="543" vertical-scroll-proportion="-0.6310044">
           <folding />
         </state>
       </provider>
