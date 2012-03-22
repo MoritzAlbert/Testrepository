@@ -22,30 +22,21 @@ class Group(s: String) {
   def addData(obj: Data) = data += obj
 
   def addData(s: String) {
-
     val file = new java.io.File(s)
-
     if (file.getName.endsWith(".jpg")) {
-
       val img = new Image(s)
       data.add(img)
-
     }
 
     if (file.getName.endsWith(".mp4")) {
-
       val vid = new Video(s)
       data.add(vid)
-
     }
 
     if (file.getName.endsWith(".pdf")) {
-
       val doc = new Document(s)
       data.add(doc)
-
     }
-
   }
 
   //deleting an object from data
@@ -58,16 +49,12 @@ class Group(s: String) {
 
   //playing all elements of a group
   def playGroup() {
-
     for (arg <- data) arg.play
-
   }
 
   //adding a new set to a playlist
   def addSetToPlaylist(s: Set[Data]) {
-
     for (arg <- s) playlist += arg
-
   }
 
   //adding a new object to a playlist
@@ -77,6 +64,4 @@ class Group(s: String) {
   def playPlaylist() {
     for (arg <- playlist) arg.play
   }
-
-
 }

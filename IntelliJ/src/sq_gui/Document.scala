@@ -41,13 +41,8 @@ class Document(s: String) extends Data(s) {
 
   //getName
   def getName: String = {
-
     val s = url.split("/")
-
     val name = s.last
-
     name
-
   }
-
 }

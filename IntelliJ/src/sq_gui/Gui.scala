@@ -83,7 +83,6 @@ object Gui extends SimpleSwingApplication {
 
     var frame = new FlowPanel()
 
-
     //Add data to datapool
     val addData = Action("add") {
 
@@ -104,7 +103,6 @@ object Gui extends SimpleSwingApplication {
       updateListVideo(list_video, database)
 
       exportToXML(database, "test.xml")
-
     }
 
     //add-Button
@@ -154,11 +152,8 @@ object Gui extends SimpleSwingApplication {
 
     //complete window (containing left_box and right_box)
     val main = new BoxPanel(Orientation.Horizontal) {
-
       contents += box_left
-
       contents += box_right
-
     }
 
     contents = main
@@ -171,46 +166,30 @@ object Gui extends SimpleSwingApplication {
   def getJListFromDatabase(data: Datapool): JList = {
 
     val model = new DefaultListModel() {
-
       val it = data.datapool.iterator
-
       while (it.hasNext) {
         val data = it.next()
-
+        // Pictures
         if (data.url.endsWith(".jpg")) {
-
           val img = data.asInstanceOf[Image]
-
           img.image.getImage.getScaledInstance(10, 10, 10)
-
           img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
-
           this.addElement(img.image)
-
         }
+        //Documtents
         if (data.url.endsWith(".pdf")) {
-
           val img = data.asInstanceOf[Document]
-
           img.image.getImage.getScaledInstance(10, 10, 10)
-
           img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
-
           this.addElement(img.image)
-
         }
+        // Videos
         if (data.url.endsWith(".mp4")) {
-
           val img = data.asInstanceOf[Video]
-
           img.image.getImage.getScaledInstance(10, 10, 10)
-
           img.image.setImage(img.image.getImage.getScaledInstance(100, 75, Image.SCALE_DEFAULT))
-
           this.addElement(img.image)
-
         }
-
       }
 
 

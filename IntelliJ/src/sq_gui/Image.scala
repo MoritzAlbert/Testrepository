@@ -8,15 +8,10 @@ import javax.swing.ImageIcon
 class Image(s: String) extends Data(s) {
 
   //declarations
-
   this.url = s
-
   val file = new File(s)
-
   var image = new ImageIcon(s, getName)
-
   var player = "C:/Program Files (x86)/GIMP-2.0/bin/gimp-2.6.exe"
-
   //methods
 
   //overwrites the play-function of data
@@ -40,12 +35,8 @@ class Image(s: String) extends Data(s) {
 
   //getName
   def getName: String = {
-
     val s = url.split("/")
-
     val name = s.last
-
     name
-
   }
 }

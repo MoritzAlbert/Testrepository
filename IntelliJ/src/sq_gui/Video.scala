@@ -8,17 +8,11 @@ import javax.swing.ImageIcon
 class Video(s: String) extends Data(s) {
 
   //declarations
-
   this.url = s
-
   var default = "D:/eclipse-jee-indigo-SR1-win32-x86_64/eclipse/workspace/SQ_GUI/video.jpg"
-
   val file = new File(s)
-
   var image = new ImageIcon(default, getName)
-
   var player = "C:/Program Files (x86)/Windows Media Player/wmplayer.exe"
-
   //methods
 
   //overwrites the play-function of video
@@ -41,14 +35,8 @@ class Video(s: String) extends Data(s) {
 
   //get name
   def getName: String = {
-
     val s = url.split("/")
-
     val name = s.last
-
     name
-
   }
-
-
 }
