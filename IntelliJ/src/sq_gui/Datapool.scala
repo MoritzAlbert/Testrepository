@@ -57,8 +57,6 @@ class Datapool() {
         documentpool.add(doc)
       }
     }
-
-
   }
 
   //adding a hashset of images to datapool

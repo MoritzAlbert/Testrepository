@@ -9,11 +9,8 @@ class Group(s: String) {
   //declarations
 
   var name = s
-
   var data = Set[Data]()
-
   var playlist = Set[Data]()
-
   var data_id = 0
 
   //methods

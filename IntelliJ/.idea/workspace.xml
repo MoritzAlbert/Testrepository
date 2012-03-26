@@ -58,28 +58,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Data.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sq_gui/Data.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="58" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Datapool.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sq_gui/Datapool.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="39" selection-start="2949" selection-end="2949" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fct_Test.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sq_gui/Fct_Test.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="24" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
+            <state line="59" column="0" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,7 +70,7 @@
       <file leaf-file-name="Gui.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sq_gui/Gui.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="57" selection-start="543" selection-end="543" vertical-scroll-proportion="-0.6310044">
+            <state line="235" column="28" selection-start="6255" selection-end="6255" vertical-scroll-proportion="0.724537">
               <folding />
             </state>
           </provider>
@@ -97,7 +79,7 @@
       <file leaf-file-name="test.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="30" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.0">
+            <state line="152" column="34" selection-start="3964" selection-end="3964" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,7 +88,16 @@
       <file leaf-file-name="Group.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sq_gui/Group.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="3" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.0">
+            <state line="13" column="2" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Data.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sq_gui/Data.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="58" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,7 +115,7 @@
       <file leaf-file-name="Video.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sq_gui/Video.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="19" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
+            <state line="40" column="34" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,7 +124,7 @@
       <file leaf-file-name="Document.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sq_gui/Document.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="30" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -154,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/sq_gui/Fct_Test.scala" />
         <option value="$PROJECT_DIR$/src/sq_gui/Data.scala" />
         <option value="$PROJECT_DIR$/src/sq_giu2/Datapool.scala" />
         <option value="$PROJECT_DIR$/src/sq_giu2/Data.scala" />
@@ -165,13 +155,17 @@
         <option value="$PROJECT_DIR$/src/sq_giu2/Image.scala" />
         <option value="$PROJECT_DIR$/src/sq_giu2/Video.scala" />
         <option value="$PROJECT_DIR$/src/sq_gui/Image.scala" />
-        <option value="$PROJECT_DIR$/src/sq_gui/Video.scala" />
-        <option value="$PROJECT_DIR$/src/sq_gui/Document.scala" />
         <option value="$PROJECT_DIR$/src/sq_gui/Group.scala" />
+        <option value="$PROJECT_DIR$/src/sq_gui/Document.scala" />
         <option value="$PROJECT_DIR$/src/sq_gui/Datapool.scala" />
+        <option value="$PROJECT_DIR$/src/sq_gui/Video.scala" />
+        <option value="$PROJECT_DIR$/test.xml" />
         <option value="$PROJECT_DIR$/src/sq_gui/Gui.scala" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_INTERNAL" />
@@ -208,34 +202,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SQ_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SQ_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SQ_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SQ_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sq_gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,6 +237,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -288,6 +258,34 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="sq_gui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SQ_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SQ_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SQ_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SQ_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sq_gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -517,17 +515,17 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33287483" sideWeight="0.42488718" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33287483" sideWeight="0.5306254" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889959" sideWeight="0.4977434" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33287483" sideWeight="0.5609284" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946485" sideWeight="0.66712517" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28239846" sideWeight="0.66712517" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33287483" sideWeight="0.5705996" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33287483" sideWeight="0.4648614" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -602,61 +600,63 @@
         <state line="365" column="0" selection-start="13550" selection-end="13550" vertical-scroll-proportion="0.33187774" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sq_gui/Fct_Test.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="24" selection-start="584" selection-end="584" vertical-scroll-proportion="0.8908297" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Test.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="7" selection-start="173" selection-end="177" vertical-scroll-proportion="0.37117904" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sq_gui/Datapool.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sq_gui/Group.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="2" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sq_gui/Data.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="58" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sq_gui/Datapool.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="39" selection-start="2949" selection-end="2949" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sq_gui/Fct_Test.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="24" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="30" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sq_gui/Group.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="3" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sq_gui/Image.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="8" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="41" column="8" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sq_gui/Video.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="19" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="40" column="34" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sq_gui/Document.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="30" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="34" selection-start="3964" selection-end="3964" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../scala-2.9.1-1/lib/scala-swing.jar!/scala/swing/BoxPanel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="14" selection-start="34" selection-end="34" vertical-scroll-proportion="0.04047619">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sq_gui/Gui.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="57" selection-start="543" selection-end="543" vertical-scroll-proportion="-0.6310044">
+        <state line="235" column="28" selection-start="6255" selection-end="6255" vertical-scroll-proportion="0.724537">
           <folding />
         </state>
       </provider>
