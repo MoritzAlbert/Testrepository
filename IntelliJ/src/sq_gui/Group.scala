@@ -1,6 +1,6 @@
 package sq_gui
 
-import scala.collection.mutable.Set
+import scala.collection.mutable.HashSet
 
 //Begin class Group
 
@@ -8,10 +8,13 @@ class Group(s: String) {
 
   //declarations
 
+  var id = 0
   var name = s
-  var data = Set[Data]()
-  var playlist = Set[Data]()
+  var data = HashSet[Data]()
+  var playlist = HashSet[Data]()
+  
   var data_id = 0
+  var data_new = HashSet[Int]()
 
   //methods
 
@@ -36,6 +39,10 @@ class Group(s: String) {
     }
   }
 
+  def addDataNew(i:Int){
+    data_new += i
+  }
+
   //deleting an object from data
   def removeData(obj: Data) {
     data.remove(obj)
@@ -49,8 +56,8 @@ class Group(s: String) {
     for (arg <- data) arg.play
   }
 
-  //adding a new set to a playlist
-  def addSetToPlaylist(s: Set[Data]) {
+  //adding a new hashSet to a playlist
+  def addSetToPlaylist(s: HashSet[Data]) {
     for (arg <- s) playlist += arg
   }
 
