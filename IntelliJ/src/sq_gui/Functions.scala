@@ -1,33 +1,47 @@
 package sq_gui
 
-import java.awt.event.{MouseEvent, MouseAdapter}
+import java.awt.event._
 import extension.IconTextListCellRenderer
-import swing.{ScrollPane, Component}
-import java.awt._
+import swing._
+import java.awt.Image
 import java.io.File
 import javax.swing.{DropMode, ImageIcon, DefaultListModel, JList}
 import com.ebenius.ListMoveTransferHandler
 
 
-trait Functions extends XML {
+trait Functions extends XML with UpdateFunctions {
 
   //Declarations
 
   val file = new File("test.xml")
   var database = readFromFile(file)
 
-  var col_data = (database.datapool.size) / 3 + 1
-  var col_image = (database.imagepool.size) / 3 + 1
-  var col_doc = (database.documentpool.size) / 3 + 1
-  var col_video = (database.videopool.size) / 3 + 1
-
   var list = getJListFromDatabase(database)
 
   list.setDragEnabled(true)
   list.setDropMode(DropMode.INSERT)
   list.setTransferHandler(new ListMoveTransferHandler())
-  list.setVisibleRowCount(col_data)
-  list.setLayoutOrientation(JList.VERTICAL_WRAP)
+
+  list.addKeyListener(new KeyAdapter {
+    override def keyPressed(evt:KeyEvent) {
+      val key = evt.getKeyCode
+      if (key == KeyEvent.VK_DELETE ){
+        val x = Dialog.showConfirmation(null,"Wollen Sie die Datei wirklich löschen?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
+        println(x.toString)
+        if(x.toString.equals("Ok")){
+        val obj = list.getSelectedValue.asInstanceOf[ImageIcon]
+        println("ImageIcon: "+obj.getDescription)
+        val url = searchURL(obj.getDescription)
+        println(url)
+        database.removeFromPools(url)
+        updateListData(list,database)
+        updateListDocument(list_doc,database)
+        updateListImage(list_image,database)
+        updateListVideo(list_video,database)
+        }
+      }
+    }
+  })
 
   var scroll = ListRenderer(list)
   var list_image = getJListImageFromDatabase(database)
@@ -35,8 +49,25 @@ trait Functions extends XML {
   list_image.setDragEnabled(true)
   list_image.setDropMode(DropMode.INSERT)
   list_image.setTransferHandler(new ListMoveTransferHandler())
-  list_image.setVisibleRowCount(col_image)
-  list_image.setLayoutOrientation(JList.VERTICAL_WRAP)
+  list_image.addKeyListener(new KeyAdapter {
+    override def keyPressed(evt:KeyEvent) {
+      val key = evt.getKeyCode
+      if (key == KeyEvent.VK_DELETE ){
+        val x = Dialog.showConfirmation(null,"Wollen Sie die Datei wirklich löschen?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
+        if(x.toString.equals("Ok")){
+        val obj = list_image.getSelectedValue.asInstanceOf[ImageIcon]
+        println("ImageIcon: "+obj.getDescription)
+        val url = searchURL(obj.getDescription)
+        println(url)
+        database.removeFromPools(url)
+        updateListData(list,database)
+        updateListDocument(list_doc,database)
+        updateListImage(list_image,database)
+        updateListVideo(list_video,database)
+        }
+      }
+    }
+  })
 
   var scroll_image = ListRenderer(list_image)
   var list_doc = getJListDocumentFromDatabase(database)
@@ -44,8 +75,25 @@ trait Functions extends XML {
   list_doc.setDragEnabled(true)
   list_doc.setDropMode(DropMode.INSERT)
   list_doc.setTransferHandler(new ListMoveTransferHandler())
-  list_doc.setVisibleRowCount(col_doc)
-  list_doc.setLayoutOrientation(JList.VERTICAL_WRAP)
+  list_doc.addKeyListener(new KeyAdapter {
+    override def keyPressed(evt:KeyEvent) {
+      val x = Dialog.showConfirmation(null,"Wollen Sie die Datei wirklich löschen?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
+      if(x.toString.equals("Ok")){
+      val key = evt.getKeyCode
+      if (key == KeyEvent.VK_DELETE ){
+        val obj = list_doc.getSelectedValue.asInstanceOf[ImageIcon]
+        println("ImageIcon: "+obj.getDescription)
+        val url = searchURL(obj.getDescription)
+        println(url)
+        database.removeFromPools(url)
+        updateListData(list,database)
+        updateListDocument(list_doc,database)
+        updateListImage(list_image,database)
+        updateListVideo(list_video,database)
+      }
+      }
+    }
+  })
 
   var scroll_doc = ListRenderer(list_doc)
   var list_video = getJListVideoFromDatabase(database)
@@ -53,8 +101,25 @@ trait Functions extends XML {
   list_video.setDragEnabled(true)
   list_video.setDropMode(DropMode.INSERT)
   list_video.setTransferHandler(new ListMoveTransferHandler())
-  list_video.setVisibleRowCount(col_video)
-  list_video.setLayoutOrientation(JList.VERTICAL_WRAP)
+  list_video.addKeyListener(new KeyAdapter {
+    override def keyPressed(evt:KeyEvent) {
+      val x = Dialog.showConfirmation(null,"Wollen Sie die Datei wirklich löschen?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
+      if(x.toString.equals("Ok")){
+      val key = evt.getKeyCode
+      if (key == KeyEvent.VK_DELETE ){
+        val obj = list_video.getSelectedValue.asInstanceOf[ImageIcon]
+        println("ImageIcon: "+obj.getDescription)
+        val url = searchURL(obj.getDescription)
+        println(url)
+        database.removeFromPools(url)
+        updateListData(list,database)
+        updateListDocument(list_doc,database)
+        updateListImage(list_image,database)
+        updateListVideo(list_video,database)
+      }
+      }
+    }
+  })
 
   var scroll_video = ListRenderer(list_video)
   var list_group = getJListFromGrouppool(database)
@@ -294,5 +359,17 @@ trait Functions extends XML {
     }
   }
 
-
+  def searchURL(s:String) : String={
+    var url = ""
+    val it = database.datapool.iterator
+    while(it.hasNext){
+      val obj = it.next()
+      val u = obj.url.split("/")
+      if (u.last.equals(s)){
+         url = obj.url
+      }
+    }
+    url
+  }
+  
 }
