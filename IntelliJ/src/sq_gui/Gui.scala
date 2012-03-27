@@ -97,17 +97,12 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       updateListGroup(list_group, database)
     }
 
-    //remove data JR
-    val remData = Action("Löschen") {
-      //todo Ausgewaehltes element erfragen, und dieses aus dem Datenbestand herausloeschen
-      println("removebutton")
-    }
-
     val searchData = Action("Suchen...") {
       println("search")
     }
     //add-Button
     var add = new Button {
+      this.preferredSize = new Dimension(200,150)
       action = addData
     }
 
@@ -115,17 +110,12 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       action = addGroup
     }
 
-    //remove button JR
-    var rem = new Button {
-      action = remData
-    }
-
     var search = new Button() {
       action = searchData
     }
 
     var searchInput = new TextField(" ") {
-
+       this.preferredSize = new Dimension(100,20)
     }
 
     //filter tabs
@@ -144,8 +134,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       //        FlowLayout.LEFT
       //TODO button possition setzen auf linksbuendig
       contents += add
-      contents += rem
-
+    //  contents += rem
+        this.maximumSize = new Dimension(200,150)
       //TODO RATING buttons einfügen siehe unten
       //contents = += rating1
     }
@@ -183,17 +173,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     var group_new = new ScrollPane(group)
 
 
-    // Grouppanel
-    var groupPanel = new BoxPanel(Orientation.Vertical) {
-
-      background = Color.RED
-
-      // 2 buttons  auslagern, damit mit funktionen belegbar
-
-      contents += new Button("+")
-      contents += new Button("-")
-
-    }
 
 
     //left-aligned Panel (containing two components)
@@ -207,8 +186,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     val main = new BoxPanel(Orientation.Horizontal) {
       contents += box_left
       contents += box_right
-      contents += groupPanel
-
     }
     contents = main
 
@@ -223,9 +200,20 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
   //paint gridPanel
   def paintGridPanel: GridPanel = {
     val size = database.grouppool.size
-    val grid = new GridPanel(size, 1) {
-      val it = database.grouppool.iterator
-
+    val grid = new GridPanel(size, 1){
+    val it = database.grouppool.iterator
+    var frame = new FlowPanel()
+    val playButton = Action("Play"){}
+    val hinzuButton = Action("+"){
+       new
+    }
+//      val fileChooser = new FileChooser() {
+//        fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
+//    }
+//      fileChooser.showOpenDialog(frame)
+//      val file = fileChooser.selectedFile
+//    }
+    val klappButton = Action("v"){}
 
       //GRUPPEN GENERIEREN
       while (it.hasNext) {
@@ -245,19 +233,40 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         var bp = new BoxPanel(Orientation.Vertical) {
           contents += new Label(obj.name)
           contents += new Label(obj.data.size + " Elements")
+          contents += new Button {
+            action = playButton
+          }
           //border = Swing.EmptyBorder(30, 30, 10, 30)
         }
 
-        val fp = new FlowPanel() {
-          contents += bp
-          contents += s_list
+        // Buttonpanel für Gruppe
+        var buttonPanel = new BoxPanel(Orientation.Vertical) {
+          // 2 buttons  auslagern, damit mit funktionen belegbar
+          contents += new Button {
+            action = hinzuButton
+          }
+          //TODO ersetzen durch Icon Pfeil nach unten
+          contents += new Button {
+            action = klappButton
+        }
         }
 
+        val fp = new FlowPanel() {
+          border = Swing.EmptyBorder(30, 30, 10, 30)
+          contents += bp
+          contents += s_list
+          contents += buttonPanel
+        }
+
+        //Grouppanel (fp) mit buttonPanel integrieren
+//        val integratedGroupPanel = new FlowPanel() {
+//          contents += fp
+//          contents += buttonPanel
+//        }
 
         // Abstände Bildergalerien
         //fp.hGap = 50
         //fp.vGap = 50
-
 
         contents += fp
       }

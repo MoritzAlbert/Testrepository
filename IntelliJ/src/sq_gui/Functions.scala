@@ -16,18 +16,18 @@ trait Functions extends XML {
   val file = new File("test.xml")
   var database = readFromFile(file)
 
-  var col_data = (database.datapool.size) / 3 + 1
-  var col_image = (database.imagepool.size) / 3 + 1
-  var col_doc = (database.documentpool.size) / 3 + 1
-  var col_video = (database.videopool.size) / 3 + 1
+//  var col_data = (database.datapool.size) / 3 + 1
+//  var col_image = (database.imagepool.size) / 3 + 1
+//  var col_doc = (database.documentpool.size) / 3 + 1
+//  var col_video = (database.videopool.size) / 3 + 1
 
   var list = getJListFromDatabase(database)
 
   list.setDragEnabled(true)
   list.setDropMode(DropMode.INSERT)
   list.setTransferHandler(new ListMoveTransferHandler())
-  list.setVisibleRowCount(col_data)
-  list.setLayoutOrientation(JList.VERTICAL_WRAP)
+//  list.setVisibleRowCount(col_data)
+//  list.setLayoutOrientation(JList.VERTICAL_WRAP)
 
   var scroll = ListRenderer(list)
   var list_image = getJListImageFromDatabase(database)
@@ -35,8 +35,8 @@ trait Functions extends XML {
   list_image.setDragEnabled(true)
   list_image.setDropMode(DropMode.INSERT)
   list_image.setTransferHandler(new ListMoveTransferHandler())
-  list_image.setVisibleRowCount(col_image)
-  list_image.setLayoutOrientation(JList.VERTICAL_WRAP)
+//  list_image.setVisibleRowCount(col_image)
+//  list_image.setLayoutOrientation(JList.VERTICAL_WRAP)
 
   var scroll_image = ListRenderer(list_image)
   var list_doc = getJListDocumentFromDatabase(database)
@@ -44,8 +44,8 @@ trait Functions extends XML {
   list_doc.setDragEnabled(true)
   list_doc.setDropMode(DropMode.INSERT)
   list_doc.setTransferHandler(new ListMoveTransferHandler())
-  list_doc.setVisibleRowCount(col_doc)
-  list_doc.setLayoutOrientation(JList.VERTICAL_WRAP)
+//  list_doc.setVisibleRowCount(col_doc)
+//  list_doc.setLayoutOrientation(JList.VERTICAL_WRAP)
 
   var scroll_doc = ListRenderer(list_doc)
   var list_video = getJListVideoFromDatabase(database)
@@ -53,8 +53,8 @@ trait Functions extends XML {
   list_video.setDragEnabled(true)
   list_video.setDropMode(DropMode.INSERT)
   list_video.setTransferHandler(new ListMoveTransferHandler())
-  list_video.setVisibleRowCount(col_video)
-  list_video.setLayoutOrientation(JList.VERTICAL_WRAP)
+//  list_video.setVisibleRowCount(col_video)
+//  list_video.setLayoutOrientation(JList.VERTICAL_WRAP)
 
   var scroll_video = ListRenderer(list_video)
   var list_group = getJListFromGrouppool(database)
