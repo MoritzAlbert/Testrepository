@@ -9,6 +9,32 @@ trait XML {
 
   //reading method
 
+
+  // TODO UMGESTALTUNG damit import von XML rate und desc möglich ist
+  //TODO unterkategorien in der XML für DATA und GROUPS.
+  /*
+  BSP:
+
+  <DATAPOOL>
+    <DATAALL>
+      <DATA ...>
+      <DATA ...>
+    </DATAALL>
+
+    <GROUPALL>
+      <GROUP ...>
+      <GROUP ...>
+      <GROUP ...>
+      <GROUP ...>
+    </GROUPALL>
+  </DATAPOOL>
+
+
+
+
+
+   */
+
   //read from file
   def readFromFile(f: File): Datapool = {
     val sAXBuilder = new SAXBuilder
@@ -16,6 +42,8 @@ trait XML {
     val root = doc.getRootElement
     val database = new Datapool
     val children = root.getChildren
+
+    println("GRÖßE" + children.size())
 
     //   var array = new Array[Array[Int]](1000)(1000)
     //
