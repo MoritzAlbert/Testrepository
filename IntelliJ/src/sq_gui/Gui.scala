@@ -1,18 +1,16 @@
 package sq_gui
 
 import scala.swing._
-import javax.swing.JList
 import com.ebenius._
 import javax.swing.filechooser.FileNameExtensionFilter
-import javax.swing.UIManager
-import javax.swing.DropMode
 import TabbedPane._
 import java.awt.{Dimension, Color}
+import javax.swing.{ImageIcon, JList, UIManager, DropMode}
 
 
 //Begin object Object Gui
 
-object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions{
+object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions {
 
   //Begin MainFrame
 
@@ -89,7 +87,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     //remove data JR
     val remData = Action("Löschen") {
       //todo Ausgewaehltes element erfragen, und dieses aus dem Datenbestand herausloeschen
-     list.getSelectedIndex
+      list.getSelectedIndex
       println("removebutton")
     }
 
@@ -173,16 +171,16 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     var group_new = new ScrollPane(group)
 
 
-    // Grouppanel
-    var groupPanel = new BoxPanel(Orientation.Vertical) {
+    // LOGOAREA
+    var LogoLeftPanel = new BoxPanel(Orientation.Vertical) {
+      contents += new Label("logoleft")
+    }
 
-      background = Color.RED
-
-      // 2 buttons  auslagern, damit mit funktionen belegbar
-
-      contents += new Button("+")
-      contents += new Button("-")
-
+    var LogoRightPanel = new BoxPanel(Orientation.Vertical) {
+      contents += new Label("logoright")
+      //val pic = new Label()
+      //pic.icon = new ImageIcon(resourceFromClassloader("logoRight.png"))
+      //contents += pic
     }
 
 
@@ -195,9 +193,10 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     //complete window (containing left_box and right_box)
     val main = new BoxPanel(Orientation.Horizontal) {
+      contents += LogoLeftPanel
       contents += box_left
       contents += box_right
-      contents += groupPanel
+      contents += LogoRightPanel
 
     }
     contents = main
