@@ -29,6 +29,7 @@ trait XML {
       val elem = x.asInstanceOf[Element]
       var name = ""
 
+      //GRUPPE!
       if (elem.getName == "Group") {
         //Geändert!!!
         name = elem.getChild("name").getText
@@ -47,12 +48,18 @@ trait XML {
           database.getGroupByString(name).addData(url)
           j += 1
         }
-      }
+      } //GRUPPE ENDE
       else {
 
         name = elem.getChild("URL").getText
+        //rate = elem.getChild("RATING").getText
+        //desc = elem.getChild("DESCRIPTION").getText
+
+
         //Geändert
         //val id = elem.getAttribute("id").getName.asInstanceOf[Int]
+        //database.addToDataPool(url, rate, desc)
+
         database.addToDataPool(name)
         //database.datapool.last.id = id
 
@@ -75,11 +82,15 @@ trait XML {
 
     while (it.hasNext) {
       val data = it.next()
-      val url = data.url
+      val url: String = data.url
+      val rate = data.rating
+      val desc: String = data.description
       root.addContent(new Element("Data")
         .setAttribute("id", data.id.toString)
-        .addContent(new Element("URL")
-        .addContent(url)))
+        .addContent(new Element("URL").addContent(url))
+        .addContent(new Element("RATING").addContent(rate.toString))
+        .addContent(new Element("DESCRIPTION").addContent(desc))
+      )
     }
 
     val it2 = d.grouppool.iterator
@@ -91,8 +102,8 @@ trait XML {
 
       root.addContent(new Element("Group")
         .setAttribute("id", grp.id.toString)
-        .addContent(new Element("name")
-        .addContent(name)))
+        .addContent(new Element("name").addContent(name))
+      )
 
       val children = root.getChildren
       val x = children.get(i)
@@ -105,8 +116,7 @@ trait XML {
         val url = obj.url
         elem.addContent(new Element("Data")
           .setAttribute("id", obj.id.toString)
-          .addContent(new Element("URL")
-          .addContent(url)))
+          .addContent(new Element("URL").addContent(url)))
         /*
           elem.addContent(new Element("Data")
           .setAttribute("id",obj.id.toString)

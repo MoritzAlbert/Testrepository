@@ -20,6 +20,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     override def closeOperation() {
       exportToXML(database, "test.xml")
+      System.exit(0);
+
     }
 
     title = "Gui Explorer"
