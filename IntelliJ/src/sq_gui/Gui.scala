@@ -22,6 +22,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     override def closeOperation() {
       exportToXML(database, "test.xml")
+      System.exit(0);
+
     }
 
     title = "Gui Explorer"
@@ -207,7 +209,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     var frame = new FlowPanel()
     val playButton = Action("Play"){}
     val hinzuButton = Action("+"){
-       new
+       //new
     }
 //      val fileChooser = new FileChooser() {
 //        fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
