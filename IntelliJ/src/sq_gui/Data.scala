@@ -8,6 +8,7 @@ class Data(s:String) {
   var url = ""
   var relation = HashSet[Data]()
   var rating = 0
+  var description = ""
 
   //adds a relation to an object
   def addRelation(obj:Data) = relation += obj
@@ -15,6 +16,11 @@ class Data(s:String) {
   //rating
   def addRating(a:Int) {
     rating = a
+  }
+
+  //Description of the Image
+  def addDescription(b:String){
+    description = b
   }
 
   def play(){}
