@@ -1,24 +1,13 @@
 package sq_gui
 
 import scala.swing._
-import javax.swing.ImageIcon
 import javax.swing.JList
-import javax.swing.DefaultListModel
-import java.io.File
-import extension._
 import com.ebenius._
 import javax.swing.filechooser.FileNameExtensionFilter
 import javax.swing.UIManager
-import java.awt.event.MouseAdapter
-import java.awt.event.MouseEvent
-import org.jdom.input.SAXBuilder
-import org.jdom.Element
-import org.jdom.output.XMLOutputter
-import org.jdom.output.Format
-import java.io.FileOutputStream
 import javax.swing.DropMode
 import TabbedPane._
-import java.awt.{Dimension, FlowLayout, Color, Image}
+import java.awt.{Dimension, Color}
 
 
 //Begin object Object Gui
@@ -59,7 +48,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       //database.addToDataPool(url.getQuery)
       //database.addToDataPool(url.getPath)
 
-      println(url.getFile())
+      println(url.getFile)
       //TODO Probleme bei URL to STRING, hier wird C: als Pfad ausgegeben. Linux Like
 
 
@@ -152,7 +141,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     //right-aligned Panel (containing three components)
     var box_right = new BoxPanel(Orientation.Vertical) {
 
-      var boxSize = java.awt.Toolkit.getDefaultToolkit.getScreenSize()
+      var boxSize = java.awt.Toolkit.getDefaultToolkit.getScreenSize
 
       val screenH = boxSize.getHeight.toInt
       val screenW = 200
@@ -171,8 +160,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     //group scrollPane
     var group_new = new ScrollPane(group)
-
-
 
 
     //left-aligned Panel (containing two components)
