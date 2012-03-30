@@ -320,19 +320,19 @@ trait Functions extends XML with UpdateFunctions {
         if (data.url.endsWith(".jpg")) {
           val img = data.asInstanceOf[Image]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(120, 120, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         if (data.url.endsWith(".pdf")) {
           val img = data.asInstanceOf[Document]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(120, 120, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         if (data.url.endsWith(".mp4")) {
           val img = data.asInstanceOf[Video]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(120, 120, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
       }

@@ -7,7 +7,6 @@ import TabbedPane._
 import java.awt.{Dimension, Color}
 import javax.swing.{ImageIcon, DropMode, JList, UIManager}
 
-
 //Begin object Object Gui
 
 object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
@@ -104,10 +103,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     val searchData = Action("") {
       startSearch(searchInput.text)
-
-      updateSearchListData(searchList,database)
-
-
+      updateSearchListData(list, database)
+      searchInput.text = ""
 
     }
     //add-Button
@@ -140,7 +137,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     // functionPanel
     var functionPanel = new FlowPanel() {
+
       // background = petrolHEX
+      //        FlowLayout.LEFT
       //        FlowLayout.LEFT
       //TODO button possition setzen auf linksbuendig
       contents += add
@@ -165,7 +164,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       var boxSize = java.awt.Toolkit.getDefaultToolkit.getScreenSize
 
       val screenH = boxSize.getHeight.toInt
-      val screenW = 200
+      val screenW = 268
 
       this.maximumSize = new Dimension(screenW, screenH)
       this.minimumSize = new Dimension(screenW, screenH)
