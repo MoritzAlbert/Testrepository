@@ -10,7 +10,9 @@ import javax.swing.{ImageIcon, DropMode, JList, UIManager}
 
 //Begin object Object Gui
 
-object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions{
+object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
+
+  var petrolHEX = new Color(0x116856)
 
   //Begin MainFrame
 
@@ -101,7 +103,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     val searchData = Action("") {
-      println("search")
+      startSearch(searchInput.text)
+
+
     }
     //add-Button
     var add = new Button {
@@ -133,11 +137,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     // functionPanel
     var functionPanel = new FlowPanel() {
-      background = Color.BLACK
+      // background = petrolHEX
       //        FlowLayout.LEFT
       //TODO button possition setzen auf linksbuendig
       contents += add
-     // contents += rem
+      // contents += rem
 
       //TODO RATING buttons einfügen siehe unten
       //contents = += rating1
@@ -175,17 +179,21 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     //group scrollPane
     var group_new = new ScrollPane(group)
 
-
-    // LOGOAREA
-    var LogoLeftPanel = new BoxPanel(Orientation.Vertical) {
-      contents += new Label("logoleft")
+    var labelLeft = new Label() {
+      this.icon = new ImageIcon("logoLeft.png")
+    }
+    var labelRight = new Label() {
+      this.icon = new ImageIcon("logoRight.png")
     }
 
-    var LogoRightPanel = new BoxPanel(Orientation.Vertical) {
-      contents += new Label("logoright")
-      //val pic = new Label()
-      //pic.icon = new ImageIcon(resourceFromClassloader("logoRight.png"))
-      //contents += pic
+    // LOGOAREA
+    var logoLeftPanel = new BoxPanel(Orientation.Vertical) {
+      contents += labelLeft
+    }
+
+    var logoRightPanel = new BoxPanel(Orientation.Vertical) {
+      contents += labelRight
+
     }
 
 
@@ -198,10 +206,10 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     //complete window (containing left_box and right_box)
     val main = new BoxPanel(Orientation.Horizontal) {
-      contents += LogoLeftPanel
+      contents += logoLeftPanel
       contents += box_left
       contents += box_right
-      contents += LogoRightPanel
+      contents += logoRightPanel
 
     }
     contents = main
@@ -210,7 +218,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     this.maximize()
 
   }
-
 
 
   //Begin method
