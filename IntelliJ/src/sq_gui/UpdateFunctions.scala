@@ -16,7 +16,7 @@ trait UpdateFunctions {
     while (it.hasNext) {
       val data = it.next()
       if (data.url.endsWith(".jpg")) {
-        val img = data.asInstanceOf[Image]
+        val img = data.asInstanceOf[sq_gui.Image]
         img.image.getImage.getScaledInstance(10, 10, 10)
         img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
         listModel.addElement(img.image)

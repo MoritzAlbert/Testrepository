@@ -33,9 +33,9 @@ trait XML {
         //Geändert!!!
         name = elem.getChild("name").getText
         val grp = new Group(name)
-        val id = elem.getAttribute("id").getIntValue
+        //val id = elem.getAttribute("id").getIntValue
 
-        grp.id = id
+        //grp.id = id
         database.addToGrouppool(grp)
 
         val child = elem.getChildren("Data")

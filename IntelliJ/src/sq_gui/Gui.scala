@@ -1,18 +1,14 @@
 package sq_gui
 
 import scala.swing._
-import javax.swing.JList
-import com.ebenius._
 import javax.swing.filechooser.FileNameExtensionFilter
-import javax.swing.UIManager
-import javax.swing.DropMode
 import TabbedPane._
 import java.awt.{Dimension, Color}
-
+import javax.swing.UIManager
 
 //Begin object Object Gui
 
-object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions{
+object Gui extends SimpleSwingApplication with XML with Functions with UpdateFunctions{
 
   //Begin MainFrame
 
@@ -22,6 +18,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     override def closeOperation() {
       exportToXML(database, "test.xml")
+      System.exit(0)
     }
 
     title = "Gui Explorer"
@@ -46,7 +43,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       //println(url)
 
       //database.addToDataPool(url.getQuery)
-      //database.addToDataPool(url.getPath)
+      database.addToDataPool(url.getFile)
 
       println(url.getFile)
       //TODO Probleme bei URL to STRING, hier wird C: als Pfad ausgegeben. Linux Like
@@ -206,53 +203,4 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     this.maximize()
 
   }
-
-
-  //Begin methods
-
-  //paint gridPanel
-  def paintGridPanel: GridPanel = {
-    val size = database.grouppool.size
-    val grid = new GridPanel(size, 1) {
-      val it = database.grouppool.iterator
-
-
-      //GRUPPEN GENERIEREN
-      while (it.hasNext) {
-        val obj = it.next()
-        val list = getJListFromGroup(obj)
-        list.setDragEnabled(true)
-        list.setDropMode(DropMode.INSERT)
-        list.setTransferHandler(new ListMoveTransferHandler())
-
-        list.setVisibleRowCount(1) //METRO STYLE bei 2, ansonsten 1
-        list.setLayoutOrientation(JList.HORIZONTAL_WRAP)
-
-        // THUMBNAILS
-        var s_list = new ScrollPane(Component.wrap(list))
-
-        // TEXT
-        var bp = new BoxPanel(Orientation.Vertical) {
-          contents += new Label(obj.name)
-          contents += new Label(obj.data.size + " Elements")
-          //border = Swing.EmptyBorder(30, 30, 10, 30)
-        }
-
-        val fp = new FlowPanel() {
-          contents += bp
-          contents += s_list
-        }
-
-
-        // Abstände Bildergalerien
-        //fp.hGap = 50
-        //fp.vGap = 50
-
-
-        contents += fp
-      }
-    }
-    grid
-  }
-
 }
