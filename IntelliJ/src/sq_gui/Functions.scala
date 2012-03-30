@@ -17,6 +17,7 @@ trait Functions extends XML with UpdateFunctions {
   var database = readFromFile(file)
 
   var list = getJListFromDatabase(database)
+  var searchList = getJListFromSearchpool(database)
 
   list.setDragEnabled(true)
   list.setDropMode(DropMode.INSERT)
@@ -169,6 +170,56 @@ trait Functions extends XML with UpdateFunctions {
     })
     list
   }
+
+
+
+
+  //generating a JList from a database
+  def getJListFromSearchpool(data: Datapool): JList = {
+
+    val model = new DefaultListModel() {
+      val it = data.searchPool.iterator
+      while (it.hasNext) {
+        val data = it.next()
+        // Pictures
+        if (data.url.endsWith(".jpg")) {
+          val img = data.asInstanceOf[Image]
+          img.image.getImage.getScaledInstance(10, 10, 10)
+          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+          this.addElement(img.image)
+        }
+        //Documtents
+        if (data.url.endsWith(".pdf")) {
+          val img = data.asInstanceOf[Document]
+          img.image.getImage.getScaledInstance(10, 10, 10)
+          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+          this.addElement(img.image)
+        }
+        // Videos
+        if (data.url.endsWith(".mp4")) {
+          val img = data.asInstanceOf[Video]
+          img.image.getImage.getScaledInstance(10, 10, 10)
+          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+          this.addElement(img.image)
+        }
+      }
+
+
+    }
+
+    val list = new JList(model)
+    list.addMouseListener(new MouseAdapter() {
+      override def mouseClicked(s: MouseEvent) {
+        val e = s.getSource.asInstanceOf[JList]
+        val f = e.getSelectedValue.asInstanceOf[ImageIcon]
+        if (s.getClickCount == 2) {
+          playObject(f.toString)
+        }
+      }
+    })
+    list
+  }
+
 
   //generating an image-JList from database
   def getJListImageFromDatabase(data: Datapool): JList = {

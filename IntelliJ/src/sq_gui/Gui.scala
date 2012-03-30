@@ -105,6 +105,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     val searchData = Action("") {
       startSearch(searchInput.text)
 
+      updateSearchListData(searchList,database)
+
+
 
     }
     //add-Button
@@ -122,7 +125,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     var searchInput = new TextField("") {
-       this.preferredSize = new Dimension(120,20)
+      this.preferredSize = new Dimension(120, 20)
     }
 
     //filter tabs
@@ -231,7 +234,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     val klappButton = Action("") {
       //TODO: Gruppe gross darstellen
     }
-    val loeschButton = Action(""){
+    val loeschButton = Action("") {
       //TODO: ausgewaehlte Gruppe entfernen
       //TODO Dialog
     }
@@ -312,8 +315,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             this.icon = new ImageIcon("icons\\24x24\\add.png")
           }
           contents += new Button {
-          action = loeschButton
-          this.icon = new ImageIcon("icons\\24x24\\trash.png")
+            action = loeschButton
+            this.icon = new ImageIcon("icons\\24x24\\trash.png")
 
           }
           //TODO ersetzen durch Icon Pfeil nach unten

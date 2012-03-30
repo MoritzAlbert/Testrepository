@@ -61,6 +61,7 @@ return -1;
       }
     }
     //TODO Panel View Aktualisieren
+
     println(searchString + " = " + database.searchPool.size)
   }
 
