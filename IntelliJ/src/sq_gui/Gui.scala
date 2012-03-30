@@ -314,7 +314,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             action = klappButton
           }
         }
-        }
+
 
         val fp = new FlowPanel() {
           border = Swing.EmptyBorder(30, 30, 10, 30)
