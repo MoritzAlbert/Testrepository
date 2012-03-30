@@ -45,6 +45,10 @@ return -1;
 
     // IF Suchfeld-leer =   alle wieder anzeigen
 
+    if (searchString.isEmpty)     {
+      // TODO Datenpool gesamt laden!
+    }
+
     database.searchPool.clear()
 
     val index = database.datapool.iterator
@@ -56,6 +60,7 @@ return -1;
        database.searchPool.add(dataFromIndex)
       }
     }
+    //TODO Panel View Aktualisieren
     println(searchString + " = " + database.searchPool.size)
   }
 
