@@ -1,16 +1,18 @@
 package sq_gui
 
 import scala.swing._
+import javax.swing.JList
 import com.ebenius._
 import javax.swing.filechooser.FileNameExtensionFilter
+import javax.swing.UIManager
+import javax.swing.DropMode
 import TabbedPane._
 import java.awt.{Dimension, Color}
-import javax.swing.{ImageIcon, JList, UIManager, DropMode}
 
 
 //Begin object Object Gui
 
-object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions {
+object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions{
 
   //Begin MainFrame
 
@@ -86,13 +88,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       updateListGroup(list_group, database)
     }
 
-    //remove data JR
-    val remData = Action("Löschen") {
-      //todo Ausgewaehltes element erfragen, und dieses aus dem Datenbestand herausloeschen
-      list.getSelectedIndex
-      println("removebutton")
-    }
-
     val searchData = Action("Suchen...") {
       println("search")
     }
@@ -105,17 +100,12 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       action = addGroup
     }
 
-    //remove button JR
-    var rem = new Button {
-      action = remData
-    }
-
     var search = new Button() {
       action = searchData
     }
 
     var searchInput = new TextField(" ") {
-
+       this.preferredSize = new Dimension(100,20)
     }
 
     //filter tabs
@@ -214,8 +204,20 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
   //paint gridPanel
   def paintGridPanel: GridPanel = {
     val size = database.grouppool.size
-    val grid = new GridPanel(size, 1) {
-      val it = database.grouppool.iterator
+    val grid = new GridPanel(size, 1){
+    val it = database.grouppool.iterator
+    var frame = new FlowPanel()
+    val playButton = Action("Play"){}
+    val hinzuButton = Action("+"){
+       //new
+    }
+//      val fileChooser = new FileChooser() {
+//        fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
+//    }
+//      fileChooser.showOpenDialog(frame)
+//      val file = fileChooser.selectedFile
+//    }
+    val klappButton = Action("v"){}
 
 
       //GRUPPEN GENERIEREN
@@ -236,12 +238,29 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         var bp = new BoxPanel(Orientation.Vertical) {
           contents += new Label(obj.name)
           contents += new Label(obj.data.size + " Elements")
+          contents += new Button {
+            action = playButton
+          }
           //border = Swing.EmptyBorder(30, 30, 10, 30)
         }
 
+        // Buttonpanel für Gruppe
+        var buttonPanel = new BoxPanel(Orientation.Vertical) {
+          // 2 buttons  auslagern, damit mit funktionen belegbar
+          contents += new Button {
+            action = hinzuButton
+          }
+          //TODO ersetzen durch Icon Pfeil nach unten
+          contents += new Button {
+            action = klappButton
+        }
+        }
+
         val fp = new FlowPanel() {
+          border = Swing.EmptyBorder(30, 30, 10, 30)
           contents += bp
           contents += s_list
+          contents += buttonPanel
         }
 
 
