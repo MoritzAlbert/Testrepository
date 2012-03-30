@@ -105,7 +105,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     val searchData = Action("") {
       startSearch(searchInput.text)
 
-      updateSearchListData(searchList,database)
+      updateSearchListData(list,database)
 
 
 
