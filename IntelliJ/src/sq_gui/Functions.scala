@@ -19,6 +19,7 @@ trait Functions extends XML with UpdateFunctions {
   val database = readFromFile(file)
 
   var list = getJListFromDatabase(database)
+  var searchList = getJListFromSearchpool(database)
 
   list.setDragEnabled(true)
   list.setTransferHandler(new MyTransferHandler)
@@ -29,18 +30,18 @@ trait Functions extends XML with UpdateFunctions {
     override def keyPressed(evt:KeyEvent) {
       val key = evt.getKeyCode
       if (key == KeyEvent.VK_DELETE ){
-        val x = Dialog.showConfirmation(null,"Wollen Sie die Datei wirklich löschen?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
+        val x = Dialog.showConfirmation(null,"Delete Data?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
         println(x.toString)
-        if(x.toString.equals("Ok")){
-        val obj = list.getSelectedValue.asInstanceOf[ImageIcon]
-        println("ImageIcon: "+obj.getDescription)
-        val url = searchURL(obj.getDescription)
-        println(url)
-        database.removeFromPools(url)
-        updateListData(list,database)
-        updateListDocument(list_doc,database)
-        updateListImage(list_image,database)
-        updateListVideo(list_video,database)
+        if(x.toString.equals("Ok") || x.toString.equals("Yes")){
+          val obj = list.getSelectedValue.asInstanceOf[ImageIcon]
+          println("ImageIcon: "+obj.getDescription)
+          val url = searchURL(obj.getDescription)
+          println(url)
+          database.removeFromPools(url)
+          updateListData(list,database)
+          updateListDocument(list_doc,database)
+          updateListImage(list_image,database)
+          updateListVideo(list_video,database)
         }
       }
     }
@@ -173,6 +174,56 @@ trait Functions extends XML with UpdateFunctions {
     list
   }
 
+
+
+
+  //generating a JList from a database
+  def getJListFromSearchpool(data: Datapool): JList = {
+
+    val model = new DefaultListModel() {
+      val it = data.searchPool.iterator
+      while (it.hasNext) {
+        val data = it.next()
+        // Pictures
+        if (data.url.endsWith(".jpg")) {
+          val img = data.asInstanceOf[Image]
+          img.image.getImage.getScaledInstance(10, 10, 10)
+          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+          this.addElement(img.image)
+        }
+        //Documtents
+        if (data.url.endsWith(".pdf")) {
+          val img = data.asInstanceOf[Document]
+          img.image.getImage.getScaledInstance(10, 10, 10)
+          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+          this.addElement(img.image)
+        }
+        // Videos
+        if (data.url.endsWith(".mp4")) {
+          val img = data.asInstanceOf[Video]
+          img.image.getImage.getScaledInstance(10, 10, 10)
+          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+          this.addElement(img.image)
+        }
+      }
+
+
+    }
+
+    val list = new JList(model)
+    list.addMouseListener(new MouseAdapter() {
+      override def mouseClicked(s: MouseEvent) {
+        val e = s.getSource.asInstanceOf[JList]
+        val f = e.getSelectedValue.asInstanceOf[ImageIcon]
+        if (s.getClickCount == 2) {
+          playObject(f.toString)
+        }
+      }
+    })
+    list
+  }
+
+
   //generating an image-JList from database
   def getJListImageFromDatabase(data: Datapool): JList = {
     val model = new DefaultListModel() {
@@ -272,19 +323,19 @@ trait Functions extends XML with UpdateFunctions {
         if (data.url.endsWith(".jpg")) {
           val img = data.asInstanceOf[sq_gui.Image]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(120, 120, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         if (data.url.endsWith(".pdf")) {
           val img = data.asInstanceOf[Document]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(120, 120, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         if (data.url.endsWith(".mp4")) {
           val img = data.asInstanceOf[Video]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(120, 120, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
       }

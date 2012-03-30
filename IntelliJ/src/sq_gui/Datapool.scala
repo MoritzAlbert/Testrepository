@@ -9,6 +9,8 @@ class Datapool() {
   var videopool = new HashSet[Video]()
   var documentpool = new HashSet[Document]()
   var grouppool = new HashSet[Group]()
+  val searchPool = new HashSet[Data]()
+
 
   def addToDataPool(s: String) {
 

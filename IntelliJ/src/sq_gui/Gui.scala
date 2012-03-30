@@ -1,14 +1,21 @@
 package sq_gui
 
 import scala.swing._
+import javax.swing.JList
+import com.ebenius._
 import javax.swing.filechooser.FileNameExtensionFilter
+import javax.swing.UIManager
+import javax.swing.DropMode
 import TabbedPane._
 import java.awt.{Dimension, Color}
-import javax.swing.UIManager
+import javax.swing.{ImageIcon, DropMode, JList, UIManager}
+
 
 //Begin object Object Gui
 
-object Gui extends SimpleSwingApplication with XML with Functions with UpdateFunctions{
+object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
+
+  var petrolHEX = new Color(0x116856)
 
   //Begin MainFrame
 
@@ -18,7 +25,8 @@ object Gui extends SimpleSwingApplication with XML with Functions with UpdateFun
 
     override def closeOperation() {
       exportToXML(database, "test.xml")
-      System.exit(0)
+      System.exit(0);
+
     }
 
     title = "Gui Explorer"
@@ -43,7 +51,7 @@ object Gui extends SimpleSwingApplication with XML with Functions with UpdateFun
       //println(url)
 
       //database.addToDataPool(url.getQuery)
-      database.addToDataPool(url.getFile)
+      database.addToDataPool(url.getPath)
 
       println(url.getFile)
       //TODO Probleme bei URL to STRING, hier wird C: als Pfad ausgegeben. Linux Like
@@ -62,6 +70,20 @@ object Gui extends SimpleSwingApplication with XML with Functions with UpdateFun
       exportToXML(database, "test.xml")
     }
 
+    menuBar = new MenuBar {
+      contents += new Menu("File") {
+        contents += new MenuItem("Settings")
+        contents += new MenuItem(Action("Exit") {
+          closeOperation()
+        })
+      }
+
+      contents += new Menu("Help") {
+        contents += new MenuItem("Onlinehelp")
+      }
+    }
+
+
     val addGroup = Action("add group") {
       /*
         val x = Dialog.showConfirmation(null,"Wo ist das Schätzchen!?!?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
@@ -71,7 +93,7 @@ object Gui extends SimpleSwingApplication with XML with Functions with UpdateFun
         }
       */
       val panel = new BoxPanel(Orientation.Vertical) {
-        val groupname = new TextField(" ")
+        val groupname = new TextField("")
         contents += groupname
       }
       Dialog.showMessage(null, panel.peer, "Enter group name", Dialog.Message.Plain)
@@ -83,16 +105,13 @@ object Gui extends SimpleSwingApplication with XML with Functions with UpdateFun
       updateListGroup(list_group, database)
     }
 
-    //remove data JR
-    val remData = Action("Löschen") {
-      //todo Ausgewaehltes element erfragen, und dieses aus dem Datenbestand herausloeschen
-     list.getSelectedIndex
-      println("removebutton")
+    val searchData = Action("") {
+      startSearch(searchInput.text)
+      updateSearchListData(list, database)
+      searchInput.text = ""
+      updateSearchListData(searchList,database)
     }
 
-    val searchData = Action("Suchen...") {
-      println("search")
-    }
     //add-Button
     var add = new Button {
       action = addData
@@ -102,17 +121,14 @@ object Gui extends SimpleSwingApplication with XML with Functions with UpdateFun
       action = addGroup
     }
 
-    //remove button JR
-    var rem = new Button {
-      action = remData
-    }
-
     var search = new Button() {
       action = searchData
+      this.icon = new ImageIcon("icons\\16x16\\search.png")
+      this.preferredSize = new Dimension(45,27)
     }
 
-    var searchInput = new TextField(" ") {
-
+    var searchInput = new TextField("") {
+       this.preferredSize = new Dimension(200,25)
     }
 
     //filter tabs
@@ -127,23 +143,18 @@ object Gui extends SimpleSwingApplication with XML with Functions with UpdateFun
 
     // functionPanel
     var functionPanel = new FlowPanel() {
-      background = Color.BLACK
+      // background = petrolHEX
       //        FlowLayout.LEFT
       //TODO button possition setzen auf linksbuendig
       contents += add
-      contents += rem
-
       //TODO RATING buttons einfügen siehe unten
-      //contents = += rating1
     }
-
 
     //searchPanel
     var searchPanel = new FlowPanel {
+      this.preferredSize = new Dimension(270,30)
       contents += searchInput
       contents += search
-
-      //TODO Breite des Suchfelds anpassen. JR
     }
 
     //right-aligned Panel (containing three components)
@@ -152,7 +163,7 @@ object Gui extends SimpleSwingApplication with XML with Functions with UpdateFun
       var boxSize = java.awt.Toolkit.getDefaultToolkit.getScreenSize
 
       val screenH = boxSize.getHeight.toInt
-      val screenW = 200
+      val screenW = 270
 
       this.maximumSize = new Dimension(screenW, screenH)
       this.minimumSize = new Dimension(screenW, screenH)
@@ -169,16 +180,20 @@ object Gui extends SimpleSwingApplication with XML with Functions with UpdateFun
     //group scrollPane
     var group_new = new ScrollPane(group)
 
+    var labelLeft = new Label() {
+      this.icon = new ImageIcon("logoLeft.png")
+    }
+    var labelRight = new Label() {
+      this.icon = new ImageIcon("logoRight.png")
+    }
 
-    // Grouppanel
-    var groupPanel = new BoxPanel(Orientation.Vertical) {
+    // LOGOAREA
+    var logoLeftPanel = new BoxPanel(Orientation.Vertical) {
+      contents += labelLeft
+    }
 
-      background = Color.RED
-
-      // 2 buttons  auslagern, damit mit funktionen belegbar
-
-      contents += new Button("+")
-      contents += new Button("-")
+    var logoRightPanel = new BoxPanel(Orientation.Vertical) {
+      contents += labelRight
 
     }
 
@@ -192,9 +207,10 @@ object Gui extends SimpleSwingApplication with XML with Functions with UpdateFun
 
     //complete window (containing left_box and right_box)
     val main = new BoxPanel(Orientation.Horizontal) {
+      contents += logoLeftPanel
       contents += box_left
       contents += box_right
-      contents += groupPanel
+      contents += logoRightPanel
 
     }
     contents = main
@@ -203,4 +219,121 @@ object Gui extends SimpleSwingApplication with XML with Functions with UpdateFun
     this.maximize()
 
   }
+
+
+  //Begin method
+
+  //paint gridPanel
+  def paintGridPanel: GridPanel = {
+
+    val playButton = Action("") {
+      //TODO: Gruppe abspielen
+    }
+    val klappButton = Action("") {
+      //TODO: Gruppe gross darstellen
+    }
+    val loeschButton = Action(""){
+      //TODO: ausgewaehlte Gruppe entfernen
+      //TODO Dialog
+    }
+    val hinzuButton = Action("") {
+
+      val buttonP = new FlowPanel() {
+        contents += new Button("okay")
+        contents += new Button("abbrechen")
+      }
+      val dia = new Dialog() {
+        centerOnScreen()
+        resizable = true
+
+        contents = new BoxPanel(Orientation.Vertical) {
+
+          contents += new FlowPanel() {
+            val kersIt = database.grouppool.iterator
+            while (kersIt.hasNext) {
+              val group = kersIt.next()
+              val groupList = getJListFromGroup(group)
+              groupList.setVisibleRowCount(1) //METRO STYLE bei 2, ansonsten 1
+              groupList.setLayoutOrientation(JList.HORIZONTAL_WRAP)
+              var scrolledGroupList = new ScrollPane(Component.wrap(groupList))
+              //  contents += new FlowPanel(){
+              contents += scrolledGroupList
+              // }
+            }
+            this.preferredSize = new Dimension(400, 100)
+          }
+          contents += new FlowPanel() {
+            var database = readFromFile(file)
+            val dataList = getJListFromDatabase(database)
+            val scrolledDataList = new ScrollPane(Component.wrap(dataList))
+            contents += scrolledDataList
+          }
+          contents += buttonP
+        }
+      }
+      dia.open()
+    }
+
+
+    val size = database.grouppool.size
+    val grid = new GridPanel(size, 1) {
+      val it = database.grouppool.iterator
+
+
+      //GRUPPEN GENERIEREN
+      while (it.hasNext) {
+        val obj = it.next()
+        val list = getJListFromGroup(obj)
+        list.setDragEnabled(true)
+        list.setDropMode(DropMode.INSERT)
+        list.setTransferHandler(new ListMoveTransferHandler())
+
+        list.setVisibleRowCount(1) //METRO STYLE bei 2, ansonsten 1
+        list.setLayoutOrientation(JList.HORIZONTAL_WRAP)
+
+        // THUMBNAILS
+        var s_list = new ScrollPane(Component.wrap(list))
+
+        // TEXT
+        var bp = new BoxPanel(Orientation.Vertical) {
+          contents += new Label(obj.name){
+            this.font = new Font("TimesRoman", 0, 20)
+          }
+          contents += new Label("[" + obj.data.size + " Elements]")
+          contents += new Button {
+            action = playButton
+            this.icon = new ImageIcon("icons\\24x24\\play.png")
+          }
+        }
+
+        // Buttons für Gruppe
+        var buttonPanel = new BoxPanel(Orientation.Vertical) {
+          contents += new Button {
+            action = hinzuButton
+            this.icon = new ImageIcon("icons\\16x16\\add.png")
+          }
+          contents += new Button {
+          action = loeschButton
+          this.icon = new ImageIcon("icons\\16x16\\trash.png")
+
+          }
+          contents += new Button {
+            action = klappButton
+            this.icon = new ImageIcon("icons\\16x16\\eject.png")
+          }
+        }
+
+
+        val fp = new FlowPanel() {
+          border = Swing.EmptyBorder(30, 30, 10, 30)
+          contents += bp
+          contents += s_list
+          contents += buttonPanel
+        }
+        contents += fp
+      }
+    }
+    grid
+  }
+
 }

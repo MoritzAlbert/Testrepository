@@ -22,13 +22,40 @@ trait UpdateFunctions {
         listModel.addElement(img.image)
       }
       if (data.url.endsWith(".pdf")) {
-        val img = data.asInstanceOf[Document]
+        val img = data.asInstanceOf[sq_gui.Document]
         img.image.getImage.getScaledInstance(10, 10, 10)
         img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
         listModel.addElement(img.image)
       }
       if (data.url.endsWith(".mp4")) {
-        val img = data.asInstanceOf[Video]
+        val img = data.asInstanceOf[sq_gui.Video]
+        img.image.getImage.getScaledInstance(10, 10, 10)
+        img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+        listModel.addElement(img.image) //TODO richtig dass img.image?   nicht video.image?
+      }
+    }
+  }
+
+  def updateSearchListData(list: JList, data: Datapool) {
+    val listModel = list.getModel.asInstanceOf[DefaultListModel]
+    listModel.clear()
+    val it = data.searchPool.iterator
+    while (it.hasNext) {
+      val data = it.next()
+      if (data.url.endsWith(".jpg")) {
+        val img = data.asInstanceOf[sq_gui.Image]
+        img.image.getImage.getScaledInstance(10, 10, 10)
+        img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+        listModel.addElement(img.image)
+      }
+      if (data.url.endsWith(".pdf")) {
+        val img = data.asInstanceOf[sq_gui.Document]
+        img.image.getImage.getScaledInstance(10, 10, 10)
+        img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+        listModel.addElement(img.image)
+      }
+      if (data.url.endsWith(".mp4")) {
+        val img = data.asInstanceOf[sq_gui.Video]
         img.image.getImage.getScaledInstance(10, 10, 10)
         img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
         listModel.addElement(img.image) //TODO richtig dass img.image?   nicht video.image?
