@@ -4,8 +4,9 @@ import scala.swing._
 import javax.swing.filechooser.FileNameExtensionFilter
 import TabbedPane._
 import java.awt.{Dimension, Color}
-import javax.swing.{ImageIcon, DropMode, JList, UIManager}
 import dragndrop.MyTransferHandler
+import javax.swing.{DropMode, JList, ImageIcon, UIManager}
+import javax.swing.border.EtchedBorder
 
 
 //Begin object Object Gui
@@ -125,7 +126,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     var searchInput = new TextField("") {
-       this.preferredSize = new Dimension(200,25)
+       this.preferredSize = new Dimension(214,25)
     }
 
 
@@ -135,18 +136,19 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     //filter tabs
     var tab_filter = new TabbedPane {
-      pages += new Page("", scroll){
-        this.self= allLabel
-      }
+      pages += new Page("All", scroll)
       pages += new Page("Images", scroll_image)
       pages += new Page("Docs", scroll_doc)
       pages += new Page("Vids", scroll_video)
     }
     //filter Pane
-    var tab = new ScrollPane(tab_filter)
+    var tab = new ScrollPane(tab_filter){
+      this.preferredSize = new Dimension(270,500)
+    }
 
     // functionPanel
     var functionPanel = new FlowPanel() {
+      this.preferredSize = new Dimension(270,140)
       // background = petrolHEX
       //        FlowLayout.LEFT
       //TODO button possition setzen auf linksbuendig
@@ -156,9 +158,13 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     //searchPanel
     var searchPanel = new FlowPanel {
-      this.preferredSize = new Dimension(270,30)
       contents += searchInput
       contents += search
+    }
+
+    var integratedPanel = new BoxPanel(Orientation.Vertical){
+      contents += searchPanel
+      contents += tab
     }
 
     //right-aligned Panel (containing three components)
@@ -174,8 +180,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       this.preferredSize = new Dimension(screenW, screenH)
 
       contents += functionPanel
-      contents += searchPanel
-      contents += tab
+      contents += integratedPanel
+//      contents += searchPanel
+//      contents += tab
     }
 
     //panel for presentation all available groups
@@ -296,7 +303,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         list.setLayoutOrientation(JList.HORIZONTAL_WRAP)
 
         // THUMBNAILS
-        var s_list = new ScrollPane(Component.wrap(list))
+        var s_list = new ScrollPane(Component.wrap(list)) {
+          this.preferredSize = new Dimension(730,73)
+        }
 
         // TEXT
         var bp = new BoxPanel(Orientation.Vertical) {
@@ -329,7 +338,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
 
         val fp = new FlowPanel() {
-          border = Swing.EmptyBorder(30, 30, 10, 30)
+          border = Swing.EmptyBorder(30,30,30,30)
           contents += bp
           contents += s_list
           contents += buttonPanel
