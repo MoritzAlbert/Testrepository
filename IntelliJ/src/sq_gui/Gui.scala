@@ -124,7 +124,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       //        FlowLayout.LEFT
       //TODO button possition setzen auf linksbuendig
       contents += add
-      contents += rem
 
       //TODO RATING buttons einfügen siehe unten
       //contents = += rating1
@@ -199,25 +198,63 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
   }
 
 
-  //Begin methods
+
+  //Begin method
 
   //paint gridPanel
   def paintGridPanel: GridPanel = {
-    val size = database.grouppool.size
-    val grid = new GridPanel(size, 1){
-    val it = database.grouppool.iterator
-    var frame = new FlowPanel()
-    val playButton = Action("Play"){}
-    val hinzuButton = Action("+"){
-       //new
+
+    val playButton = Action("Play") {}
+    val klappButton = Action("v") {}
+    //    val item = new MenuItem(new Action("Say Hello"){
+    //      def apply = println("Hello World");
+    //    })
+    //   val popupAct = new Action(""){
+    //    val popup = new PopupMenu
+    //    popup.add(item)
+    //    popup.setEnabled() = true
+    //   }
+    val hinzuButton = Action("+") {
+      val buttonP = new FlowPanel() {
+        contents += new Button("okay")
+        contents += new Button("abbrechen")
+      }
+      val dia = new Dialog() {
+        centerOnScreen()
+        resizable = true
+
+        contents = new BoxPanel(Orientation.Vertical) {
+
+          contents += new FlowPanel() {
+            val kersIt = database.grouppool.iterator
+            while (kersIt.hasNext) {
+              val group = kersIt.next()
+              val groupList = getJListFromGroup(group)
+              groupList.setVisibleRowCount(1) //METRO STYLE bei 2, ansonsten 1
+              groupList.setLayoutOrientation(JList.HORIZONTAL_WRAP)
+              var scrolledGroupList = new ScrollPane(Component.wrap(groupList))
+              //  contents += new FlowPanel(){
+              contents += scrolledGroupList
+              // }
+            }
+            this.preferredSize = new Dimension(400, 100)
+          }
+          contents += new FlowPanel() {
+            var database = readFromFile(file)
+            val dataList = getJListFromDatabase(database)
+            val scrolledDataList = new ScrollPane(Component.wrap(dataList))
+            contents += scrolledDataList
+          }
+          contents += buttonP
+        }
+      }
+      dia.open()
     }
-//      val fileChooser = new FileChooser() {
-//        fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
-//    }
-//      fileChooser.showOpenDialog(frame)
-//      val file = fileChooser.selectedFile
-//    }
-    val klappButton = Action("v"){}
+
+
+    val size = database.grouppool.size
+    val grid = new GridPanel(size, 1) {
+      val it = database.grouppool.iterator
 
 
       //GRUPPEN GENERIEREN
@@ -236,12 +273,12 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
         // TEXT
         var bp = new BoxPanel(Orientation.Vertical) {
-          contents += new Label(obj.name)
+          contents += new Label(obj.name){
+          }
           contents += new Label(obj.data.size + " Elements")
           contents += new Button {
             action = playButton
           }
-          //border = Swing.EmptyBorder(30, 30, 10, 30)
         }
 
         // Buttonpanel für Gruppe
@@ -253,7 +290,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           //TODO ersetzen durch Icon Pfeil nach unten
           contents += new Button {
             action = klappButton
-        }
+          }
         }
 
         val fp = new FlowPanel() {
@@ -267,7 +304,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         // Abstände Bildergalerien
         //fp.hGap = 50
         //fp.vGap = 50
-
 
         contents += fp
       }
