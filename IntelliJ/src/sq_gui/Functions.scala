@@ -4,9 +4,11 @@ import java.awt.event._
 import extension.IconTextListCellRenderer
 import swing._
 import java.awt.Image
+import com.ebenius._
 import java.io.File
-import javax.swing.{DropMode, ImageIcon, DefaultListModel, JList}
-import com.ebenius.ListMoveTransferHandler
+import javax.swing._
+
+import dragndrop.MyTransferHandler
 
 
 trait Functions extends XML with UpdateFunctions {
@@ -14,16 +16,16 @@ trait Functions extends XML with UpdateFunctions {
   //Declarations
 
   val file = new File("test.xml")
-  var database = readFromFile(file)
+  val database = readFromFile(file)
 
   var list = getJListFromDatabase(database)
   var searchList = getJListFromSearchpool(database)
 
   list.setDragEnabled(true)
+  list.setTransferHandler(new MyTransferHandler)
   list.setDropMode(DropMode.INSERT)
-  list.setTransferHandler(new ListMoveTransferHandler())
-
   list.addKeyListener(new KeyAdapter {
+
     override def keyPressed(evt:KeyEvent) {
       val key = evt.getKeyCode
       if (key == KeyEvent.VK_DELETE ){
@@ -48,7 +50,7 @@ trait Functions extends XML with UpdateFunctions {
   var list_image = getJListImageFromDatabase(database)
 
   list_image.setDragEnabled(true)
-  list_image.setDropMode(DropMode.INSERT)
+  list_image.setDropMode(DropMode.ON_OR_INSERT)
   list_image.setTransferHandler(new ListMoveTransferHandler())
   list_image.addKeyListener(new KeyAdapter {
     override def keyPressed(evt:KeyEvent) {
@@ -74,7 +76,7 @@ trait Functions extends XML with UpdateFunctions {
   var list_doc = getJListDocumentFromDatabase(database)
 
   list_doc.setDragEnabled(true)
-  list_doc.setDropMode(DropMode.INSERT)
+  list_doc.setDropMode(DropMode.ON_OR_INSERT)
   list_doc.setTransferHandler(new ListMoveTransferHandler())
   list_doc.addKeyListener(new KeyAdapter {
     override def keyPressed(evt:KeyEvent) {
@@ -100,7 +102,7 @@ trait Functions extends XML with UpdateFunctions {
   var list_video = getJListVideoFromDatabase(database)
 
   list_video.setDragEnabled(true)
-  list_video.setDropMode(DropMode.INSERT)
+  list_video.setDropMode(DropMode.ON_OR_INSERT)
   list_video.setTransferHandler(new ListMoveTransferHandler())
   list_video.addKeyListener(new KeyAdapter {
     override def keyPressed(evt:KeyEvent) {
@@ -134,7 +136,7 @@ trait Functions extends XML with UpdateFunctions {
         val data = it.next()
         // Pictures
         if (data.url.endsWith(".jpg")) {
-          val img = data.asInstanceOf[Image]
+          val img = data.asInstanceOf[sq_gui.Image]
           img.image.getImage.getScaledInstance(10, 10, 10)
           img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
           this.addElement(img.image)
@@ -318,7 +320,7 @@ trait Functions extends XML with UpdateFunctions {
       while (it.hasNext) {
         val data = it.next()
         if (data.url.endsWith(".jpg")) {
-          val img = data.asInstanceOf[Image]
+          val img = data.asInstanceOf[sq_gui.Image]
           img.image.getImage.getScaledInstance(10, 10, 10)
           img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
           this.addElement(img.image)
@@ -422,5 +424,12 @@ trait Functions extends XML with UpdateFunctions {
     }
     url
   }
-  
+
+  def displayDropLocation(string:String) {
+    SwingUtilities.invokeLater(new Runnable() {
+      override def run() {
+        JOptionPane.showMessageDialog(null, string)
+      }
+    })
+  }
 }
