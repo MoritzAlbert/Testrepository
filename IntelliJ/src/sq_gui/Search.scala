@@ -39,8 +39,8 @@ return -1;
 
     // DATENBANK durchlaufen       ok
     // JEDES DATENBANKELEMENT      ok
-    // SEQUENTIELL NACH TEXT SUCHEN
-    // FALLS ELEMENT GEFUNDEN IN NEUE LISTE
+    // SEQUENTIELL NACH TEXT SUCHEN       ok
+    // FALLS ELEMENT GEFUNDEN IN NEUE LISTE       ok
     // NEUE LISTE AM ENDE IN VIEW LADEN
 
     // IF Suchfeld-leer =   alle wieder anzeigen
