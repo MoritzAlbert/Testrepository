@@ -1,13 +1,11 @@
 package sq_gui
 
 import scala.swing._
-import javax.swing.JList
 import com.ebenius._
 import javax.swing.filechooser.FileNameExtensionFilter
-import javax.swing.UIManager
-import javax.swing.DropMode
 import TabbedPane._
 import java.awt.{Dimension, Color}
+import javax.swing.{ImageIcon, JList, UIManager, DropMode}
 
 
 //Begin object Object Gui
@@ -176,17 +174,21 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     //group scrollPane
     var group_new = new ScrollPane(group)
 
-
-    // LOGOAREA
-    var LogoLeftPanel = new BoxPanel(Orientation.Vertical) {
-      contents += new Label("logoleft")
+    var labelLeft = new Label()   {
+      this.icon = new ImageIcon("logoLeft.png")
+    }
+    var labelRight = new Label()  {
+      this.icon = new ImageIcon("logoRight.png")
     }
 
-    var LogoRightPanel = new BoxPanel(Orientation.Vertical) {
-      contents += new Label("logoright")
-      //val pic = new Label()
-      //pic.icon = new ImageIcon(resourceFromClassloader("logoRight.png"))
-      //contents += pic
+    // LOGOAREA
+    var logoLeftPanel = new BoxPanel(Orientation.Vertical) {
+      contents += labelLeft
+    }
+
+    var logoRightPanel = new BoxPanel(Orientation.Vertical) {
+      contents += labelRight
+
     }
 
 
@@ -199,10 +201,10 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     //complete window (containing left_box and right_box)
     val main = new BoxPanel(Orientation.Horizontal) {
-      contents += LogoLeftPanel
+      contents += logoLeftPanel
       contents += box_left
       contents += box_right
-      contents += LogoRightPanel
+      contents += logoRightPanel
 
     }
     contents = main
