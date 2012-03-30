@@ -28,7 +28,7 @@ trait Functions extends XML with UpdateFunctions {
       if (key == KeyEvent.VK_DELETE ){
         val x = Dialog.showConfirmation(null,"Wollen Sie die Datei wirklich löschen?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
         println(x.toString)
-        if(x.toString.equals("Ok")){
+        if(x.toString.equals("Ok") || x.toString.equals("Yes")){
           val obj = list.getSelectedValue.asInstanceOf[ImageIcon]
           println("ImageIcon: "+obj.getDescription)
           val url = searchURL(obj.getDescription)

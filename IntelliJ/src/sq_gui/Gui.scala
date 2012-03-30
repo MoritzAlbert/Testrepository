@@ -48,7 +48,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       //println(url)
 
       //database.addToDataPool(url.getQuery)
-      //database.addToDataPool(url.getPath)
+      database.addToDataPool(url.getPath)
 
       println(url.getFile)
       //TODO Probleme bei URL to STRING, hier wird C: als Pfad ausgegeben. Linux Like
@@ -313,8 +313,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           contents += new Button {
             action = klappButton
           }
-
         }
+
 
         val fp = new FlowPanel() {
           border = Swing.EmptyBorder(30, 30, 10, 30)
