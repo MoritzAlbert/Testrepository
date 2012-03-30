@@ -39,11 +39,15 @@ return -1;
 
     // DATENBANK durchlaufen       ok
     // JEDES DATENBANKELEMENT      ok
-    // SEQUENTIELL NACH TEXT SUCHEN
-    // FALLS ELEMENT GEFUNDEN IN NEUE LISTE
+    // SEQUENTIELL NACH TEXT SUCHEN       ok
+    // FALLS ELEMENT GEFUNDEN IN NEUE LISTE       ok
     // NEUE LISTE AM ENDE IN VIEW LADEN
 
     // IF Suchfeld-leer =   alle wieder anzeigen
+
+    if (searchString.isEmpty)     {
+      // TODO Datenpool gesamt laden!
+    }
 
     database.searchPool.clear()
 
@@ -56,6 +60,8 @@ return -1;
        database.searchPool.add(dataFromIndex)
       }
     }
+    //TODO Panel View Aktualisieren
+
     println(searchString + " = " + database.searchPool.size)
   }
 

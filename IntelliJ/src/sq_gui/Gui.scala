@@ -7,7 +7,6 @@ import TabbedPane._
 import java.awt.{Dimension, Color}
 import javax.swing.{ImageIcon, DropMode, JList, UIManager}
 
-
 //Begin object Object Gui
 
 object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
@@ -104,6 +103,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     val searchData = Action("") {
       startSearch(searchInput.text)
+      updateSearchListData(list, database)
+      searchInput.text = ""
+
+      updateSearchListData(searchList,database)
+
 
 
     }
@@ -134,14 +138,12 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       pages += new Page("Vids", scroll_video)
     }
     //filter Pane
-    var tab = new ScrollPane(tab_filter) {
-      this.preferredSize = new Dimension(270,400)
-    }
-
-
+    var tab = new ScrollPane(tab_filter)
 
     // functionPanel
     var functionPanel = new FlowPanel() {
+      // background = petrolHEX
+      //        FlowLayout.LEFT
       //TODO button possition setzen auf linksbuendig
       contents += add
       //TODO RATING buttons einfügen siehe unten
