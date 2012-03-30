@@ -106,6 +106,10 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       updateSearchListData(list, database)
       searchInput.text = ""
 
+      updateSearchListData(searchList,database)
+
+
+
     }
     //add-Button
     var add = new Button {
