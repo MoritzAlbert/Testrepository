@@ -105,12 +105,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       startSearch(searchInput.text)
       updateSearchListData(list, database)
       searchInput.text = ""
-
       updateSearchListData(searchList,database)
-
-
-
     }
+
     //add-Button
     var add = new Button {
       action = addData
@@ -127,7 +124,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     var searchInput = new TextField("") {
-       this.preferredSize = new Dimension(140,25)
+       this.preferredSize = new Dimension(200,25)
     }
 
     //filter tabs
