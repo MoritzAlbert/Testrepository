@@ -313,7 +313,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           contents += new Button {
             action = klappButton
           }
-        }
+
         }
 
         val fp = new FlowPanel() {
