@@ -10,6 +10,7 @@ trait XML {
   //reading method
 
 
+
   // TODO UMGESTALTUNG damit import von XML rate und desc möglich ist
   //TODO unterkategorien in der XML für DATA und GROUPS.
   /*
