@@ -1,13 +1,11 @@
 package sq_gui
 
 import scala.swing._
-import javax.swing.JList
 import com.ebenius._
 import javax.swing.filechooser.FileNameExtensionFilter
-import javax.swing.UIManager
-import javax.swing.DropMode
 import TabbedPane._
 import java.awt.{Dimension, Color}
+import javax.swing.{ImageIcon, DropMode, JList, UIManager}
 
 
 //Begin object Object Gui
@@ -90,7 +88,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         }
       */
       val panel = new BoxPanel(Orientation.Vertical) {
-        val groupname = new TextField(" ")
+        val groupname = new TextField("")
         contents += groupname
       }
       Dialog.showMessage(null, panel.peer, "Enter group name", Dialog.Message.Plain)
@@ -102,7 +100,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       updateListGroup(list_group, database)
     }
 
-    val searchData = Action("Suchen...") {
+    val searchData = Action("") {
       println("search")
     }
     //add-Button
@@ -116,10 +114,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     var search = new Button() {
       action = searchData
+      this.icon = new ImageIcon("icons\\16x16\\search.png")
     }
 
-    var searchInput = new TextField(" ") {
-       this.preferredSize = new Dimension(100,20)
+    var searchInput = new TextField("") {
+       this.preferredSize = new Dimension(120,20)
     }
 
     //filter tabs
@@ -219,17 +218,18 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
   //paint gridPanel
   def paintGridPanel: GridPanel = {
 
-    val playButton = Action("Play") {}
-    val klappButton = Action("v") {}
-    //    val item = new MenuItem(new Action("Say Hello"){
-    //      def apply = println("Hello World");
-    //    })
-    //   val popupAct = new Action(""){
-    //    val popup = new PopupMenu
-    //    popup.add(item)
-    //    popup.setEnabled() = true
-    //   }
-    val hinzuButton = Action("+") {
+    val playButton = Action("") {
+      //TODO: Gruppe abspielen
+    }
+    val klappButton = Action("") {
+      //TODO: Gruppe gross darstellen
+    }
+    val loeschButton = Action(""){
+      //TODO: ausgewaehlte Gruppe entfernen
+      //TODO Dialog
+    }
+    val hinzuButton = Action("") {
+
       val buttonP = new FlowPanel() {
         contents += new Button("okay")
         contents += new Button("abbrechen")
@@ -265,13 +265,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
       dia.open()
     }
-//      val fileChooser = new FileChooser() {
-//        fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
-//    }
-//      fileChooser.showOpenDialog(frame)
-//      val file = fileChooser.selectedFile
-//    }
-    //val klappButton = Action("v"){}
 
 
     val size = database.grouppool.size
@@ -299,6 +292,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           contents += new Label(obj.data.size + " Elements")
           contents += new Button {
             action = playButton
+            this.icon = new ImageIcon("icons\\24x24\\play.png")
           }
           //border = Swing.EmptyBorder(30, 30, 10, 30)
         }
@@ -308,10 +302,17 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           // 2 buttons  auslagern, damit mit funktionen belegbar
           contents += new Button {
             action = hinzuButton
+            this.icon = new ImageIcon("icons\\24x24\\add.png")
+          }
+          contents += new Button {
+          action = loeschButton
+          this.icon = new ImageIcon("icons\\24x24\\trash.png")
+
           }
           //TODO ersetzen durch Icon Pfeil nach unten
           contents += new Button {
             action = klappButton
+            this.icon = new ImageIcon("icons\\24x24\\zoom_in.png")
           }
         }
 
