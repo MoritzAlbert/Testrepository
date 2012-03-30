@@ -8,9 +8,12 @@ import java.awt.{Dimension, Color}
 import javax.swing.{ImageIcon, JList, UIManager, DropMode}
 
 
+
 //Begin object Object Gui
 
-object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions{
+object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search{
+
+  var petrolHEX = new Color(0x116856)
 
   //Begin MainFrame
 
@@ -101,7 +104,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     val searchData = Action("Suchen...") {
-      println("search")
+      startSearch(searchInput.text)
+
+
     }
     //add-Button
     var add = new Button {
@@ -132,7 +137,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     // functionPanel
     var functionPanel = new FlowPanel() {
-      background = Color.BLACK
+      // background = petrolHEX
       //        FlowLayout.LEFT
       //TODO button possition setzen auf linksbuendig
       contents += add

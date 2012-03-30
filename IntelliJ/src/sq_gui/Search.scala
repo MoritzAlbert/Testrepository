@@ -8,7 +8,7 @@ package sq_gui
  * To change this template use File | Settings | File Templates.
  */
 
-class Search(searchString: String) {
+trait Search {
 
   //     search for String
 
@@ -34,5 +34,11 @@ return -1;
 
 
    */
+
+  def startSearch  (searchString: String)   {
+
+
+
+  }
 
 }
