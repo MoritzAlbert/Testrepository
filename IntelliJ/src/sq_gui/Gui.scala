@@ -119,10 +119,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     var search = new Button() {
       action = searchData
       this.icon = new ImageIcon("icons\\16x16\\search.png")
+      this.preferredSize = new Dimension(45,27)
     }
 
     var searchInput = new TextField("") {
-       this.preferredSize = new Dimension(120,20)
+       this.preferredSize = new Dimension(140,25)
     }
 
     //filter tabs
@@ -133,27 +134,24 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       pages += new Page("Vids", scroll_video)
     }
     //filter Pane
-    var tab = new ScrollPane(tab_filter)
-
-    // functionPanel
-    var functionPanel = new FlowPanel() {
-      // background = petrolHEX
-      //        FlowLayout.LEFT
-      //TODO button possition setzen auf linksbuendig
-      contents += add
-      // contents += rem
-
-      //TODO RATING buttons einfügen siehe unten
-      //contents = += rating1
+    var tab = new ScrollPane(tab_filter) {
+      this.preferredSize = new Dimension(270,400)
     }
 
 
+
+    // functionPanel
+    var functionPanel = new FlowPanel() {
+      //TODO button possition setzen auf linksbuendig
+      contents += add
+      //TODO RATING buttons einfügen siehe unten
+    }
+
     //searchPanel
     var searchPanel = new FlowPanel {
+      this.preferredSize = new Dimension(270,30)
       contents += searchInput
       contents += search
-
-      //TODO Breite des Suchfelds anpassen. JR
     }
 
     //right-aligned Panel (containing three components)
@@ -162,7 +160,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       var boxSize = java.awt.Toolkit.getDefaultToolkit.getScreenSize
 
       val screenH = boxSize.getHeight.toInt
-      val screenW = 200
+      val screenW = 270
 
       this.maximumSize = new Dimension(screenW, screenH)
       this.minimumSize = new Dimension(screenW, screenH)
@@ -295,31 +293,30 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
         // TEXT
         var bp = new BoxPanel(Orientation.Vertical) {
-          contents += new Label(obj.name)
-          contents += new Label(obj.data.size + " Elements")
+          contents += new Label(obj.name){
+            this.font = new Font("TimesRoman", 0, 20)
+          }
+          contents += new Label("[" + obj.data.size + " Elements]")
           contents += new Button {
             action = playButton
             this.icon = new ImageIcon("icons\\24x24\\play.png")
           }
-          //border = Swing.EmptyBorder(30, 30, 10, 30)
         }
 
-        // Buttonpanel für Gruppe
+        // Buttons für Gruppe
         var buttonPanel = new BoxPanel(Orientation.Vertical) {
-          // 2 buttons  auslagern, damit mit funktionen belegbar
           contents += new Button {
             action = hinzuButton
-            this.icon = new ImageIcon("icons\\24x24\\add.png")
+            this.icon = new ImageIcon("icons\\16x16\\add.png")
           }
           contents += new Button {
           action = loeschButton
-          this.icon = new ImageIcon("icons\\24x24\\trash.png")
+          this.icon = new ImageIcon("icons\\16x16\\trash.png")
 
           }
-          //TODO ersetzen durch Icon Pfeil nach unten
           contents += new Button {
             action = klappButton
-            this.icon = new ImageIcon("icons\\24x24\\zoom_in.png")
+            this.icon = new ImageIcon("icons\\16x16\\eject.png")
           }
         }
 
@@ -330,12 +327,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           contents += s_list
           contents += buttonPanel
         }
-
-
-        // Abstände Bildergalerien
-        //fp.hGap = 50
-        //fp.vGap = 50
-
         contents += fp
       }
     }
