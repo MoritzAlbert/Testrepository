@@ -127,9 +127,10 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
        this.preferredSize = new Dimension(200,25)
     }
 
-     val allLabel = new Label("All"){
-      this.icon = new ImageIcon("icon\\16x16\\add.png")
-    }
+
+//     val allLabel = new Label("All"){
+//      this.icon = new ImageIcon("icon\\16x16\\add.png")
+//    }
 
     //filter tabs
     var tab_filter = new TabbedPane {
