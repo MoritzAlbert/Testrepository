@@ -91,7 +91,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         }
       */
       val panel = new BoxPanel(Orientation.Vertical) {
-        val groupname = new TextField(" ")
+        val groupname = new TextField("")
         contents += groupname
       }
       Dialog.showMessage(null, panel.peer, "Enter group name", Dialog.Message.Plain)
@@ -121,7 +121,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       action = searchData
     }
 
-    var searchInput = new TextField(" ") {
+    var searchInput = new TextField("") {
        this.preferredSize = new Dimension(100,20)
     }
 
