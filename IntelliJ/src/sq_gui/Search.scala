@@ -45,33 +45,18 @@ return -1;
 
     // IF Suchfeld-leer =   alle wieder anzeigen
 
+    database.searchPool.clear()
 
-    val searchPool = new HashSet[Data]()
     val index = database.datapool.iterator
     while (index.hasNext) {
       val dataFromIndex = index.next()
       // Schnelle Suche
-      if (dataFromIndex.url.split("/").last.split("[.]").head == searchString) {
+      if (dataFromIndex.url.split("/").last.split("[.]").head.toLowerCase.contains(searchString.toLowerCase)) {
         // ADD FILE TO POOL
-                searchPool.add(dataFromIndex)
-        println(searchPool.size)
+       database.searchPool.add(dataFromIndex)
       }
-        //alternative suche
-      else
-      {
-
-      }
-
-
-
-      // searchPool.add(dataFromIndex)
-
-
     }
-
-    //println(searchPool.size)
-
-
+    println(searchString + " = " + database.searchPool.size)
   }
 
 }

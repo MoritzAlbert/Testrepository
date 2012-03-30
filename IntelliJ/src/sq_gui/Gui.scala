@@ -8,10 +8,9 @@ import java.awt.{Dimension, Color}
 import javax.swing.{ImageIcon, JList, UIManager, DropMode}
 
 
-
 //Begin object Object Gui
 
-object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search{
+object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
 
   var petrolHEX = new Color(0x116856)
 
@@ -122,7 +121,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     var searchInput = new TextField("") {
-       this.preferredSize = new Dimension(100,20)
+      this.preferredSize = new Dimension(100, 20)
     }
 
     //filter tabs
@@ -141,7 +140,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       //        FlowLayout.LEFT
       //TODO button possition setzen auf linksbuendig
       contents += add
-     // contents += rem
+      // contents += rem
 
       //TODO RATING buttons einfügen siehe unten
       //contents = += rating1
@@ -179,10 +178,10 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     //group scrollPane
     var group_new = new ScrollPane(group)
 
-    var labelLeft = new Label()   {
+    var labelLeft = new Label() {
       this.icon = new ImageIcon("logoLeft.png")
     }
-    var labelRight = new Label()  {
+    var labelRight = new Label() {
       this.icon = new ImageIcon("logoRight.png")
     }
 
@@ -218,7 +217,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     this.maximize()
 
   }
-
 
 
   //Begin method
@@ -272,12 +270,12 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
       dia.open()
     }
-//      val fileChooser = new FileChooser() {
-//        fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
-//    }
-//      fileChooser.showOpenDialog(frame)
-//      val file = fileChooser.selectedFile
-//    }
+    //      val fileChooser = new FileChooser() {
+    //        fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
+    //    }
+    //      fileChooser.showOpenDialog(frame)
+    //      val file = fileChooser.selectedFile
+    //    }
     //val klappButton = Action("v"){}
 
 
