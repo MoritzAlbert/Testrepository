@@ -29,15 +29,15 @@ trait Functions extends XML with UpdateFunctions {
         val x = Dialog.showConfirmation(null,"Wollen Sie die Datei wirklich löschen?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
         println(x.toString)
         if(x.toString.equals("Ok")){
-        val obj = list.getSelectedValue.asInstanceOf[ImageIcon]
-        println("ImageIcon: "+obj.getDescription)
-        val url = searchURL(obj.getDescription)
-        println(url)
-        database.removeFromPools(url)
-        updateListData(list,database)
-        updateListDocument(list_doc,database)
-        updateListImage(list_image,database)
-        updateListVideo(list_video,database)
+          val obj = list.getSelectedValue.asInstanceOf[ImageIcon]
+          println("ImageIcon: "+obj.getDescription)
+          val url = searchURL(obj.getDescription)
+          println(url)
+          database.removeFromPools(url)
+          updateListData(list,database)
+          updateListDocument(list_doc,database)
+          updateListImage(list_image,database)
+          updateListVideo(list_video,database)
         }
       }
     }

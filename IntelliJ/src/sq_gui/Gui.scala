@@ -67,6 +67,20 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       exportToXML(database, "test.xml")
     }
 
+    menuBar = new MenuBar {
+      contents += new Menu("File") {
+        contents += new MenuItem("Settings")
+        contents += new MenuItem(Action("Exit") {
+          closeOperation()
+        })
+      }
+
+      contents += new Menu("Help") {
+        contents += new MenuItem("Onlinehelp")
+      }
+    }
+
+
     val addGroup = Action("add group") {
       /*
         val x = Dialog.showConfirmation(null,"Wo ist das Schätzchen!?!?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
@@ -124,7 +138,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       //        FlowLayout.LEFT
       //TODO button possition setzen auf linksbuendig
       contents += add
-      contents += rem
+     // contents += rem
 
       //TODO RATING buttons einfügen siehe unten
       //contents = += rating1
