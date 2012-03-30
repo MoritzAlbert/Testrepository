@@ -1,14 +1,11 @@
 package sq_gui
 
 import scala.swing._
-import javax.swing.JList
-import com.ebenius._
 import javax.swing.filechooser.FileNameExtensionFilter
-import javax.swing.UIManager
-import javax.swing.DropMode
 import TabbedPane._
 import java.awt.{Dimension, Color}
 import javax.swing.{ImageIcon, DropMode, JList, UIManager}
+import dragndrop.MyTransferHandler
 
 
 //Begin object Object Gui
@@ -286,7 +283,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         val list = getJListFromGroup(obj)
         list.setDragEnabled(true)
         list.setDropMode(DropMode.INSERT)
-        list.setTransferHandler(new ListMoveTransferHandler())
+        list.setTransferHandler(new MyTransferHandler)
 
         list.setVisibleRowCount(1) //METRO STYLE bei 2, ansonsten 1
         list.setLayoutOrientation(JList.HORIZONTAL_WRAP)

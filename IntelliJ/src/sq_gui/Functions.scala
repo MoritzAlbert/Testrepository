@@ -23,10 +23,9 @@ trait Functions extends XML with UpdateFunctions {
 
   list.setDragEnabled(true)
   list.setTransferHandler(new MyTransferHandler)
-  list.setDropMode(DropMode.ON_OR_INSERT)
-
-
+  list.setDropMode(DropMode.INSERT)
   list.addKeyListener(new KeyAdapter {
+
     override def keyPressed(evt:KeyEvent) {
       val key = evt.getKeyCode
       if (key == KeyEvent.VK_DELETE ){
@@ -432,49 +431,5 @@ trait Functions extends XML with UpdateFunctions {
         JOptionPane.showMessageDialog(null, string)
       }
     })
-  }
-
-  //paint gridPanel
-  def paintGridPanel: GridPanel = {
-    val size = database.grouppool.size
-    val grid = new GridPanel(size, 1) {
-      val it = database.grouppool.iterator
-
-
-      //GRUPPEN GENERIEREN
-      while (it.hasNext) {
-        val obj = it.next()
-        val list = getJListFromGroup(obj)
-        list.setDragEnabled(true)
-        list.setDropMode(DropMode.INSERT)
-        list.setTransferHandler(new MyTransferHandler)
-        list.setVisibleRowCount(1) //METRO STYLE bei 2, ansonsten 1
-        list.setLayoutOrientation(JList.HORIZONTAL_WRAP)
-
-        // THUMBNAILS
-        var s_list = new ScrollPane(Component.wrap(list))
-
-        // TEXT
-        var bp = new BoxPanel(Orientation.Vertical) {
-          contents += new Label(obj.name)
-          contents += new Label(obj.data.size + " Elements")
-          //border = Swing.EmptyBorder(30, 30, 10, 30)
-        }
-
-        val fp = new FlowPanel() {
-          contents += bp
-          contents += s_list
-        }
-
-
-        // Abstände Bildergalerien
-        //fp.hGap = 50
-        //fp.vGap = 50
-
-
-        contents += fp
-      }
-    }
-    grid
   }
 }
