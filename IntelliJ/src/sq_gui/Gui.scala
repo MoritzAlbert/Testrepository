@@ -67,6 +67,20 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       exportToXML(database, "test.xml")
     }
 
+    menuBar = new MenuBar {
+      contents += new Menu("File") {
+        contents += new MenuItem("Settings")
+        contents += new MenuItem(Action("Exit") {
+          closeOperation()
+        })
+      }
+
+      contents += new Menu("Help") {
+        contents += new MenuItem("Onlinehelp")
+      }
+    }
+
+
     val addGroup = Action("add group") {
       /*
         val x = Dialog.showConfirmation(null,"Wo ist das Schätzchen!?!?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
@@ -124,6 +138,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       //        FlowLayout.LEFT
       //TODO button possition setzen auf linksbuendig
       contents += add
+     // contents += rem
 
       //TODO RATING buttons einfügen siehe unten
       //contents = += rating1
@@ -250,6 +265,13 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
       dia.open()
     }
+//      val fileChooser = new FileChooser() {
+//        fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
+//    }
+//      fileChooser.showOpenDialog(frame)
+//      val file = fileChooser.selectedFile
+//    }
+    //val klappButton = Action("v"){}
 
 
     val size = database.grouppool.size
@@ -273,12 +295,12 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
         // TEXT
         var bp = new BoxPanel(Orientation.Vertical) {
-          contents += new Label(obj.name){
-          }
+          contents += new Label(obj.name)
           contents += new Label(obj.data.size + " Elements")
           contents += new Button {
             action = playButton
           }
+          //border = Swing.EmptyBorder(30, 30, 10, 30)
         }
 
         // Buttonpanel für Gruppe
@@ -291,6 +313,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           contents += new Button {
             action = klappButton
           }
+        }
         }
 
         val fp = new FlowPanel() {
