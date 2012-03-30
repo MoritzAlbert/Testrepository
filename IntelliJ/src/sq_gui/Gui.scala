@@ -52,7 +52,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       println(url.getFile)
       //TODO Probleme bei URL to STRING, hier wird C: als Pfad ausgegeben. Linux Like
 
-
       //var stringtest = url.getPath
 
       //stringtest = stringtest.split("/", 1)
@@ -81,17 +80,12 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
 
     val addGroup = Action("add group") {
-      /*
-        val x = Dialog.showConfirmation(null,"Wo ist das Schätzchen!?!?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
-        println(x)
-        println {
-          x.toString
-        }
-      */
+
       val panel = new BoxPanel(Orientation.Vertical) {
         val groupname = new TextField("")
         contents += groupname
       }
+
       Dialog.showMessage(null, panel.peer, "Enter group name", Dialog.Message.Plain)
 
       println(panel.groupname.text)
@@ -105,12 +99,18 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       startSearch(searchInput.text)
       updateSearchListData(list, database)
       searchInput.text = ""
-      updateSearchListData(searchList,database)
+      updateSearchListData(searchList, database)
     }
 
     //add-Button
     var add = new Button {
       action = addData
+    }
+
+    var name_group = new TextField() {
+      this.preferredSize = new Dimension(200, 25)
+      this.maximumSize = new Dimension(200, 25)
+      this.minimumSize = new Dimension(200, 25)
     }
 
     var add_group = new Button {
@@ -120,11 +120,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     var search = new Button() {
       action = searchData
       this.icon = new ImageIcon("icons\\16x16\\search.png")
-      this.preferredSize = new Dimension(45,27)
+      this.preferredSize = new Dimension(40, 25)
     }
 
     var searchInput = new TextField("") {
-       this.preferredSize = new Dimension(200,25)
+      this.preferredSize = new Dimension(200, 25)
     }
 
     //filter tabs
@@ -141,14 +141,14 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     var functionPanel = new FlowPanel() {
       // background = petrolHEX
       //        FlowLayout.LEFT
-      //TODO button possition setzen auf linksbuendig
+      //TODO button position setzen auf linksbuendig
       contents += add
       //TODO RATING buttons einfügen siehe unten
     }
 
     //searchPanel
     var searchPanel = new FlowPanel {
-      this.preferredSize = new Dimension(270,30)
+      this.preferredSize = new Dimension(270, 30)
       contents += searchInput
       contents += search
     }
@@ -193,12 +193,43 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     }
 
+    var newGroupTextFieldPanel = new BoxPanel(Orientation.Vertical) {
+
+      var newGroupLabel = new Label("Creating a new Group")
+
+      contents += newGroupLabel
+      contents += name_group
+
+    }
+
+    var newGroupAddElementsPanel = new BoxPanel(Orientation.Vertical) {
+      var testlabel = new Label("Hier sind dann die ganzen Elemente drinnen")
+      contents += testlabel
+    }
+    var newGroupCreateButtonPanel = new BoxPanel(Orientation.Vertical) {
+      contents += add_group
+    }
+
+    var newGroupPanel = new BoxPanel(Orientation.Horizontal) {
+
+      this.preferredSize = new Dimension(900, 100)
+      this.maximumSize = new Dimension(900, 100)
+      this.minimumSize = new Dimension(900, 100)
+
+      contents += newGroupTextFieldPanel
+      contents += newGroupAddElementsPanel
+      contents += newGroupCreateButtonPanel
+
+
+    }
 
     //left-aligned Panel (containing two components)
     var box_left = new BoxPanel(Orientation.Vertical) {
       // this.preferredSize = new Dimension(1200, 600)
+
       contents += group_new
-      contents += add_group
+      contents += newGroupPanel
+
     }
 
     //complete window (containing left_box and right_box)
@@ -208,18 +239,21 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       contents += box_right
       contents += logoRightPanel
 
+
     }
     contents = main
 
     //window maximized
     this.maximize()
 
+
   }
 
 
-  //Begin method
+  //Begin methods
 
   //paint gridPanel
+
   def paintGridPanel: GridPanel = {
 
     val playButton = Action("") {
@@ -228,7 +262,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     val klappButton = Action("") {
       //TODO: Gruppe gross darstellen
     }
-    val loeschButton = Action(""){
+    val loeschButton = Action("") {
       //TODO: ausgewaehlte Gruppe entfernen
       //TODO Dialog
     }
@@ -292,7 +326,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
         // TEXT
         var bp = new BoxPanel(Orientation.Vertical) {
-          contents += new Label(obj.name){
+          contents += new Label(obj.name) {
             this.font = new Font("TimesRoman", 0, 20)
           }
           contents += new Label("[" + obj.data.size + " Elements]")
@@ -309,8 +343,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             this.icon = new ImageIcon("icons\\16x16\\add.png")
           }
           contents += new Button {
-          action = loeschButton
-          this.icon = new ImageIcon("icons\\16x16\\trash.png")
+            action = loeschButton
+            this.icon = new ImageIcon("icons\\16x16\\trash.png")
 
           }
           contents += new Button {
