@@ -11,7 +11,6 @@ import dragndrop._
 import java.awt.{Dimension, Color}
 
 //Begin object Object Gui
-
 object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
 
   var petrolHEX = new Color(0x116856)
@@ -20,7 +19,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
   val root = new DefaultMutableTreeNode("Groups")
   val tree_model = new DefaultTreeModel(root)
 
-
   //Begin MainFrame
   def top = new MainFrame() {
 
@@ -28,15 +26,13 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     override def closeOperation() {
       exportToXML(database, "test.xml")
-      System.exit(0);
-
+      System.exit(0)
     }
 
     title = "Gui Explorer"
     visible = true
 
     //treeview
-
     val jtree = new JTree(tree_model)
     val tsm = new DefaultTreeSelectionModel()
     tsm.setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION)
@@ -65,7 +61,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     // New FlowPanel
     var frame = new FlowPanel()
 
-
     //Add data to datapool
     val addData = Action("Hinzufügen") {
 
@@ -73,10 +68,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
       }
 
-      // EXEPTION ABFANGEN WENN FENSTER OHNE AUSWAHL GESCHLOSSEN WIRD. JR
       fileChooser.showOpenDialog(frame)
       val file = fileChooser.selectedFile
-      //println(file)
 
       val url = file.getAbsolutePath
       //println(url)
@@ -119,10 +112,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
     }
 
-
     val addGroup = Action("") {
-
-
       val panel = new BoxPanel(Orientation.Vertical) {
         val groupname = new TextField("")
         contents += groupname
@@ -133,30 +123,36 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       println(panel.groupname.text)
       println(database.grouppool.size)
 
-      if(panel.groupname.text == ""){
-        Dialog.showMessage (null, "Please enter name", "Missing input", Dialog.Message.Error)
-      }  else{
+      if (panel.groupname.text == "") {
+        Dialog.showMessage(null, "Please enter name", "Missing input", Dialog.Message.Error)
+      } else {
         database.addToGrouppool(panel.groupname.text)
         println(database.grouppool.size)
         val child = new DefaultMutableTreeNode(panel.groupname.text)
         tree_model.insertNodeInto(child, root, root.getChildCount)
       }
       updateFromXML()
-
     }
 
     val delete_group = Action("") {
       val tp = jtree.getLeadSelectionPath
       val node = tp.getLastPathComponent.asInstanceOf[DefaultMutableTreeNode]
-      database.removeFromGrouppool(node.toString)
+
       if (node != root) {
-        tree_model.removeNodeFromParent(node)
+        val x = Dialog.showConfirmation(null, "Do you really want to delete this group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+        if (x.toString.equals("Ok")) {
+          tree_model.removeNodeFromParent(node)
+          database.removeFromGrouppool(node.toString)
+        }
+
       }
-         }
+      updateFromXML()
+
+    }
 
     var add_group = new Button {
       action = addGroup
-        }
+    }
 
     var add_delete_group = new FlowPanel {
 
@@ -227,7 +223,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             println(url)
             //playerImage = url.getPath()
             playerImage = url
-            
+
           }) {
             this.tooltip = "Set editor for .jpeg data"
           }
@@ -335,7 +331,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     //group scrollPane
     var group_new = new ScrollPane(group)
 
-    def updateFromXML(){
+    def updateFromXML() {
       group_new.contents = paintGridPanel
     }
 
@@ -498,6 +494,5 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
     grid
   }
-
 
 }

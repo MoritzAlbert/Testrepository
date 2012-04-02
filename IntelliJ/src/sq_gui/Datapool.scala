@@ -177,8 +177,11 @@ class Datapool() {
   }
 
   def removeFromGrouppool(s: String) {
+
     val grp = getGroupByString(s)
-    grouppool.remove(grp)
+    println("Gruppenname:" +  grp.name + "Stringname:" + s)
+    val b = grouppool.remove(grp)
+    println(b)
 
   }
 

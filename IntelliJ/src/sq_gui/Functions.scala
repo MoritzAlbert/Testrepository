@@ -159,8 +159,6 @@ trait Functions extends XML with UpdateFunctions {
           this.addElement(img.image)
         }
       }
-
-
     }
 
     val list = new JList(model)
