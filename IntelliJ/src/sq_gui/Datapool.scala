@@ -11,7 +11,6 @@ class Datapool() {
   var grouppool = new HashSet[Group]()
   val searchPool = new HashSet[Data]()
 
-
   def addToDataPool(s: String) {
 
     val file = new java.io.File(s)
@@ -68,8 +67,6 @@ class Datapool() {
       }
 
     }
-
-
   }
 
   def addToDataPoolI(s: HashSet[Image]) {

@@ -4,13 +4,12 @@ import java.io._
 import javax.swing.ImageIcon
 
 //Begin class Document
-
 class Document(s: String) extends Data(s) {
 
   //declarations
   this.url = s
   val file = new File(s)
-  var default = "D:/eclipse-jee-indigo-SR1-win32-x86_64/eclipse/workspace/SQ_GUI/pdf_logo.jpg"
+  var default = "pdf_logo.jpg"
   var image = new ImageIcon(default, getName)
   var player = "C:/Program Files (x86)/Adobe/Acrobat 10.0/Acrobat/Acrobat.exe"
 
