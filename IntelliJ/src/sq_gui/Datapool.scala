@@ -188,22 +188,22 @@ class Datapool() {
   }
 
   def sortDatapool(): List[Data] = {
-    val list = datapool.toList.sortWith((e1, e2) => (e1.getName< e2.getName))
+    val list = datapool.toList.sortWith((e1, e2) => (e1.getName.toLowerCase< e2.getName.toLowerCase))
     list
   }
 
   def sortImagepool(): List[Image] = {
-    val list = imagepool.toList.sortWith((e1, e2) => (e1.getName< e2.getName))
+    val list = imagepool.toList.sortWith((e1, e2) => (e1.getName.toLowerCase< e2.getName.toLowerCase))
     list
   }
 
   def sortVideopool(): List[Video] = {
-    val list = videopool.toList.sortWith((e1, e2) => (e1.getName< e2.getName))
+    val list = videopool.toList.sortWith((e1, e2) => (e1.getName.toLowerCase< e2.getName.toLowerCase))
     list
   }
 
   def sortDocumentpool(): List[Document] = {
-    val list = documentpool.toList.sortWith((e1, e2) => (e1.getName< e2.getName))
+    val list = documentpool.toList.sortWith((e1, e2) => (e1.getName.toLowerCase< e2.getName.toLowerCase))
     list
   }
 }

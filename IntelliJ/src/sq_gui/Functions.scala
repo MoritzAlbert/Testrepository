@@ -168,6 +168,7 @@ trait Functions extends XML with UpdateFunctions {
       override def mouseClicked(s: MouseEvent) {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
+        //Einfügen Get-FKT
         if (s.getClickCount == 2) {
           play(f.toString)
         }
@@ -356,57 +357,6 @@ trait Functions extends XML with UpdateFunctions {
     s.setCellRenderer(renderer)
     val scroll = new ScrollPane(Component.wrap(s))
     scroll
-  }
-
-  //playing an object
-  def playObject(s: String) {
-    val x = s.split("[.]")
-    if (x.last.equals("jpg")) {
-      playImage(s)
-    }
-    if (x.last.equals("pdf")) {
-      playDocument(s)
-    }
-    if (x.last.equals("mp4")) {
-      playVideo(s)
-    }
-  }
-
-  //presenting an image
-  def playImage(s: String) {
-    val it = database.imagepool.iterator
-    println(s)
-    while (it.hasNext) {
-      val data = it.next()
-      if (data.getName.equals(s)) {
-        println(data.url)
-        data.play
-      }
-    }
-  }
-
-  //presenting a pdf-file
-  def playDocument(s: String) {
-    val it = database.documentpool.iterator
-    while (it.hasNext) {
-      val data = it.next()
-      if (data.getName.equals(s)) {
-        println(data.url)
-        data.play
-      }
-    }
-  }
-
-  //presenting a video
-  def playVideo(s: String) {
-    val it = database.videopool.iterator
-    while (it.hasNext) {
-      val data = it.next()
-      if (data.getName.equals(s)) {
-        println(data.url)
-        data.play
-      }
-    }
   }
 
   def searchURL(s: String): String = {

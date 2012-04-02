@@ -78,13 +78,13 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       val file = fileChooser.selectedFile
       //println(file)
 
-      val url = file.toURI.toURL
+      val url = file.getAbsolutePath
       //println(url)
 
       //database.addToDataPool(url.getQuery)
-      database.addToDataPool(url.getPath)
+      database.addToDataPool(url)
 
-      println(url.getFile)
+      println(url)
       //TODO Probleme bei URL to STRING, hier wird C: als Pfad ausgegeben. Linux Like
 
       updateListData(list, database)

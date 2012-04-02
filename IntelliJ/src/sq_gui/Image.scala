@@ -11,8 +11,11 @@ class Image(s: String) extends Data(s){
   this.url = s
   val file = new File(s)
   var image = new ImageIcon(s, getName)
-  this.name = getName
   //methods
-
+  override def getName: String ={
+    val s = url.split('\\')
+    val name = s.last
+    name
+  }
 
 }
