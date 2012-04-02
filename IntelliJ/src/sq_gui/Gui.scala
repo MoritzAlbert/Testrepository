@@ -1,6 +1,7 @@
 package sq_gui
 
 import scala.swing._
+import event.KeyPressed
 import javax.swing.filechooser.FileNameExtensionFilter
 import TabbedPane._
 import jBrowser.JBrowser
@@ -9,6 +10,8 @@ import javax.swing.{JList, UIManager, ImageIcon, JTree, DropMode}
 import javax.swing.event.{TreeSelectionEvent, TreeSelectionListener}
 import dragndrop._
 import java.awt.{Dimension, Color}
+import scala.swing.event.Key
+import scala.swing.event.KeyPressed
 
 //Begin object Object Gui
 object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
@@ -117,14 +120,14 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
       Dialog.showMessage(null, panel.peer, "Enter group name", Dialog.Message.Plain)
 
-      println(panel.groupname.text)
-      println(database.grouppool.size)
+      println("Groupname: " + panel.groupname.text)
+      println("Grouppool Size: " + database.grouppool.size)
 
       if (panel.groupname.text == "") {
         Dialog.showMessage(null, "Please enter name", "Missing input", Dialog.Message.Error)
       } else {
         database.addToGrouppool(panel.groupname.text)
-        println(database.grouppool.size)
+        println("Grouppool Size: " + database.grouppool.size)
         val child = new DefaultMutableTreeNode(panel.groupname.text)
         tree_model.insertNodeInto(child, root, root.getChildCount)
       }
@@ -140,11 +143,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         if (x.toString.equals("Ok")) {
           tree_model.removeNodeFromParent(node)
           database.removeFromGrouppool(node.toString)
-        }
+          println("Grouppool Size: " + database.grouppool.size)
 
+        }
       }
       updateFromXML()
-
     }
 
     var add_group = new Button {
@@ -177,6 +180,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       updateSearchListData(searchList, database)
     }
 
+
+
     //buttons
     var add = new Button {
       action = addData
@@ -198,6 +203,16 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     var searchInput = new TextField("") {
       this.preferredSize = new Dimension(214, 25)
+    }
+
+    // SEARCH WITH ENTER ON END WITHOUT USE OF THE BUTTON
+    listenTo(searchInput.keys)
+
+    reactions += {
+      case KeyPressed(_, Key.Enter, _, _) =>  startSearch(searchInput.text)
+      updateSearchListData(list, database)
+      searchInput.text = ""
+      updateSearchListData(searchList, database)
     }
 
     val settingDia = new Dialog() {
@@ -365,7 +380,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       contents += add_group
     }
 
-    var newGroupPanel = new BoxPanel(Orientation.Horizontal) {8
+    var newGroupPanel = new BoxPanel(Orientation.Horizontal) {
+      8
 
       contents += newGroupTextFieldPanel
       contents += newGroupAddElementsPanel
