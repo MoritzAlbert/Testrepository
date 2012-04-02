@@ -39,11 +39,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     jtree.setSelectionModel(tsm)
     jtree.addTreeSelectionListener(new TreeSelectionListener {
       def valueChanged(e: TreeSelectionEvent) {
-        val tp = jtree.getLastSelectedPathComponent.toString
-        child_name = tp
-        println(child_name)
-        val grp = database.getGroupByString(tp)
-        child_list = getJListFromGroup(grp)
       }
     })
 
@@ -94,6 +89,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         contents += new MenuItem(Action("Settings") {
           settingDia.open()
         })
+        contents += new MenuItem("Datenbank speichern")
+        contents += new MenuItem("Datenbank laden")
         contents += new MenuItem(Action("Exit") {
           closeOperation()
         })
@@ -368,11 +365,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       contents += add_group
     }
 
-    var newGroupPanel = new BoxPanel(Orientation.Horizontal) {
-
-      this.preferredSize = new Dimension(900, 100)
-      this.maximumSize = new Dimension(900, 100)
-      this.minimumSize = new Dimension(900, 100)
+    var newGroupPanel = new BoxPanel(Orientation.Horizontal) {8
 
       contents += newGroupTextFieldPanel
       contents += newGroupAddElementsPanel
