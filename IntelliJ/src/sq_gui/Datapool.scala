@@ -183,7 +183,7 @@ class Datapool() {
   }
 
   def sortGrouppool(): List[Group] = {
-    val list = grouppool.toList.sortWith((e1, e2) => (e1.name< e2.name))
+    val list = grouppool.toList.sortWith((e1, e2) => (e1.name.toLowerCase< e2.name.toLowerCase))
     list
   }
 

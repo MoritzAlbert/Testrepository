@@ -12,8 +12,9 @@ class Video(s: String) extends Data(s) {
   var default = "video.jpg"
   val file = new File(s)
   var image = new ImageIcon(default, getName)
- this.name = getName
+  this.name = getName
   this.player = "C:/Program Files (x86)/Windows Media Player/wmplayer.exe"
+
   //methods
 
   //overwrites the play-function of video

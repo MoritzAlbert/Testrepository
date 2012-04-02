@@ -141,6 +141,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         val child = new DefaultMutableTreeNode(panel.groupname.text)
         tree_model.insertNodeInto(child, root, root.getChildCount)
       }
+      updateFromXML()
 
     }
 
@@ -221,8 +222,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             fileChooserJPEG.showOpenDialog(this)
 
             val file = fileChooserJPEG.selectedFile
-            val url = file.toURI.toURL
-            playerImage = url.getPath()
+            //val url = file.toURI.toURL
+            val url = file.getAbsolutePath
+            println(url)
+            //playerImage = url.getPath()
+            playerImage = url
             
           }) {
             this.tooltip = "Set editor for .jpeg data"
@@ -236,7 +240,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             fileChooserMP.showOpenDialog(this)
 
             val file = fileChooserMP.selectedFile
-            val url = file.toURI.toURL
+            val url = file.getAbsolutePath
+            playerVideo = url
+            println(playerVideo)
 
           }) {
             this.tooltip = "Set editor for .mp4 data"
@@ -249,7 +255,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             fileChooserPDF.showOpenDialog(this)
 
             val file = fileChooserPDF.selectedFile
-            val url = file.toURI.toURL
+            val url = file.getAbsolutePath
+            playerPDF = url
 
           }) {
             this.tooltip = "Set editor for .pdf data"
@@ -327,6 +334,10 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     //group scrollPane
     var group_new = new ScrollPane(group)
+
+    def updateFromXML(){
+      group_new.contents = paintGridPanel
+    }
 
     var labelLeft = new Label() {
       this.icon = new ImageIcon("logoLeft.png")
