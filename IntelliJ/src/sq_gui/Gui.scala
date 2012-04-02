@@ -37,6 +37,15 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     val tsm = new DefaultTreeSelectionModel()
     tsm.setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION)
     jtree.setSelectionModel(tsm)
+    jtree.addTreeSelectionListener(new TreeSelectionListener {
+      def valueChanged(e: TreeSelectionEvent) {
+        val tp = jtree.getLastSelectedPathComponent.toString
+        child_name = tp
+        println(child_name)
+        val grp = database.getGroupByString(tp)
+        child_list = getJListFromGroup(grp)
+      }
+    })
 
     jtree.setRootVisible(true)
 
@@ -62,12 +71,14 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       fileChooser.showOpenDialog(frame)
       val file = fileChooser.selectedFile
 
-      val url = file.toURI.toURL
+      val url = file.getAbsolutePath
+      //println(url)
 
       //database.addToDataPool(url.getQuery)
-      database.addToDataPool(url.getPath)
+      database.addToDataPool(url)
 
-      println(url.getFile)
+      println(url)
+      //TODO Probleme bei URL to STRING, hier wird C: als Pfad ausgegeben. Linux Like
 
       updateListData(list, database)
       updateListImage(list_image, database)

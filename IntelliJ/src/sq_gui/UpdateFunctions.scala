@@ -11,7 +11,7 @@ trait UpdateFunctions {
   def updateListData(list: JList, data: Datapool) {
     val listModel = list.getModel.asInstanceOf[DefaultListModel]
     listModel.clear()
-    val it = data.datapool.iterator
+    val it = data.sortDatapool().iterator
     while (it.hasNext) {
       val data = it.next()
       if (data.url.endsWith(".jpg")) {
@@ -67,7 +67,7 @@ trait UpdateFunctions {
   def updateListImage(list: JList, data: Datapool) {
     val listModel = list.getModel.asInstanceOf[DefaultListModel]
     listModel.clear()
-    val it = data.imagepool.iterator
+    val it = data.sortImagepool().iterator
     while (it.hasNext) {
       val data = it.next()
       data.image.getImage.getScaledInstance(10, 10, 10)
@@ -80,7 +80,7 @@ trait UpdateFunctions {
   def updateListDocument(list: JList, data: Datapool) {
     val listModel = list.getModel.asInstanceOf[DefaultListModel]
     listModel.clear()
-    val it = data.documentpool.iterator
+    val it = data.sortDocumentpool().iterator
     while (it.hasNext) {
       val data = it.next()
       data.image.getImage.getScaledInstance(10, 10, 10)
@@ -93,7 +93,7 @@ trait UpdateFunctions {
   def updateListVideo(list: JList, data: Datapool) {
     val listModel = list.getModel.asInstanceOf[DefaultListModel]
     listModel.clear()
-    val it = data.videopool.iterator
+    val it = data.sortVideopool().iterator
     while (it.hasNext) {
       val data = it.next()
       data.image.getImage.getScaledInstance(10, 10, 10)
