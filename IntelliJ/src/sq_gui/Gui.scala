@@ -95,59 +95,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       exportToXML(database, "test.xml")
     }
 
-    val settingDia = new Dialog() {
-      this.preferredSize = new Dimension(600, 400)
-      this.centerOnScreen()
-      resizable = true
-      contents = new BoxPanel(Orientation.Vertical) {
-        contents += new FlowPanel() {
-          contents += new Label("Set standard data editors")
-        }
-        contents += new FlowPanel() {
-          val fileChooserJPEG = new FileChooser()
-          contents += new Label("JPEG:")
-          contents += new Button(Action("Choose...") {
-            fileChooserJPEG.showOpenDialog(this)
-            // newPlayer(fileChooserPDF.selectedFile.toString())
-          }) {
-            this.tooltip = "Set editor for .jpeg data"
-          }
-          // contents += new Label(fileChooserJPEG.selectedFile.toString())
-        }
-        contents += new FlowPanel() {
-          val fileChooserMP = new FileChooser()
-          contents += new Label("MP4:")
-          contents += new Button(Action("Choose...") {
-            fileChooserMP.showOpenDialog(this)
-          }) {
-            this.tooltip = "Set editor for .mp4 data"
-          }
-        }
-        contents += new FlowPanel() {
-          val fileChooserPDF = new FileChooser()
-          contents += new Label("PDF:")
-          contents += new Button(Action("Choose...") {
-            fileChooserPDF.showOpenDialog(this)
-
-          }) {
-            this.tooltip = "Set editor for .pdf data"
-          }
-        }
-        contents += new FlowPanel() {
-          contents += new Button("") {
-            this.icon = new ImageIcon("icons\\24x24\\save.png")
-            this.tooltip = "Save"
-          }
-          contents += new Button(Action("") {
-            this.tooltip = "Cancel"
-            close()
-          }) {
-            this.icon = new ImageIcon("icons\\24x24\\delete.png")
-          }
-        }
-      }
-    }
-
 
     menuBar = new MenuBar {
       contents += new Menu("File") {
@@ -208,10 +155,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
       updateFromXML()
 
-    }
-
-    var add_group = new Button {
-      action = addGroup
     }
 
     var add_delete_group = new FlowPanel {
@@ -580,7 +523,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             this.icon = new ImageIcon("icons\\16x16\\save.png")
           }
           contents += new Button {
-            action = loeschButton
+//            action = loeschButton
             this.icon = new ImageIcon("icons\\16x16\\trash.png")
 
           }
