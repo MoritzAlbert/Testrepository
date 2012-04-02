@@ -14,6 +14,10 @@ trait Functions extends XML with UpdateFunctions {
 
   //Declarations
 
+  var playerImage = "C:/Program Files (x86)/GIMP-2.0/bin/gimp-2.6.exe"
+  var playerPDF = "C:/Program Files (x86)/Adobe/Reader 9.0/Reader/AcroRd32.exe"
+  var playerVideo = "C:/Program Files (x86)/Windows Media Player/wmplayer.exe"
+
   val file = new File("test.xml")
   val database = readFromFile(file)
 
@@ -130,7 +134,7 @@ trait Functions extends XML with UpdateFunctions {
   def getJListFromDatabase(data: Datapool): JList = {
 
     val model = new DefaultListModel() {
-      val it = data.datapool.iterator
+      val it = data.sortDatapool().iterator
       while (it.hasNext) {
         val data = it.next()
         // Pictures
@@ -165,7 +169,7 @@ trait Functions extends XML with UpdateFunctions {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
         if (s.getClickCount == 2) {
-          playObject(f.toString)
+          play(f.toString)
         }
       }
     })
@@ -209,7 +213,7 @@ trait Functions extends XML with UpdateFunctions {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
         if (s.getClickCount == 2) {
-          playObject(f.toString)
+          play(f.toString)
         }
       }
     })
@@ -219,7 +223,7 @@ trait Functions extends XML with UpdateFunctions {
   //generating an image-JList from database
   def getJListImageFromDatabase(data: Datapool): JList = {
     val model = new DefaultListModel() {
-      val it = data.imagepool.iterator
+      val it = data.sortImagepool().iterator
       while (it.hasNext) {
         val data = it.next()
         data.image.getImage.getScaledInstance(10, 10, 10)
@@ -234,7 +238,7 @@ trait Functions extends XML with UpdateFunctions {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
         if (s.getClickCount == 2) {
-          playObject(f.toString)
+          play(f.toString)
         }
       }
     })
@@ -245,7 +249,7 @@ trait Functions extends XML with UpdateFunctions {
   //generating a document/pdf-JList from database
   def getJListDocumentFromDatabase(data: Datapool): JList = {
     val model = new DefaultListModel() {
-      val it = data.documentpool.iterator
+      val it = data.sortDocumentpool().iterator
       while (it.hasNext) {
 
         val data = it.next()
@@ -260,7 +264,7 @@ trait Functions extends XML with UpdateFunctions {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
         if (s.getClickCount == 2) {
-          playObject(f.toString)
+          play(f.toString)
         }
       }
     })
@@ -270,7 +274,7 @@ trait Functions extends XML with UpdateFunctions {
   //generating a video-JList from database
   def getJListVideoFromDatabase(data: Datapool): JList = {
     val model = new DefaultListModel {
-      val it = data.videopool.iterator
+      val it = data.sortVideopool().iterator
       while (it.hasNext) {
         val data = it.next()
         data.image.getImage.getScaledInstance(10, 10, 10)
@@ -285,7 +289,7 @@ trait Functions extends XML with UpdateFunctions {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
         if (s.getClickCount == 2) {
-          playObject(f.toString)
+          play(f.toString)
         }
       }
     })
@@ -339,7 +343,7 @@ trait Functions extends XML with UpdateFunctions {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
         if (s.getClickCount == 2) {
-          playObject(f.toString)
+          play(f.toString)
         }
       }
     })
@@ -433,4 +437,31 @@ trait Functions extends XML with UpdateFunctions {
       i += 1
     }
   }
+
+  //overwrites the play-function of data
+  def play(url:String) {
+
+    if (url.endsWith(".jpg")) {
+      val sb = new StringBuilder(playerImage);
+      sb.append(' ');
+      sb.append(url);
+      println(sb.toString())
+      Runtime.getRuntime.exec(sb.toString());
+    }
+    if (url.endsWith(".pdf")) {
+      val sb = new StringBuilder(playerPDF);
+      sb.append(' ');
+      sb.append(url);
+      println(sb.toString())
+      Runtime.getRuntime.exec(sb.toString());
+    }
+    if (url.endsWith(".mp4")) {
+      val sb = new StringBuilder(playerVideo);
+      sb.append(' ');
+      sb.append(url);
+      println(sb.toString())
+      Runtime.getRuntime.exec(sb.toString());
+    }
+  }
+
 }

@@ -11,7 +11,7 @@ class Document(s: String) extends Data(s) {
   val file = new File(s)
   var default = "pdf_logo.jpg"
   var image = new ImageIcon(default, getName)
-  var player = "C:/Program Files (x86)/Adobe/Acrobat 10.0/Acrobat/Acrobat.exe"
+  this.name = getName
 
   //methods
 
@@ -33,10 +33,4 @@ class Document(s: String) extends Data(s) {
     player = s
   }
 
-  //getName
-  def getName: String = {
-    val s = url.split("/")
-    val name = s.last
-    name
-  }
 }

@@ -1,74 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Datapool>
-  <Data id="1">
+  <Data id="5">
+    <URL>C:/Users/Public/Pictures/Sample Pictures/Chrysanthemum.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="3">
     <URL>C:/Users/Public/Pictures/Sample Pictures/Hydrangeas.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
   <Data id="6">
-    <URL>C:/Users/Public/Pictures/Sample Pictures/Koala.jpg</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="5">
-    <URL>/C:/Users/Moritz/Desktop/BILD.jpg</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="3">
-    <URL>C:/Users/Public/Pictures/Sample Pictures/Penguins.jpg</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="8">
     <URL>/C:/Users/Moritz/Desktop/hiwi_vr_muehlberger-2.pdf</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Data id="4">
+  <Data id="8">
     <URL>C:/Users/Public/Pictures/Sample Pictures/Desert.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Data id="7">
-    <URL>C:/Users/Public/Pictures/Sample Pictures/Chrysanthemum.jpg</URL>
+  <Data id="2">
+    <URL>C:/Users/Public/Pictures/Sample Pictures/Penguins.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Data id="2">
+  <Data id="4">
+    <URL>/C:/Users/Moritz/Desktop/BILD.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="7">
+    <URL>C:/Users/Public/Pictures/Sample Pictures/Koala.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="1">
     <URL>C:/Users/Public/Pictures/Sample Pictures/Lighthouse.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Group id="6">
+  <Group id="3">
+    <name>Test5</name>
+  </Group>
+  <Group id="2">
     <name>Test6</name>
   </Group>
-  <Group id="7">
-    <name>Test2</name>
-  </Group>
-  <Group id="3">
-    <name>Test3</name>
+  <Group id="1">
+    <name>Test1</name>
   </Group>
   <Group id="5">
-    <name>Test1</name>
+    <name>Test3</name>
   </Group>
   <Group id="4">
     <name>Test4</name>
     <Data id="0">
-      <URL>C:/Users/Public/Pictures/Sample Pictures/Penguins.jpg</URL>
+      <URL>C:/Users/Public/Pictures/Sample Pictures/Jellyfish.jpg</URL>
     </Data>
     <Data id="0">
-      <URL>C:/Users/Public/Pictures/Sample Pictures/Jellyfish.jpg</URL>
+      <URL>C:/Users/Public/Pictures/Sample Pictures/Penguins.jpg</URL>
     </Data>
     <Data id="0">
       <URL>C:/Users/Public/Pictures/Sample Pictures/Tulips.jpg</URL>
     </Data>
-  </Group>
-  <Group id="1">
-    <name>Test5</name>
-  </Group>
-  <Group id="2">
-    <name>Bla</name>
   </Group>
 </Datapool>
 
