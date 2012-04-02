@@ -9,6 +9,7 @@ import java.io.File
 import javax.swing._
 
 import dragndrop.MyTransferHandler
+import swing.event.MousePressed
 
 
 trait Functions extends XML with UpdateFunctions {
@@ -19,6 +20,14 @@ trait Functions extends XML with UpdateFunctions {
   val database = readFromFile(file)
 
   var list = getJListFromDatabase(database)
+//  val it2 = list.iterator
+//  while(it2.hasNext()){
+//    val obj2 = it2
+//    reactions += {
+//      case e: MousePressed => popupMenu.show(obj2, 0, obj2.bounds.height)
+//    }
+//    listenTo(obj2)
+//  }
   var searchList = getJListFromSearchpool(database)
 
   list.setDragEnabled(true)
@@ -47,6 +56,7 @@ trait Functions extends XML with UpdateFunctions {
   })
 
   var scroll = ListRenderer(list)
+
   var list_image = getJListImageFromDatabase(database)
 
   list_image.setDragEnabled(true)
@@ -56,7 +66,7 @@ trait Functions extends XML with UpdateFunctions {
     override def keyPressed(evt:KeyEvent) {
       val key = evt.getKeyCode
       if (key == KeyEvent.VK_DELETE ){
-        val x = Dialog.showConfirmation(null,"Wollen Sie die Datei wirklich löschen?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
+        val x = Dialog.showConfirmation(null,"Delete Data?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
         if(x.toString.equals("Ok")){
         val obj = list_image.getSelectedValue.asInstanceOf[ImageIcon]
         println("ImageIcon: "+obj.getDescription)
