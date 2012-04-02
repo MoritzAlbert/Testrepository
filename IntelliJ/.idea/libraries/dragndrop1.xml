@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="dragndrop1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/dnd/dragndrop.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/dnd/dragndrop.jar!/" />
+    </SOURCES>
+  </library>
+</component>
