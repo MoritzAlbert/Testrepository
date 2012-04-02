@@ -130,7 +130,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         println("Grouppool Size: " + database.grouppool.size)
         val child = new DefaultMutableTreeNode(panel.groupname.text)
         tree_model.insertNodeInto(child, root, root.getChildCount)
-        expandAll(jtree)    //JR
+        expandAll(jtree) //JR
       }
       updateFromXML()
     }
@@ -141,11 +141,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
       if (node != root) {
         val x = Dialog.showConfirmation(null, "Do you really want to delete this group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
-        if (x.toString.equals("Ok") || x.toString.equals("Yes") ) {
+        if (x.toString.equals("Ok") || x.toString.equals("Yes")) {
           tree_model.removeNodeFromParent(node)
           database.removeFromGrouppool(node.toString)
           println("Grouppool Size: " + database.grouppool.size)
-          expandAll(jtree)   //JR
+          expandAll(jtree) //JR
         }
       }
       updateFromXML()
@@ -182,7 +182,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
 
-
     //buttons
     var add = new Button {
       action = addData
@@ -210,7 +209,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     listenTo(searchInput.keys)
 
     reactions += {
-      case KeyPressed(_, Key.Enter, _, _) =>  startSearch(searchInput.text)
+      case KeyPressed(_, Key.Enter, _, _) => startSearch(searchInput.text)
       updateSearchListData(list, database)
       searchInput.text = ""
       updateSearchListData(searchList, database)
@@ -230,8 +229,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }
 
 
-
-
           contents += new Label("JPEG:")
           contents += new Button(Action("Choose...") {
             fileChooserJPEG.showOpenDialog(this)
@@ -246,16 +243,15 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }) {
             this.tooltip = "Set editor for .jpeg data"
           }
+
+          val jpegApp = new Label(playerImage)
+          contents += jpegApp
           // contents += new Label(fileChooserJPEG.selectedFile.toString())
         }
         contents += new FlowPanel() {
           val fileChooserMP = new FileChooser() {
             fileFilter = new FileNameExtensionFilter("Applications for MP4 view", "exe")
           }
-
-
-
-
 
 
           contents += new Label("MP4:")
@@ -270,13 +266,15 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }) {
             this.tooltip = "Set editor for .mp4 data"
           }
+
+          val mp4App = new Label(playerVideo)
+          contents += mp4App
+
         }
         contents += new FlowPanel() {
           val fileChooserPDF = new FileChooser() {
             fileFilter = new FileNameExtensionFilter("Applications for PDF view", "exe")
           }
-
-
 
 
           contents += new Label("PDF:")
@@ -290,6 +288,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }) {
             this.tooltip = "Set editor for .pdf data"
           }
+          val pdfApp = new Label(playerPDF)
+          contents += pdfApp
         }
         contents += new FlowPanel() {
           contents += new Button("") {
