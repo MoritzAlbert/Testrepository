@@ -225,7 +225,13 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           contents += new Label("Set standard data editors")
         }
         contents += new FlowPanel() {
-          val fileChooserJPEG = new FileChooser()
+          val fileChooserJPEG = new FileChooser() {
+            fileFilter = new FileNameExtensionFilter("Applications for JPEG view", "exe")
+          }
+
+
+
+
           contents += new Label("JPEG:")
           contents += new Button(Action("Choose...") {
             fileChooserJPEG.showOpenDialog(this)
@@ -243,7 +249,15 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           // contents += new Label(fileChooserJPEG.selectedFile.toString())
         }
         contents += new FlowPanel() {
-          val fileChooserMP = new FileChooser()
+          val fileChooserMP = new FileChooser() {
+            fileFilter = new FileNameExtensionFilter("Applications for MP4 view", "exe")
+          }
+
+
+
+
+
+
           contents += new Label("MP4:")
           contents += new Button(Action("Choose...") {
             fileChooserMP.showOpenDialog(this)
@@ -258,7 +272,13 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }
         }
         contents += new FlowPanel() {
-          val fileChooserPDF = new FileChooser()
+          val fileChooserPDF = new FileChooser() {
+            fileFilter = new FileNameExtensionFilter("Applications for PDF view", "exe")
+          }
+
+
+
+
           contents += new Label("PDF:")
           contents += new Button(Action("Choose...") {
             fileChooserPDF.showOpenDialog(this)
