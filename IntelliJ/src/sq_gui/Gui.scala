@@ -130,6 +130,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         println("Grouppool Size: " + database.grouppool.size)
         val child = new DefaultMutableTreeNode(panel.groupname.text)
         tree_model.insertNodeInto(child, root, root.getChildCount)
+        expandAll(jtree)    //JR
       }
       updateFromXML()
     }
@@ -140,11 +141,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
       if (node != root) {
         val x = Dialog.showConfirmation(null, "Do you really want to delete this group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
-        if (x.toString.equals("Ok")) {
+        if (x.toString.equals("Ok") || x.toString.equals("Yes") ) {
           tree_model.removeNodeFromParent(node)
           database.removeFromGrouppool(node.toString)
           println("Grouppool Size: " + database.grouppool.size)
-
+          expandAll(jtree)   //JR
         }
       }
       updateFromXML()
