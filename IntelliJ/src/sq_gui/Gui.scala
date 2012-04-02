@@ -1,14 +1,14 @@
 package sq_gui
 
 import scala.swing._
-import event.{MousePressed, ButtonClicked}
+import swing.event.{MousePressed, ButtonClicked}
 import javax.swing.filechooser.FileNameExtensionFilter
 import TabbedPane._
-import java.awt.{Dimension, Color}
 import dragndrop.MyTransferHandler
-import javax.swing.{DropMode, JList, ImageIcon, UIManager}
 import sq_gui.Image
 import javax.swing.border.EtchedBorder
+import java.awt.{Image, Dimension, Color}
+import javax.swing.{ImageIcon, UIManager, JList, DropMode}
 
 
 //Begin object Object Gui
@@ -72,37 +72,37 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     val settingDia = new Dialog() {
-      this.preferredSize = new Dimension(600,400)
+      this.preferredSize = new Dimension(600, 400)
       this.centerOnScreen()
       resizable = true
       contents = new BoxPanel(Orientation.Vertical) {
-        contents += new FlowPanel(){
+        contents += new FlowPanel() {
           contents += new Label("Set standard data editors")
         }
-        contents += new FlowPanel(){
+        contents += new FlowPanel() {
           val fileChooserJPEG = new FileChooser()
           contents += new Label("JPEG:")
-          contents += new Button(Action("Choose..."){
+          contents += new Button(Action("Choose...") {
             fileChooserJPEG.showOpenDialog(this)
             // newPlayer(fileChooserPDF.selectedFile.toString())
           }) {
             this.tooltip = "Set editor for .jpeg data"
           }
-         // contents += new Label(fileChooserJPEG.selectedFile.toString())
+          // contents += new Label(fileChooserJPEG.selectedFile.toString())
         }
-        contents += new FlowPanel(){
+        contents += new FlowPanel() {
           val fileChooserMP = new FileChooser()
           contents += new Label("MP4:")
-          contents += new Button(Action("Choose..."){
+          contents += new Button(Action("Choose...") {
             fileChooserMP.showOpenDialog(this)
           }) {
             this.tooltip = "Set editor for .mp4 data"
           }
         }
-        contents += new FlowPanel(){
+        contents += new FlowPanel() {
           val fileChooserPDF = new FileChooser()
           contents += new Label("PDF:")
-          contents += new Button(Action("Choose..."){
+          contents += new Button(Action("Choose...") {
             fileChooserPDF.showOpenDialog(this)
 
           }) {
@@ -198,8 +198,45 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
     }
 
+    //      val test_model = list.getModel.asInstanceOf[DefaultListModel]
+    //      test_model.clear()
+    //      val it2 = database.datapool.iterator
+    //      while(it2.hasNext){
+    //        val data = it2.next()
+    //        if (data.url.endsWith(".jpg")) {
+    //          val img = data.asInstanceOf[sq_gui.Image]
+    //          img.image.getImage.getScaledInstance(10, 10, 10)
+    //          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+    //          listModel.addElement(img.image)
+    //          reactions += {
+    //            case e: MousePressed => popupMenu.show(data, 0, data.bounds.height)
+    //          }
+    //          listenTo(data)
+    //        }
+    //        if (data.url.endsWith(".pdf")) {
+    //          val img = data.asInstanceOf[sq_gui.Document]
+    //          img.image.getImage.getScaledInstance(10, 10, 10)
+    //          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+    //          listModel.addElement(img.image)
+    //          reactions += {
+    //            case e: MousePressed => popupMenu.show(data, 0, data.bounds.height)
+    //          }
+    //          listenTo(data)
+    //        }
+    //        if (data.url.endsWith(".mp4")) {
+    //          val img = data.asInstanceOf[sq_gui.Video]
+    //          img.image.getImage.getScaledInstance(10, 10, 10)
+    //          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
+    //          listModel.addElement(img.image) //TODO richtig dass img.image?   nicht video.image?
+    //          reactions += {
+    //            case e: MousePressed => popupMenu.show(data, 0, data.bounds.height)
+    //          }
+    //          listenTo(data)
+    //        }
+    //
+    //      }
 
-    var search = new Button("Test"){
+    var search = new Button("Test") {
       action = searchData
       this.tooltip = "Search"
       //this.icon = new ImageIcon("icons\\16x16\\search.png")
@@ -330,35 +367,34 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         centerOnScreen()
         resizable = true
         contents = new BoxPanel(Orientation.Vertical) {
-          contents += new FlowPanel() {
-            val kersIt = database.grouppool.iterator
-            while (kersIt.hasNext) {
-              val group = kersIt.next()
-              val groupList = getJListFromGroup(group)
-              groupList.setVisibleRowCount(1) //METRO STYLE bei 2, ansonsten 1
-              groupList.setLayoutOrientation(JList.HORIZONTAL_WRAP)
-              var scrolledGroupList = new ScrollPane(Component.wrap(groupList))
-              //  contents += new FlowPanel(){
-              contents += scrolledGroupList
-              // }
+          val ratingP = new FlowPanel() {
+            val buttonGroup = new ButtonGroup
+            val bad = new RadioButton("Bad")
+            val good = new RadioButton("Good")
+            val awesome = new RadioButton("Awesome")
+            val radioButtons = List(bad, good, awesome)
+
+            contents += new Label("Rating")
+            contents += new BoxPanel(Orientation.Vertical) {
+              contents ++= radioButtons
             }
-            this.preferredSize = new Dimension(400, 100)
           }
-          contents += new FlowPanel() {
-            var database = readFromFile(file)
-            val dataList = getJListFromDatabase(database)
-            val scrolledDataList = new ScrollPane(Component.wrap(dataList))
-            contents += scrolledDataList
+          val informationP = new FlowPanel(){
+            contents += new Label("Informations:")
+            contents += new TextArea(){
+              preferredSize = new Dimension(200,100)
+            }
           }
           val buttonP = new FlowPanel() {
             contents += new Button(Action("") {
-
+              //TODO in xml speichern
             }) {
               this.tooltip = "Save Changes"
               this.icon = new ImageIcon("icons\\24x24\\save.png")
               this.preferredSize = new Dimension(60, 30)
             }
             contents += new Button(Action("") {
+              //TODO abfrage, ob aenderungen wirklich nicht gespeichert werden sollen
               close()
             }) {
               this.tooltip = "Cancel"
@@ -366,6 +402,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
               this.preferredSize = new Dimension(60, 30)
             }
           }
+          contents += ratingP
+          contents += informationP
           contents += buttonP
         }
         open()
@@ -425,11 +463,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             val x = Dialog.showConfirmation(null, "Delete Group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
             if (x.toString().equals("Ok") || x.toString().equals("Yes")) {
               //TODO: ausgewaehlte Gruppe entfernen
-//              val obj = group.getSelectedValue.asInstanceOf[ImageIcon]
-//              println("ImageIcon: "+obj.getDescription)
-//              val url = searchURL(obj.getDescription)
-//              println(url)
-//              database.removeFromGroupPool(url)
+              //              val obj = group.getSelectedValue.asInstanceOf[ImageIcon]
+              //              println("ImageIcon: "+obj.getDescription)
+              //              val url = searchURL(obj.getDescription)
+              //              println(url)
+              //              database.removeFromGroupPool(url)
               //TODO auch hier updaten
             }
           }) {

@@ -20,14 +20,7 @@ trait Functions extends XML with UpdateFunctions {
   val database = readFromFile(file)
 
   var list = getJListFromDatabase(database)
-//  val it2 = list.iterator
-//  while(it2.hasNext()){
-//    val obj2 = it2
-//    reactions += {
-//      case e: MousePressed => popupMenu.show(obj2, 0, obj2.bounds.height)
-//    }
-//    listenTo(obj2)
-//  }
+
   var searchList = getJListFromSearchpool(database)
 
   list.setDragEnabled(true)
