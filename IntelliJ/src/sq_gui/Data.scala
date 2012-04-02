@@ -9,6 +9,8 @@ class Data(s:String) {
   var relation = HashSet[Data]()
   var rating = 0
   var description = ""
+  var name = getName
+  var player = ""
 
   //adds a relation to an object
   def addRelation(obj:Data) = relation += obj
@@ -24,5 +26,11 @@ class Data(s:String) {
   }
 
   def play(){}
+
+  def getName: String ={
+    val s = url.split("/")
+    val name = s.last
+    name
+  }
 
 }

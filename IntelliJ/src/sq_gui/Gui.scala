@@ -370,7 +370,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           val ratingP = new FlowPanel() {
             val buttonGroup = new ButtonGroup
             val bad = new RadioButton("Bad")
-            val good = new RadioButton("Good")
+             val good = new RadioButton("Good")
             val awesome = new RadioButton("Awesome")
             val radioButtons = List(bad, good, awesome)
 

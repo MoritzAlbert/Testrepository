@@ -22,7 +22,8 @@
     <orderEntry type="library" name="com.ebenius" level="project" />
     <orderEntry type="library" name="jdom" level="project" />
     <orderEntry type="library" name="JListErweiterung" level="project" />
-    <orderEntry type="library" name="dragndrop" level="project" />
+    <orderEntry type="library" name="jBrowser" level="project" />
+    <orderEntry type="library" name="dragndrop1" level="project" />
   </component>
 </module>
 

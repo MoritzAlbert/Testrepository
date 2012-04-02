@@ -7,10 +7,6 @@ import java.io.{FileOutputStream, File}
 
 trait XML {
 
-  //reading method
-
-
-
   // TODO UMGESTALTUNG damit import von XML rate und desc möglich ist
   //TODO unterkategorien in der XML für DATA und GROUPS.
   /*
@@ -29,11 +25,6 @@ trait XML {
       <GROUP ...>
     </GROUPALL>
   </DATAPOOL>
-
-
-
-
-
    */
 
   //read from file
@@ -43,12 +34,6 @@ trait XML {
     val root = doc.getRootElement
     val database = new Datapool
     val children = root.getChildren
-
-    println("GRÖßE" + children.size())
-
-    //   var array = new Array[Array[Int]](1000)(1000)
-    //
-    //   var m = new Array[Int](children.size())
 
     var i = 0
 
@@ -98,12 +83,7 @@ trait XML {
     database
   }
 
-
-  //export method
-
   //export to XML
-
-
   def exportToXML(d: Datapool, s: String) {
     val root = new Element("Datapool")
     val doc = new org.jdom.Document(root)
@@ -156,11 +136,9 @@ trait XML {
     }
 
     val xml = new XMLOutputter(Format.getPrettyFormat)
-
     val output = new FileOutputStream(s)
 
     xml.output(doc, output)
   }
-
 
 }
