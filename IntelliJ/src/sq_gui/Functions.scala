@@ -14,9 +14,9 @@ trait Functions extends XML with UpdateFunctions {
 
   //Declarations
 
-  var playerImage = "C:/Program Files (x86)/GIMP-2.0/bin/gimp-2.6.exe"
-  var playerPDF = "C:/Program Files (x86)/Adobe/Reader 9.0/Reader/AcroRd32.exe"
-  var playerVideo = "C:/Program Files (x86)/Windows Media Player/wmplayer.exe"
+  var playerImage = ""
+  var playerPDF = ""
+  var playerVideo = ""
 
   val file = new File("test.xml")
   val database = readFromFile(file)

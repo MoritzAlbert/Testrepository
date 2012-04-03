@@ -178,12 +178,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       action = addData
     }
 
-    var search = new Button() {
-      action = searchData
-      this.icon = new ImageIcon("icons\\16x16\\search.png")
-      this.preferredSize = new Dimension(40, 25)
-    }
-
     //textfields
     var name_group = new TextField() {
 
@@ -220,6 +214,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             fileFilter = new FileNameExtensionFilter("Executing File for JPEG", "exe")
           }
           contents += new Label("Images:") {
+            this.font = new Font("TimesRoman", 0, 20)
             //this.font = Font.BOLD
             // TODO
           }
@@ -249,7 +244,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           val fileChooserMP = new FileChooser() {
             fileFilter = new FileNameExtensionFilter("Executing File for MP4", "exe")
           }
-          contents += new Label("MP4:")
+          contents += new Label("Video:") {
+            this.font = new Font("TimesRoman", 0, 20)
+          }
 
           val playerVideoLBL = new Label(Gui.playerVideo) //
           contents += playerVideoLBL //
@@ -270,7 +267,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           val fileChooserPDF = new FileChooser() {
             fileFilter = new FileNameExtensionFilter("Executing File for PDF", "exe")
           }
-          contents += new Label("PDF:")
+          contents += new Label("PDF:") {
+            this.font = new Font("TimesRoman", 0, 20)
+          }
 
           val playerPdfLBL = new Label(Gui.playerPDF) //
           contents += playerPdfLBL //
