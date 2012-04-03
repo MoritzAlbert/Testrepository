@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Datapool>
-  <Group id="6">
-    <name>ASD</name>
-  </Group>
-  <Group id="7">
-    <name>ASD</name>
-  </Group>
-  <Group id="4">
-    <name>masseffect</name>
-  </Group>
-  <Group id="5">
-    <name>Test 1</name>
-  </Group>
-  <Group id="3">
-    <name>a</name>
-  </Group>
+  <Data id="1">
+    <URL>C:\Users\Moritz\Desktop\BILD.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="3">
+    <URL>C:\Users\Moritz\Desktop\hiwi_vr_muehlberger-2.pdf</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="2">
+    <URL>C:\Users\Moritz\Desktop\BILD.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
   <Group id="1">
-    <name>Test</name>
-  </Group>
-  <Group id="2">
-    <name>Test12</name>
+    <name>New group</name>
   </Group>
 </Datapool>
 
