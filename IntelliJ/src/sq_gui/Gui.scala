@@ -9,7 +9,7 @@ import javax.swing.tree.{TreeSelectionModel, DefaultTreeSelectionModel, DefaultT
 import javax.swing.{JList, UIManager, ImageIcon, JTree, DropMode}
 import javax.swing.event.{TreeSelectionEvent, TreeSelectionListener}
 import dragndrop._
-import java.awt.{Dimension, Color}
+import java.awt.{Font, Dimension, Color}
 
 //Begin object Object Gui
 object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
@@ -192,17 +192,26 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     val settingDia = new Dialog() {
-      this.preferredSize = new Dimension(300, 300)
-      this.location = new Point(100,100)
+      this.preferredSize = new Dimension(600, 300)
+      this.location = new Point(100, 100)
       resizable = true
       contents = new BoxPanel(Orientation.Vertical) {
         contents += new FlowPanel() {
           contents += new Label("Set standard data editors")
         }
         contents += new FlowPanel() {
-          val fileChooserJPEG = new FileChooser()
-          contents += new Label("Images:")
-          contents += new Button(Action("Choose...") {
+          val fileChooserJPEG = new FileChooser() {
+            fileFilter = new FileNameExtensionFilter("Executing File for JPEG", "exe")
+          }
+          contents += new Label("Images:") {
+            //this.font = Font.BOLD
+            // TODO
+          }
+
+          val playerImageLBL = new Label(Gui.playerImage) //
+          contents += playerImageLBL //
+
+          contents += new Button(Action("Change...") {
 
             fileChooserJPEG.showOpenDialog(this)
             val file = fileChooserJPEG.selectedFile
@@ -211,46 +220,66 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             println(url)
             //playerImage = url.getPath()
             playerImage = url
+            playerImageLBL.text = Gui.playerImage //
+
 
           }) {
             this.tooltip = "Set editor for .jpeg data"
           }
-          //TODO Name des aktuell ausgewählten Programms anzeigen
+
           //contents += new Label(fileChooserJPEG.selectedFile.toString())
         }
         contents += new FlowPanel() {
-          val fileChooserMP = new FileChooser()
+          val fileChooserMP = new FileChooser() {
+            fileFilter = new FileNameExtensionFilter("Executing File for MP4", "exe")
+          }
           contents += new Label("MP4:")
-          contents += new Button(Action("Choose...") {
+
+          val playerVideoLBL = new Label(Gui.playerVideo) //
+          contents += playerVideoLBL //
+
+          contents += new Button(Action("Change...") {
             fileChooserMP.showOpenDialog(this)
 
             val file = fileChooserMP.selectedFile
             val url = file.getAbsolutePath
             playerVideo = url
-            println(playerVideo)
+            playerVideoLBL.text = Gui.playerVideo //
 
           }) {
             this.tooltip = "Set editor for .mp4 data"
           }
         }
         contents += new FlowPanel() {
-          val fileChooserPDF = new FileChooser()
+          val fileChooserPDF = new FileChooser() {
+            fileFilter = new FileNameExtensionFilter("Executing File for PDF", "exe")
+          }
           contents += new Label("PDF:")
-          contents += new Button(Action("Choose...") {
+
+          val playerPdfLBL = new Label(Gui.playerPDF) //
+          contents += playerPdfLBL //
+
+          contents += new Button(Action("Change...") {
             fileChooserPDF.showOpenDialog(this)
 
             val file = fileChooserPDF.selectedFile
             val url = file.getAbsolutePath
             playerPDF = url
+            playerPdfLBL.text = Gui.playerPDF //
+
 
           }) {
             this.tooltip = "Set editor for .pdf data"
           }
         }
         contents += new FlowPanel() {
-          contents += new Button("") {
+          contents += new Button(Action("") {
+            exportPlayerPreferencesToXML("pref.xml")
+            close()
+          }) {
             this.icon = new ImageIcon("icons\\24x24\\save.png")
             this.tooltip = "Save"
+
           }
           contents += new Button(Action("") {
             this.tooltip = "Cancel"
@@ -427,7 +456,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
     val editButton = Action("") {
 
-    val hinzuButton = Action("") {}
+      val hinzuButton = Action("") {}
 
       val dia = new Dialog() {
         centerOnScreen()
@@ -437,17 +466,17 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             val bad = new RadioButton("Bad")
             val good = new RadioButton("Good")
             val awesome = new RadioButton("Awesome")
-           val radioButtons = List(bad, good, awesome)
+            val radioButtons = List(bad, good, awesome)
 
             contents += new Label("Rating")
             contents += new BoxPanel(Orientation.Vertical) {
               contents ++= radioButtons
             }
           }
-          val informationP = new FlowPanel(){
+          val informationP = new FlowPanel() {
             contents += new Label("Informations:")
-            contents += new TextArea(){
-              preferredSize = new Dimension(200,100)
+            contents += new TextArea() {
+              preferredSize = new Dimension(200, 100)
             }
           }
           val buttonP = new FlowPanel() {
