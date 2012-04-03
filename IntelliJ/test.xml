@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Datapool>
-  <Data id="7">
-    <URL>C:\SampleDataScala\Würzburg.jpg</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="8">
-    <URL>C:\SampleDataScala\JavaKompendium.pdf</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="3">
-    <URL>C:\SampleDataScala\LeseprobeJava.pdf</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="2">
+  <Data id="5">
     <URL>C:\SampleDataScala\Würzburg_Süd_RB_1064.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Data id="4">
-    <URL>C:\SampleDataScala\Würzburg_Trümmerbahn.jpg</URL>
+  <Data id="2">
+    <URL>C:\SampleDataScala\ProgrammierenMitJava.pdf</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Data id="5">
-    <URL>C:\SampleDataScala\Java_Beans.jpg</URL>
+  <Data id="8">
+    <URL>C:\SampleDataScala\LeseprobeJava.pdf</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="3">
+    <URL>C:\SampleDataScala\Würzburg.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="7">
+    <URL>C:\SampleDataScala\Würzburg_Trümmerbahn.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
@@ -35,12 +30,17 @@
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Data id="1">
-    <URL>C:\SampleDataScala\ProgrammierenMitJava.pdf</URL>
+  <Data id="4">
+    <URL>C:\SampleDataScala\Java_Beans.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Group id="2">
+  <Data id="1">
+    <URL>C:\SampleDataScala\JavaKompendium.pdf</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Group id="1">
     <name>Java</name>
     <Data id="0">
       <URL>C:\SampleDataScala\Java_Beans.jpg</URL>
@@ -55,7 +55,7 @@
       <URL>C:\SampleDataScala\ProgrammierenMitJava.pdf</URL>
     </Data>
   </Group>
-  <Group id="1">
+  <Group id="2">
     <name>Würzburg</name>
     <Data id="0">
       <URL>C:\SampleDataScala\Juliusspital-Wuerzburg.jpg</URL>

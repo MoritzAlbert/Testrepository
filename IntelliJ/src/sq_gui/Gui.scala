@@ -63,7 +63,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     var frame = new FlowPanel()
 
     //Add data to datapool (with a filechooser)
-    val addData = Action("Add data") {
+    val addData = Action("") {
 
       val fileChooser = new FileChooser() {
         fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
@@ -179,8 +179,13 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     //buttons
-    var add = new Button {
+    var add = new Button() {
       action = addData
+      this.preferredSize = new Dimension(255, 40)
+      this.maximumSize = new Dimension(255, 40)
+      this.minimumSize = new Dimension(255, 40)
+      this.tooltip = "Add a new data to your datapool"
+      this.icon = new ImageIcon("icons\\32x32\\add.png")
     }
 
     //textfields
@@ -543,65 +548,65 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }
           contents += new Button(Action("") {
 
-                val nameP = new FlowPanel() {
-                  contents += new Label("Group Name")
-                  val grpnameField = new TextField() {
-                    this.preferredSize = new Dimension(200, 20)
-                    this.maximumSize = new Dimension(200, 20)
-                    this.minimumSize = new Dimension(200, 20)
-                  }
-                  contents += grpnameField
-                }
-
-                val ratingP = new FlowPanel() {
-
-                  val bad = new RadioButton("Bad")
-                  val good = new RadioButton("Good")
-                  val awesome = new RadioButton("Awesome")
-
-                  val radioButtons = List(bad, good, awesome)
-
-
-                  contents += new Label("Rating")
-                  contents += new BoxPanel(Orientation.Vertical) {
-                    contents ++= radioButtons
-                  }
-                }
-                val informationP = new FlowPanel() {
-                  contents += new Label("Informations:")
-                  contents += new TextArea() {
-                    preferredSize = new Dimension(200, 100)
-                  }
-                }
-                val buttonP = new FlowPanel() {
-                  contents += new Button(Action("") {
-                    //TODO in xml speichern
-                  }) {
-                    this.tooltip = "Save Changes"
-                    this.icon = new ImageIcon("icons\\24x24\\save.png")
-                    this.preferredSize = new Dimension(60, 30)
-                  }
-                  contents += new Button(Action("") {
-                    //TODO abfrage, ob aenderungen wirklich nicht gespeichert werden sollen
-                    //close()
-                  }) {
-                    this.tooltip = "Cancel"
-                    this.icon = new ImageIcon("icons\\24x24\\delete.png")
-                    this.preferredSize = new Dimension(60, 30)
-                  }
-                }
-                var panel = new BoxPanel(Orientation.Vertical){
-                contents += nameP
-                contents += ratingP
-                contents += informationP
-                contents += buttonP
+            val nameP = new FlowPanel() {
+              contents += new Label("Group Name")
+              val grpnameField = new TextField() {
+                this.preferredSize = new Dimension(200, 20)
+                this.maximumSize = new Dimension(200, 20)
+                this.minimumSize = new Dimension(200, 20)
               }
-             val dia = new Dialog(){
-               contents=panel
-               open()
-             }
-              
-        } 
+              contents += grpnameField
+            }
+
+            val ratingP = new FlowPanel() {
+
+              val bad = new RadioButton("Bad")
+              val good = new RadioButton("Good")
+              val awesome = new RadioButton("Awesome")
+
+              val radioButtons = List(bad, good, awesome)
+
+
+              contents += new Label("Rating")
+              contents += new BoxPanel(Orientation.Vertical) {
+                contents ++= radioButtons
+              }
+            }
+            val informationP = new FlowPanel() {
+              contents += new Label("Informations:")
+              contents += new TextArea() {
+                preferredSize = new Dimension(200, 100)
+              }
+            }
+            val buttonP = new FlowPanel() {
+              contents += new Button(Action("") {
+                //TODO in xml speichern
+              }) {
+                this.tooltip = "Save Changes"
+                this.icon = new ImageIcon("icons\\24x24\\save.png")
+                this.preferredSize = new Dimension(60, 30)
+              }
+              contents += new Button(Action("") {
+                //TODO abfrage, ob aenderungen wirklich nicht gespeichert werden sollen
+                //close()
+              }) {
+                this.tooltip = "Cancel"
+                this.icon = new ImageIcon("icons\\24x24\\delete.png")
+                this.preferredSize = new Dimension(60, 30)
+              }
+            }
+            var panel = new BoxPanel(Orientation.Vertical) {
+              contents += nameP
+              contents += ratingP
+              contents += informationP
+              contents += buttonP
+            }
+            val dia = new Dialog() {
+              contents = panel
+              open()
+            }
+
+          }
           ) {
             this.tooltip = "Edit group settings"
             this.icon = new ImageIcon("icons\\16x16\\edit.png")
