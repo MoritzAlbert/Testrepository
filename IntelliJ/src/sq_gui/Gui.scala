@@ -543,7 +543,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             updateFromXML()
           }) {
             this.tooltip = "Delete data from group"
-            this.icon = new ImageIcon("icons\\16x16\\trash.png")
+            this.icon = new ImageIcon("icons\\16x16\\remove.png")
 
           }
           contents += new Button(Action("") {
