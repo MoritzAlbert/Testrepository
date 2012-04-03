@@ -10,6 +10,7 @@ import javax.swing.{JList, UIManager, ImageIcon, JTree, DropMode, TransferHandle
 import javax.swing.event.{TreeSelectionEvent, TreeSelectionListener}
 import dragndrop._
 import java.awt.{Font, Dimension, Color}
+import java.awt.datatransfer.Transferable
 
 //Begin object Object Gui
 object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
@@ -176,12 +177,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     //buttons
     var add = new Button {
       action = addData
-    }
-
-    var search = new Button() {
-      action = searchData
-      this.icon = new ImageIcon("icons\\16x16\\search.png")
-      this.preferredSize = new Dimension(40, 25)
     }
 
     //textfields
@@ -543,7 +538,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         var bp = new BoxPanel(Orientation.Vertical) {
 
           val playButton = Action("") {
-            obj.playGroup()
+            playGroup(obj)
           }
 
           contents += new Label(obj.name) {

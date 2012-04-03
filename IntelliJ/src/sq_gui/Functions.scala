@@ -4,7 +4,6 @@ import java.awt.event._
 import extension.IconTextListCellRenderer
 import swing._
 import java.awt.Image
-import com.ebenius._
 import java.io.File
 import javax.swing._
 
@@ -14,8 +13,8 @@ trait Functions extends XML with UpdateFunctions {
 
   //Declarations
 
-  var playerImage = "C:/Program Files (x86)/GIMP-2.0/bin/gimp-2.6.exe"
-  var playerPDF = "C:/Program Files (x86)/Adobe/Reader 9.0/Reader/AcroRd32.exe"
+  var playerImage = "C:\\Windows\\System32\\mspaint.exe"
+  var playerPDF ="C:\\Program Files (x86)\\Adobe\\Acrobat 10.0\\Acrobat\\Acrobat.exe"
   var playerVideo = "C:/Program Files (x86)/Windows Media Player/wmplayer.exe"
 
   val file = new File("test.xml")
@@ -54,7 +53,7 @@ trait Functions extends XML with UpdateFunctions {
 
   list_image.setDragEnabled(true)
   list_image.setDropMode(DropMode.ON_OR_INSERT)
-  list_image.setTransferHandler(new ListMoveTransferHandler())
+  list_image.setTransferHandler(new MyTransferHandler())
   list_image.addKeyListener(new KeyAdapter {
     override def keyPressed(evt: KeyEvent) {
       val key = evt.getKeyCode
@@ -80,7 +79,7 @@ trait Functions extends XML with UpdateFunctions {
 
   list_doc.setDragEnabled(true)
   list_doc.setDropMode(DropMode.ON_OR_INSERT)
-  list_doc.setTransferHandler(new ListMoveTransferHandler())
+  list_doc.setTransferHandler(new MyTransferHandler())
   list_doc.addKeyListener(new KeyAdapter {
     override def keyPressed(evt: KeyEvent) {
       val x = Dialog.showConfirmation(null, "Wollen Sie die Datei wirklich löschen?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
@@ -106,7 +105,7 @@ trait Functions extends XML with UpdateFunctions {
 
   list_video.setDragEnabled(true)
   list_video.setDropMode(DropMode.ON_OR_INSERT)
-  list_video.setTransferHandler(new ListMoveTransferHandler())
+  list_video.setTransferHandler(new MyTransferHandler())
   list_video.addKeyListener(new KeyAdapter {
     override def keyPressed(evt: KeyEvent) {
       val x = Dialog.showConfirmation(null, "Wollen Sie die Datei wirklich löschen?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
@@ -141,14 +140,14 @@ trait Functions extends XML with UpdateFunctions {
         if (data.url.endsWith(".jpg")) {
           val img = data.asInstanceOf[sq_gui.Image]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         //Documtents
         if (data.url.endsWith(".pdf")) {
           val img = data.asInstanceOf[Document]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         // Videos
@@ -187,21 +186,21 @@ trait Functions extends XML with UpdateFunctions {
         if (data.url.endsWith(".jpg")) {
           val img = data.asInstanceOf[Image]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         //Documents
         if (data.url.endsWith(".pdf")) {
           val img = data.asInstanceOf[Document]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         // Videos
         if (data.url.endsWith(".mp4")) {
           val img = data.asInstanceOf[Video]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
       }
@@ -227,7 +226,7 @@ trait Functions extends XML with UpdateFunctions {
       while (it.hasNext) {
         val data = it.next()
         data.image.getImage.getScaledInstance(10, 10, 10)
-        data.image.setImage(data.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+        data.image.setImage(data.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
         this.addElement(data.image)
       }
     }
@@ -254,7 +253,7 @@ trait Functions extends XML with UpdateFunctions {
 
         val data = it.next()
         data.image.getImage.getScaledInstance(10, 10, 10)
-        data.image.setImage(data.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+        data.image.setImage(data.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
         this.addElement(data.image)
       }
     }
@@ -319,9 +318,13 @@ trait Functions extends XML with UpdateFunctions {
         super.add(index,element)
         val name = element.toString
         val url = searchURL(name)
-        s.addData(url)
+        s.addData(index,url)
       }
-
+      
+      override def remove(index: Int):Object={
+         super.remove(index)
+         s.data.remove(index)
+      }
 
       val it = s.data.iterator
       while (it.hasNext) {
@@ -329,13 +332,13 @@ trait Functions extends XML with UpdateFunctions {
         if (data.url.endsWith(".jpg")) {
           val img = data.asInstanceOf[sq_gui.Image]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         if (data.url.endsWith(".pdf")) {
           val img = data.asInstanceOf[Document]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         if (data.url.endsWith(".mp4")) {
@@ -420,6 +423,15 @@ trait Functions extends XML with UpdateFunctions {
       sb.append(url);
       println(sb.toString())
       Runtime.getRuntime.exec(sb.toString());
+    }
+  }
+  
+  def playGroup(grp:Group){
+    val it = grp.data.iterator
+    while(it.hasNext){
+      val data = it.next()
+      play(data.url)
+      println(data.url)
     }
   }
 

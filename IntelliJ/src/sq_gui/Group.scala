@@ -1,6 +1,6 @@
 package sq_gui
 
-import scala.collection.mutable.HashSet
+import java.util.ArrayList
 
 //Begin class Group
 
@@ -10,16 +10,13 @@ class Group(s: String) {
 
   var id = 0
   var name = s
-  var data = HashSet[Data]()
-  var playlist = HashSet[Data]()
-  
+  //var data = HashSet[Data]()
+
   var data_id = 0
-  var data_new = HashSet[Int]()
 
-  //methods
-
+  var data = new ArrayList[Data]()
   //add a new group to data
-  def addData(obj: Data) = data += obj
+  def addData(obj: Data){data.add(obj)}
 
   def addData(s: String) {
     val file = new java.io.File(s)
@@ -39,10 +36,23 @@ class Group(s: String) {
     }
   }
 
-  def addDataNew(i:Int){
-    data_new += i
-  }
+  def addData(i:Int, s: String) {
+    val file = new java.io.File(s)
+    if (file.getName.endsWith(".jpg")) {
+      val img = new Image(s)
+      data.add(i,img)
+    }
 
+    if (file.getName.endsWith(".mp4")) {
+      val vid = new Video(s)
+      data.add(i,vid)
+    }
+
+    if (file.getName.endsWith(".pdf")) {
+      val doc = new Document(s)
+      data.add(i,doc)
+    }
+  }
   //deleting an object from data
   def removeData(obj: Data) {
     data.remove(obj)
@@ -51,21 +61,5 @@ class Group(s: String) {
     //else Dialog.showMessage(null, "Datei wurde nicht gelscht!!!")
   }
 
-  //playing all elements of a group
-  def playGroup() {
-    for (arg <- data) arg.play
-  }
 
-  //adding a new hashSet to a playlist
-  def addSetToPlaylist(s: HashSet[Data]) {
-    for (arg <- s) playlist += arg
-  }
-
-  //adding a new object to a playlist
-  def addDataToPlaylist(s: Data) = playlist += s
-
-  //playing a playlist
-  def playPlaylist() {
-    for (arg <- playlist) arg.play
-  }
 }

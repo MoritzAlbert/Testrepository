@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PREFERENCES>
   <playerImage>
-    <File />
+    <File>C:\Windows\System32\mspaint.exe</File>
   </playerImage>
   <playerVideo>
-    <File />
+    <File>C:/Program Files (x86)/Windows Media Player/wmplayer.exe</File>
   </playerVideo>
   <playerPDF>
-    <File />
+    <File>C:\Program Files (x86)\Adobe\Acrobat 10.0\Acrobat\Acrobat.exe</File>
   </playerPDF>
 </PREFERENCES>
 

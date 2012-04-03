@@ -1,35 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Datapool>
-  <Data id="4">
-    <URL>C:\Users\Moritz\Desktop\hiwi_vr_muehlberger-2.pdf</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
   <Data id="2">
-    <URL>C:\Users\Moritz\Desktop\BILD.jpg</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="1">
-    <URL>C:\Users\Dave\Documents\2012-03-11_11-52-10_269.jpg</URL>
+    <URL>C:\Users\Dave\Desktop\Hausarbeit_LernenmitNeuenMedien.pdf</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
   <Data id="3">
-    <URL>C:\Users\Moritz\Desktop\BILD.jpg</URL>
+    <URL>C:\Users\Dave\Documents\2012-03-11_11-52-10_269.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="1">
+    <URL>C:\Users\Dave\Documents\20120311_113447.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
   <Group id="1">
     <name>New group</name>
     <Data id="0">
-      <URL>C:\Users\Moritz\Desktop\hiwi_vr_muehlberger-2.pdf</URL>
-    </Data>
-    <Data id="0">
-      <URL>C:\Users\Moritz\Desktop\hiwi_vr_muehlberger-2.pdf</URL>
+      <URL>C:\Users\Dave\Documents\20120311_113447.jpg</URL>
     </Data>
     <Data id="0">
       <URL>C:\Users\Dave\Documents\2012-03-11_11-52-10_269.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\Users\Dave\Desktop\Hausarbeit_LernenmitNeuenMedien.pdf</URL>
     </Data>
   </Group>
 </Datapool>
