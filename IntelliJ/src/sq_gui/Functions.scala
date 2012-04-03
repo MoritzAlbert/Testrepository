@@ -150,21 +150,21 @@ trait Functions extends XML with UpdateFunctions {
         if (data.url.endsWith(".jpg")) {
           val img = data.asInstanceOf[sq_gui.Image]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         //Documtents
         if (data.url.endsWith(".pdf")) {
           val img = data.asInstanceOf[Document]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         // Videos
         if (data.url.endsWith(".mp4")) {
           val img = data.asInstanceOf[Video]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
       }
@@ -196,21 +196,21 @@ trait Functions extends XML with UpdateFunctions {
         if (data.url.endsWith(".jpg")) {
           val img = data.asInstanceOf[Image]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         //Documents
         if (data.url.endsWith(".pdf")) {
           val img = data.asInstanceOf[Document]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         // Videos
         if (data.url.endsWith(".mp4")) {
           val img = data.asInstanceOf[Video]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
       }
@@ -236,7 +236,7 @@ trait Functions extends XML with UpdateFunctions {
       while (it.hasNext) {
         val data = it.next()
         data.image.getImage.getScaledInstance(10, 10, 10)
-        data.image.setImage(data.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
+        data.image.setImage(data.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
         this.addElement(data.image)
       }
     }
@@ -263,7 +263,7 @@ trait Functions extends XML with UpdateFunctions {
 
         val data = it.next()
         data.image.getImage.getScaledInstance(10, 10, 10)
-        data.image.setImage(data.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
+        data.image.setImage(data.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
         this.addElement(data.image)
       }
     }
@@ -287,7 +287,7 @@ trait Functions extends XML with UpdateFunctions {
       while (it.hasNext) {
         val data = it.next()
         data.image.getImage.getScaledInstance(10, 10, 10)
-        data.image.setImage(data.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+        data.image.setImage(data.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
         this.addElement(data.image)
       }
     }
@@ -342,19 +342,19 @@ trait Functions extends XML with UpdateFunctions {
         if (data.url.endsWith(".jpg")) {
           val img = data.asInstanceOf[sq_gui.Image]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         if (data.url.endsWith(".pdf")) {
           val img = data.asInstanceOf[Document]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
         if (data.url.endsWith(".mp4")) {
           val img = data.asInstanceOf[Video]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(65, 65, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
       }
