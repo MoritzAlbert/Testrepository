@@ -143,25 +143,26 @@ trait XML {
     xml.output(doc, output)
   }
 
+  def exportPlayerPreferencesToXML(filename: String) {
 
-  def exportPlayerPreferencesToXML(f: String, l: String) {
-    
-    // f = fileytpe
-    // l = location
+    val root = new Element("PREFERENCES")
+    val doc = new org.jdom.Document(root)
 
-    /*
-    
-    Gui.playerVideo
-    Gui.playerImage
-    Gui.playerPDF
+    root.addContent(new Element("playerImage").addContent(new Element("File").addContent(Gui.playerImage))
+    )
 
-       */
+    root.addContent(new Element("playerVideo").addContent(new Element("File").addContent(Gui.playerVideo))
+    )
 
+    root.addContent(new Element("playerPDF").addContent(new Element("File").addContent(Gui.playerPDF))
+    )
 
-    println("XML EXPORT TEST")
-    
-    
+    val xml = new XMLOutputter(Format.getPrettyFormat)
+    val output = new FileOutputStream(filename)
+
+    xml.output(doc, output)
   }
+
 
   
 

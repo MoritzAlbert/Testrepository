@@ -28,6 +28,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     override def closeOperation() {
       exportToXML(database, "test.xml")
+      exportPlayerPreferencesToXML("pref.xml")
       System.exit(0)
     }
 
@@ -146,11 +147,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       updateFromXML()
     }
 
-
-    var add_group = new Button {
-      action = addGroup
-    }
-
     var add_delete_group = new FlowPanel {
 
       contents += new Button {
@@ -165,7 +161,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     var tree = new BoxPanel(Orientation.Vertical) {
-
+      this.maximumSize = new Dimension(400, 800)
       contents += new ScrollPane(Component.wrap(jtree))
       contents += add_delete_group
     }
@@ -182,11 +178,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       action = addData
     }
 
-    var search = new Button() {
-      action = searchData
-      this.icon = new ImageIcon("icons\\16x16\\search.png")
-      this.preferredSize = new Dimension(40, 25)
-    }
 
     //textfields
     var name_group = new TextField() {
@@ -286,119 +277,18 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
     }
 
-
-    val addGroup = Action("add group") {
-      /*
-        val x = Dialog.showConfirmation(null,"Wo ist das Schätzchen!?!?","Question", Dialog.Options.YesNo, Dialog.Message.Question)
-        println(x)
-        println {
-          x.toString
-        }
-      */
-      val panel = new BoxPanel(Orientation.Vertical) {
-        val groupname = new TextField("")
-        contents += groupname
-      }
-      Dialog.showMessage(null, panel.peer, "Enter group name", Dialog.Message.Plain)
-
-      println(panel.groupname.text)
-      println(database.grouppool.size)
-      database.addToGrouppool(panel.groupname.text)
-      println(database.grouppool.size)
-      updateListGroup(list_group, database)
-      //group.contents.clear()
-      var groupUpdated = paintGridPanel
-      //group.visible = false
-      group = groupUpdated
-      //group.visible = true
-      group.peer.validate()
-      group.repaint()
-      // group.contents.update(0,groupUpdated)
-      // group.repaint()
-    }
-
-    val searchData = Action("") {
-      startSearch(searchInput.text)
-      updateSearchListData(list, database)
-      searchInput.text = ""
-      updateSearchListData(searchList, database)
-    }
-
-    //add-Button
-    var add = new Button {
-      action = addData
-    }
-
     var add_group = new Button {
       action = addGroup
     }
 
 
-    val popupMenu = new PopupMenu {
-      contents += new Menu("menu 1") {
-        contents += new RadioMenuItem("radio 1.1")
-        contents += new RadioMenuItem("radio 1.2")
-      }
-      contents += new Menu("menu 2") {
-        contents += new RadioMenuItem("radio 2.1")
-        contents += new RadioMenuItem("radio 2.2")
-      }
-    }
-
-    //      val test_model = list.getModel.asInstanceOf[DefaultListModel]
-    //      test_model.clear()
-    //      val it2 = database.datapool.iterator
-    //      while(it2.hasNext){
-    //        val data = it2.next()
-    //        if (data.url.endsWith(".jpg")) {
-    //          val img = data.asInstanceOf[sq_gui.Image]
-    //          img.image.getImage.getScaledInstance(10, 10, 10)
-    //          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
-    //          listModel.addElement(img.image)
-    //          reactions += {
-    //            case e: MousePressed => popupMenu.show(data, 0, data.bounds.height)
-    //          }
-    //          listenTo(data)
-    //        }
-    //        if (data.url.endsWith(".pdf")) {
-    //          val img = data.asInstanceOf[sq_gui.Document]
-    //          img.image.getImage.getScaledInstance(10, 10, 10)
-    //          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
-    //          listModel.addElement(img.image)
-    //          reactions += {
-    //            case e: MousePressed => popupMenu.show(data, 0, data.bounds.height)
-    //          }
-    //          listenTo(data)
-    //        }
-    //        if (data.url.endsWith(".mp4")) {
-    //          val img = data.asInstanceOf[sq_gui.Video]
-    //          img.image.getImage.getScaledInstance(10, 10, 10)
-    //          img.image.setImage(img.image.getImage.getScaledInstance(40, 40, Image.SCALE_DEFAULT))
-    //          listModel.addElement(img.image) //TODO richtig dass img.image?   nicht video.image?
-    //          reactions += {
-    //            case e: MousePressed => popupMenu.show(data, 0, data.bounds.height)
-    //          }
-    //          listenTo(data)
-    //        }
-    //
-    //      }
-
     var search = new Button("Test") {
       action = searchData
       this.tooltip = "Search"
-      //this.icon = new ImageIcon("icons\\16x16\\search.png")
+      this.icon = new ImageIcon("icons\\16x16\\search.png")
       this.preferredSize = new Dimension(45, 27)
     }
 
-
-    var searchInput = new TextField("") {
-      this.preferredSize = new Dimension(214, 25)
-    }
-
-
-    //     val allLabel = new Label("All"){
-    //      this.icon = new ImageIcon("icon\\16x16\\add.png")
-    //    }
 
     //filter tabs
     var tab_filter = new TabbedPane {
@@ -505,12 +395,10 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     //left-aligned Panel (containing two components)
-    var box_left = new BoxPanel(Orientation.Vertical) {
+    var box_left = new BoxPanel(Orientation.Horizontal) {
       // this.preferredSize = new Dimension(1200, 600)
-
       contents += tree
       contents += group_new
-      contents += add_group
     }
 
     //complete window (containing left_box and right_box)
@@ -628,7 +516,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         // Buttons für Gruppe
         var buttonPanel = new BoxPanel(Orientation.Vertical) {
           contents += new Button {
-            action = saveButton
             this.tooltip = "Save group"
             this.icon = new ImageIcon("icons\\16x16\\save.png")
           }
