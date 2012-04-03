@@ -166,9 +166,10 @@ trait Functions extends XML with UpdateFunctions {
       override def mouseClicked(s: MouseEvent) {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
+
         //Einfügen Get-FKT
         if (s.getClickCount == 2) {
-          play(f.toString)
+          play(searchURL(f.toString))
         }
       }
     })
@@ -212,7 +213,7 @@ trait Functions extends XML with UpdateFunctions {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
         if (s.getClickCount == 2) {
-          play(f.toString)
+          play(searchURL(f.toString))
         }
       }
     })
@@ -237,7 +238,7 @@ trait Functions extends XML with UpdateFunctions {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
         if (s.getClickCount == 2) {
-          play(f.toString)
+          play(searchURL(f.toString))
         }
       }
     })
@@ -263,7 +264,7 @@ trait Functions extends XML with UpdateFunctions {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
         if (s.getClickCount == 2) {
-          play(f.toString)
+          play(searchURL(f.toString))
         }
       }
     })
@@ -288,7 +289,7 @@ trait Functions extends XML with UpdateFunctions {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
         if (s.getClickCount == 2) {
-          play(f.toString)
+          play(searchURL(f.toString))
         }
       }
     })
@@ -342,7 +343,7 @@ trait Functions extends XML with UpdateFunctions {
         val e = s.getSource.asInstanceOf[JList]
         val f = e.getSelectedValue.asInstanceOf[ImageIcon]
         if (s.getClickCount == 2) {
-          play(f.toString)
+          play(searchURL(f.toString))
         }
       }
     })
@@ -362,7 +363,7 @@ trait Functions extends XML with UpdateFunctions {
     val it = database.datapool.iterator
     while (it.hasNext) {
       val obj = it.next()
-      val u = obj.url.split("/")
+      val u = obj.url.split('\\')
       if (u.last.equals(s)) {
         url = obj.url
       }

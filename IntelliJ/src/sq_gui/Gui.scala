@@ -39,11 +39,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     jtree.setSelectionModel(tsm)
     jtree.addTreeSelectionListener(new TreeSelectionListener {
       def valueChanged(e: TreeSelectionEvent) {
-        val tp = jtree.getLastSelectedPathComponent.toString
-        child_name = tp
-        println(child_name)
-        val grp = database.getGroupByString(tp)
-        child_list = getJListFromGroup(grp)
+
       }
     })
 
