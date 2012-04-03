@@ -530,8 +530,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         // Buttons für Gruppe
         var buttonPanel = new BoxPanel(Orientation.Vertical) {
           contents += new Button {
-            this.tooltip = "Save group"
-            this.icon = new ImageIcon("icons\\16x16\\save.png")
+            this.tooltip = "Reload group"
+            this.icon = new ImageIcon("icons\\16x16\\reload.png")
           }
           contents += new Button(Action("") {
 

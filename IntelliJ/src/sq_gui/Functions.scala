@@ -35,7 +35,7 @@ trait Functions extends XML with UpdateFunctions {
 
   list.setDragEnabled(true)
   list.setTransferHandler(new MyTransferHandler)
-  //list.setDropMode(DropMode.INSERT)
+  list.setDropMode(DropMode.INSERT)
   list.addKeyListener(new KeyAdapter {
 
     override def keyPressed(evt: KeyEvent) {
