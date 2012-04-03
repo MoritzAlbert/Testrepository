@@ -18,14 +18,10 @@ trait Functions extends XML with UpdateFunctions {
   var playerPDF = ""
   var playerVideo = ""
 
-  // Einstellungen laden...
-
-
   val prefFile = new File("pref.xml")
   val pref = importPlayerPreferences(prefFile)
 
   setPlayers(pref)
-
 
   val file = new File("test.xml")
   val database = readFromFile(file)
@@ -68,7 +64,7 @@ trait Functions extends XML with UpdateFunctions {
     override def keyPressed(evt: KeyEvent) {
       val key = evt.getKeyCode
       if (key == KeyEvent.VK_DELETE) {
-        val x = Dialog.showConfirmation(null, "Wollen Sie die Datei wirklich löschen?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+        val x = Dialog.showConfirmation(null, "Delete Data?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
         if (x.toString.equals("Ok")) {
           val obj = list_image.getSelectedValue.asInstanceOf[ImageIcon]
           println("ImageIcon: " + obj.getDescription)
@@ -92,7 +88,7 @@ trait Functions extends XML with UpdateFunctions {
   list_doc.setTransferHandler(new MyTransferHandler())
   list_doc.addKeyListener(new KeyAdapter {
     override def keyPressed(evt: KeyEvent) {
-      val x = Dialog.showConfirmation(null, "Wollen Sie die Datei wirklich löschen?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+      val x = Dialog.showConfirmation(null, "Delete Data?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
       if (x.toString.equals("Ok")) {
         val key = evt.getKeyCode
         if (key == KeyEvent.VK_DELETE) {
@@ -118,7 +114,7 @@ trait Functions extends XML with UpdateFunctions {
   list_video.setTransferHandler(new MyTransferHandler())
   list_video.addKeyListener(new KeyAdapter {
     override def keyPressed(evt: KeyEvent) {
-      val x = Dialog.showConfirmation(null, "Wollen Sie die Datei wirklich löschen?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+      val x = Dialog.showConfirmation(null, "Delete Data?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
       if (x.toString.equals("Ok")) {
         val key = evt.getKeyCode
         if (key == KeyEvent.VK_DELETE) {

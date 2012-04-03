@@ -529,23 +529,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
         // Buttons für Gruppe
         var buttonPanel = new BoxPanel(Orientation.Vertical) {
-          contents += new Button {
-            this.tooltip = "Reload group"
-            this.icon = new ImageIcon("icons\\16x16\\reload.png")
-          }
-          contents += new Button(Action("") {
 
-            val x = Dialog.showConfirmation(null, "Delete data from group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
-            if (x.toString().equals("Ok") || x.toString().equals("Yes")) {
-              val index = list.getSelectedIndex
-              obj.data.remove(index)
-            }
-            updateFromXML()
-          }) {
-            this.tooltip = "Delete data from group"
-            this.icon = new ImageIcon("icons\\16x16\\remove.png")
-
-          }
           contents += new Button(Action("") {
 
             val nameP = new FlowPanel() {
@@ -595,7 +579,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
                 this.preferredSize = new Dimension(60, 30)
               }
             }
-            var panel = new BoxPanel(Orientation.Vertical) {
+            val panel = new BoxPanel(Orientation.Vertical) {
               contents += nameP
               contents += ratingP
               contents += informationP
@@ -605,11 +589,28 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
               contents = panel
               open()
             }
-
           }
           ) {
             this.tooltip = "Edit group settings"
             this.icon = new ImageIcon("icons\\16x16\\edit.png")
+          }
+
+          contents += new Button(Action("") {
+
+            val x = Dialog.showConfirmation(null, "Delete data from group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+            if (x.toString().equals("Ok") || x.toString().equals("Yes")) {
+              val index = list.getSelectedIndex
+              obj.data.remove(index)
+            }
+            updateFromXML()
+          }) {
+            this.tooltip = "Delete data from group"
+            this.icon = new ImageIcon("icons\\16x16\\remove.png")
+
+          }
+          contents += new Button {
+            this.tooltip = "Reload group"
+            this.icon = new ImageIcon("icons\\16x16\\repeat.png")
           }
         }
 
