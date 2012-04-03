@@ -137,7 +137,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       val tp = jtree.getLeadSelectionPath
       val node = tp.getLastPathComponent.asInstanceOf[DefaultMutableTreeNode]
       if (node != root) {
-        val x = Dialog.showConfirmation(null, "Do you really want to delete this group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+        val x = Dialog.showConfirmation(null, "Delete this group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
         if (x.toString.equals("Ok") || x.toString.equals("Yes")) {
           tree_model.removeNodeFromParent(node)
           database.removeFromGrouppool(node.toString)
@@ -151,11 +151,13 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     var add_delete_group = new FlowPanel {
 
       contents += new Button {
+        this.preferredSize = new Dimension(70, 40)
         action = addGroup
         this.icon = new ImageIcon("icons\\24x24\\new_group.png")
 
       }
       contents += new Button {
+        this.preferredSize = new Dimension(70, 40)
         action = delete_group
         this.icon = new ImageIcon("icons\\24x24\\trash.png")
       }
@@ -345,12 +347,12 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     //filter Pane
     var tab = new ScrollPane(tab_filter) {
-      this.preferredSize = new Dimension(270, 500)
+      this.preferredSize = new Dimension(270, 550)
     }
 
     // functionPanel
     var functionPanel = new FlowPanel() {
-      this.preferredSize = new Dimension(270, 140)
+      this.preferredSize = new Dimension(270, 80)
       // background = petrolHEX
       //TODO button position setzen auf linksbuendig
       contents += add
@@ -536,7 +538,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
         // THUMBNAILS
         var s_list = new ScrollPane(Component.wrap(list)) {
-          this.preferredSize = new Dimension(730, 73)
+          this.preferredSize = new Dimension(700, 73)
         }
 
         // TEXT
