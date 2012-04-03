@@ -6,12 +6,15 @@ import javax.swing.filechooser.FileNameExtensionFilter
 import TabbedPane._
 import jBrowser.JBrowser
 import javax.swing.tree.{TreeSelectionModel, DefaultTreeSelectionModel, DefaultTreeModel, DefaultMutableTreeNode}
-import javax.swing.{JList, UIManager, ImageIcon, JTree, DropMode}
+import javax.swing.{JList, UIManager, ImageIcon, JTree, DropMode, TransferHandler, DefaultListModel, JComponent}
 import javax.swing.event.{TreeSelectionEvent, TreeSelectionListener}
 import dragndrop._
 import java.awt.{Dimension, Color}
 import scala.swing.event.Key
 import scala.swing.event.KeyPressed
+import java.io.IOException
+import javax.swing.TransferHandler.TransferSupport
+import java.awt.datatransfer.{Transferable, UnsupportedFlavorException}
 
 //Begin object Object Gui
 object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
@@ -21,6 +24,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
   var child_list = new JList()
   val root = new DefaultMutableTreeNode("Groups")
   val tree_model = new DefaultTreeModel(root)
+  var index_drop = 0
 
   //Begin MainFrame
   def top = new MainFrame() {
@@ -403,7 +407,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     var newGroupPanel = new BoxPanel(Orientation.Horizontal) {
-      8
 
       contents += newGroupTextFieldPanel
       contents += newGroupAddElementsPanel
@@ -469,7 +472,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         list.setDragEnabled(true)
         list.setDropMode(DropMode.INSERT)
         list.setTransferHandler(new MyTransferHandlerGroup)
-
         list.setVisibleRowCount(1)
         list.setLayoutOrientation(JList.HORIZONTAL_WRAP)
 
