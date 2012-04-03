@@ -1,30 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Datapool>
-  <Data id="2">
-    <URL>C:\Users\Dave\Desktop\Hausarbeit_LernenmitNeuenMedien.pdf</URL>
+  <Data id="6">
+    <URL>C:\Users\Public\Pictures\Sample Pictures\Chrysanthemum.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
   <Data id="3">
-    <URL>C:\Users\Dave\Documents\2012-03-11_11-52-10_269.jpg</URL>
+    <URL>C:\Users\Public\Pictures\Sample Pictures\Desert.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="4">
+    <URL>C:\Users\Public\Pictures\Sample Pictures\Hydrangeas.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="2">
+    <URL>C:\Users\Public\Pictures\Sample Pictures\Jellyfish.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="5">
+    <URL>C:\img\bier.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="7">
+    <URL>C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
   <Data id="1">
-    <URL>C:\Users\Dave\Documents\20120311_113447.jpg</URL>
+    <URL>C:\Users\Public\Pictures\Sample Pictures\Koala.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
+  <Group id="2">
+    <name>Beispielbilder Windows 7</name>
+    <Data id="0">
+      <URL>C:\Users\Public\Pictures\Sample Pictures\Jellyfish.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\Users\Public\Pictures\Sample Pictures\Hydrangeas.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\Users\Public\Pictures\Sample Pictures\Desert.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\Users\Public\Pictures\Sample Pictures\Koala.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\Users\Public\Pictures\Sample Pictures\Chrysanthemum.jpg</URL>
+    </Data>
+  </Group>
+  <Group id="3">
+    <name>hjsugf</name>
+    <Data id="0">
+      <URL>C:\img\bier.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\img\bier.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\img\bier.jpg</URL>
+    </Data>
+  </Group>
+  <Group id="4">
+    <name>lala</name>
+    <Data id="0">
+      <URL>C:\img\bier.jpg</URL>
+    </Data>
+  </Group>
   <Group id="1">
-    <name>New group</name>
+    <name>Some Examples</name>
     <Data id="0">
-      <URL>C:\Users\Dave\Documents\20120311_113447.jpg</URL>
+      <URL>C:\Users\Public\Pictures\Sample Pictures\Desert.jpg</URL>
     </Data>
     <Data id="0">
-      <URL>C:\Users\Dave\Documents\2012-03-11_11-52-10_269.jpg</URL>
-    </Data>
-    <Data id="0">
-      <URL>C:\Users\Dave\Desktop\Hausarbeit_LernenmitNeuenMedien.pdf</URL>
+      <URL>C:\Users\Public\Pictures\Sample Pictures\Chrysanthemum.jpg</URL>
     </Data>
   </Group>
 </Datapool>

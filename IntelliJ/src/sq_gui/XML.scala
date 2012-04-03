@@ -4,30 +4,10 @@ import org.jdom.input.SAXBuilder
 import org.jdom.Element
 import org.jdom.output.{Format, XMLOutputter}
 import java.io.{FileOutputStream, File}
-
 import scala.xml._
+import java.util.{ArrayList, HashSet}
 
 trait XML {
-
-  // TODO UMGESTALTUNG damit import von XML rate und desc möglich ist
-  //TODO unterkategorien in der XML für DATA und GROUPS.
-  /*
-  BSP:
-
-  <DATAPOOL>
-    <DATAALL>
-      <DATA ...>
-      <DATA ...>
-    </DATAALL>
-
-    <GROUPALL>
-      <GROUP ...>
-      <GROUP ...>
-      <GROUP ...>
-      <GROUP ...>
-    </GROUPALL>
-  </DATAPOOL>
-   */
 
   //read from file
   def readFromFile(f: File): Datapool = {
@@ -164,6 +144,32 @@ trait XML {
   }
 
 
-  
+  def importPlayerPreferences(filename: File): ArrayList[String] = {
 
+    val sAXBuilder = new SAXBuilder
+    val doc = sAXBuilder.build(filename)
+    val root = doc.getRootElement
+    val children = root.getChildren
+
+    var temp = new ArrayList[String]()
+    var i = 0
+
+    while (i < children.size()) {
+      val x = children.get(i)
+      val elem = x.asInstanceOf[Element]
+
+      if (elem.getName == "playerImage") {
+        temp.add(elem.getChild("File").getText)
+      }
+      if (elem.getName == "playerVideo") {
+        temp.add(elem.getChild("File").getText)
+      }
+      if (elem.getName == "playerPDF") {
+        temp.add(elem.getChild("File").getText)
+      }
+      i += 1
+    }
+
+    temp
+  }
 }

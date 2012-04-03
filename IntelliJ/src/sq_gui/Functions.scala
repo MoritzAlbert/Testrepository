@@ -8,14 +8,24 @@ import java.io.File
 import javax.swing._
 
 import dragndrop.MyTransferHandler
+import java.util.ArrayList
 
 trait Functions extends XML with UpdateFunctions {
 
   //Declarations
 
-  var playerImage = "C:\\Windows\\System32\\mspaint.exe"
-  var playerPDF ="C:\\Program Files (x86)\\Adobe\\Acrobat 10.0\\Acrobat\\Acrobat.exe"
-  var playerVideo = "C:/Program Files (x86)/Windows Media Player/wmplayer.exe"
+  var playerImage = ""
+  var playerPDF = ""
+  var playerVideo = ""
+
+  // Einstellungen laden...
+
+
+  val prefFile = new File("pref.xml")
+  val pref = importPlayerPreferences(prefFile)
+
+  setPlayers(pref)
+
 
   val file = new File("test.xml")
   val database = readFromFile(file)
@@ -314,8 +324,8 @@ trait Functions extends XML with UpdateFunctions {
     val model = new DefaultListModel() {
 
 
-        override def add(index: Int, element: AnyRef) {
-        super.add(index,element)
+      override def add(index: Int, element: AnyRef) {
+        super.add(index, element)
         val name = element.toString
         val url = searchURL(name)
         s.addData(index,url)
@@ -401,7 +411,7 @@ trait Functions extends XML with UpdateFunctions {
   }
 
   //overwrites the play-function of data
-  def play(url:String) {
+  def play(url: String) {
 
     if (url.endsWith(".jpg")) {
       val sb = new StringBuilder(playerImage);
@@ -435,4 +445,16 @@ trait Functions extends XML with UpdateFunctions {
     }
   }
 
+  def playGroup(grp: Group) {
+    val it = grp.data.iterator
+    while (it.hasNext) {
+      play(it.next().url)
+    }
+  }
+
+  def setPlayers(list: ArrayList[String]) {
+    playerImage = list.get(0)
+    playerVideo =  list.get(1)
+    playerPDF =  list.get(2)
+  }
 }
