@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Datapool>
+  <Data id="1">
+    <URL>C:\Users\Moritz\Desktop\hiwi_vr_muehlberger-2.pdf</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
   <Data id="2">
-    <URL>C:\Users\Moritz\Desktop\BILD.jpg</URL>
+    <URL>C:\Users\Moritz\Desktop\hiwi_vr_muehlberger-2.pdf</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
@@ -10,13 +15,13 @@
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Data id="1">
-    <URL>C:\Users\Moritz\Desktop\hiwi_vr_muehlberger-2.pdf</URL>
+  <Data id="4">
+    <URL>C:\Users\Moritz\Desktop\BILD.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
   <Group id="1">
-    <name>New group</name>
+    <name>Test</name>
   </Group>
 </Datapool>
 

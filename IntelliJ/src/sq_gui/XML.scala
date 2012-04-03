@@ -157,7 +157,8 @@ trait XML {
 
        */
 
-    
+
+    println("XML EXPORT TEST")
     
     
   }
