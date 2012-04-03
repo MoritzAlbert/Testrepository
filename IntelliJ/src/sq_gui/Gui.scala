@@ -368,21 +368,15 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         resizable = true
         contents = new BoxPanel(Orientation.Vertical) {
           val ratingP = new FlowPanel() {
-            val buttonGroup = new ButtonGroup{
-              contents += new RadioButton("Bad")
-              contents += new RadioButton("Good")
-              contents += new RadioButton("Awesome")
-            }
-//            val bad = new JRadioButton("Bad")
-//            val good = new JRadioButton("Good")
-//            val awesome = new JRadioButton("Awesome")
-           // val radioButtons = List(bad, good, awesome)
+            val bad = new RadioButton("Bad")
+            val good = new RadioButton("Good")
+            val awesome = new RadioButton("Awesome")
+           val radioButtons = List(bad, good, awesome)
 
             contents += new Label("Rating")
-//            contents += new BoxPanel(Orientation.Vertical) {
-//              contents ++= radioButtons
-//            contents += buttonGroup
-//            }
+            contents += new BoxPanel(Orientation.Vertical) {
+              contents ++= radioButtons
+            }
           }
           val informationP = new FlowPanel(){
             contents += new Label("Informations:")
