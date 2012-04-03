@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Datapool>
-  <Group id="5">
-    <name>Test</name>
-  </Group>
   <Group id="6">
-    <name>Test12</name>
+    <name>ASD</name>
+  </Group>
+  <Group id="7">
+    <name>ASD</name>
+  </Group>
+  <Group id="4">
+    <name>masseffect</name>
+  </Group>
+  <Group id="5">
+    <name>Test 1</name>
   </Group>
   <Group id="3">
     <name>a</name>
   </Group>
-  <Group id="7">
-    <name>masseffect</name>
-  </Group>
-  <Group id="4">
-    <name>Test 1</name>
+  <Group id="1">
+    <name>Test</name>
   </Group>
   <Group id="2">
-    <name>ASD</name>
-  </Group>
-  <Group id="1">
-    <name>ASD</name>
+    <name>Test12</name>
   </Group>
 </Datapool>
 
