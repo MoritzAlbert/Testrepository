@@ -21,6 +21,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
   var child_list = new JList()
   val root = new DefaultMutableTreeNode("Groups")
   val tree_model = new DefaultTreeModel(root)
+  var group_new = new ScrollPane()
 
   //Begin MainFrame
   def top = new MainFrame() {
@@ -180,12 +181,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     //buttons
     var add = new Button {
       action = addData
-    }
-
-    var search = new Button() {
-      action = searchData
-      this.icon = new ImageIcon("icons\\16x16\\search.png")
-      this.preferredSize = new Dimension(40, 25)
     }
 
     //textfields
@@ -400,11 +395,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     var group = paintGridPanel
 
     //group scrollPane
-    var group_new = new ScrollPane(group)
-
-    def updateFromXML() {
-      group_new.contents = paintGridPanel
-    }
+    group_new = new ScrollPane(group)
 
     var labelLeft = new Label() {
       this.icon = new ImageIcon("logoLeft.png")
@@ -473,6 +464,10 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
   //Begin methods
 
+  def updateFromXML() {
+    group_new.contents = paintGridPanel
+  }
+
   //paint gridPanel
   def paintGridPanel: GridPanel = {
 
@@ -537,59 +532,17 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
             val x = Dialog.showConfirmation(null, "Delete data from group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
             if (x.toString().equals("Ok") || x.toString().equals("Yes")) {
-
-
-              //var url = searchURL(list.getSelectedValue)
-
-              /*
-              var data = obj.
-
-
-              obj.removeData()
-
-              1. gruppe finden     (=obj)
-              2. datei in gruppe finden
-              3. datei löschen von gruppenpool
-
-                   //list.getSelectedValue
-
-
-
-              //grouppool
-
-
-
-                           */
-
-
-
-
-
-              println(list.getSelectedValue)
-
-
-
-
-
-
-              //TODO: ausgewaehlte Gruppe entfernen
-              //              val obj = group.getSelectedValue.asInstanceOf[ImageIcon]
-              //              println("ImageIcon: "+obj.getDescription)
-              //              val url = searchURL(obj.getDescription)
-              //              println(url)
-              //              database.removeFromGroupPool(url)
-              //TODO auch hier updaten
+              val index = list.getSelectedIndex
+              obj.data.remove(index)
             }
+            updateFromXML()
           }) {
             this.tooltip = "Delete data from group"
             this.icon = new ImageIcon("icons\\16x16\\trash.png")
 
           }
           contents += new Button(Action("") {
-            new Dialog() {
-              centerOnScreen()
-              resizable = true
-              contents = new BoxPanel(Orientation.Vertical) {
+
                 val nameP = new FlowPanel() {
                   contents += new Label("Group Name")
                   val grpnameField = new TextField() {
@@ -630,21 +583,26 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
                   }
                   contents += new Button(Action("") {
                     //TODO abfrage, ob aenderungen wirklich nicht gespeichert werden sollen
-                    close()
+                    //close()
                   }) {
                     this.tooltip = "Cancel"
                     this.icon = new ImageIcon("icons\\24x24\\delete.png")
                     this.preferredSize = new Dimension(60, 30)
                   }
                 }
+                var panel = new BoxPanel(Orientation.Vertical){
                 contents += nameP
                 contents += ratingP
                 contents += informationP
                 contents += buttonP
               }
-              open()
-            }
-          }) {
+             val dia = new Dialog(){
+               contents=panel
+               open()
+             }
+              
+        } 
+          ) {
             this.tooltip = "Edit group settings"
             this.icon = new ImageIcon("icons\\16x16\\edit.png")
           }

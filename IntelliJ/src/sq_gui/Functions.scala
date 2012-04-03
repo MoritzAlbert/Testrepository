@@ -445,13 +445,6 @@ trait Functions extends XML with UpdateFunctions {
     }
   }
 
-  def playGroup(grp: Group) {
-    val it = grp.data.iterator
-    while (it.hasNext) {
-      play(it.next().url)
-    }
-  }
-
   def setPlayers(list: ArrayList[String]) {
     playerImage = list.get(0)
     playerVideo =  list.get(1)
