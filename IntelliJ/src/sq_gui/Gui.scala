@@ -32,6 +32,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       System.exit(0)
     }
 
+
     title = "Gui Explorer"
     visible = true
 
@@ -541,12 +542,25 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         // TEXT
         var bp = new BoxPanel(Orientation.Vertical) {
 
-          val playButton = Action("") {
+          val playButton = Action("PLAY") {
             obj.playGroup()
           }
 
-          contents += new Label(obj.name) {
+          var tmp = ""
+          if (obj.name.size > 10) {
+            tmp = obj.name.substring(0, 10) + "..."
+          }
+          else {
+            tmp = obj.name
+          }
+
+          contents += new Label(tmp) {
             this.font = new Font("TimesRoman", 0, 20)
+            this.minimumSize = new Dimension(120, 28)
+            this.preferredSize = new Dimension(120, 28)
+            this.maximumSize = new Dimension(120, 28)
+            this.horizontalTextPosition = Alignment.Left
+            this.horizontalAlignment = Alignment.Left
           }
           contents += new Label("[" + obj.data.size + " Elements]")
           contents += new Button {

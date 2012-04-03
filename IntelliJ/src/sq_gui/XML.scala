@@ -164,6 +164,27 @@ trait XML {
   }
 
 
-  
+  def importPlayerPreferences(filename: String) {
+
+
+    /*
+
+<?xml version="1.0" encoding="UTF-8"?>
+<PREFERENCES>
+<playerImage>
+<File>C:/Program Files (x86)/GIMP-2.0/bin/gimp-2.6.exe</File>
+</playerImage>
+<playerVideo>
+<File>C:/Program Files (x86)/Windows Media Player/wmplayer.exe</File>
+</playerVideo>
+<playerPDF>
+<File>C:/Program Files (x86)/Adobe/Reader 9.0/Reader/AcroRd32.exe</File>
+</playerPDF>
+</PREFERENCES>
+    */
+
+
+  }
+
 
 }

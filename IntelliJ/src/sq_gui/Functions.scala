@@ -18,6 +18,9 @@ trait Functions extends XML with UpdateFunctions {
   var playerPDF = ""
   var playerVideo = ""
 
+  // Einstellungen laden...
+  importPlayerPreferences("pref.xml")
+
   val file = new File("test.xml")
   val database = readFromFile(file)
 
