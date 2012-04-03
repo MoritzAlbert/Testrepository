@@ -1,6 +1,7 @@
 package sq_gui
 
 import scala.swing._
+import event.KeyPressed
 import javax.swing.filechooser.FileNameExtensionFilter
 import TabbedPane._
 import jBrowser.JBrowser
@@ -9,6 +10,8 @@ import javax.swing.{JList, UIManager, ImageIcon, JTree, DropMode}
 import javax.swing.event.{TreeSelectionEvent, TreeSelectionListener}
 import dragndrop._
 import java.awt.{Dimension, Color}
+import scala.swing.event.Key
+import scala.swing.event.KeyPressed
 
 //Begin object Object Gui
 object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
@@ -90,6 +93,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         contents += new MenuItem(Action("Settings") {
           settingDia.open()
         })
+        contents += new MenuItem("Datenbank speichern")
+        contents += new MenuItem("Datenbank laden")
         contents += new MenuItem(Action("Exit") {
           closeOperation()
         })
@@ -116,16 +121,17 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
       Dialog.showMessage(null, panel.peer, "Enter group name", Dialog.Message.Plain)
 
-      println(panel.groupname.text)
-      println(database.grouppool.size)
+      println("Groupname: " + panel.groupname.text)
+      println("Grouppool Size: " + database.grouppool.size)
 
       if (panel.groupname.text == "") {
         Dialog.showMessage(null, "Please enter name", "Missing input", Dialog.Message.Error)
       } else {
         database.addToGrouppool(panel.groupname.text)
-        println(database.grouppool.size)
+        println("Grouppool Size: " + database.grouppool.size)
         val child = new DefaultMutableTreeNode(panel.groupname.text)
         tree_model.insertNodeInto(child, root, root.getChildCount)
+        expandAll(jtree) //JR
       }
       updateFromXML()
     }
@@ -136,14 +142,14 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
       if (node != root) {
         val x = Dialog.showConfirmation(null, "Do you really want to delete this group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
-        if (x.toString.equals("Ok")) {
+        if (x.toString.equals("Ok") || x.toString.equals("Yes")) {
           tree_model.removeNodeFromParent(node)
           database.removeFromGrouppool(node.toString)
+          println("Grouppool Size: " + database.grouppool.size)
+          expandAll(jtree) //JR
         }
-
       }
       updateFromXML()
-
     }
 
     var add_group = new Button {
@@ -176,6 +182,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       updateSearchListData(searchList, database)
     }
 
+
     //buttons
     var add = new Button {
       action = addData
@@ -199,6 +206,16 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       this.preferredSize = new Dimension(214, 25)
     }
 
+    // SEARCH WITH ENTER ON END WITHOUT USE OF THE BUTTON
+    listenTo(searchInput.keys)
+
+    reactions += {
+      case KeyPressed(_, Key.Enter, _, _) => startSearch(searchInput.text)
+      updateSearchListData(list, database)
+      searchInput.text = ""
+      updateSearchListData(searchList, database)
+    }
+
     val settingDia = new Dialog() {
       this.preferredSize = new Dimension(600, 400)
       this.centerOnScreen()
@@ -208,7 +225,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           contents += new Label("Set standard data editors")
         }
         contents += new FlowPanel() {
-          val fileChooserJPEG = new FileChooser()
+          val fileChooserJPEG = new FileChooser() {
+            fileFilter = new FileNameExtensionFilter("Applications for JPEG view", "exe")
+          }
+
+
           contents += new Label("JPEG:")
           contents += new Button(Action("Choose...") {
             fileChooserJPEG.showOpenDialog(this)
@@ -223,10 +244,17 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }) {
             this.tooltip = "Set editor for .jpeg data"
           }
+
+          val jpegApp = new Label(playerImage)
+          contents += jpegApp
           // contents += new Label(fileChooserJPEG.selectedFile.toString())
         }
         contents += new FlowPanel() {
-          val fileChooserMP = new FileChooser()
+          val fileChooserMP = new FileChooser() {
+            fileFilter = new FileNameExtensionFilter("Applications for MP4 view", "exe")
+          }
+
+
           contents += new Label("MP4:")
           contents += new Button(Action("Choose...") {
             fileChooserMP.showOpenDialog(this)
@@ -239,9 +267,17 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }) {
             this.tooltip = "Set editor for .mp4 data"
           }
+
+          val mp4App = new Label(playerVideo)
+          contents += mp4App
+
         }
         contents += new FlowPanel() {
-          val fileChooserPDF = new FileChooser()
+          val fileChooserPDF = new FileChooser() {
+            fileFilter = new FileNameExtensionFilter("Applications for PDF view", "exe")
+          }
+
+
           contents += new Label("PDF:")
           contents += new Button(Action("Choose...") {
             fileChooserPDF.showOpenDialog(this)
@@ -253,6 +289,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }) {
             this.tooltip = "Set editor for .pdf data"
           }
+          val pdfApp = new Label(playerPDF)
+          contents += pdfApp
         }
         contents += new FlowPanel() {
           contents += new Button("") {
@@ -365,10 +403,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     var newGroupPanel = new BoxPanel(Orientation.Horizontal) {
-
-      this.preferredSize = new Dimension(900, 100)
-      this.maximumSize = new Dimension(900, 100)
-      this.minimumSize = new Dimension(900, 100)
+      8
 
       contents += newGroupTextFieldPanel
       contents += newGroupAddElementsPanel
