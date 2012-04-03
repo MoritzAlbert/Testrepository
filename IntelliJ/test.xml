@@ -1,57 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Datapool>
-  <Data id="6">
-    <URL>C:\Users\Public\Pictures\Sample Pictures\Hydrangeas.jpg</URL>
+  <Data id="7">
+    <URL>C:\SampleDataScala\Würzburg.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Data id="5">
-    <URL>C:\Users\Public\Pictures\Sample Pictures\Jellyfish.jpg</URL>
+  <Data id="8">
+    <URL>C:\SampleDataScala\JavaKompendium.pdf</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
   <Data id="3">
-    <URL>C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="1">
-    <URL>C:\Users\Public\Pictures\Sample Pictures\Chrysanthemum.jpg</URL>
+    <URL>C:\SampleDataScala\LeseprobeJava.pdf</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
   <Data id="2">
-    <URL>C:\Users\Public\Pictures\Sample Pictures\Desert.jpg</URL>
+    <URL>C:\SampleDataScala\Würzburg_Süd_RB_1064.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
   <Data id="4">
-    <URL>C:\Users\Public\Pictures\Sample Pictures\Koala.jpg</URL>
+    <URL>C:\SampleDataScala\Würzburg_Trümmerbahn.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="5">
+    <URL>C:\SampleDataScala\Java_Beans.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="6">
+    <URL>C:\SampleDataScala\Juliusspital-Wuerzburg.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="1">
+    <URL>C:\SampleDataScala\ProgrammierenMitJava.pdf</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
   <Group id="2">
-    <name>Some Examples</name>
+    <name>Java</name>
     <Data id="0">
-      <URL>C:\Users\Public\Pictures\Sample Pictures\Desert.jpg</URL>
+      <URL>C:\SampleDataScala\Java_Beans.jpg</URL>
     </Data>
     <Data id="0">
-      <URL>C:\Users\Public\Pictures\Sample Pictures\Chrysanthemum.jpg</URL>
+      <URL>C:\SampleDataScala\JavaKompendium.pdf</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\SampleDataScala\LeseprobeJava.pdf</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\SampleDataScala\ProgrammierenMitJava.pdf</URL>
     </Data>
   </Group>
   <Group id="1">
-    <name>Beispielbilder Windows 7</name>
+    <name>Würzburg</name>
     <Data id="0">
-      <URL>C:\Users\Public\Pictures\Sample Pictures\Jellyfish.jpg</URL>
+      <URL>C:\SampleDataScala\Juliusspital-Wuerzburg.jpg</URL>
     </Data>
     <Data id="0">
-      <URL>C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg</URL>
+      <URL>C:\SampleDataScala\Würzburg.jpg</URL>
     </Data>
     <Data id="0">
-      <URL>C:\Users\Public\Pictures\Sample Pictures\Hydrangeas.jpg</URL>
+      <URL>C:\SampleDataScala\Würzburg_Süd_RB_1064.jpg</URL>
     </Data>
     <Data id="0">
-      <URL>C:\Users\Public\Pictures\Sample Pictures\Desert.jpg</URL>
+      <URL>C:\SampleDataScala\Würzburg_Trümmerbahn.jpg</URL>
     </Data>
   </Group>
 </Datapool>

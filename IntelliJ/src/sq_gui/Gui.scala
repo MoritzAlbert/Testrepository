@@ -349,7 +349,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     //filter Pane
     var tab = new ScrollPane(tab_filter) {
-      this.preferredSize = new Dimension(270, 550)
+      this.preferredSize = new Dimension(270, 570)
     }
 
     // functionPanel
