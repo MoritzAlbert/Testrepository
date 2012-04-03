@@ -1,7 +1,7 @@
 package sq_gui
 
 import scala.swing._
-import event.KeyPressed
+import event.{Key, KeyPressed}
 import javax.swing.filechooser.FileNameExtensionFilter
 import TabbedPane._
 import jBrowser.JBrowser
@@ -189,6 +189,17 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     var searchInput = new TextField("") {
       this.preferredSize = new Dimension(214, 25)
+    }
+
+    // SEARCH WITH ENTER ON END WITHOUT USE OF THE BUTTON
+
+    listenTo(searchInput.keys)
+
+    reactions += {
+      case KeyPressed(_, Key.Enter, _, _) => startSearch(searchInput.text)
+      updateSearchListData(list, database)
+      searchInput.text = ""
+      updateSearchListData(searchList, database)
     }
 
     val settingDia = new Dialog() {
