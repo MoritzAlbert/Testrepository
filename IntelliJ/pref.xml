@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PREFERENCES>
   <playerImage>
-    <File />
+    <File>C:\Program Files\Paint.NET\PaintDotNet.exe</File>
   </playerImage>
   <playerVideo>
-    <File />
+    <File>C:\Program Files (x86)\VideoLAN\VLC\vlc.exe</File>
   </playerVideo>
   <playerPDF>
-    <File />
+    <File>C:\Program Files (x86)\Adobe\Reader 10.0\Reader\AcroRd32.exe</File>
   </playerPDF>
 </PREFERENCES>
 

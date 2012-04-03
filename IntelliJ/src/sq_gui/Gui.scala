@@ -137,7 +137,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       val tp = jtree.getLeadSelectionPath
       val node = tp.getLastPathComponent.asInstanceOf[DefaultMutableTreeNode]
       if (node != root) {
-        val x = Dialog.showConfirmation(null, "Delete this group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+        val x = Dialog.showConfirmation(null, "Delete group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
         if (x.toString.equals("Ok") || x.toString.equals("Yes")) {
           tree_model.removeNodeFromParent(node)
           database.removeFromGrouppool(node.toString)
@@ -469,58 +469,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
   //paint gridPanel
   def paintGridPanel: GridPanel = {
 
-    val playButton = Action("") {
-      //TODO: Gruppe abspielen
-    }
-    val editButton = Action("") {
-
-      val hinzuButton = Action("") {}
-
-      val dia = new Dialog() {
-        centerOnScreen()
-        resizable = true
-        contents = new BoxPanel(Orientation.Vertical) {
-          val ratingP = new FlowPanel() {
-            val bad = new RadioButton("Bad")
-            val good = new RadioButton("Good")
-            val awesome = new RadioButton("Awesome")
-            val radioButtons = List(bad, good, awesome)
-
-            contents += new Label("Rating")
-            contents += new BoxPanel(Orientation.Vertical) {
-              contents ++= radioButtons
-            }
-          }
-          val informationP = new FlowPanel() {
-            contents += new Label("Informations:")
-            contents += new TextArea() {
-              preferredSize = new Dimension(200, 100)
-            }
-          }
-          val buttonP = new FlowPanel() {
-            contents += new Button(Action("") {
-              //TODO in xml speichern
-            }) {
-              this.tooltip = "Save Changes"
-              this.icon = new ImageIcon("icons\\24x24\\save.png")
-              this.preferredSize = new Dimension(60, 30)
-            }
-            contents += new Button(Action("") {
-              //TODO abfrage, ob aenderungen wirklich nicht gespeichert werden sollen
-              close()
-            }) {
-              this.tooltip = "Cancel"
-              this.icon = new ImageIcon("icons\\24x24\\delete.png")
-              this.preferredSize = new Dimension(60, 30)
-            }
-          }
-          contents += ratingP
-          contents += informationP
-          contents += buttonP
-        }
-        open()
-      }
-    }
 
     val size = database.grouppool.size
     val grid = new GridPanel(size, 1) {
@@ -545,7 +493,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         var bp = new BoxPanel(Orientation.Vertical) {
 
           val playButton = Action("PLAY") {
-            obj.playGroup()
+            playGroup(obj)
           }
 
           var tmp = ""
@@ -579,10 +527,44 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             this.icon = new ImageIcon("icons\\16x16\\save.png")
           }
           contents += new Button(Action("") {
-            // val selectedGroup =
-            //TODO: alle dialoge in englisch
-            val x = Dialog.showConfirmation(null, "Delete Group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+
+            val x = Dialog.showConfirmation(null, "Delete data from group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
             if (x.toString().equals("Ok") || x.toString().equals("Yes")) {
+
+
+              //var url = searchURL(list.getSelectedValue)
+
+              /*
+              var data = obj.
+
+
+              obj.removeData()
+
+              1. gruppe finden     (=obj)
+              2. datei in gruppe finden
+              3. datei löschen von gruppenpool
+
+                   //list.getSelectedValue
+
+
+
+              //grouppool
+
+
+
+                           */
+
+
+
+
+
+              println(list.getSelectedValue)
+
+
+
+
+
+
               //TODO: ausgewaehlte Gruppe entfernen
               //              val obj = group.getSelectedValue.asInstanceOf[ImageIcon]
               //              println("ImageIcon: "+obj.getDescription)
@@ -592,18 +574,74 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
               //TODO auch hier updaten
             }
           }) {
-            this.tooltip = "Delete group"
+            this.tooltip = "Delete data from group"
             this.icon = new ImageIcon("icons\\16x16\\trash.png")
 
           }
-          contents += new Button {
-            action = editButton
+          contents += new Button(Action("") {
+            new Dialog() {
+              centerOnScreen()
+              resizable = true
+              contents = new BoxPanel(Orientation.Vertical) {
+                val nameP = new FlowPanel() {
+                  contents += new Label("Group Name")
+                  val grpnameField = new TextField() {
+                    this.preferredSize = new Dimension(200, 20)
+                    this.maximumSize = new Dimension(200, 20)
+                    this.minimumSize = new Dimension(200, 20)
+                  }
+                  contents += grpnameField
+                }
+
+                val ratingP = new FlowPanel() {
+
+                  val bad = new RadioButton("Bad")
+                  val good = new RadioButton("Good")
+                  val awesome = new RadioButton("Awesome")
+
+                  val radioButtons = List(bad, good, awesome)
+
+
+                  contents += new Label("Rating")
+                  contents += new BoxPanel(Orientation.Vertical) {
+                    contents ++= radioButtons
+                  }
+                }
+                val informationP = new FlowPanel() {
+                  contents += new Label("Informations:")
+                  contents += new TextArea() {
+                    preferredSize = new Dimension(200, 100)
+                  }
+                }
+                val buttonP = new FlowPanel() {
+                  contents += new Button(Action("") {
+                    //TODO in xml speichern
+                  }) {
+                    this.tooltip = "Save Changes"
+                    this.icon = new ImageIcon("icons\\24x24\\save.png")
+                    this.preferredSize = new Dimension(60, 30)
+                  }
+                  contents += new Button(Action("") {
+                    //TODO abfrage, ob aenderungen wirklich nicht gespeichert werden sollen
+                    close()
+                  }) {
+                    this.tooltip = "Cancel"
+                    this.icon = new ImageIcon("icons\\24x24\\delete.png")
+                    this.preferredSize = new Dimension(60, 30)
+                  }
+                }
+                contents += nameP
+                contents += ratingP
+                contents += informationP
+                contents += buttonP
+              }
+              open()
+            }
+          }) {
             this.tooltip = "Edit group settings"
             this.icon = new ImageIcon("icons\\16x16\\edit.png")
           }
         }
-
-
 
         val fp = new FlowPanel() {
           border = Swing.EmptyBorder(20, 20, 20, 20)
@@ -616,5 +654,4 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
     grid
   }
-
 }
