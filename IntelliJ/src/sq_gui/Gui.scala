@@ -1,7 +1,6 @@
 package sq_gui
 
 import scala.swing._
-import event.KeyPressed
 import javax.swing.filechooser.FileNameExtensionFilter
 import TabbedPane._
 import jBrowser.JBrowser
@@ -10,12 +9,11 @@ import javax.swing.{JList, UIManager, ImageIcon, JTree, DropMode}
 import javax.swing.event.{TreeSelectionEvent, TreeSelectionListener}
 import dragndrop._
 import java.awt.{Dimension, Color}
-import scala.swing.event.Key
-import scala.swing.event.KeyPressed
 
 //Begin object Object Gui
 object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
 
+  //declarations
   var petrolHEX = new Color(0x116856)
   var child_name = ""
   var child_list = new JList()
@@ -35,7 +33,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     title = "Gui Explorer"
     visible = true
 
-    //treeview
+    //treeview (left side)
     val jtree = new JTree(tree_model)
     val tsm = new DefaultTreeSelectionModel()
     tsm.setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION)
@@ -56,11 +54,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
     expandAll(jtree)
 
-    // New FlowPanel
+    // new FlowPanel
     var frame = new FlowPanel()
 
-    //Add data to datapool
-    val addData = Action("Hinzufügen") {
+    //Add data to datapool (with a filechooser)
+    val addData = Action("Add data") {
 
       val fileChooser = new FileChooser() {
         fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
@@ -68,15 +66,10 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
       fileChooser.showOpenDialog(frame)
       val file = fileChooser.selectedFile
-
       val url = file.getAbsolutePath
-      //println(url)
-
-      //database.addToDataPool(url.getQuery)
       database.addToDataPool(url)
 
       println(url)
-      //TODO Probleme bei URL to STRING, hier wird C: als Pfad ausgegeben. Linux Like
 
       updateListData(list, database)
       updateListImage(list_image, database)
@@ -92,13 +85,16 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
         contents += new MenuItem(Action("Settings") {
           settingDia.open()
         })
-        contents += new MenuItem("Datenbank speichern")
-        contents += new MenuItem("Datenbank laden")
+        contents += new MenuItem(Action("Save database") {
+          exportToXML(database, "test.xml")
+        })
+        contents += new MenuItem(Action("Load database") {
+          settingDia.open()
+        })
         contents += new MenuItem(Action("Exit") {
           closeOperation()
         })
       }
-
       contents += new Menu("Help") {
         contents += new MenuItem(Action("Onlinehelp") {
           val browser = new JBrowser("http://www.laptico.de")
@@ -112,22 +108,19 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
     }
 
+    //Dialog for entering a new group name
     val addGroup = Action("") {
       val panel = new BoxPanel(Orientation.Vertical) {
         val groupname = new TextField("")
         contents += groupname
       }
-
-      Dialog.showMessage(null, panel.peer, "Enter group name", Dialog.Message.Plain)
-
-      println("Groupname: " + panel.groupname.text)
-      println("Grouppool Size: " + database.grouppool.size)
+      Dialog.showMessage(null, panel.peer, "Please enter a group name", Dialog.Message.Plain)
 
       if (panel.groupname.text == "") {
-        Dialog.showMessage(null, "Please enter name", "Missing input", Dialog.Message.Error)
+        Dialog.showMessage(null, "Please enter a correct group name", "Missing input", Dialog.Message.Error)
       } else {
         database.addToGrouppool(panel.groupname.text)
-        println("Grouppool Size: " + database.grouppool.size)
+        println(database.grouppool.size)
         val child = new DefaultMutableTreeNode(panel.groupname.text)
         tree_model.insertNodeInto(child, root, root.getChildCount)
         expandAll(jtree) //JR
@@ -135,10 +128,10 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       updateFromXML()
     }
 
+    //remove a group from treeview and groupview
     val delete_group = Action("") {
       val tp = jtree.getLeadSelectionPath
       val node = tp.getLastPathComponent.asInstanceOf[DefaultMutableTreeNode]
-
       if (node != root) {
         val x = Dialog.showConfirmation(null, "Do you really want to delete this group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
         if (x.toString.equals("Ok") || x.toString.equals("Yes")) {
@@ -150,6 +143,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
       updateFromXML()
     }
+
 
     var add_group = new Button {
       action = addGroup
@@ -181,7 +175,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       updateSearchListData(searchList, database)
     }
 
-
     //buttons
     var add = new Button {
       action = addData
@@ -205,34 +198,20 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       this.preferredSize = new Dimension(214, 25)
     }
 
-    // SEARCH WITH ENTER ON END WITHOUT USE OF THE BUTTON
-    listenTo(searchInput.keys)
-
-    reactions += {
-      case KeyPressed(_, Key.Enter, _, _) => startSearch(searchInput.text)
-      updateSearchListData(list, database)
-      searchInput.text = ""
-      updateSearchListData(searchList, database)
-    }
-
     val settingDia = new Dialog() {
-      this.preferredSize = new Dimension(600, 400)
-      this.centerOnScreen()
+      this.preferredSize = new Dimension(300, 300)
+      this.location = new Point(100,100)
       resizable = true
       contents = new BoxPanel(Orientation.Vertical) {
         contents += new FlowPanel() {
           contents += new Label("Set standard data editors")
         }
         contents += new FlowPanel() {
-          val fileChooserJPEG = new FileChooser() {
-            fileFilter = new FileNameExtensionFilter("Applications for JPEG view", "exe")
-          }
-
-
-          contents += new Label("JPEG:")
+          val fileChooserJPEG = new FileChooser()
+          contents += new Label("Images:")
           contents += new Button(Action("Choose...") {
-            fileChooserJPEG.showOpenDialog(this)
 
+            fileChooserJPEG.showOpenDialog(this)
             val file = fileChooserJPEG.selectedFile
             //val url = file.toURI.toURL
             val url = file.getAbsolutePath
@@ -243,17 +222,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }) {
             this.tooltip = "Set editor for .jpeg data"
           }
-
-          val jpegApp = new Label(playerImage)
-          contents += jpegApp
-          // contents += new Label(fileChooserJPEG.selectedFile.toString())
+          //TODO Name des aktuell ausgewählten Programms anzeigen
+          //contents += new Label(fileChooserJPEG.selectedFile.toString())
         }
         contents += new FlowPanel() {
-          val fileChooserMP = new FileChooser() {
-            fileFilter = new FileNameExtensionFilter("Applications for MP4 view", "exe")
-          }
-
-
+          val fileChooserMP = new FileChooser()
           contents += new Label("MP4:")
           contents += new Button(Action("Choose...") {
             fileChooserMP.showOpenDialog(this)
@@ -266,17 +239,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }) {
             this.tooltip = "Set editor for .mp4 data"
           }
-
-          val mp4App = new Label(playerVideo)
-          contents += mp4App
-
         }
         contents += new FlowPanel() {
-          val fileChooserPDF = new FileChooser() {
-            fileFilter = new FileNameExtensionFilter("Applications for PDF view", "exe")
-          }
-
-
+          val fileChooserPDF = new FileChooser()
           contents += new Label("PDF:")
           contents += new Button(Action("Choose...") {
             fileChooserPDF.showOpenDialog(this)
@@ -288,8 +253,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }) {
             this.tooltip = "Set editor for .pdf data"
           }
-          val pdfApp = new Label(playerPDF)
-          contents += pdfApp
         }
         contents += new FlowPanel() {
           contents += new Button("") {
@@ -402,7 +365,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     var newGroupPanel = new BoxPanel(Orientation.Horizontal) {
-      8
 
       contents += newGroupTextFieldPanel
       contents += newGroupAddElementsPanel

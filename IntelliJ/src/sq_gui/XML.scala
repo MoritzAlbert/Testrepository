@@ -5,8 +5,6 @@ import org.jdom.Element
 import org.jdom.output.{Format, XMLOutputter}
 import java.io.{FileOutputStream, File}
 
-import scala.xml._
-
 trait XML {
 
   // TODO UMGESTALTUNG damit import von XML rate und desc möglich ist
@@ -142,26 +140,5 @@ trait XML {
 
     xml.output(doc, output)
   }
-
-
-  def exportPlayerPreferencesToXML(f: String, l: String) {
-    
-    // f = fileytpe
-    // l = location
-
-    /*
-    
-    Gui.playerVideo
-    Gui.playerImage
-    Gui.playerPDF
-
-       */
-
-    
-    
-    
-  }
-
-  
 
 }
