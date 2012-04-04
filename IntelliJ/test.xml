@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Datapool>
-  <Data id="6">
+  <Data id="2">
+    <URL>C:\SampleDataScala\ProgrammierenMitJava.pdf</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="7">
+    <URL>C:\SampleDataScala\SamsungViral.mp4</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="1">
     <URL>C:\SampleDataScala\Juliusspital-Wuerzburg.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Data id="8">
-    <URL>C:\SampleDataScala\ProgrammierenMitJava.pdf</URL>
+  <Data id="5">
+    <URL>C:\SampleDataScala\Würzburg.jpg</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Data id="9">
+    <URL>C:\SampleDataScala\LeseprobeJava.pdf</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
@@ -15,36 +30,42 @@
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Data id="2">
-    <URL>C:\SampleDataScala\Würzburg_Süd_RB_1064.jpg</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="4">
-    <URL>C:\SampleDataScala\Würzburg.jpg</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="5">
-    <URL>C:\SampleDataScala\JavaKompendium.pdf</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="9">
-    <URL>C:\SampleDataScala\SamsungViral.mp4</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="1">
+  <Data id="8">
     <URL>C:\SampleDataScala\Würzburg_Trümmerbahn.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
-  <Data id="7">
-    <URL>C:\SampleDataScala\LeseprobeJava.pdf</URL>
+  <Data id="4">
+    <URL>C:\SampleDataScala\Würzburg_Süd_RB_1064.jpg</URL>
     <RATING>0</RATING>
     <DESCRIPTION />
   </Data>
+  <Data id="6">
+    <URL>C:\SampleDataScala\JavaKompendium.pdf</URL>
+    <RATING>0</RATING>
+    <DESCRIPTION />
+  </Data>
+  <Group id="3">
+    <name>Würzburg</name>
+    <Data id="0">
+      <URL>C:\SampleDataScala\Juliusspital-Wuerzburg.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\SampleDataScala\Würzburg.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\SampleDataScala\Würzburg_Süd_RB_1064.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\SampleDataScala\Würzburg_Trümmerbahn.jpg</URL>
+    </Data>
+  </Group>
+  <Group id="2">
+    <name>Samsung</name>
+    <Data id="0">
+      <URL>C:\SampleDataScala\SamsungViral.mp4</URL>
+    </Data>
+  </Group>
   <Group id="1">
     <name>Java</name>
     <Data id="0">
@@ -58,27 +79,6 @@
     </Data>
     <Data id="0">
       <URL>C:\SampleDataScala\JavaKompendium.pdf</URL>
-    </Data>
-  </Group>
-  <Group id="3">
-    <name>Samsung</name>
-    <Data id="0">
-      <URL>C:\SampleDataScala\SamsungViral.mp4</URL>
-    </Data>
-  </Group>
-  <Group id="2">
-    <name>Würzburg</name>
-    <Data id="0">
-      <URL>C:\SampleDataScala\Juliusspital-Wuerzburg.jpg</URL>
-    </Data>
-    <Data id="0">
-      <URL>C:\SampleDataScala\Würzburg.jpg</URL>
-    </Data>
-    <Data id="0">
-      <URL>C:\SampleDataScala\Würzburg_Süd_RB_1064.jpg</URL>
-    </Data>
-    <Data id="0">
-      <URL>C:\SampleDataScala\Würzburg_Trümmerbahn.jpg</URL>
     </Data>
   </Group>
 </Datapool>

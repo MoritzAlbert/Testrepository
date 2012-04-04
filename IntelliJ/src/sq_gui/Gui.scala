@@ -6,11 +6,10 @@ import javax.swing.filechooser.FileNameExtensionFilter
 import TabbedPane._
 import jBrowser.JBrowser
 import javax.swing.tree.{TreeSelectionModel, DefaultTreeSelectionModel, DefaultTreeModel, DefaultMutableTreeNode}
-import javax.swing.{JList, UIManager, ImageIcon, JTree, DropMode, TransferHandler, DefaultListModel, JComponent}
+import javax.swing.{JList, UIManager, ImageIcon, JTree, DropMode}
 import javax.swing.event.{TreeSelectionEvent, TreeSelectionListener}
 import dragndrop._
 import java.awt.{Font, Dimension, Color}
-import java.awt.datatransfer.Transferable
 
 //Begin object Object Gui
 object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
@@ -535,15 +534,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             this.tooltip = "Save group"
             this.icon = new ImageIcon("icons\\16x16\\save.png")
           }
-          ) {
-            this.tooltip = "Edit group settings"
-            this.icon = new ImageIcon("icons\\16x16\\edit.png")
-          }
 
           contents += new Button(Action("") {
 
             val x = Dialog.showConfirmation(null, "Delete data from group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
-            if (x.toString().equals("Ok") || x.toString().equals("Yes")) {
+            if (x.toString.equals("Ok") || x.toString.equals("Yes")) {
               val index = list.getSelectedIndex
               obj.data.remove(index)
             }
@@ -589,7 +584,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
                   contents += info
                 }
 
-                var panel = new BoxPanel(Orientation.Vertical){
+                val panel = new BoxPanel(Orientation.Vertical){
 
                 contents += nameP
                 contents += ratingP
