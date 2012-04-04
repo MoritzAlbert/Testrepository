@@ -524,7 +524,9 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
         // Buttons für Gruppe
         var buttonPanel = new BoxPanel(Orientation.Vertical) {
-          contents += new Button {
+          contents += new Button(Action(""){
+            updateFromXML()
+          }) {
             this.tooltip = "Save group"
             this.icon = new ImageIcon("icons\\16x16\\save.png")
           }
@@ -546,6 +548,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
                 val nameP = new FlowPanel() {
                   contents += new Label("Group Name")
                   val grpnameField = new TextField() {
+                    this.text = obj.name
                     this.preferredSize = new Dimension(200, 20)
                     this.maximumSize = new Dimension(200, 20)
                     this.minimumSize = new Dimension(200, 20)
@@ -569,38 +572,27 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
                 }
                 val informationP = new FlowPanel() {
                   contents += new Label("Informations:")
-                  contents += new TextArea() {
+                  val info= new TextArea() {
+                    this.text = obj.info
                     preferredSize = new Dimension(200, 100)
                   }
+                  contents += info
                 }
-                val buttonP = new FlowPanel() {
-                  contents += new Button(Action("") {
-                    //TODO in xml speichern
-                  }) {
-                    this.tooltip = "Save Changes"
-                    this.icon = new ImageIcon("icons\\24x24\\save.png")
-                    this.preferredSize = new Dimension(60, 30)
-                  }
-                  contents += new Button(Action("") {
-                    //TODO abfrage, ob aenderungen wirklich nicht gespeichert werden sollen
-                    //close()
-                  }) {
-                    this.tooltip = "Cancel"
-                    this.icon = new ImageIcon("icons\\24x24\\delete.png")
-                    this.preferredSize = new Dimension(60, 30)
-                  }
-                }
+
                 var panel = new BoxPanel(Orientation.Vertical){
+
                 contents += nameP
                 contents += ratingP
                 contents += informationP
-                contents += buttonP
               }
-             val dia = new Dialog(){
-               contents=panel
-               open()
-             }
-              
+            Dialog.showMessage(null, panel.peer, "Group Changes", Dialog.Message.Plain)
+
+            println(nameP.grpnameField.text)
+            println(ratingP.radioButtons)
+            println(informationP.info.text)
+            obj.name = nameP.grpnameField.text
+            obj.info = informationP.info.text
+            updateFromXML()
         } 
           ) {
             this.tooltip = "Edit group settings"

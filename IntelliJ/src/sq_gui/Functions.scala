@@ -62,13 +62,13 @@ trait Functions extends XML with UpdateFunctions {
   var list_image = getJListImageFromDatabase(database)
 
   list_image.setDragEnabled(true)
-  list_image.setDropMode(DropMode.ON_OR_INSERT)
+  list_image.setDropMode(DropMode.INSERT)
   list_image.setTransferHandler(new MyTransferHandler())
   list_image.addKeyListener(new KeyAdapter {
     override def keyPressed(evt: KeyEvent) {
       val key = evt.getKeyCode
       if (key == KeyEvent.VK_DELETE) {
-        val x = Dialog.showConfirmation(null, "Wollen Sie die Datei wirklich löschen?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+        val x = Dialog.showConfirmation(null, "Delete Data?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
         if (x.toString.equals("Ok")) {
           val obj = list_image.getSelectedValue.asInstanceOf[ImageIcon]
           println("ImageIcon: " + obj.getDescription)
@@ -88,11 +88,11 @@ trait Functions extends XML with UpdateFunctions {
   var list_doc = getJListDocumentFromDatabase(database)
 
   list_doc.setDragEnabled(true)
-  list_doc.setDropMode(DropMode.ON_OR_INSERT)
+  list_doc.setDropMode(DropMode.INSERT)
   list_doc.setTransferHandler(new MyTransferHandler())
   list_doc.addKeyListener(new KeyAdapter {
     override def keyPressed(evt: KeyEvent) {
-      val x = Dialog.showConfirmation(null, "Wollen Sie die Datei wirklich löschen?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+      val x = Dialog.showConfirmation(null, "Delete Data?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
       if (x.toString.equals("Ok")) {
         val key = evt.getKeyCode
         if (key == KeyEvent.VK_DELETE) {
@@ -114,11 +114,11 @@ trait Functions extends XML with UpdateFunctions {
   var list_video = getJListVideoFromDatabase(database)
 
   list_video.setDragEnabled(true)
-  list_video.setDropMode(DropMode.ON_OR_INSERT)
+  list_video.setDropMode(DropMode.INSERT)
   list_video.setTransferHandler(new MyTransferHandler())
   list_video.addKeyListener(new KeyAdapter {
     override def keyPressed(evt: KeyEvent) {
-      val x = Dialog.showConfirmation(null, "Wollen Sie die Datei wirklich löschen?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+      val x = Dialog.showConfirmation(null, "Delete Data?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
       if (x.toString.equals("Ok")) {
         val key = evt.getKeyCode
         if (key == KeyEvent.VK_DELETE) {
@@ -164,7 +164,7 @@ trait Functions extends XML with UpdateFunctions {
         if (data.url.endsWith(".mp4")) {
           val img = data.asInstanceOf[Video]
           img.image.getImage.getScaledInstance(10, 10, 10)
-          img.image.setImage(img.image.getImage.getScaledInstance(60, 60, Image.SCALE_DEFAULT))
+          img.image.setImage(img.image.getImage.getScaledInstance(70, 70, Image.SCALE_DEFAULT))
           this.addElement(img.image)
         }
       }

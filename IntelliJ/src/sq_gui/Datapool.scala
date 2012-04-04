@@ -96,21 +96,6 @@ class Datapool() {
 
   }
 
-  def getDataByID(i: Int): Data = {
-
-    var id = new Data("")
-    val it = datapool.iterator
-
-    while (it.hasNext) {
-      val data = it.next()
-
-      if (data.id.equals(i)) {
-        id = data
-      }
-    }
-    id
-  }
-
   def removeFromPools(s: String) {
     val data = getDataByString(s)
     val src = new java.io.File(s)
