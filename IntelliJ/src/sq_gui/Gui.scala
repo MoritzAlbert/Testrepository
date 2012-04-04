@@ -103,7 +103,8 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
       contents += new Menu("Help") {
         contents += new MenuItem(Action("Onlinehelp") {
-          val browser = new JBrowser("http://www.laptico.de")
+          println("webbrowser")
+          val browser = new JBrowser("http://www.julianrapp.de/sq/help.html")
           val f = new Frame() {
             contents = new ScrollPane(Component.wrap(browser))
           }
