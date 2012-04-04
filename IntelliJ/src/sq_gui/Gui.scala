@@ -63,7 +63,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     var frame = new FlowPanel()
 
     //Add data to datapool (with a filechooser)
-    val addData = Action("Add data") {
+    val addData = Action("") {
 
       val fileChooser = new FileChooser() {
         fileFilter = new FileNameExtensionFilter("JPG, PDF & MP4", "jpg", "pdf", "mp4")
@@ -179,8 +179,13 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
     //buttons
-    var add = new Button {
+    var add = new Button() {
       action = addData
+      this.preferredSize = new Dimension(255, 40)
+      this.maximumSize = new Dimension(255, 40)
+      this.minimumSize = new Dimension(255, 40)
+      this.tooltip = "Add a new data to your datapool"
+      this.icon = new ImageIcon("icons\\32x32\\add.png")
     }
 
     //textfields
@@ -349,7 +354,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
     //filter Pane
     var tab = new ScrollPane(tab_filter) {
-      this.preferredSize = new Dimension(270, 550)
+      this.preferredSize = new Dimension(270, 570)
     }
 
     // functionPanel
@@ -530,6 +535,11 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             this.tooltip = "Save group"
             this.icon = new ImageIcon("icons\\16x16\\save.png")
           }
+          ) {
+            this.tooltip = "Edit group settings"
+            this.icon = new ImageIcon("icons\\16x16\\edit.png")
+          }
+
           contents += new Button(Action("") {
 
             val x = Dialog.showConfirmation(null, "Delete data from group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
@@ -540,7 +550,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             updateFromXML()
           }) {
             this.tooltip = "Delete data from group"
-            this.icon = new ImageIcon("icons\\16x16\\trash.png")
+            this.icon = new ImageIcon("icons\\16x16\\remove.png")
 
           }
           contents += new Button(Action("") {
