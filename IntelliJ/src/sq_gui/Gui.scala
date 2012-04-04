@@ -94,7 +94,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           exportToXML(database, "test.xml")
         })
         contents += new MenuItem(Action("Load database") {
-          settingDia.open()
+          //filechooser mit xml
         })
         contents += new MenuItem(Action("Exit") {
           closeOperation()
@@ -102,14 +102,27 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
       contents += new Menu("Help") {
         contents += new MenuItem(Action("Onlinehelp") {
-          val browser = new JBrowser("http://www.laptico.de")
+          val browser = new JBrowser("http://www.julianrapp.de/sq/Help.html")
           val f = new Frame() {
+            this.title = "Onlinehelp"
             contents = new ScrollPane(Component.wrap(browser))
           }
-          f.peer.setSize(750, 700)
+          f.size = new Dimension(900, 700)
           f.peer.setLocation(370, 20)
           f.visible = true
         })
+
+        contents += new MenuItem(Action("About") {
+          val browser = new JBrowser("http://www.julianrapp.de/sq/About.html")
+          val f = new Frame() {
+            this.title = "About"
+            contents = new ScrollPane(Component.wrap(browser))
+          }
+          f.size = new Dimension(900, 700)
+          f.peer.setLocation(370, 20)
+          f.visible = true
+        })
+
       }
     }
 
@@ -136,14 +149,19 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     //remove a group from treeview and groupview
     val delete_group = Action("") {
       val tp = jtree.getLeadSelectionPath
-      val node = tp.getLastPathComponent.asInstanceOf[DefaultMutableTreeNode]
-      if (node != root) {
-        val x = Dialog.showConfirmation(null, "Delete group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
-        if (x.toString.equals("Ok") || x.toString.equals("Yes")) {
-          tree_model.removeNodeFromParent(node)
-          database.removeFromGrouppool(node.toString)
-          println("Grouppool Size: " + database.grouppool.size)
-          expandAll(jtree) //JR
+      if (tp == null) {
+        Dialog.showMessage(null, "Select data to delete", "Missing input", Dialog.Message.Error)
+      }
+      else {
+        val node = tp.getLastPathComponent.asInstanceOf[DefaultMutableTreeNode]
+        if (node != root) {
+          val x = Dialog.showConfirmation(null, "Delete group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+          if (x.toString.equals("Ok") || x.toString.equals("Yes")) {
+            tree_model.removeNodeFromParent(node)
+            database.removeFromGrouppool(node.toString)
+            println("Grouppool Size: " + database.grouppool.size)
+            expandAll(jtree) //JR
+          }
         }
       }
       updateFromXML()
@@ -316,20 +334,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
     }
 
 
-    menuBar = new MenuBar {
-      contents += new Menu("File") {
-        contents += new MenuItem(Action("Settings") {
-          settingDia.open()
-        })
-        contents += new MenuItem(Action("Exit") {
-          closeOperation()
-        })
-      }
-      contents += new Menu("Help") {
-        contents += new MenuItem("Onlinehelp")
-      }
-    }
-
     var add_group = new Button {
       action = addGroup
     }
@@ -474,8 +478,6 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
   //paint gridPanel
   def paintGridPanel: GridPanel = {
-
-
     val size = database.grouppool.size
     val grid = new GridPanel(size, 1) {
       val it = database.sortGrouppool().iterator
@@ -517,6 +519,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             this.maximumSize = new Dimension(120, 28)
             this.horizontalTextPosition = Alignment.Left
             this.horizontalAlignment = Alignment.Left
+            this.tooltip = "Rating: " + obj.rating + " " + "Info: " + obj.info
           }
           contents += new Label("[" + obj.data.size + " Elements]")
           contents += new Button {
@@ -528,7 +531,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
         // Buttons für Gruppe
         var buttonPanel = new BoxPanel(Orientation.Vertical) {
-          contents += new Button(Action(""){
+          contents += new Button(Action("") {
             updateFromXML()
           }) {
             this.tooltip = "Save group"
@@ -536,11 +539,15 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }
 
           contents += new Button(Action("") {
-
-            val x = Dialog.showConfirmation(null, "Delete data from group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
-            if (x.toString.equals("Ok") || x.toString.equals("Yes")) {
-              val index = list.getSelectedIndex
-              obj.data.remove(index)
+            val index = list.getSelectedIndex
+            if (index == (-1)) {
+              Dialog.showMessage(null, "Select data to delete", "Missing input", Dialog.Message.Error)
+            }
+            else {
+              val x = Dialog.showConfirmation(null, "Delete data from group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
+              if (x.toString.equals("Ok") || x.toString.equals("Yes")) {
+                obj.data.remove(index)
+              }
             }
             updateFromXML()
           }) {
@@ -550,55 +557,49 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
           }
           contents += new Button(Action("") {
 
-                val nameP = new FlowPanel() {
-                  contents += new Label("Group Name")
-                  val grpnameField = new TextField() {
-                    this.text = obj.name
-                    this.preferredSize = new Dimension(200, 20)
-                    this.maximumSize = new Dimension(200, 20)
-                    this.minimumSize = new Dimension(200, 20)
-                  }
-                  contents += grpnameField
-                }
-
-                val ratingP = new FlowPanel() {
-
-                  val bad = new RadioButton("Bad")
-                  val good = new RadioButton("Good")
-                  val awesome = new RadioButton("Awesome")
-
-                  val radioButtons = List(bad, good, awesome)
-
-
-                  contents += new Label("Rating")
-                  contents += new BoxPanel(Orientation.Vertical) {
-                    contents ++= radioButtons
-                  }
-                }
-                val informationP = new FlowPanel() {
-                  contents += new Label("Informations:")
-                  val info= new TextArea() {
-                    this.text = obj.info
-                    preferredSize = new Dimension(200, 100)
-                  }
-                  contents += info
-                }
-
-                val panel = new BoxPanel(Orientation.Vertical){
-
-                contents += nameP
-                contents += ratingP
-                contents += informationP
+            val nameP = new FlowPanel() {
+              contents += new Label("Group Name")
+              val grpnameField = new TextField() {
+                this.text = obj.name
+                this.preferredSize = new Dimension(200, 20)
+                this.maximumSize = new Dimension(200, 20)
+                this.minimumSize = new Dimension(200, 20)
               }
+              contents += grpnameField
+            }
+
+            val ratingP = new FlowPanel() {
+              contents += new Label("Rating      ")
+              val ratingField = new TextField() {
+                this.text = obj.rating
+                this.preferredSize = new Dimension(200, 20)
+                this.maximumSize = new Dimension(200, 20)
+                this.minimumSize = new Dimension(200, 20)
+              }
+              contents += ratingField
+            }
+            val informationP = new FlowPanel() {
+              contents += new Label("Informations:")
+              val info = new TextArea() {
+                this.text = obj.info
+                preferredSize = new Dimension(200, 100)
+              }
+              contents += info
+            }
+
+            val panel = new BoxPanel(Orientation.Vertical) {
+
+              contents += nameP
+              contents += ratingP
+              contents += informationP
+            }
             Dialog.showMessage(null, panel.peer, "Group Changes", Dialog.Message.Plain)
 
-            println(nameP.grpnameField.text)
-            println(ratingP.radioButtons)
-            println(informationP.info.text)
             obj.name = nameP.grpnameField.text
+            obj.rating = ratingP.ratingField.text
             obj.info = informationP.info.text
             updateFromXML()
-        } 
+          }
           ) {
             this.tooltip = "Edit group settings"
             this.icon = new ImageIcon("icons\\16x16\\edit.png")

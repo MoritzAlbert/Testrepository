@@ -433,11 +433,16 @@ trait Functions extends XML with UpdateFunctions {
   }
   
   def playGroup(grp:Group){
+    if (grp.data.size()==0){
+      Dialog.showMessage(null, "Add data to play group", "Missing input", Dialog.Message.Error)
+    }
+    else{
     val it = grp.data.iterator
     while(it.hasNext){
       val data = it.next()
       play(data.url)
       println(data.url)
+    }
     }
   }
 

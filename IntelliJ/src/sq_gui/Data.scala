@@ -7,7 +7,7 @@ class Data(s:String) {
   var id = 0
   var url = ""
   var relation = HashSet[Data]()
-  var rating = 0
+  var rating = ""
   var description = ""
   var name = getName
   var player = ""
@@ -16,7 +16,7 @@ class Data(s:String) {
   def addRelation(obj:Data) = relation += obj
 
   //rating
-  def addRating(a:Int) {
+  def addRating(a:String) {
     rating = a
   }
 

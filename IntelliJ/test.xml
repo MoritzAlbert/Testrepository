@@ -1,76 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Datapool>
-  <Data id="2">
-    <URL>C:\SampleDataScala\ProgrammierenMitJava.pdf</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="7">
-    <URL>C:\SampleDataScala\SamsungViral.mp4</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="1">
+  <Data id="4">
     <URL>C:\SampleDataScala\Juliusspital-Wuerzburg.jpg</URL>
-    <RATING>0</RATING>
+    <RATING />
     <DESCRIPTION />
   </Data>
-  <Data id="5">
-    <URL>C:\SampleDataScala\Würzburg.jpg</URL>
-    <RATING>0</RATING>
-    <DESCRIPTION />
-  </Data>
-  <Data id="9">
-    <URL>C:\SampleDataScala\LeseprobeJava.pdf</URL>
-    <RATING>0</RATING>
+  <Data id="2">
+    <URL>C:\SampleDataScala\JavaKompendium.pdf</URL>
+    <RATING />
     <DESCRIPTION />
   </Data>
   <Data id="3">
-    <URL>C:\SampleDataScala\Java_Beans.jpg</URL>
-    <RATING>0</RATING>
+    <URL>C:\SampleDataScala\Würzburg.jpg</URL>
+    <RATING />
     <DESCRIPTION />
   </Data>
   <Data id="8">
-    <URL>C:\SampleDataScala\Würzburg_Trümmerbahn.jpg</URL>
-    <RATING>0</RATING>
+    <URL>C:\SampleDataScala\LeseprobeJava.pdf</URL>
+    <RATING />
     <DESCRIPTION />
   </Data>
-  <Data id="4">
-    <URL>C:\SampleDataScala\Würzburg_Süd_RB_1064.jpg</URL>
-    <RATING>0</RATING>
+  <Data id="1">
+    <URL>C:\SampleDataScala\SamsungViral.mp4</URL>
+    <RATING />
+    <DESCRIPTION />
+  </Data>
+  <Data id="5">
+    <URL>C:\SampleDataScala\Würzburg_Trümmerbahn.jpg</URL>
+    <RATING />
     <DESCRIPTION />
   </Data>
   <Data id="6">
-    <URL>C:\SampleDataScala\JavaKompendium.pdf</URL>
-    <RATING>0</RATING>
+    <URL>C:\SampleDataScala\Würzburg_Süd_RB_1064.jpg</URL>
+    <RATING />
+    <DESCRIPTION />
+  </Data>
+  <Data id="7">
+    <URL>C:\SampleDataScala\Java_Beans.jpg</URL>
+    <RATING />
+    <DESCRIPTION />
+  </Data>
+  <Data id="9">
+    <URL>C:\SampleDataScala\ProgrammierenMitJava.pdf</URL>
+    <RATING />
     <DESCRIPTION />
   </Data>
   <Group id="3">
     <name>Würzburg</name>
+    <rating>1</rating>
+    <info>Tolle Bilder von Würzburg</info>
+    <Data id="0">
+      <URL>C:\SampleDataScala\Würzburg_Trümmerbahn.jpg</URL>
+    </Data>
+    <Data id="0">
+      <URL>C:\SampleDataScala\Würzburg_Süd_RB_1064.jpg</URL>
+    </Data>
     <Data id="0">
       <URL>C:\SampleDataScala\Juliusspital-Wuerzburg.jpg</URL>
     </Data>
     <Data id="0">
       <URL>C:\SampleDataScala\Würzburg.jpg</URL>
     </Data>
-    <Data id="0">
-      <URL>C:\SampleDataScala\Würzburg_Süd_RB_1064.jpg</URL>
-    </Data>
-    <Data id="0">
-      <URL>C:\SampleDataScala\Würzburg_Trümmerbahn.jpg</URL>
-    </Data>
   </Group>
   <Group id="2">
     <name>Samsung</name>
+    <rating>3</rating>
+    <info>Samsung Videos</info>
     <Data id="0">
       <URL>C:\SampleDataScala\SamsungViral.mp4</URL>
     </Data>
   </Group>
   <Group id="1">
-    <name>Java</name>
-    <Data id="0">
-      <URL>C:\SampleDataScala\Java_Beans.jpg</URL>
-    </Data>
+    <name>Java Programmieren</name>
+    <rating>5</rating>
+    <info>Java Programming PDF Files</info>
     <Data id="0">
       <URL>C:\SampleDataScala\JavaKompendium.pdf</URL>
     </Data>
@@ -78,7 +81,7 @@
       <URL>C:\SampleDataScala\LeseprobeJava.pdf</URL>
     </Data>
     <Data id="0">
-      <URL>C:\SampleDataScala\JavaKompendium.pdf</URL>
+      <URL>C:\SampleDataScala\ProgrammierenMitJava.pdf</URL>
     </Data>
   </Group>
 </Datapool>

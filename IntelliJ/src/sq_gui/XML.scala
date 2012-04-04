@@ -5,7 +5,7 @@ import org.jdom.Element
 import org.jdom.output.{Format, XMLOutputter}
 import java.io.{FileOutputStream, File}
 import scala.xml._
-import java.util.{ArrayList, HashSet}
+import java.util.{ArrayList}
 
 trait XML {
 
@@ -24,16 +24,22 @@ trait XML {
       val x = children.get(i)
       val elem = x.asInstanceOf[Element]
       var name = ""
+      var rating = ""
+      var info = ""
 
       //GRUPPE!
       if (elem.getName == "Group") {
         //Geändert!!!
         name = elem.getChild("name").getText
+        rating = elem.getChild("rating").getText
+        info = elem.getChild("info").getText
         val grp = new Group(name)
-        //val id = elem.getAttribute("id").getIntValue
 
-        //grp.id = id
         database.addToGrouppool(grp)
+
+        val obj = database.getGroupByString(name)
+        obj.info = info
+        obj.rating = rating
 
         val child = elem.getChildren("Data")
 
@@ -79,7 +85,7 @@ trait XML {
       root.addContent(new Element("Data")
         .setAttribute("id", data.id.toString)
         .addContent(new Element("URL").addContent(url))
-        .addContent(new Element("RATING").addContent(rate.toString))
+        .addContent(new Element("RATING").addContent(rate))
         .addContent(new Element("DESCRIPTION").addContent(desc))
       )
     }
@@ -90,10 +96,14 @@ trait XML {
     while (it2.hasNext) {
       val grp = it2.next()
       val name = grp.name
+      val rating = grp.rating
+      val info = grp.info
 
       root.addContent(new Element("Group")
         .setAttribute("id", grp.id.toString)
         .addContent(new Element("name").addContent(name))
+        .addContent(new Element("rating").addContent(rating))
+        .addContent(new Element("info").addContent(info))
       )
 
       val children = root.getChildren
@@ -151,7 +161,7 @@ trait XML {
     val root = doc.getRootElement
     val children = root.getChildren
 
-    var temp = new ArrayList[String]()
+    val temp = new ArrayList[String]()
     var i = 0
 
     while (i < children.size()) {
