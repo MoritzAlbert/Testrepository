@@ -10,6 +10,8 @@ class Group(s: String) {
 
   var id = 0
   var name = s
+  var info = ""
+  var rating = ""
   //var data = HashSet[Data]()
 
   var data_id = 0

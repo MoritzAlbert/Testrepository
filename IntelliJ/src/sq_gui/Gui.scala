@@ -6,11 +6,10 @@ import javax.swing.filechooser.FileNameExtensionFilter
 import TabbedPane._
 import jBrowser.JBrowser
 import javax.swing.tree.{TreeSelectionModel, DefaultTreeSelectionModel, DefaultTreeModel, DefaultMutableTreeNode}
-import javax.swing.{JList, UIManager, ImageIcon, JTree, DropMode, TransferHandler, DefaultListModel, JComponent}
+import javax.swing.{JList, UIManager, ImageIcon, JTree, DropMode}
 import javax.swing.event.{TreeSelectionEvent, TreeSelectionListener}
 import dragndrop._
 import java.awt.{Font, Dimension, Color}
-import java.awt.datatransfer.Transferable
 
 //Begin object Object Gui
 object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Functions with Search {
@@ -103,8 +102,7 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
       }
       contents += new Menu("Help") {
         contents += new MenuItem(Action("Onlinehelp") {
-          println("webbrowser")
-          val browser = new JBrowser("http://www.julianrapp.de/sq/help.html")
+          val browser = new JBrowser("http://www.laptico.de")
           val f = new Frame() {
             contents = new ScrollPane(Component.wrap(browser))
           }
@@ -530,76 +528,17 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
 
         // Buttons für Gruppe
         var buttonPanel = new BoxPanel(Orientation.Vertical) {
-
-          contents += new Button(Action("") {
-
-            val nameP = new FlowPanel() {
-              contents += new Label("Group Name")
-              val grpnameField = new TextField() {
-                this.preferredSize = new Dimension(200, 20)
-                this.maximumSize = new Dimension(200, 20)
-                this.minimumSize = new Dimension(200, 20)
-              }
-              contents += grpnameField
-            }
-
-            val ratingP = new FlowPanel() {
-
-              val bad = new RadioButton("Bad")
-              val good = new RadioButton("Good")
-              val awesome = new RadioButton("Awesome")
-
-              val radioButtons = List(bad, good, awesome)
-
-
-              contents += new Label("Rating")
-              contents += new BoxPanel(Orientation.Vertical) {
-                contents ++= radioButtons
-              }
-            }
-            val informationP = new FlowPanel() {
-              contents += new Label("Informations:")
-              contents += new TextArea() {
-                preferredSize = new Dimension(200, 100)
-              }
-            }
-            val buttonP = new FlowPanel() {
-              contents += new Button(Action("") {
-                //TODO in xml speichern
-              }) {
-                this.tooltip = "Save Changes"
-                this.icon = new ImageIcon("icons\\24x24\\save.png")
-                this.preferredSize = new Dimension(60, 30)
-              }
-              contents += new Button(Action("") {
-                //TODO abfrage, ob aenderungen wirklich nicht gespeichert werden sollen
-                //close()
-              }) {
-                this.tooltip = "Cancel"
-                this.icon = new ImageIcon("icons\\24x24\\delete.png")
-                this.preferredSize = new Dimension(60, 30)
-              }
-            }
-            val panel = new BoxPanel(Orientation.Vertical) {
-              contents += nameP
-              contents += ratingP
-              contents += informationP
-              contents += buttonP
-            }
-            val dia = new Dialog() {
-              contents = panel
-              open()
-            }
-          }
-          ) {
-            this.tooltip = "Edit group settings"
-            this.icon = new ImageIcon("icons\\16x16\\edit.png")
+          contents += new Button(Action(""){
+            updateFromXML()
+          }) {
+            this.tooltip = "Save group"
+            this.icon = new ImageIcon("icons\\16x16\\save.png")
           }
 
           contents += new Button(Action("") {
 
             val x = Dialog.showConfirmation(null, "Delete data from group?", "Question", Dialog.Options.YesNo, Dialog.Message.Question)
-            if (x.toString().equals("Ok") || x.toString().equals("Yes")) {
+            if (x.toString.equals("Ok") || x.toString.equals("Yes")) {
               val index = list.getSelectedIndex
               obj.data.remove(index)
             }
@@ -609,9 +548,60 @@ object Gui extends SimpleSwingApplication with UpdateFunctions with XML with Fun
             this.icon = new ImageIcon("icons\\16x16\\remove.png")
 
           }
-          contents += new Button {
-            this.tooltip = "Reload group"
-            this.icon = new ImageIcon("icons\\16x16\\repeat.png")
+          contents += new Button(Action("") {
+
+                val nameP = new FlowPanel() {
+                  contents += new Label("Group Name")
+                  val grpnameField = new TextField() {
+                    this.text = obj.name
+                    this.preferredSize = new Dimension(200, 20)
+                    this.maximumSize = new Dimension(200, 20)
+                    this.minimumSize = new Dimension(200, 20)
+                  }
+                  contents += grpnameField
+                }
+
+                val ratingP = new FlowPanel() {
+
+                  val bad = new RadioButton("Bad")
+                  val good = new RadioButton("Good")
+                  val awesome = new RadioButton("Awesome")
+
+                  val radioButtons = List(bad, good, awesome)
+
+
+                  contents += new Label("Rating")
+                  contents += new BoxPanel(Orientation.Vertical) {
+                    contents ++= radioButtons
+                  }
+                }
+                val informationP = new FlowPanel() {
+                  contents += new Label("Informations:")
+                  val info= new TextArea() {
+                    this.text = obj.info
+                    preferredSize = new Dimension(200, 100)
+                  }
+                  contents += info
+                }
+
+                val panel = new BoxPanel(Orientation.Vertical){
+
+                contents += nameP
+                contents += ratingP
+                contents += informationP
+              }
+            Dialog.showMessage(null, panel.peer, "Group Changes", Dialog.Message.Plain)
+
+            println(nameP.grpnameField.text)
+            println(ratingP.radioButtons)
+            println(informationP.info.text)
+            obj.name = nameP.grpnameField.text
+            obj.info = informationP.info.text
+            updateFromXML()
+        } 
+          ) {
+            this.tooltip = "Edit group settings"
+            this.icon = new ImageIcon("icons\\16x16\\edit.png")
           }
         }
 

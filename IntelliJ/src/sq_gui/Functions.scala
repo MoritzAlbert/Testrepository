@@ -31,7 +31,7 @@ trait Functions extends XML with UpdateFunctions {
 
   list.setDragEnabled(true)
   list.setTransferHandler(new MyTransferHandler)
-  list.setDropMode(DropMode.INSERT)
+  //list.setDropMode(DropMode.INSERT)
   list.addKeyListener(new KeyAdapter {
 
     override def keyPressed(evt: KeyEvent) {
@@ -58,7 +58,7 @@ trait Functions extends XML with UpdateFunctions {
   var list_image = getJListImageFromDatabase(database)
 
   list_image.setDragEnabled(true)
-  list_image.setDropMode(DropMode.ON_OR_INSERT)
+  list_image.setDropMode(DropMode.INSERT)
   list_image.setTransferHandler(new MyTransferHandler())
   list_image.addKeyListener(new KeyAdapter {
     override def keyPressed(evt: KeyEvent) {
@@ -84,7 +84,7 @@ trait Functions extends XML with UpdateFunctions {
   var list_doc = getJListDocumentFromDatabase(database)
 
   list_doc.setDragEnabled(true)
-  list_doc.setDropMode(DropMode.ON_OR_INSERT)
+  list_doc.setDropMode(DropMode.INSERT)
   list_doc.setTransferHandler(new MyTransferHandler())
   list_doc.addKeyListener(new KeyAdapter {
     override def keyPressed(evt: KeyEvent) {
@@ -110,7 +110,7 @@ trait Functions extends XML with UpdateFunctions {
   var list_video = getJListVideoFromDatabase(database)
 
   list_video.setDragEnabled(true)
-  list_video.setDropMode(DropMode.ON_OR_INSERT)
+  list_video.setDropMode(DropMode.INSERT)
   list_video.setTransferHandler(new MyTransferHandler())
   list_video.addKeyListener(new KeyAdapter {
     override def keyPressed(evt: KeyEvent) {
